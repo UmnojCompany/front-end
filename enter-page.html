@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <section class="enter-page">
+      <div class="container">
+        <div class="wrapper">
+          <h3>Войдите в свой профиль</h3>
+          <div class="subtitle">
+            Если у вас ещё нет профиля, тогда
+            <a href="#">пройдите регистрацию</a>
+          </div>
+          <form class="" action="">
+            <div class="input-container">
+              <div class="flags">
+                <ul>
+                  <li><img src="img/Flag-tr.svg" alt="" /></li>
+                  <li></li>
+                </ul>
+                <div class="drop">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.5 7.75L8.64645 11.8964C8.84171 12.0917 9.15829 12.0917 9.35355 11.8964L13.5 7.75"
+                      stroke="#7786A5"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <input
+                class="phone blocked"
+                type="tel"
+                name=""
+                id=""
+                placeholder="+7 (919) 777–77–77"
+              />
+            </div>
+            <div class="restore-access">Восстановить доступ</div>
+          </form>
+        </div>
+        <div class="wrapper confirm">
+          <h3>Подтвердите номер телефона</h3>
+          <div class="subtitle">
+            На номер +7 919 777-77-77 был отправлен СМС-код для подтверждения.
+            Если код не поступил, тогда напишите в <a href="#">поддержку</a>
+          </div>
+          <form action="">
+            <div class="numbers">
+              <input type="" name="" id="" />
+              <input type="" name="" id="" />
+              <input type="" name="" id="" />
+              <input type="" name="" id="" />
+            </div>
+            <div class="daha">
+              Отправить код ещё раз через <span>(2:59)</span>
+            </div>
+          </form>
+        </div>
+        <div class="enter-button">Войти</div>
+      </div>
+    </section>
+    <script>
+      document.body.addEventListener("click", function (event) {
+        if (event.target.classList.contains("restore-access")) {
+          event.target.classList.add("hide");
+
+          var modalContent = event.target.closest(".enter-page");
+
+          var confirmElement = modalContent.querySelector(".confirm");
+
+          if (confirmElement) {
+            confirmElement.classList.add("active");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
