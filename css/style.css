@@ -1015,27 +1015,6 @@ section {
   height: 24px;
   flex-shrink: 0;
 }
-.enter-page .input-container,
-.modal .input-container {
-  position: relative;
-}
-.enter-page .input-container label,
-.modal .input-container label {
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  color: var(--Fields-Title, #7786a5);
-  /* Platform/Fields/Title (caption) */
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px; /* 133.333% */
-}
-.enter-page .input-container label span,
-.modal .input-container label span {
-  color: var(--Text-Error, #f34942);
-}
 .enter-page .subtitle,
 .modal .subtitle {
   background: var(--Stroke-Divider_form, #f1f7ff);
@@ -1224,4 +1203,34 @@ section {
   padding: 30px 0px 0px 0px;
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--BG-White, #fff);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+.input-container .blocked-text {
+  color: var(--Text-Error, #f34942);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+.input-container .blocked-text.hide {
+  display: none;
+}
+.input-container label {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  color: var(--Fields-Title, #7786a5);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+.input-container label span {
+  color: var(--Text-Error, #f34942);
 }/*# sourceMappingURL=style.css.map */

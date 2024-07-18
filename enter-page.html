@@ -11,9 +11,9 @@
     <section class="enter-page">
       <div class="container">
         <div class="wrapper">
-          <h3>Войдите в свой профиль</h3>
+          <h3>Войдите в свой профиль</h3>
           <div class="subtitle">
-            Если у вас ещё нет профиля, тогда
+            Если у вас ещё нет профиля, тогда
             <a href="#">пройдите регистрацию</a>
           </div>
           <form class="" action="">
@@ -47,6 +47,7 @@
                 id=""
                 placeholder="+7 (919) 777–77–77"
               />
+              <span class="blocked-text">Профиль заблокирован</span>
             </div>
             <div class="restore-access">Восстановить доступ</div>
           </form>
@@ -54,8 +55,8 @@
         <div class="wrapper confirm">
           <h3>Подтвердите номер телефона</h3>
           <div class="subtitle">
-            На номер +7 919 777-77-77 был отправлен СМС-код для подтверждения.
-            Если код не поступил, тогда напишите в <a href="#">поддержку</a>
+            На номер +7 919 777-77-77 был отправлен СМС-код для подтверждения.
+            Если код не поступил, тогда напишите в <a href="#">поддержку</a>
           </div>
           <form action="">
             <div class="numbers">
@@ -65,7 +66,7 @@
               <input type="" name="" id="" />
             </div>
             <div class="daha">
-              Отправить код ещё раз через <span>(2:59)</span>
+              Отправить код ещё раз через <span>(2:59)</span>
             </div>
           </form>
         </div>
@@ -76,16 +77,27 @@
       document.body.addEventListener("click", function (event) {
         if (event.target.classList.contains("restore-access")) {
           event.target.classList.add("hide");
-
+    
           var modalContent = event.target.closest(".enter-page");
-
+    
           var confirmElement = modalContent.querySelector(".confirm");
-
           if (confirmElement) {
             confirmElement.classList.add("active");
+          }
+    
+          var phoneElement = modalContent.querySelector(".phone");
+          if (phoneElement) {
+            phoneElement.classList.remove("blocked");
+          }
+    
+          var blockedTextElement = modalContent.querySelector(".blocked-text");
+          if (blockedTextElement) {
+            blockedTextElement.classList.add("hide");
           }
         }
       });
     </script>
+    
+    
   </body>
 </html>
