@@ -537,32 +537,7 @@
             document.getElementById("modal").style.display = "none";
           });
         //////////////////////////////////////////////////////////////////////////////////////
-        var listItems = document.querySelectorAll(".head-profile ul li");
-
-        var personalDataBlock = document.querySelector(".personal-data");
-        var notificationsBlock = document.querySelector(".notifications");
-        var safetyBlock = document.querySelector(".safety");
-
-        listItems.forEach(function (item) {
-          item.addEventListener("click", function () {
-            listItems.forEach(function (el) {
-              el.classList.remove("active");
-            });
-            personalDataBlock.classList.remove("active");
-            notificationsBlock.classList.remove("active");
-            safetyBlock.classList.remove("active");
-
-            this.classList.add("active");
-
-            if (this.classList.contains("personal-data-btn")) {
-              personalDataBlock.classList.add("active");
-            } else if (this.classList.contains("notifications-btn")) {
-              notificationsBlock.classList.add("active");
-            } else if (this.classList.contains("safety-btn")) {
-              safetyBlock.classList.add("active");
-            }
-          });
-        });
+        
 
         var toggles = document.querySelectorAll(".toggle");
 
