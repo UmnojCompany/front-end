@@ -35,6 +35,11 @@
   }
 }
 @media (max-width: 767px) {
+  .payments-balance .wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
   .footer {
     position: relative;
     margin: 90px 0px 0px 0px;
@@ -67,6 +72,23 @@
   }
 }
 @media (max-width: 640px) {
+  .payments-balance .right form input[type=submit] {
+    min-width: 100%;
+  }
+  .payments-balance .right form input[type=number] {
+    width: 100%;
+  }
+  .payments-balance .right {
+    min-width: 100%;
+  }
+  .payments-balance .right .input-container {
+    min-width: 100%;
+  }
+  .payments-balance .right form {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
   .footer .wrapp.mob .left, .footer .wrapp.mob .right {
     gap: 0px;
     justify-content: space-around;
