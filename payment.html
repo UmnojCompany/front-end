@@ -287,50 +287,78 @@
           </div>
         </div>
       </section>
-      <section class="payments-balance">
-        <div class="container">
-          <div class="wrapper">
-            <div class="left">
-              <h4>Мой баланс</h4>
-              <div class="circle"></div>
-              <div class="balance">13 761 ₽</div>
-            </div>
-            <div class="right">
-              <form action="">
-                <div class="input-container">
-                  <input
-                    type="number"
-                    name=""
-                    id=""
-                    placeholder="Сумма пополнения"
-                  />
-                  <div class="currency">₽</div>
-                </div>
-                <input type="submit" value="Пополнить баланс">
-              </form>
+      <div class="page-content-1 active page-list">
+        <section class="payments-balance">
+          <div class="container">
+            <div class="wrapper">
+              <div class="left">
+                <h4>Мой баланс</h4>
+                <div class="circle"></div>
+                <div class="balance">13 761 ₽</div>
+              </div>
+              <div class="right">
+                <form action="">
+                  <div class="input-container">
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      placeholder="Сумма пополнения"
+                    />
+                    <div class="currency">₽</div>
+                  </div>
+                  <input type="submit" value="Пополнить баланс" />
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="payments-story">
-        <div class="container">
-          <div class="wrapper">
-            <h4>История операций</h4>
-            <div class="list-header"><div class="title">Событие</div><div class="value">сумма, ₽</div></div>
-            <ul>
-                <li class="date"><div class="title">4 мая, понедельник</div></li>
-                <li class="item"><div class="title">Баланс профиля</div><div class="value green">+400 ₽</div></li>
-                <li class="item"><div class="title">Покупка заявки</div><div class="value">− 1 500 ₽</div></li>
-            </ul>
-            <ul>
+        </section>
+        <section class="payments-story">
+          <div class="container">
+            <div class="wrapper">
+              <h4>История операций</h4>
+              <div class="list-header">
+                <div class="title">Событие</div>
+                <div class="value">сумма, ₽</div>
+              </div>
+              <ul>
+                <li class="date">
+                  <div class="title">4 мая, понедельник</div>
+                </li>
+                <li class="item">
+                  <div class="title">Баланс профиля</div>
+                  <div class="value green">+400 ₽</div>
+                </li>
+                <li class="item">
+                  <div class="title">Покупка заявки</div>
+                  <div class="value">− 1 500 ₽</div>
+                </li>
+              </ul>
+              <ul>
                 <li class="date"><div class="title">2 мая, суббота</div></li>
-                <li class="item"><div class="title">Продление тарифа PRO</div><div class="value">− 200.35 ₽</div></li>
-                <li class="item"><div class="title">Баланс профиля</div><div class="value green"></div>+ 400 ₽</li>
-                
-            </ul>
+                <li class="item">
+                  <div class="title">Продление тарифа PRO</div>
+                  <div class="value">− 200.35 ₽</div>
+                </li>
+                <li class="item">
+                  <div class="title">Баланс профиля</div>
+                  <div class="value green"></div>
+                  + 400 ₽
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+      <div class="page-content-2 page-list">
+        <section>
+          <div class="container">
+            <div class="wrapper">
+              <h4>Документы</h4>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="footer">
       <div class="wrapp mob">
@@ -557,6 +585,41 @@
             button.classList.add("hide");
           });
         }
+        /////////////////////////////////////////////////////////////////////////////////////
+        // Получаем блок с классом page-head и внутри него все li
+        var pageHead = document.querySelector(".page-head ul");
+        var listItems = pageHead.querySelectorAll("li");
+
+        // Проходим по всем li и добавляем обработчик события click
+        listItems.forEach(function (item, index) {
+          item.addEventListener("click", function () {
+            // Удаляем класс active у всех li
+            listItems.forEach(function (li) {
+              li.classList.remove("active");
+            });
+
+            // Добавляем класс active к текущему li
+            item.classList.add("active");
+
+            // Получаем все блоки с классами page-content-1, page-content-2 и т.д.
+            var pageContents = document.querySelectorAll(
+              "[class^='page-content-']"
+            );
+
+            // Удаляем класс active у всех блоков контента
+            pageContents.forEach(function (content) {
+              content.classList.remove("active");
+            });
+
+            // Добавляем класс active к соответствующему блоку контента
+            var targetContent = document.querySelector(
+              ".page-content-" + (index + 1)
+            );
+            if (targetContent) {
+              targetContent.classList.add("active");
+            }
+          });
+        });
       });
     </script>
   </body>
