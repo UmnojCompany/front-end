@@ -907,6 +907,7 @@ section {
 }
 
 .modal-button {
+  display: block;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 40px auto 0px auto;
