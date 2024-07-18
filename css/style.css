@@ -1173,9 +1173,8 @@ section {
   padding: 100px 0px 0px 0px;
 }
 .enter-page .enter-button {
-  cursor: pointer;
   border-radius: 10px;
-  background: var(--Button-Primary-BG-Default, #4e6af3);
+  background: #D5DAF1;
   padding: 15px 36px;
   color: var(--Button-Primary-Text-Default, #fff);
   text-align: center;
@@ -1185,6 +1184,10 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+}
+.enter-page .enter-button.active {
+  cursor: pointer;
+  background: var(--Button-Primary-BG-Default, #4e6af3);
 }
 .enter-page .restore-access {
   cursor: pointer;

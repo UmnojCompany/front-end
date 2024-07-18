@@ -1124,9 +1124,12 @@ section {
 }
 .enter-page {
    .enter-button {
-      cursor: pointer;
       border-radius: 10px;
-      background: var(--Button-Primary-BG-Default, #4e6af3);
+      &.active {
+         cursor: pointer;
+         background: var(--Button-Primary-BG-Default, #4e6af3);
+      }
+      background: #D5DAF1;
       padding: 15px 36px;
       color: var(--Button-Primary-Text-Default, #fff);
       text-align: center;
@@ -1162,7 +1165,7 @@ section {
 }
 .input-container {
    .blocked-text {
-      &.hide{
+      &.hide {
          display: none;
       }
       color: var(--Text-Error, #f34942);
@@ -1188,5 +1191,4 @@ section {
    flex-direction: column;
    gap: 4px;
    position: relative;
-
 }
