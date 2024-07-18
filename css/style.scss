@@ -65,7 +65,7 @@ section {
          color: var(--Button-Primary-Text-Default, #fff);
 
          /* Platform/Button Link/Small */
-         font-family: Roboto;
+
          font-size: 14px;
          font-style: normal;
          font-weight: 400;
@@ -95,7 +95,7 @@ section {
                color: var(--Text-Disabled, #b8c6e3);
 
                /* Platform/Fields/Title (caption) */
-               font-family: Roboto;
+
                font-size: 12px;
                font-style: normal;
                font-weight: 400;
@@ -112,7 +112,7 @@ section {
                align-items: flex-start;
 
                color: var(--Text-White, #fff);
-               font-family: Roboto;
+
                font-size: 14px;
                font-style: normal;
                font-weight: 500;
@@ -156,7 +156,7 @@ section {
          color: var(--Header-Text_Default, #d5daf1);
 
          /* Platform/Accent_12_CAPS (S) */
-         font-family: Roboto;
+
          font-size: 12px;
          font-style: normal;
          font-weight: 600;
@@ -203,7 +203,7 @@ section {
          text-align: center;
 
          /* Platform/Accent_12_CAPS (S) */
-         font-family: Roboto;
+
          font-size: 12px;
          font-style: normal;
          font-weight: 600;
@@ -213,11 +213,16 @@ section {
       }
       .buttons {
          .button {
+            &:hover {
+               background: var(--Header-BG-Hover, #3a465d);
+            }
+            border-radius: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
             padding: 11px;
             cursor: pointer;
+            transition: 0.3s;
          }
          display: flex;
          align-items: center;
@@ -302,7 +307,7 @@ section {
    color: var(--Text-Grey, #7786a5);
 
    /* Landing/Caption_2 */
-   font-family: Roboto;
+
    font-size: 14px;
    font-style: normal;
    font-weight: 400;
@@ -323,6 +328,7 @@ section {
       gap: 10px;
    }
 }
+.page-head,
 .head-profile {
    .wrapper {
       padding: 30px 30px 21px 30px;
@@ -660,7 +666,7 @@ section {
       color: var(--Main-Blue, #4e6af3);
 
       /* Fields/Placeholder */
-      font-family: Roboto;
+
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -844,7 +850,7 @@ section {
       color: var(--Text-Grey, #7786a5);
 
       /* Platform/Desktop/Body-1 R */
-      font-family: Roboto;
+
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -887,7 +893,7 @@ section {
    text-align: center;
 
    /* Platform/Button Link/Medium */
-   font-family: Roboto;
+
    font-size: 16px;
    font-style: normal;
    font-weight: 400;
@@ -903,7 +909,7 @@ section {
          text-align: center;
 
          /* Platform/Button Link/Small */
-         font-family: Roboto;
+
          font-size: 14px;
          font-style: normal;
          font-weight: 400;
@@ -913,7 +919,7 @@ section {
       text-align: right;
 
       /* Platform/Button Link/Small */
-      font-family: Roboto;
+
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -940,7 +946,7 @@ section {
          text-align: center;
 
          /* Platform/Fields/Placeholder */
-         font-family: Roboto;
+
          font-size: 16px;
          font-style: normal;
          font-weight: 400;
@@ -980,7 +986,7 @@ section {
       background: var(--Stroke-Divider_form, #f1f7ff);
       padding: var(--Corner_radius_s, 5px) 30px;
       color: var(--Text-Grey_Dark, #3b4a69);
-      font-family: Roboto;
+
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -1018,7 +1024,7 @@ section {
             color: var(--Fields-Text, #2a344a);
 
             /* Platform/Fields/Placeholder */
-            font-family: Roboto;
+
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -1055,7 +1061,7 @@ section {
          text-align: center;
 
          /* Platform/Button Link/Medium */
-         font-family: Roboto;
+
          font-size: 16px;
          font-style: normal;
          font-weight: 400;
@@ -1069,7 +1075,7 @@ section {
          text-align: center;
 
          /* Platform/Desktop/Body-1 R */
-         font-family: Roboto;
+
          font-size: 16px;
          font-style: normal;
          font-weight: 400;
@@ -1129,13 +1135,13 @@ section {
          cursor: pointer;
          background: var(--Button-Primary-BG-Default, #4e6af3);
       }
-      background: #D5DAF1;
+      background: #d5daf1;
       padding: 15px 36px;
       color: var(--Button-Primary-Text-Default, #fff);
       text-align: center;
 
       /* Platform/Button Link/Medium */
-      font-family: Roboto;
+
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -1191,4 +1197,148 @@ section {
    flex-direction: column;
    gap: 4px;
    position: relative;
+}
+.payments-balance {
+   .right {
+      .currency {
+         position: absolute;
+         top: 8px;
+         right: 15px;
+         color: var(--Fields-Title, #7786a5);
+
+         /* Platform/Fields/Placeholder */
+
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 24px; /* 150% */
+      }
+      form {
+         input[type="submit"] {
+            cursor: pointer;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--Button-Primary-BG-Default, #4e6af3);
+            padding: 10px 20px;
+            color: var(--Button-Primary-Text-Default, #fff);
+            text-align: center;
+
+            /* Platform/Button Link/Medium */
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 125% */
+         }
+         input[type="number"] {
+            height: 40px;
+            width: 227px;
+            padding: 0px 35px 0px 15px;
+            border-radius: 10px;
+            border: 2px solid var(--Fields-Stroke, #e1edfd);
+            background: var(--Fields-Form, #fff);
+            color: var(--Fields-Title, #7786a5);
+
+            /* Platform/Fields/Placeholder */
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+         }
+         display: flex;
+         align-items: center;
+         gap: 10px;
+      }
+   }
+   .circle {
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background: #c7d2e9;
+   }
+   .left {
+      .balance {
+         color: var(--Text-Success, #0ab258);
+
+         /* Platform/Accent_20 (B) */
+
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 120%; /* 24px */
+      }
+      display: flex;
+      align-items: center;
+      gap: 15px;
+   }
+
+   .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+   }
+}
+.payments-story {
+   .green {
+      color: var(--Text-Success, #0ab258);
+   }
+   .list-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      color: var(--Text-Grey, #7786a5);
+
+      /* Platform/Table/Headline */
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px; /* 166.667% */
+      letter-spacing: 1.44px;
+      text-transform: uppercase;
+   }
+   .item {
+      &:last-child {
+         border-bottom: none;
+      }
+      border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+   }
+   .date {
+      margin: 0px 0px 0px 0px;
+      padding: 5px 30px;
+      background: var(--Stroke-Divider_form, #f1f7ff);
+      color: var(--Text-Grey_Dark, #3b4a69);
+
+      /* Platform/Desktop/Body-2 R */
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+   }
+   li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0px;
+      margin: 0px 30px;
+      color: var(--Text-Black, #2a344a);
+
+      /* Platform/Table/Body-1 */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 125% */
+   }
+   h4 {
+      padding: 0px 30px 20px 30px;
+      border-bottom: 2px solid var(--Stroke-Divider_form, #f1f7ff);
+   }
+   .wrapper {
+      padding: 30px 0px 0px 0px;
+   }
 }

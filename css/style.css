@@ -159,7 +159,6 @@ section {
   padding: 12px 20px;
   color: var(--Button-Primary-Text-Default, #fff);
   /* Platform/Button Link/Small */
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -193,7 +192,6 @@ section {
 .header .submenu li a .descr {
   color: var(--Text-Disabled, #b8c6e3);
   /* Platform/Fields/Title (caption) */
-  font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -205,7 +203,6 @@ section {
   gap: 10px;
   align-items: flex-start;
   color: var(--Text-White, #fff);
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -231,7 +228,6 @@ section {
   position: relative;
   color: var(--Header-Text_Default, #d5daf1);
   /* Platform/Accent_12_CAPS (S) */
-  font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -279,7 +275,6 @@ section {
   color: var(--Button-Primary-Text-Default, #fff);
   text-align: center;
   /* Platform/Accent_12_CAPS (S) */
-  font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -293,11 +288,16 @@ section {
   gap: 8px;
 }
 .header .right .buttons .button {
+  border-radius: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 11px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.header .right .buttons .button:hover {
+  background: var(--Header-BG-Hover, #3a465d);
 }
 .header .left {
   display: flex;
@@ -313,7 +313,6 @@ section {
 .footer {
   color: var(--Text-Grey, #7786a5);
   /* Landing/Caption_2 */
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -383,32 +382,39 @@ section {
   gap: 10px;
 }
 
+.page-head .wrapper,
 .head-profile .wrapper {
   padding: 30px 30px 21px 30px;
 }
+.page-head h3,
 .head-profile h3 {
   margin: 0px 0px 30px 0px;
 }
+.page-head .line,
 .head-profile .line {
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--Stroke-Divider, #e1edfd);
   height: 4px;
   margin-bottom: -20px;
 }
+.page-head ul,
 .head-profile ul {
   width: 100%;
   display: flex;
   gap: 30px;
   position: relative;
 }
+.page-head ul li,
 .head-profile ul li {
   position: relative;
   cursor: pointer;
   line-height: 32px; /* 125% */
 }
+.page-head ul li.active,
 .head-profile ul li.active {
   color: #4e6af3;
 }
+.page-head ul li.active::after,
 .head-profile ul li.active::after {
   content: "";
   position: absolute;
@@ -420,6 +426,7 @@ section {
   left: 0;
   z-index: 1;
 }
+.page-head ul::after,
 .head-profile ul::after {
   content: "";
   position: absolute;
@@ -688,7 +695,6 @@ section {
   cursor: pointer;
   color: var(--Main-Blue, #4e6af3);
   /* Fields/Placeholder */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -875,7 +881,6 @@ section {
   margin: 0px 0px 30px 0px;
   color: var(--Text-Grey, #7786a5);
   /* Platform/Desktop/Body-1 R */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -916,7 +921,6 @@ section {
   color: var(--Button-Primary-Text-Default, #fff);
   text-align: center;
   /* Platform/Button Link/Medium */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -944,7 +948,6 @@ section {
   color: var(--Text-Disabled, #b8c6e3);
   text-align: right;
   /* Platform/Button Link/Small */
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -955,7 +958,6 @@ section {
   color: var(--Main-Blue, #4e6af3);
   text-align: center;
   /* Platform/Button Link/Small */
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -987,7 +989,6 @@ section {
   color: var(--Text-Black, #2a344a);
   text-align: center;
   /* Platform/Fields/Placeholder */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1020,7 +1021,6 @@ section {
   background: var(--Stroke-Divider_form, #f1f7ff);
   padding: var(--Corner_radius_s, 5px) 30px;
   color: var(--Text-Grey_Dark, #3b4a69);
-  font-family: Roboto;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1069,7 +1069,6 @@ section {
   padding: 18px 20px 18px 97px;
   color: var(--Fields-Text, #2a344a);
   /* Platform/Fields/Placeholder */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1102,7 +1101,6 @@ section {
   color: var(--Button-Primary-Text-Default, #fff);
   text-align: center;
   /* Platform/Button Link/Medium */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1123,7 +1121,6 @@ section {
   color: var(--Text-Grey_Dark, #3b4a69);
   text-align: center;
   /* Platform/Desktop/Body-1 R */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1174,12 +1171,11 @@ section {
 }
 .enter-page .enter-button {
   border-radius: 10px;
-  background: #D5DAF1;
+  background: #d5daf1;
   padding: 15px 36px;
   color: var(--Button-Primary-Text-Default, #fff);
   text-align: center;
   /* Platform/Button Link/Medium */
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1236,4 +1232,132 @@ section {
 }
 .input-container label span {
   color: var(--Text-Error, #f34942);
+}
+
+.payments-balance .right .currency {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  color: var(--Fields-Title, #7786a5);
+  /* Platform/Fields/Placeholder */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.payments-balance .right form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.payments-balance .right form input[type=submit] {
+  cursor: pointer;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--Button-Primary-BG-Default, #4e6af3);
+  padding: 10px 20px;
+  color: var(--Button-Primary-Text-Default, #fff);
+  text-align: center;
+  /* Platform/Button Link/Medium */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.payments-balance .right form input[type=number] {
+  height: 40px;
+  width: 227px;
+  padding: 0px 35px 0px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  background: var(--Fields-Form, #fff);
+  color: var(--Fields-Title, #7786a5);
+  /* Platform/Fields/Placeholder */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.payments-balance .circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: #c7d2e9;
+}
+.payments-balance .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.payments-balance .left .balance {
+  color: var(--Text-Success, #0ab258);
+  /* Platform/Accent_20 (B) */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+}
+.payments-balance .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.payments-story .green {
+  color: var(--Text-Success, #0ab258);
+}
+.payments-story .list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Table/Headline */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+.payments-story .item {
+  border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+}
+.payments-story .item:last-child {
+  border-bottom: none;
+}
+.payments-story .date {
+  margin: 0px 0px 0px 0px;
+  padding: 5px 30px;
+  background: var(--Stroke-Divider_form, #f1f7ff);
+  color: var(--Text-Grey_Dark, #3b4a69);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.payments-story li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  margin: 0px 30px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Table/Body-1 */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.payments-story h4 {
+  padding: 0px 30px 20px 30px;
+  border-bottom: 2px solid var(--Stroke-Divider_form, #f1f7ff);
+}
+.payments-story .wrapper {
+  padding: 30px 0px 0px 0px;
 }/*# sourceMappingURL=style.css.map */
