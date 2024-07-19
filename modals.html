@@ -100,7 +100,7 @@
       <div id="addEmaileModal" class="modal-content">
         <div class="mw700">
           <h3>Добавьте эл. почту</h3>
-         <div class="line"></div>
+          <div class="line"></div>
           <form class="form-add-email" action="">
             <div class="input-container">
               <label for="chengeemail">Эл. почта <span>*</span></label>
@@ -190,24 +190,11 @@
             </p>
           </div>
 
-          <a href="enter-page.html" class="delete-profile-end modal-button">Удалить профиль</a>
+          <a href="enter-page.html" class="delete-profile-end modal-button"
+            >Удалить профиль</a
+          >
         </div>
       </div>
     </div>
-    <script>
-      document.body.addEventListener("click", function (event) {
-        if (event.target.classList.contains("form-next")) {
-          event.target.classList.add("hide");
-
-          var modalContent = event.target.closest(".modal-content");
-
-          var confirmElement = modalContent.querySelector(".confirm");
-
-          if (confirmElement) {
-            confirmElement.classList.add("active");
-          }
-        }
-      });
-    </script>
   </body>
 </html>
