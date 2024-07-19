@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
+   &.hold{
+      overflow: hidden;
+   }
    font-family: "Roboto", sans-serif;
    font-size: 16px;
    font-weight: 400;
@@ -40,6 +43,13 @@ h4 {
    font-style: normal;
    font-weight: 500;
    line-height: 120%; /* 28.8px */
+}
+h5 {
+   color: var(--Text-Black, #2a344a);
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 120%; /* 24px */
 }
 main {
    flex-grow: 1;
@@ -327,6 +337,9 @@ section {
       justify-content: space-between;
       gap: 10px;
    }
+}
+.trigger {
+   cursor: pointer;
 }
 .page-head,
 .head-profile {
@@ -995,6 +1008,7 @@ section {
    }
    .mw700 {
       width: 700px;
+     
    }
    .mw460 {
       width: 460px;
@@ -1100,6 +1114,7 @@ section {
       top: 15px;
    }
    #modal-body {
+     
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1127,6 +1142,45 @@ section {
    min-width: 100%;
    min-height: 100%;
    z-index: 999;
+}
+.content-text {
+   h5{
+      padding: 40px 30px 20px 30px;
+   }
+   p {
+     span{
+      &.list{
+         margin: 0px 0px 0px 40px;
+      }
+      &.indent{
+         text-indent: 30px;
+      }
+      display: inline-block;
+      padding: 0px 0px 20px 0px;
+      &:last-child{
+         padding: 0px 0px 0px 0px;
+      }
+     }
+      color: var(--Text-Grey_Dark, #3b4a69);
+
+      /* Platform/Desktop/Body-1 R */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+      padding: 0px 30px;
+   }
+   max-height: 69vh;
+   overflow: scroll;
+   padding: 30px 0px 30px 0px;
+}
+.modal{
+   
+   .modal-content{
+      max-height: 90vh;
+      //overflow: scroll;
+   }
 }
 .enter-page {
    .enter-button {
@@ -1300,7 +1354,6 @@ section {
    .item {
       &:last-child {
          border-bottom: none;
-         
       }
       .value {
          &.green {
@@ -1352,3 +1405,4 @@ section {
       display: block;
    }
 }
+

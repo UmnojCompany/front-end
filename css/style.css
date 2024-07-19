@@ -84,6 +84,9 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
+body.hold {
+  overflow: hidden;
+}
 
 h3 {
   color: var(--Text-Black, #2a344a);
@@ -111,6 +114,14 @@ h4 span {
   color: var(--Text-Grey, #7786a5);
   display: inline-block;
   margin: 0px 0px 0px 5px;
+}
+
+h5 {
+  color: var(--Text-Black, #2a344a);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
 }
 
 main {
@@ -380,6 +391,10 @@ section {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+
+.trigger {
+  cursor: pointer;
 }
 
 .page-head .wrapper,
@@ -1163,6 +1178,42 @@ section {
 .enter-page.test,
 .modal.test {
   position: absolute;
+}
+
+.content-text {
+  max-height: 69vh;
+  overflow: scroll;
+  padding: 30px 0px 30px 0px;
+}
+.content-text h5 {
+  padding: 40px 30px 20px 30px;
+}
+.content-text p {
+  color: var(--Text-Grey_Dark, #3b4a69);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  padding: 0px 30px;
+}
+.content-text p span {
+  display: inline-block;
+  padding: 0px 0px 20px 0px;
+}
+.content-text p span.list {
+  margin: 0px 0px 0px 40px;
+}
+.content-text p span.indent {
+  text-indent: 30px;
+}
+.content-text p span:last-child {
+  padding: 0px 0px 0px 0px;
+}
+
+.modal .modal-content {
+  max-height: 90vh;
 }
 
 .enter-page {

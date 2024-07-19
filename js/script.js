@@ -5,31 +5,34 @@
 });
 document.addEventListener("DOMContentLoaded", function () {
 
-  //Вызов Модальных окон
+  // Функция для загрузки и отображения модальных окон
+  function loadModal(modalType) {
+    fetch("modals.html")
+      .then((response) => response.text())
+      .then((html) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const modalContent = doc.getElementById(modalType).innerHTML;
+
+        document.getElementById("modal-body").innerHTML = modalContent;
+        document.getElementById("modal").style.display = "flex"; // Показываем модальное окно
+        document.body.classList.add("hold"); // Добавляем класс hold для body
+      });
+  }
+
+  // Вызов Модальных окон
   document.querySelectorAll(".trigger").forEach((item) => {
     item.addEventListener("click", function () {
       const modalType = this.getAttribute("data-modal-type"); // Например, 'formModal' или 'infoModal'
-
-      // Загрузка содержимого модального окна
-      fetch("modals.html")
-        .then((response) => response.text())
-        .then((html) => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const modalContent = doc.getElementById(modalType).innerHTML;
-
-          document.getElementById("modal-body").innerHTML = modalContent;
-          document.getElementById("modal").style.display = "flex"; // Показываем модальное окно
-        });
+      loadModal(modalType);
     });
   });
 
   // Закрытие модального окна
-  document
-    .querySelector(".close-button")
-    .addEventListener("click", function () {
-      document.getElementById("modal").style.display = "none";
-    });
+  document.querySelector(".close-button").addEventListener("click", function () {
+    document.getElementById("modal").style.display = "none";
+    document.body.classList.remove("hold"); // Убираем класс hold для body
+  });
   
 // Переключатели
   var toggles = document.querySelectorAll(".toggle");
@@ -59,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   listItems.forEach(function (item, index) {
     item.addEventListener("click", function () {
-      // Удаляем класс active у всех li
       listItems.forEach(function (li) {
         li.classList.remove("active");
       });
@@ -82,4 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  
 });

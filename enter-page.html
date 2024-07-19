@@ -77,24 +77,24 @@
       document.body.addEventListener("click", function (event) {
         if (event.target.classList.contains("restore-access")) {
           event.target.classList.add("hide");
-    
+
           var modalContent = event.target.closest(".enter-page");
-    
+
           var confirmElement = modalContent.querySelector(".confirm");
           if (confirmElement) {
             confirmElement.classList.add("active");
           }
-    
+
           var phoneElement = modalContent.querySelector(".phone");
           if (phoneElement) {
             phoneElement.classList.remove("blocked");
           }
-    
+
           var blockedTextElement = modalContent.querySelector(".blocked-text");
           if (blockedTextElement) {
             blockedTextElement.classList.add("hide");
           }
-    
+
           var enterButtonElement = modalContent.querySelector(".enter-button");
           if (enterButtonElement) {
             enterButtonElement.classList.add("active");
@@ -102,8 +102,5 @@
         }
       });
     </script>
-    
-    
-    
   </body>
 </html>
