@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-   &.hold{
+   &.hold {
       overflow: hidden;
    }
    font-family: "Roboto", sans-serif;
@@ -914,6 +914,7 @@ section {
    border-radius: 10px;
    background: var(--Button-Primary-BG-Default, #4e6af3);
 }
+
 .enter-page,
 .modal {
    .daha {
@@ -1008,7 +1009,6 @@ section {
    }
    .mw700 {
       width: 700px;
-     
    }
    .mw460 {
       width: 460px;
@@ -1049,6 +1049,17 @@ section {
          border-radius: 10px;
          border: 2px solid var(--Fields-Stroke, #e1edfd);
          background: var(--Fields-Form, #fff);
+      }
+      input[type="text"] {
+         color: var(--Fields-Text, #2a344a);
+
+         /* Platform/Fields/Placeholder */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 24px; /* 150% */
+         padding: 22px 20px 10px 20px;
       }
       input[type="email"] {
          padding: 30px 20px 10px 20px;
@@ -1114,7 +1125,6 @@ section {
       top: 15px;
    }
    #modal-body {
-     
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1144,23 +1154,23 @@ section {
    z-index: 999;
 }
 .content-text {
-   h5{
+   h5 {
       padding: 40px 30px 20px 30px;
    }
    p {
-     span{
-      &.list{
-         margin: 0px 0px 0px 40px;
+      span {
+         &.list {
+            margin: 0px 0px 0px 40px;
+         }
+         &.indent {
+            text-indent: 30px;
+         }
+         display: inline-block;
+         padding: 0px 0px 20px 0px;
+         &:last-child {
+            padding: 0px 0px 0px 0px;
+         }
       }
-      &.indent{
-         text-indent: 30px;
-      }
-      display: inline-block;
-      padding: 0px 0px 20px 0px;
-      &:last-child{
-         padding: 0px 0px 0px 0px;
-      }
-     }
       color: var(--Text-Grey_Dark, #3b4a69);
 
       /* Platform/Desktop/Body-1 R */
@@ -1175,14 +1185,14 @@ section {
    overflow: scroll;
    padding: 30px 0px 30px 0px;
 }
-.modal{
-   
-   .modal-content{
+.modal {
+   .modal-content {
       max-height: 90vh;
       //overflow: scroll;
    }
 }
 .enter-page {
+   .next-button,
    .enter-button {
       border-radius: 10px;
       &.active {
@@ -1222,35 +1232,6 @@ section {
    }
    background: none;
    padding: 100px 0px 0px 0px;
-}
-.input-container {
-   .blocked-text {
-      &.hide {
-         display: none;
-      }
-      color: var(--Text-Error, #f34942);
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px; /* 133.333% */
-   }
-   label {
-      position: absolute;
-      left: 20px;
-      top: 10px;
-      color: var(--Fields-Title, #7786a5);
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px; /* 133.333% */
-      span {
-         color: var(--Text-Error, #f34942);
-      }
-   }
-   display: flex;
-   flex-direction: column;
-   gap: 4px;
-   position: relative;
 }
 .payments-balance {
    .right {
@@ -1405,4 +1386,136 @@ section {
       display: block;
    }
 }
+.registration-page {
+   p{
+      color: var(--Text-Grey, #7786A5);
 
+/* Platform/Desktop/Body-2 R */
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+text-align: center;
+a{
+   color: var(--Main-Blue, #4E6AF3);
+
+/* Platform/Button Link/Small */
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 114.286% */
+display: inline-block;
+margin: 30px 0px 0px 0px;
+}
+   }
+   .top {
+      min-width: 100%;
+   }
+   .bott {
+      .input-container {
+         flex: 1;
+      }
+      input {
+         // min-width: 100% !important;
+         width: 100% !important;
+      }
+      display: flex;
+      gap: 20px;
+      min-width: 100%;
+      // justify-content: space-between;
+   }
+   padding: 0px 0px 0px 0px;
+   display: flex;
+   align-items: center;
+   .enter-button {
+      display: none;
+      &.active {
+         display: block;
+      }
+   }
+   .next-button {
+      &.hide {
+         display: none;
+      }
+   }
+}
+.select-container {
+   // &::after{
+   //    content: '';
+   //    width: 18px;
+   //    height: 18px;
+   //    position: absolute;
+   //    right: 10px;
+   //    top: 10px;
+   //    background: url('../img/icon_container.svg') no-repeat;
+   // }
+   select {
+      background: #fff
+         url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgc3Ryb2tlPSIjNzc4NkE1IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjUgNy43NUw4LjY0NiAxMS44OTZDOC44NDEgMTIuMDkxIDkgMTIuMDkxIDkuMzUzNSAxMS44OTZMMTMuNSA3Ljc1Ii8+PC9zdmc+")
+         no-repeat right 0px;
+      background-size: 18px;
+      appearance: none; /* Убираем стандартный стиль браузера */
+      -webkit-appearance: none; /* Убираем стандартный стиль браузера для Safari */
+      -moz-appearance: none; /* Убираем стандартный стиль браузера для Firefox */
+
+      width: 100%;
+      color: var(--Fields-Text, #2a344a);
+
+      /* Platform/Fields/Placeholder */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+   }
+   label {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      color: var(--Fields-Title, #7786a5);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 133.333% */
+      span {
+         color: var(--Text-Error, #f34942);
+      }
+   }
+   position: relative;
+   min-width: 100%;
+   padding: 30px 20px 10px 20px;
+   border-radius: 10px;
+   border: 2px solid var(--Fields-Stroke, #e1edfd);
+   background: var(--Fields-Form, #fff);
+}
+.input-container {
+   .blocked-text {
+      &.hide {
+         display: none;
+      }
+      color: var(--Text-Error, #f34942);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 133.333% */
+   }
+   label {
+      position: absolute;
+      left: 22px;
+      top: 10px;
+      color: var(--Fields-Title, #7786a5);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 133.333% */
+      span {
+         color: var(--Text-Error, #f34942);
+      }
+   }
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   position: relative;
+}
