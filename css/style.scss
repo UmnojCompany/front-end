@@ -1281,9 +1281,6 @@ section {
    }
 }
 .payments-story {
-   .green {
-      color: var(--Text-Success, #0ab258);
-   }
    .list-header {
       display: flex;
       align-items: center;
@@ -1303,7 +1300,14 @@ section {
    .item {
       &:last-child {
          border-bottom: none;
+         
       }
+      .value {
+         &.green {
+            color: var(--Text-Success, #0ab258);
+         }
+      }
+
       border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
    }
    .date {
@@ -1342,9 +1346,9 @@ section {
       padding: 30px 0px 0px 0px;
    }
 }
-.page-list{
+.page-list {
    display: none;
-   &.active{
+   &.active {
       display: block;
    }
 }

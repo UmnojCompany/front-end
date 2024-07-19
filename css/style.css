@@ -1304,9 +1304,6 @@ section {
   padding: 20px 30px;
 }
 
-.payments-story .green {
-  color: var(--Text-Success, #0ab258);
-}
 .payments-story .list-header {
   display: flex;
   align-items: center;
@@ -1327,6 +1324,9 @@ section {
 }
 .payments-story .item:last-child {
   border-bottom: none;
+}
+.payments-story .item .value.green {
+  color: var(--Text-Success, #0ab258);
 }
 .payments-story .date {
   margin: 0px 0px 0px 0px;
