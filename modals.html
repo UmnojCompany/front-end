@@ -168,7 +168,7 @@
                 placeholder="+7 (919) 777–77–77"
               />
             </div>
-            <div class="form-next">Далее</div>
+            <div class="form-next button-primary w370">Далее</div>
             <!-- <input class="" type="submit" value="Далее" /> -->
           </form>
           <div class="confirm">
@@ -189,7 +189,8 @@
               <div class="daha">
                 Отправить код ещё раз через <span>(2:59)</span>
               </div>
-              <input class="" type="submit" value="Изменить номер телефона" />
+              <div class="button-primary w370">Изменить номер телефона</div>
+              <!-- <input class="button-primary w370" type="submit" value="Изменить номер телефона" /> -->
             </form>
           </div>
         </div>
@@ -213,8 +214,8 @@
                 placeholder="@infoumnoj"
               />
             </div>
-
-            <input class="" type="submit" value="Добавить Telegram" />
+            <div class="button-primary w370">Добавить Telegram</div>
+            <!-- <input class="" type="submit" value="Добавить Telegram" /> -->
           </form>
         </div>
       </div>
@@ -233,7 +234,7 @@
                 placeholder="info@umnoj.com"
               />
             </div>
-            <div class="form-next">Далее</div>
+            <div class="form-next button-primary w370">Далее</div>
             <!-- <input class="" type="submit" value="Далее" /> -->
           </form>
           <div class="confirm">
@@ -253,7 +254,8 @@
               <div class="daha">
                 Отправить код ещё раз через <span>(2:59)</span>
               </div>
-              <input class="" type="submit" value="Добавить эл. почту" />
+              <div class="button-primary w370">Добавить эл. почту</div>
+              <!-- <input class="" type="submit" value="Добавить эл. почту" /> -->
             </form>
           </div>
         </div>
@@ -275,7 +277,7 @@
                 placeholder="info@umnoj.com"
               />
             </div>
-            <div class="form-next">Далее</div>
+            <div class="form-next button-primary w370">Далее</div>
             <!-- <input class="" type="submit" value="Далее" /> -->
           </form>
           <div class="confirm">
@@ -295,7 +297,8 @@
               <div class="daha">
                 Отправить код ещё раз через <span>(2:59)</span>
               </div>
-              <input class="" type="submit" value="Изменить эл. почту" />
+              <div class="button-primary w370">Изменить эл. почту</div>
+              <!-- <input class="" type="submit" value="Изменить эл. почту" /> -->
             </form>
           </div>
         </div>
@@ -312,11 +315,26 @@
             </p>
           </div>
 
-          <a href="enter-page.html" class="delete-profile-end modal-button"
+          <a href="enter-page.html" class="button-primary fit-content"
             >Удалить профиль</a
           >
         </div>
       </div>
     </div>
+    <script>
+      document.body.addEventListener("click", function (event) {
+        if (event.target.classList.contains("form-next")) {
+          event.target.classList.add("hide");
+
+          var modalContent = event.target.closest(".modal-content");
+
+          var confirmElement = modalContent.querySelector(".confirm");
+
+          if (confirmElement) {
+            confirmElement.classList.add("active");
+          }
+        }
+      });
+    </script>
   </body>
 </html>
