@@ -1047,40 +1047,6 @@ section {
 .enter-page form input,
 .modal form input {
   width: 370px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid var(--Fields-Stroke, #e1edfd);
-  background: var(--Fields-Form, #fff);
-}
-.enter-page form input.phone,
-.modal form input.phone {
-  padding: 18px 20px 18px 97px;
-  color: var(--Fields-Text, #2a344a);
-  /* Platform/Fields/Placeholder */
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 150% */
-}
-.enter-page form input.phone.blocked,
-.modal form input.phone.blocked {
-  border: 2px solid var(--Fields-Stroke-Error, #ffd8d8);
-  background: var(--Fields-BG-Error, #fff5f5);
-}
-.enter-page form input[type=text],
-.modal form input[type=text] {
-  color: var(--Fields-Text, #2a344a);
-  /* Platform/Fields/Placeholder */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  padding: 22px 20px 10px 20px;
-}
-.enter-page form input[type=email],
-.modal form input[type=email] {
-  padding: 30px 20px 10px 20px;
 }
 .enter-page .info,
 .modal .info {
@@ -1091,7 +1057,6 @@ section {
   margin: 0px 0px 40px 0px;
   color: var(--Text-Grey_Dark, #3b4a69);
   text-align: center;
-  /* Platform/Desktop/Body-1 R */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1199,76 +1164,6 @@ section {
   flex: 1;
 }
 
-.payments-balance .right .currency {
-  position: absolute;
-  top: 8px;
-  right: 15px;
-  color: var(--Fields-Title, #7786a5);
-  /* Platform/Fields/Placeholder */
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-}
-.payments-balance .right form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.payments-balance .right form input[type=submit] {
-  cursor: pointer;
-  height: 40px;
-  border-radius: 10px;
-  background: var(--Button-Primary-BG-Default, #4e6af3);
-  padding: 10px 20px;
-  color: var(--Button-Primary-Text-Default, #fff);
-  text-align: center;
-  /* Platform/Button Link/Medium */
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 125% */
-}
-.payments-balance .right form input[type=number] {
-  height: 40px;
-  width: 227px;
-  padding: 0px 35px 0px 15px;
-  border-radius: 10px;
-  border: 2px solid var(--Fields-Stroke, #e1edfd);
-  background: var(--Fields-Form, #fff);
-  color: var(--Fields-Title, #7786a5);
-  /* Platform/Fields/Placeholder */
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-}
-.payments-balance .circle {
-  width: 4px;
-  height: 4px;
-  border-radius: 4px;
-  background: #c7d2e9;
-}
-.payments-balance .left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.payments-balance .left .balance {
-  color: var(--Text-Success, #0ab258);
-  /* Platform/Accent_20 (B) */
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 24px */
-}
-.payments-balance .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 30px;
-}
-
 .payments-story .list-header {
   display: flex;
   align-items: center;
@@ -1372,7 +1267,7 @@ section {
   flex: 1;
 }
 .registration-page .bott input {
-  width: 100% !important;
+  width: 100%;
 }
 .registration-page .enter-button {
   display: none;
@@ -1510,4 +1405,93 @@ section {
 .button-primary:focus {
   border: 2px solid var(--Button-Primary-Stroke-Focused, #f845fc);
   background: var(--Button-Primary-BG-Focused, #3e56d0);
+}
+
+.payments-balance .right .currency {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  color: var(--Fields-Title, #7786a5);
+  /* Platform/Fields/Placeholder */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.payments-balance .right form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.payments-balance .right form .button-primary {
+  height: 40px;
+  padding: 10px 20px;
+}
+.payments-balance .right form input[type=number] {
+  height: 40px;
+  width: 227px;
+  padding: 0px 35px 0px 15px;
+}
+.payments-balance .circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: #c7d2e9;
+}
+.payments-balance .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.payments-balance .left .balance {
+  color: var(--Text-Success, #0ab258);
+  /* Platform/Accent_20 (B) */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+}
+.payments-balance .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+form input {
+  border-radius: var(--Corner_radius_m, 10px);
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  background: var(--Fields-Form, #fff);
+  display: flex;
+  width: 300px;
+  padding: 17px 20px;
+  align-items: center;
+  gap: var(--Corner_radius_m, 10px);
+  color: var(--Fields-Text, #2A344A);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+form input.labeled {
+  padding: 26px 20px 6px 20px;
+}
+form input.phone {
+  padding: 16px 20px 16px 97px;
+}
+form input.phone.blocked {
+  border: 2px solid var(--Fields-Stroke-Error, #ffd8d8);
+  background: var(--Fields-BG-Error, #fff5f5);
+}
+form input input[type=text] {
+  padding: 22px 20px 10px 20px;
+}
+form input[type=email] {
+  padding: 26px 20px 6px 20px;
+}
+form input:focus {
+  border: 2px solid #4e6af3;
+}
+form input:hover {
+  border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
 }/*# sourceMappingURL=style.css.map */
