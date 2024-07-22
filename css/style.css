@@ -319,7 +319,7 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 19.6px */
-  padding: 0px 0px 10px 0px;
+  padding: 200px 0px 10px 0px;
 }
 .footer .wrapp.mob {
   background: url("../img/tab_bar.svg") top no-repeat;
