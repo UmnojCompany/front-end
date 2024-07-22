@@ -74,4 +74,30 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+
+});
+
+ // Первый скрипт для обработки кликов на элементах с классом form-next
+ document.body.addEventListener("click", function (event) {
+  if (event.target.classList.contains("form-next")) {
+    event.target.classList.add("hide");
+
+    var modalContent = event.target.closest(".modal-content");
+
+    var confirmElement = modalContent.querySelector(".confirm");
+
+    if (confirmElement) {
+      confirmElement.classList.add("active");
+    }
+  }
+});
+
+// Второй скрипт для ограничения ввода одной цифрой в инпутах с классом single-digit
+document.body.addEventListener("input", function (event) {
+  if (event.target.classList.contains("single-digit")) {
+    if (event.target.value.length > 1) {
+      event.target.value = event.target.value.slice(0, 1);
+    }
+  }
 });

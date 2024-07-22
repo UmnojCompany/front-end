@@ -1015,7 +1015,7 @@ section {
          width: 370px;
          //padding: 10px 20px;
       }
-     
+
       input[type="email"] {
          //padding: 30px 20px 10px 20px;
       }
@@ -1249,7 +1249,7 @@ section {
       }
       input {
          // min-width: 100% !important;
-         width: 100% ;
+         width: 100%;
       }
       display: flex;
       gap: 20px;
@@ -1473,10 +1473,10 @@ section {
 }
 form {
    input {
-      &.labeled{
+      &.labeled {
          padding: 26px 20px 6px 20px;
       }
-      &.phone{
+      &.phone {
          &.blocked {
             border: 2px solid var(--Fields-Stroke-Error, #ffd8d8);
             background: var(--Fields-BG-Error, #fff5f5);
@@ -1508,11 +1508,26 @@ form {
       align-items: center;
       gap: var(--Corner_radius_m, 10px);
 
-      color: var(--Fields-Text, #2A344A);
+      color: var(--Fields-Text, #2a344a);
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 24px; /* 150% */
-      
+   }
+   /* Убираем стрелки для всех браузеров */
+   input[type="number"] {
+      -moz-appearance: textfield; /* Firefox */
+   }
+
+   /* Убираем стрелки для Chrome, Safari, Edge, Opera */
+   input[type="number"]::-webkit-outer-spin-button,
+   input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+
+   /* Убираем стрелки для IE */
+   input[type="number"] {
+      -ms-appearance: none;
    }
 }

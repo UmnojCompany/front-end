@@ -1458,6 +1458,11 @@ section {
   padding: 20px 30px;
 }
 
+form {
+  /* Убираем стрелки для всех браузеров */
+  /* Убираем стрелки для Chrome, Safari, Edge, Opera */
+  /* Убираем стрелки для IE */
+}
 form input {
   border-radius: var(--Corner_radius_m, 10px);
   border: 2px solid var(--Fields-Stroke, #e1edfd);
@@ -1467,7 +1472,7 @@ form input {
   padding: 17px 20px;
   align-items: center;
   gap: var(--Corner_radius_m, 10px);
-  color: var(--Fields-Text, #2A344A);
+  color: var(--Fields-Text, #2a344a);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1494,4 +1499,15 @@ form input:focus {
 }
 form input:hover {
   border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
+}
+form input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+form input[type=number]::-webkit-outer-spin-button,
+form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+form input[type=number] {
+  -ms-appearance: none;
 }/*# sourceMappingURL=style.css.map */

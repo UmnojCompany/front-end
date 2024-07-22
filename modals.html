@@ -181,15 +181,53 @@
             </div>
             <form action="">
               <div class="numbers">
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
               </div>
               <div class="daha">
                 Отправить код ещё раз через <span>(2:59)</span>
               </div>
-              <a href="#" class="button-primary w370">Изменить номер телефона</a>
+              <a href="#" class="button-primary w370"
+                >Изменить номер телефона</a
+              >
               <!-- <input class="button-primary w370" type="submit" value="Изменить номер телефона" /> -->
             </form>
           </div>
@@ -207,7 +245,8 @@
           <form class="form-change-email" action="">
             <div class="input-container">
               <label for="chengeemail">Telegram<span>*</span></label>
-              <input class="labeled"
+              <input
+                class="labeled"
                 type="text"
                 name=""
                 id="chengeemail"
@@ -246,10 +285,46 @@
             </div>
             <form action="">
               <div class="numbers">
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
               </div>
               <div class="daha">
                 Отправить код ещё раз через <span>(2:59)</span>
@@ -289,10 +364,46 @@
             </div>
             <form action="">
               <div class="numbers">
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
-                <input type="" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
               </div>
               <div class="daha">
                 Отправить код ещё раз через <span>(2:59)</span>
@@ -322,6 +433,7 @@
       </div>
     </div>
     <script>
+      // Первый скрипт для обработки кликов на элементах с классом form-next
       document.body.addEventListener("click", function (event) {
         if (event.target.classList.contains("form-next")) {
           event.target.classList.add("hide");
@@ -332,6 +444,15 @@
 
           if (confirmElement) {
             confirmElement.classList.add("active");
+          }
+        }
+      });
+
+      // Второй скрипт для ограничения ввода одной цифрой в инпутах с классом single-digit
+      document.body.addEventListener("input", function (event) {
+        if (event.target.classList.contains("single-digit")) {
+          if (event.target.value.length > 1) {
+            event.target.value = event.target.value.slice(0, 1);
           }
         }
       });
