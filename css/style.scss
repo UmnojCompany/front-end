@@ -1005,20 +1005,9 @@ section {
       gap: 20px;
       align-items: center;
       input {
-         // &.phone {
-         //    &.blocked {
-         //       border: 2px solid var(--Fields-Stroke-Error, #ffd8d8);
-         //       background: var(--Fields-BG-Error, #fff5f5);
-         //    }
-         //    padding: 18px 20px 18px 97px;
-         // }
          width: 370px;
-         //padding: 10px 20px;
       }
 
-      input[type="email"] {
-         //padding: 30px 20px 10px 20px;
-      }
    }
 
    .info {
@@ -1493,6 +1482,9 @@ form {
          padding: 26px 20px 6px 20px;
       }
       &:focus {
+         &:hover{
+            border: 2px solid #4e6af3;
+         }
          border: 2px solid #4e6af3;
       }
       &:hover {
@@ -1501,6 +1493,7 @@ form {
       border-radius: var(--Corner_radius_m, 10px);
       border: 2px solid var(--Fields-Stroke, #e1edfd);
       background: var(--Fields-Form, #fff);
+      outline: none; /* Убираем стандартный outline */
 
       display: flex;
       width: 300px;

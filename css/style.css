@@ -1467,6 +1467,7 @@ form input {
   border-radius: var(--Corner_radius_m, 10px);
   border: 2px solid var(--Fields-Stroke, #e1edfd);
   background: var(--Fields-Form, #fff);
+  outline: none; /* Убираем стандартный outline */
   display: flex;
   width: 300px;
   padding: 17px 20px;
@@ -1495,6 +1496,9 @@ form input[type=email] {
   padding: 26px 20px 6px 20px;
 }
 form input:focus {
+  border: 2px solid #4e6af3;
+}
+form input:focus:hover {
   border: 2px solid #4e6af3;
 }
 form input:hover {
