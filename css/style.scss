@@ -1106,7 +1106,7 @@ section {
    }
 }
 .enter-page {
-  position: absolute;
+   position: absolute;
    .restore-access {
       &.hide {
          display: none;
@@ -1130,7 +1130,7 @@ section {
    display: flex;
    align-items: center;
    .container {
-     padding: 100px 0px ;
+      padding: 100px 0px;
       flex: 1;
    }
 }
@@ -1461,6 +1461,84 @@ section {
    }
 }
 form {
+   &.gap{
+      gap: 20px;
+   }
+   .row {
+      min-width: 100%;
+      .input-container {
+         .placeholder {
+            z-index: 0;
+            span {
+               color: var(--Text-Error, #f34942);
+            }
+            position: absolute;
+            left: 20px;
+            top: 20px;
+
+            color: var(--Fields-Title, #7786a5);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+         }
+         input {
+            background: none;
+            z-index: 1;
+            min-width: 100%;
+            &:focus + .placeholder{
+                  display: none;
+               }
+            
+         }
+         flex: 1;
+      }
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+   }
+   .upload-container {
+      a {
+         color: var(--Main-Blue, #4e6af3);
+      }
+      border: 2px dashed var(--Stroke-Divider, #e1edfd);
+
+      border-radius: 10px;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+
+      position: relative;
+      cursor: pointer;
+   }
+
+   .upload-container input[type="file"] {
+      display: none;
+   }
+
+   .upload-container.dragover {
+      border-color: #4caf50;
+      color: #4caf50;
+   }
+
+   .preview {
+   }
+
+   .preview img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+   }
+
    input {
       &.labeled {
          padding: 26px 20px 6px 20px;
@@ -1523,4 +1601,62 @@ form {
    input[type="number"] {
       -ms-appearance: none;
    }
+}
+.progress-container {
+   width: 100%;
+   background-color: #eef1f5;
+
+   overflow: hidden;
+}
+.progress-bar {
+   height: 6px;
+   width: 0;
+   border-radius: 0px 2px 2px 0px;
+   background: var(--Main-Blue, #4e6af3);
+}
+.create-profile-realtor {
+   h5{
+      padding: 0px 30px ;
+   }
+   form {
+      gap: 0;
+      margin: 0px 0px 0px 0px;
+      padding: 30px;
+      &.gap{
+         gap: 20px;
+      }
+   }
+   h3 {
+      span {
+         color: var(--Text-Error, #f34942);
+      }
+   }
+   .id-realtor {
+      padding: 9px 30px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+   }
+   .head {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+   }
+   .cancel {
+      position: absolute;
+      top: 40px;
+      right: -50px;
+      cursor: pointer;
+      border-radius: 50px;
+      background: #fff;
+      padding: 8px;
+      display: inline-flex;
+   }
+   .container {
+      position: relative;
+      padding: 40px 0px 0px 0px;
+   }
+   align-items: flex-start;
+   position: relative;
 }

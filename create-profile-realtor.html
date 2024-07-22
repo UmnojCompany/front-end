@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Profile Realtor Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <main>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <button onclick="move()">Increment Progress</button>
+
+      <section class="enter-page create-profile-realtor">
+        <div class="container">
+          <div class="cancel">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.3647 5.63567C18.7552 6.02619 18.7552 6.65936 18.3647 7.04988L13.4148 11.9998L18.3646 16.9495C18.7551 17.34 18.7551 17.9732 18.3646 18.3637C17.974 18.7543 17.3409 18.7543 16.9504 18.3637L12.0006 13.414L7.05099 18.3636C6.66047 18.7541 6.0273 18.7541 5.63678 18.3636C5.24625 17.9731 5.24625 17.3399 5.63678 16.9494L10.5864 11.9998L5.63664 7.05002C5.24612 6.6595 5.24612 6.02633 5.63664 5.63581C6.02717 5.24528 6.66033 5.24528 7.05086 5.63581L12.0006 10.5856L16.9505 5.63567C17.341 5.24514 17.9742 5.24514 18.3647 5.63567Z"
+                fill="#2A344A"
+              />
+            </svg>
+          </div>
+          <div class="wrapper head">
+            <h3>Настройте ваш профиль риелтора</h3>
+            <div class="id-realtor">ID 10445</div>
+          </div>
+          <div class="wrapper">
+            <h3>Фото для профиля <span>*</span></h3>
+            <div class="subtitle">
+              Загрузите минимум одно фото для профиля. Вес до 10 мб. Оптимальное
+              разрешение 600 x 600px. Доступный формат jpg / png
+            </div>
+            <form action="">
+              <div class="upload-container" id="uploadContainer">
+                <div class="file-icon">
+                  <img src="img/file-image.svg" alt="" />
+                </div>
+                <p>
+                  Перетащите изображение сюда или <a> загрузите с устройства</a>
+                </p>
+                <input type="file" id="fileInput" accept="image/*" />
+              </div>
+              <div class="preview" id="preview"></div>
+            </form>
+          </div>
+          <div class="wrapper">
+            <h3>Личные данные <span>*</span></h3>
+            <div class="subtitle">
+              Ваши личные данные будут доступны всем пользователям платформы
+            </div>
+            <form class="gap" action="">
+              <div class="row">
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Имя <span>*</span></div>
+                </div>
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Фамилия <span>*</span></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Отчество</div>
+                </div>
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Пол <span>*</span></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="select-container">
+                  <label for="fruit-select">Город <span>*</span></label>
+                  <select id="fruit-select" name="fruits">
+                    <option value="">Выберите ваш город</option>
+                    <option value="apple">Я клиент</option>
+                    <option value="banana">Я риелтор</option>
+                    <option value="cherry">Я застройщик</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="wrapper">
+            <h3>Контакты <span>*</span></h3>
+            <div class="subtitle">
+              Все данные, кроме эл. почтывидны пользователям, которые откроют
+              вам свои контакты
+            </div>
+            <form class="gap" action="">
+              <div class="row">
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Телефон <span>*</span></div>
+                </div>
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Эл. почта <span>*</span></div>
+                </div>
+              </div>
+            </form>
+            <h5>Мессенджеры</h5>
+            <form class="gap" action="">
+              <div class="row">
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">WhatsApp</div>
+                </div>
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Telegram</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Viber</div>
+                </div>
+                <div class="input-container">
+                  <input type="text" name="" id="" />
+                  <div class="placeholder">Zoom</div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="wrapper">
+            <h3>Параметры недвижимости <span>*</span></h3>
+            <div class="subtitle">
+              Укажите параметры недвижимости, которой сейчас занимаетесь.
+              Система будет информировать вас о поступлении заявок
+              с аналогичными данными
+            </div>
+            <form class="gap" action="">
+              <div class="row">
+                <div class="select-container">
+                  <label for="fruit-select"
+                    >Город недвижимости <span>*</span></label
+                  >
+                  <select id="fruit-select" name="fruits">
+                    <option value="">Выберите город</option>
+                    <option value="apple">Я клиент</option>
+                    <option value="banana">Я риелтор</option>
+                    <option value="cherry">Я застройщик</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="select-container">
+                  <label for="fruit-select">Формат сделки <span>*</span></label>
+                  <select id="fruit-select" name="fruits">
+                    <option value="">Выберите</option>
+                    <option value="apple">Я клиент</option>
+                    <option value="banana">Я риелтор</option>
+                    <option value="cherry">Я застройщик</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="select-container">
+                  <label for="fruit-select"
+                    >Тип недвижимости <span>*</span></label
+                  >
+                  <select id="fruit-select" name="fruits">
+                    <option value="">Выберите</option>
+                    <option value="apple">Я клиент</option>
+                    <option value="banana">Я риелтор</option>
+                    <option value="cherry">Я застройщик</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="select-container">
+                  <label for="fruit-select"
+                    >Состояние недвижимости <span>*</span></label
+                  >
+                  <select id="fruit-select" name="fruits">
+                    <option value="">Выберите</option>
+                    <option value="apple">Я клиент</option>
+                    <option value="banana">Я риелтор</option>
+                    <option value="cherry">Я застройщик</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="wrapper">
+            <h3>Лицензии и сертификаты</h3>
+            <div class="subtitle">
+              Можете загрузить до 20 изображений. Вес до 10 мб. Оптимальное разрешение 1080 x 1920px. Доступный формат jpg / png / pdf
+            </div>
+            <form action="">
+              <div class="upload-container" id="uploadContainer">
+                <div class="file-icon">
+                  <img src="img/file-image.svg" alt="" />
+                </div>
+                <p>
+                  Перетащите изображение сюда или <a> загрузите с устройства</a>
+                </p>
+                <input type="file" id="fileInput2" accept="image/*" />
+              </div>
+              <div class="preview" id="preview"></div>
+            </form>
+          </div>
+          <div class="wrapper">
+            <h3>О себе</h3>
+            <div class="subtitle">Напишите о себе и преимуществах работы с вами</div>
+            <form action="">
+              <div class="input-container">
+                <textarea name="" id=""></textarea>
+              </div>
+            </form>
+          </div>
+
+          <div class="button-primary">Создать профиль</div>
+        </div>
+      </section>
+    </main>
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.3647 5.63567C18.7552 6.02619 18.7552 6.65936 18.3647 7.04988L13.4148 11.9998L18.3646 16.9495C18.7551 17.34 18.7551 17.9732 18.3646 18.3637C17.974 18.7543 17.3409 18.7543 16.9504 18.3637L12.0006 13.414L7.05099 18.3636C6.66047 18.7541 6.0273 18.7541 5.63678 18.3636C5.24625 17.9731 5.24625 17.3399 5.63678 16.9494L10.5864 11.9998L5.63664 7.05002C5.24612 6.6595 5.24612 6.02633 5.63664 5.63581C6.02717 5.24528 6.66033 5.24528 7.05086 5.63581L12.0006 10.5856L16.9505 5.63567C17.341 5.24514 17.9742 5.24514 18.3647 5.63567Z"
+              fill="#7786A5"
+            /></svg
+        ></span>
+        <div id="modal-body"></div>
+      </div>
+      <script>
+        document.body.addEventListener("click", function (event) {
+          if (event.target.classList.contains("form-next")) {
+            event.target.classList.add("hide");
+
+            var modalContent = event.target.closest(".modal-content");
+
+            var confirmElement = modalContent.querySelector(".confirm");
+
+            if (confirmElement) {
+              confirmElement.classList.add("active");
+            }
+          }
+        });
+      </script>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // прогресс бар
+      let progress = 0;
+
+      function move() {
+        if (progress < 100) {
+          progress += 10;
+          const progressBar = document.getElementById("progressBar");
+          progressBar.style.width = progress + "%";
+        }
+      }
+      // область загрузки фото
+
+      const uploadContainer = document.getElementById("uploadContainer");
+      const fileInput = document.getElementById("fileInput");
+      const preview = document.getElementById("preview");
+
+      uploadContainer.addEventListener("click", () => {
+        fileInput.click();
+      });
+
+      uploadContainer.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        uploadContainer.classList.add("dragover");
+      });
+
+      uploadContainer.addEventListener("dragleave", () => {
+        uploadContainer.classList.remove("dragover");
+      });
+
+      uploadContainer.addEventListener("drop", (event) => {
+        event.preventDefault();
+        uploadContainer.classList.remove("dragover");
+
+        const files = event.dataTransfer.files;
+        if (files.length) {
+          fileInput.files = files;
+          handleFiles(files);
+        }
+      });
+
+      fileInput.addEventListener("change", (event) => {
+        handleFiles(event.target.files);
+      });
+
+      function handleFiles(files) {
+        preview.innerHTML = "";
+        const file = files[0];
+        if (file && file.type.startsWith("image/")) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            const img = document.createElement("img");
+            img.src = event.target.result;
+            preview.appendChild(img);
+          };
+          reader.readAsDataURL(file);
+        } else {
+          alert("Please upload an image file.");
+        }
+      }
+    </script>
+  </body>
+</html>
