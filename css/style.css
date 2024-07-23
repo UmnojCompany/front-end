@@ -1509,6 +1509,7 @@ form .preview {
   display: flex;
   gap: 20px;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 form .preview img {
   margin: 0px 0px 0px 0px;
