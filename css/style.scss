@@ -1526,16 +1526,23 @@ form {
    }
 
    .upload-container.dragover {
-      border-color: #4caf50;
-      color: #4caf50;
+      border-color: #3E56D0;
+
+      color: #3E56D0;
    }
 
    .preview {
+      display: flex;
+      min-width: 100%;
+      gap: 20px;
+      justify-content: flex-start;
    }
 
    .preview img {
-      max-width: 100%;
-      height: auto;
+      margin: 20px 0px 0px 0px;
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
       border-radius: 10px;
    }
 
