@@ -1461,6 +1461,70 @@ section {
    }
 }
 form {
+
+   .up-info {
+      a {
+         color: var(--Main-Blue, #4e6af3);
+      }
+      border: 2px dashed var(--Stroke-Divider, #e1edfd);
+
+      border-radius: 10px;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+
+      position: relative;
+      cursor: pointer;
+   }
+   .upload-container {
+      &.full {
+         .up-info {
+            width: 130px;
+            height: 130px;
+            p {
+               display: none;
+            }
+         }
+      }
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      min-width: 100%;
+   }
+
+   .upload-container input[type="file"] {
+      display: none;
+   }
+
+   .upload-container.dragover {
+      border-color: #3e56d0;
+
+      color: #3e56d0;
+   }
+
+   .preview {
+      display: flex;
+      //min-width: 100%;
+      gap: 20px;
+      justify-content: flex-start;
+   }
+
+   .preview img {
+      margin: 0px 0px 0px 0px;
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+   }
    .char-counter {
       position: absolute;
       top: 18px;
@@ -1521,7 +1585,6 @@ form {
             font-size: 12px;
             top: 5px;
          }
-        
       }
       flex: 1;
    }
@@ -1531,54 +1594,6 @@ form {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-   }
-   .upload-container {
-      a {
-         color: var(--Main-Blue, #4e6af3);
-      }
-      border: 2px dashed var(--Stroke-Divider, #e1edfd);
-
-      border-radius: 10px;
-      width: 100%;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-      justify-content: center;
-
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%; /* 24px */
-
-      position: relative;
-      cursor: pointer;
-   }
-
-   .upload-container input[type="file"] {
-      display: none;
-   }
-
-   .upload-container.dragover {
-      border-color: #3e56d0;
-
-      color: #3e56d0;
-   }
-
-   .preview {
-      display: flex;
-      min-width: 100%;
-      gap: 20px;
-      justify-content: flex-start;
-   }
-
-   .preview img {
-      margin: 20px 0px 0px 0px;
-      width: 130px;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 10px;
    }
 
    input {

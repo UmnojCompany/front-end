@@ -1465,6 +1465,59 @@ form {
   /* Убираем стрелки для Chrome, Safari, Edge, Opera */
   /* Убираем стрелки для IE */
 }
+form .up-info {
+  border: 2px dashed var(--Stroke-Divider, #e1edfd);
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  position: relative;
+  cursor: pointer;
+}
+form .up-info a {
+  color: var(--Main-Blue, #4e6af3);
+}
+form .upload-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  min-width: 100%;
+}
+form .upload-container.full .up-info {
+  width: 130px;
+  height: 130px;
+}
+form .upload-container.full .up-info p {
+  display: none;
+}
+form .upload-container input[type=file] {
+  display: none;
+}
+form .upload-container.dragover {
+  border-color: #3e56d0;
+  color: #3e56d0;
+}
+form .preview {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+form .preview img {
+  margin: 0px 0px 0px 0px;
+  width: 130px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
 form .char-counter {
   position: absolute;
   top: 18px;
@@ -1530,47 +1583,6 @@ form .row {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-}
-form .upload-container {
-  border: 2px dashed var(--Stroke-Divider, #e1edfd);
-  border-radius: 10px;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-  position: relative;
-  cursor: pointer;
-}
-form .upload-container a {
-  color: var(--Main-Blue, #4e6af3);
-}
-form .upload-container input[type=file] {
-  display: none;
-}
-form .upload-container.dragover {
-  border-color: #3e56d0;
-  color: #3e56d0;
-}
-form .preview {
-  display: flex;
-  min-width: 100%;
-  gap: 20px;
-  justify-content: flex-start;
-}
-form .preview img {
-  margin: 20px 0px 0px 0px;
-  width: 130px;
-  height: 130px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
 }
 form input {
   border-radius: var(--Corner_radius_m, 10px);

@@ -44,14 +44,17 @@
             </div>
             <form action="">
               <div class="upload-container" data-multiple="false">
-                <div class="file-icon">
-                  <img src="img/file-image.svg" alt="" />
-                </div>
-                <p>
-                  Перетащите изображение сюда или <a> загрузите с устройства</a>
-                </p>
-                <input type="file" accept="image/*" style="display: none" />
                 <div class="preview"></div>
+                <div class="up-info">
+                  <div class="file-icon">
+                    <img src="img/file-image.svg" alt="" />
+                  </div>
+                  <p>
+                    Перетащите изображение сюда или
+                    <a> загрузите с устройства</a>
+                  </p>
+                  <input type="file" accept="image/*" style="display: none" />
+                </div>
               </div>
             </form>
           </div>
@@ -204,19 +207,22 @@
             </div>
             <form action="">
               <div class="upload-container" data-multiple="true">
-                <div class="file-icon">
-                  <img src="img/file-image.svg" alt="" />
-                </div>
-                <p>
-                  Перетащите изображение сюда или <a> загрузите с устройства</a>
-                </p>
-                <input
-                  type="file"
-                  accept="image/*"
-                  multiple
-                  style="display: none"
-                />
                 <div class="preview"></div>
+                <div class="up-info">
+                  <div class="file-icon">
+                    <img src="img/file-image.svg" alt="" />
+                  </div>
+                  <p>
+                    Перетащите изображение сюда или
+                    <a> загрузите с устройства</a>
+                  </p>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    style="display: none"
+                  />
+                </div>
               </div>
             </form>
           </div>
@@ -327,16 +333,16 @@
 
           const files = event.dataTransfer.files;
           if (files.length) {
-            handleFiles(files, preview, multiple);
+            handleFiles(files, preview, multiple, container);
           }
         });
 
         fileInput.addEventListener("change", (event) => {
-          handleFiles(event.target.files, preview, multiple);
+          handleFiles(event.target.files, preview, multiple, container);
         });
       });
 
-      function handleFiles(files, preview, multiple) {
+      function handleFiles(files, preview, multiple, container) {
         if (!multiple) {
           preview.innerHTML = "";
         }
@@ -349,6 +355,7 @@
               img.src = event.target.result;
               if (preview) {
                 preview.appendChild(img);
+                container.classList.add("full");
               } else {
                 console.error("Preview element not found.");
               }
