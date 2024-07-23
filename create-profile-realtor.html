@@ -43,16 +43,16 @@
               разрешение 600 x 600px. Доступный формат jpg / png
             </div>
             <form action="">
-              <div class="upload-container" id="uploadContainer">
+              <div class="upload-container" data-multiple="false">
                 <div class="file-icon">
                   <img src="img/file-image.svg" alt="" />
                 </div>
                 <p>
                   Перетащите изображение сюда или <a> загрузите с устройства</a>
                 </p>
-                <input type="file" id="fileInput" accept="image/*" />
+                <input type="file" accept="image/*" style="display: none" />
+                <div class="preview"></div>
               </div>
-              <div class="preview" id="preview"></div>
             </form>
           </div>
           <div class="wrapper">
@@ -203,16 +203,21 @@
               разрешение 1080 x 1920px. Доступный формат jpg / png / pdf
             </div>
             <form action="">
-              <div class="upload-container" id="uploadContainer">
+              <div class="upload-container" data-multiple="true">
                 <div class="file-icon">
                   <img src="img/file-image.svg" alt="" />
                 </div>
                 <p>
                   Перетащите изображение сюда или <a> загрузите с устройства</a>
                 </p>
-                <input type="file" id="fileInput2" accept="image/*" />
+                <input
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  style="display: none"
+                />
+                <div class="preview"></div>
               </div>
-              <div class="preview" id="preview"></div>
             </form>
           </div>
           <div class="wrapper">
@@ -222,7 +227,12 @@
             </div>
             <form action="">
               <div class="input-container w100">
-                <textarea id="myTextarea" maxlength="500" rows="10" required></textarea>
+                <textarea
+                  id="myTextarea"
+                  maxlength="500"
+                  rows="10"
+                  required
+                ></textarea>
                 <div class="placeholder">О себе</div>
                 <div class="char-counter" id="charCounter">0/500</div>
               </div>
@@ -271,6 +281,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script>
+      //счетчик вводимых символов
       const textarea = document.getElementById("myTextarea");
       const charCounter = document.getElementById("charCounter");
 
@@ -290,54 +301,63 @@
           progressBar.style.width = progress + "%";
         }
       }
-      // область загрузки фото
+    </script>
+    <script>
+      document.querySelectorAll(".upload-container").forEach((container) => {
+        const fileInput = container.querySelector('input[type="file"]');
+        const preview = container.querySelector(".preview");
+        const multiple = container.getAttribute("data-multiple") === "true";
 
-      const uploadContainer = document.getElementById("uploadContainer");
-      const fileInput = document.getElementById("fileInput");
-      const preview = document.getElementById("preview");
+        container.addEventListener("click", () => {
+          fileInput.click();
+        });
 
-      uploadContainer.addEventListener("click", () => {
-        fileInput.click();
+        container.addEventListener("dragover", (event) => {
+          event.preventDefault();
+          container.classList.add("dragover");
+        });
+
+        container.addEventListener("dragleave", () => {
+          container.classList.remove("dragover");
+        });
+
+        container.addEventListener("drop", (event) => {
+          event.preventDefault();
+          container.classList.remove("dragover");
+
+          const files = event.dataTransfer.files;
+          if (files.length) {
+            handleFiles(files, preview, multiple);
+          }
+        });
+
+        fileInput.addEventListener("change", (event) => {
+          handleFiles(event.target.files, preview, multiple);
+        });
       });
 
-      uploadContainer.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        uploadContainer.classList.add("dragover");
-      });
-
-      uploadContainer.addEventListener("dragleave", () => {
-        uploadContainer.classList.remove("dragover");
-      });
-
-      uploadContainer.addEventListener("drop", (event) => {
-        event.preventDefault();
-        uploadContainer.classList.remove("dragover");
-
-        const files = event.dataTransfer.files;
-        if (files.length) {
-          fileInput.files = files;
-          handleFiles(files);
+      function handleFiles(files, preview, multiple) {
+        if (!multiple) {
+          preview.innerHTML = "";
         }
-      });
 
-      fileInput.addEventListener("change", (event) => {
-        handleFiles(event.target.files);
-      });
-
-      function handleFiles(files) {
-        preview.innerHTML = "";
-        const file = files[0];
-        if (file && file.type.startsWith("image/")) {
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            const img = document.createElement("img");
-            img.src = event.target.result;
-            preview.appendChild(img);
-          };
-          reader.readAsDataURL(file);
-        } else {
-          alert("Please upload an image file.");
-        }
+        Array.from(files).forEach((file) => {
+          if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+              const img = document.createElement("img");
+              img.src = event.target.result;
+              if (preview) {
+                preview.appendChild(img);
+              } else {
+                console.error("Preview element not found.");
+              }
+            };
+            reader.readAsDataURL(file);
+          } else {
+            alert("Please upload an image file.");
+          }
+        });
       }
     </script>
   </body>
