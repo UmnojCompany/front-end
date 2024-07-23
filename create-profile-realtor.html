@@ -63,21 +63,21 @@
             <form class="gap" action="">
               <div class="row">
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Имя <span>*</span></div>
                 </div>
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Фамилия <span>*</span></div>
                 </div>
               </div>
               <div class="row">
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Отчество</div>
                 </div>
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Пол <span>*</span></div>
                 </div>
               </div>
@@ -103,11 +103,11 @@
             <form class="gap" action="">
               <div class="row">
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Телефон <span>*</span></div>
                 </div>
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Эл. почта <span>*</span></div>
                 </div>
               </div>
@@ -116,21 +116,21 @@
             <form class="gap" action="">
               <div class="row">
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">WhatsApp</div>
                 </div>
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Telegram</div>
                 </div>
               </div>
               <div class="row">
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Viber</div>
                 </div>
                 <div class="input-container">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="" id="" required />
                   <div class="placeholder">Zoom</div>
                 </div>
               </div>
@@ -199,7 +199,8 @@
           <div class="wrapper">
             <h3>Лицензии и сертификаты</h3>
             <div class="subtitle">
-              Можете загрузить до 20 изображений. Вес до 10 мб. Оптимальное разрешение 1080 x 1920px. Доступный формат jpg / png / pdf
+              Можете загрузить до 20 изображений. Вес до 10 мб. Оптимальное
+              разрешение 1080 x 1920px. Доступный формат jpg / png / pdf
             </div>
             <form action="">
               <div class="upload-container" id="uploadContainer">
@@ -216,10 +217,14 @@
           </div>
           <div class="wrapper">
             <h3>О себе</h3>
-            <div class="subtitle">Напишите о себе и преимуществах работы с вами</div>
+            <div class="subtitle">
+              Напишите о себе и преимуществах работы с вами
+            </div>
             <form action="">
-              <div class="input-container">
-                <textarea name="" id=""></textarea>
+              <div class="input-container w100">
+                <textarea id="myTextarea" maxlength="500" rows="10" required></textarea>
+                <div class="placeholder">О себе</div>
+                <div class="char-counter" id="charCounter">0/500</div>
               </div>
             </form>
           </div>
@@ -265,6 +270,15 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      const textarea = document.getElementById("myTextarea");
+      const charCounter = document.getElementById("charCounter");
+
+      textarea.addEventListener("input", () => {
+        const currentLength = textarea.value.length;
+        charCounter.textContent = `${currentLength}/500`;
+      });
+    </script>
     <script>
       // прогресс бар
       let progress = 0;

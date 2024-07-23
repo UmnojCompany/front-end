@@ -1461,38 +1461,69 @@ section {
    }
 }
 form {
-   &.gap{
+   .char-counter {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      color: var(--Text-Grey, #7786a5);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 133.333% */
+   }
+   .input-container {
+      &.w100 {
+         min-width: 100%;
+      }
+   }
+   textarea {
+      //min-width: 100%;
+      border-radius: 10px;
+      border: 2px solid var(--Fields-Stroke, #e1edfd);
+      background: var(--Fields-Form, #fff);
+      padding: 18px 80px 18px 20px;
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+   }
+   &.gap {
       gap: 20px;
+   }
+   .input-container {
+      .placeholder {
+         z-index: 0;
+         span {
+            color: var(--Text-Error, #f34942);
+         }
+         position: absolute;
+         left: 20px;
+         top: 20px;
+
+         color: var(--Fields-Title, #7786a5);
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 24px; /* 150% */
+      }
+      textarea,
+      input {
+         background: none;
+         z-index: 1;
+         min-width: 100%;
+         &:valid + .placeholder {
+            display: none;
+         }
+         &:focus + .placeholder {
+            display: none;
+         }
+      }
+      flex: 1;
    }
    .row {
       min-width: 100%;
-      .input-container {
-         .placeholder {
-            z-index: 0;
-            span {
-               color: var(--Text-Error, #f34942);
-            }
-            position: absolute;
-            left: 20px;
-            top: 20px;
 
-            color: var(--Fields-Title, #7786a5);
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px; /* 150% */
-         }
-         input {
-            background: none;
-            z-index: 1;
-            min-width: 100%;
-            &:focus + .placeholder{
-                  display: none;
-               }
-            
-         }
-         flex: 1;
-      }
       display: flex;
       justify-content: space-between;
       gap: 20px;
@@ -1526,9 +1557,9 @@ form {
    }
 
    .upload-container.dragover {
-      border-color: #3E56D0;
+      border-color: #3e56d0;
 
-      color: #3E56D0;
+      color: #3e56d0;
    }
 
    .preview {
@@ -1622,14 +1653,14 @@ form {
    background: var(--Main-Blue, #4e6af3);
 }
 .create-profile-realtor {
-   h5{
-      padding: 0px 30px ;
+   h5 {
+      padding: 0px 30px;
    }
    form {
       gap: 0;
       margin: 0px 0px 0px 0px;
       padding: 30px;
-      &.gap{
+      &.gap {
          gap: 20px;
       }
    }

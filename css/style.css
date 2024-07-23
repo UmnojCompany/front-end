@@ -1465,19 +1465,36 @@ form {
   /* Убираем стрелки для Chrome, Safari, Edge, Opera */
   /* Убираем стрелки для IE */
 }
+form .char-counter {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: var(--Text-Grey, #7786a5);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+form .input-container.w100 {
+  min-width: 100%;
+}
+form textarea {
+  border-radius: 10px;
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  background: var(--Fields-Form, #fff);
+  padding: 18px 80px 18px 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
 form.gap {
   gap: 20px;
 }
-form .row {
-  min-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-form .row .input-container {
+form .input-container {
   flex: 1;
 }
-form .row .input-container .placeholder {
+form .input-container .placeholder {
   z-index: 0;
   position: absolute;
   left: 20px;
@@ -1488,16 +1505,28 @@ form .row .input-container .placeholder {
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
-form .row .input-container .placeholder span {
+form .input-container .placeholder span {
   color: var(--Text-Error, #f34942);
 }
-form .row .input-container input {
+form .input-container textarea,
+form .input-container input {
   background: none;
   z-index: 1;
   min-width: 100%;
 }
-form .row .input-container input:focus + .placeholder {
+form .input-container textarea:valid + .placeholder,
+form .input-container input:valid + .placeholder {
   display: none;
+}
+form .input-container textarea:focus + .placeholder,
+form .input-container input:focus + .placeholder {
+  display: none;
+}
+form .row {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 form .upload-container {
   border: 2px dashed var(--Stroke-Divider, #e1edfd);
@@ -1523,8 +1552,8 @@ form .upload-container input[type=file] {
   display: none;
 }
 form .upload-container.dragover {
-  border-color: #3E56D0;
-  color: #3E56D0;
+  border-color: #3e56d0;
+  color: #3e56d0;
 }
 form .preview {
   display: flex;
