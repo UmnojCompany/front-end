@@ -1482,7 +1482,7 @@ form textarea {
   border-radius: 10px;
   border: 2px solid var(--Fields-Stroke, #e1edfd);
   background: var(--Fields-Form, #fff);
-  padding: 18px 80px 18px 20px;
+  padding: 28px 80px 18px 20px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1495,6 +1495,7 @@ form .input-container {
   flex: 1;
 }
 form .input-container .placeholder {
+  transition: 0.3s;
   z-index: 0;
   position: absolute;
   left: 20px;
@@ -1516,11 +1517,13 @@ form .input-container input {
 }
 form .input-container textarea:valid + .placeholder,
 form .input-container input:valid + .placeholder {
-  display: none;
+  font-size: 12px;
+  top: 5px;
 }
 form .input-container textarea:focus + .placeholder,
 form .input-container input:focus + .placeholder {
-  display: none;
+  font-size: 12px;
+  top: 5px;
 }
 form .row {
   min-width: 100%;
@@ -1576,7 +1579,7 @@ form input {
   outline: none; /* Убираем стандартный outline */
   display: flex;
   width: 300px;
-  padding: 17px 20px;
+  padding: 24px 20px 10px 20px;
   align-items: center;
   gap: var(--Corner_radius_m, 10px);
   color: var(--Fields-Text, #2a344a);
