@@ -156,54 +156,57 @@
             <form class="gap" action="">
               <div class="row">
                 <div class="multi-select" data-multi-select-id="1">
-                  <label for="multiSelect1">Выберите пункты:</label>
-                  <select id="multiSelect1">
-                      <option value="item1">Пункт 1</option>
-                      <option value="item2">Пункт 2</option>
-                      <option value="item3">Пункт 3</option>
-                      <option value="item4">Пункт 4</option>
+                  <select id="multiSelect1" required>
+                    <option value=""></option>
+                    <option value="item1">Пункт 1</option>
+                    <option value="item2">Пункт 2</option>
+                    <option value="item3">Пункт 3</option>
+                    <option value="item4">Пункт 4</option>
                   </select>
+                  <div class="placeholder">Город недвижимости <span>*</span></div>
                   <ul class="selected-items"></ul>
               </div>
               </div>
               <div class="row">
                 <div class="multi-select" data-multi-select-id="2">
-                  <label for="multiSelect2">Выберите пункты:</label>
-                  <select id="multiSelect2">
-                      <option value="itemA">Пункт A</option>
-                      <option value="itemB">Пункт B</option>
-                      <option value="itemC">Пункт C</option>
-                      <option value="itemD">Пункт D</option>
+                  <select id="multiSelect1" required>
+                    <option value=""></option>
+                    <option value="item1">Пункт 1</option>
+                    <option value="item2">Пункт 2</option>
+                    <option value="item3">Пункт 3</option>
+                    <option value="item4">Пункт 4</option>
                   </select>
+                  <div class="placeholder">Формат сделки <span>*</span></div>
                   <ul class="selected-items"></ul>
               </div>
               </div>
               <div class="row">
-                <div class="select-container">
-                  <label for="fruit-select"
-                    >Тип недвижимости <span>*</span></label
-                  >
-                  <select id="fruit-select" name="fruits">
-                    <option value="">Выберите</option>
-                    <option value="apple">Я клиент</option>
-                    <option value="banana">Я риелтор</option>
-                    <option value="cherry">Я застройщик</option>
+                <div class="multi-select" data-multi-select-id="3">
+                  <select id="multiSelect1" required>
+                    <option value=""></option>
+                    <option value="item1">Пункт 1</option>
+                    <option value="item2">Пункт 2</option>
+                    <option value="item3">Пункт 3</option>
+                    <option value="item4">Пункт 4</option>
                   </select>
-                </div>
+                  <div class="placeholder">Тип недвижимости <span>*</span></div>
+                  <ul class="selected-items"></ul>
+              </div>
               </div>
               <div class="row">
-                <div class="select-container">
-                  <label for="fruit-select"
-                    >Состояние недвижимости <span>*</span></label
-                  >
-                  <select id="fruit-select" name="fruits">
-                    <option value="">Выберите</option>
-                    <option value="apple">Я клиент</option>
-                    <option value="banana">Я риелтор</option>
-                    <option value="cherry">Я застройщик</option>
+                <div class="multi-select" data-multi-select-id="4">
+                  <select id="multiSelect1" required>
+                    <option value=""></option>
+                    <option value="item1">Пункт 1</option>
+                    <option value="item2">Пункт 2</option>
+                    <option value="item3">Пункт 3</option>
+                    <option value="item4">Пункт 4</option>
                   </select>
-                </div>
+                  <div class="placeholder">Состояние недвижимости <span>*</span></div>
+                  <ul class="selected-items"></ul>
               </div>
+              </div>
+
             </form>
           </div>
           <div class="wrapper">
@@ -399,14 +402,32 @@
               removeBtn.textContent = ' ×';
               removeBtn.addEventListener('click', () => {
                   selectedItems.removeChild(li);
+                  updateSelectClass(select, selectedItems);
+                  // Показать опцию снова в селекте
+                  const option = select.querySelector(`option[value="${selectedValue}"]`);
+                  if (option) option.classList.remove('hidden');
               });
 
               li.appendChild(removeBtn);
               selectedItems.appendChild(li);
 
-              // Сброс выбора в селекте
+              // Скрываем выбранную опцию
+              const option = select.querySelector(`option[value="${selectedValue}"]`);
+              if (option) option.classList.add('hidden');
+
+              // Обновляем класс select и сбрасываем выбор
+              updateSelectClass(select, selectedItems);
               select.value = '';
           });
+
+          // Функция обновления класса select
+          function updateSelectClass(select, selectedItems) {
+              if (selectedItems.children.length > 0) {
+                  select.classList.add('full');
+              } else {
+                  select.classList.remove('full');
+              }
+          }
       });
   </script>
   </body>

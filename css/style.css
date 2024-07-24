@@ -1758,29 +1758,70 @@ form input[type=number] {
 }
 
 form .multi-select {
-  width: 300px;
-  margin-bottom: 20px;
+  position: relative;
+  padding: 17px 20px 17px 20px;
+  width: 100%;
+  border-radius: var(--Corner_radius_m, 10px);
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  background: var(--Fields-Form, #fff);
+  outline: none; /* Убираем стандартный outline */
+}
+form .multi-select .hidden {
+  display: none;
+}
+form .multi-select select {
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  height: 24px;
+  background: rgba(18, 154, 222, 0);
+}
+form .multi-select select.full + .placeholder {
+  font-size: 12px;
+  top: 5px;
+}
+form .multi-select select:focus + .placeholder {
+  font-size: 12px;
+  top: 5px;
+}
+form .multi-select .placeholder {
+  transition: 0.3s;
+  z-index: 0;
+  position: absolute;
+  left: 22px;
+  top: 20px;
+  color: var(--Fields-Title, #7786a5);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+form .multi-select .placeholder span {
+  color: var(--Text-Error, #f34942);
 }
 form .selected-items {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
+  display: flex;
+  gap: 8px;
+  width: 100%;
 }
 form .selected-items li {
+  border-radius: 5px;
+  border: 1px solid var(--Stroke-Divider, #e1edfd);
+  background: var(--BG-White, #fff);
   display: flex;
-  justify-content: space-between;
+  padding: 7px 10px;
   align-items: center;
-  margin-bottom: 5px;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  gap: 5px;
+  color: var(--Text-Black, #2a344a);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
 }
 form .selected-items li span {
   cursor: pointer;
-  color: red;
-  font-weight: bold;
+  color: #7786a5;
+  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */
