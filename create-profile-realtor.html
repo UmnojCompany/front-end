@@ -10,11 +10,11 @@
   <body>
     <main>
       <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
-      <button onclick="move()">Increment Progress</button>
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
 
       <section class="enter-page create-profile-realtor">
+        
         <div class="container">
           <div class="cancel">
             <svg
@@ -58,7 +58,8 @@
               </div>
             </form>
           </div>
-          <div class="wrapper">
+          <div class="button-primary">Далее</div>
+          <div class="wrapper hide">
             <h3>Личные данные <span>*</span></h3>
             <div class="subtitle">
               Ваши личные данные будут доступны всем пользователям платформы
@@ -102,7 +103,8 @@
               </div>
             </form>
           </div>
-          <div class="wrapper">
+          <div class="button-primary inactive">Далее</div>
+          <div class="wrapper hide">
             <h3>Контакты <span>*</span></h3>
             <div class="subtitle">
               Все данные, кроме эл. почтывидны пользователям, которые откроют
@@ -144,7 +146,8 @@
               </div>
             </form>
           </div>
-          <div class="wrapper">
+          <div class="button-primary inactive">Далее</div>
+          <div class="wrapper hide">
             <h3>Параметры недвижимости <span>*</span></h3>
             <div class="subtitle">
               Укажите параметры недвижимости, которой сейчас занимаетесь.
@@ -210,7 +213,8 @@
               </div>
             </form>
           </div>
-          <div class="wrapper">
+          <div class="button-primary inactive">Далее</div>
+          <div class="wrapper hide">
             <h3>Лицензии и сертификаты</h3>
             <div class="subtitle">
               Можете загрузить до 20 изображений. Вес до 10 мб. Оптимальное
@@ -237,7 +241,8 @@
               </div>
             </form>
           </div>
-          <div class="wrapper">
+          <div class="button-primary inactive">Далее</div>
+          <div class="wrapper hide">
             <h3>О себе</h3>
             <div class="subtitle">
               Напишите о себе и преимуществах работы с вами
@@ -273,7 +278,7 @@
             </form>
           </div>
 
-          <div class="button-primary">Создать профиль</div>
+          <div class="button-primary hide">Создать профиль</div>
         </div>
       </section>
     </main>
@@ -456,5 +461,44 @@
         }
       });
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.button-primary');
+        const lastButton = buttons[buttons.length - 1];
+        const createProfileButton = document.querySelector('.button-primary.hide');
+        let progress = 0;
+        const progressBar = document.getElementById("progressBar");
+    
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Скрыть текущую кнопку
+                button.classList.add('hide');
+    
+                // Показать следующий блок wrapper
+                const nextWrapper = button.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains('wrapper')) {
+                    nextWrapper.classList.remove('hide');
+                }
+    
+                // Показать следующую кнопку или кнопку "Создать профиль"
+                if (index < buttons.length - 2) {
+                    buttons[index + 1].classList.remove('inactive');
+                } else if (index === buttons.length - 2) {
+                    // Последняя кнопка "Далее" была нажата
+                    createProfileButton.classList.remove('hide');
+                }
+    
+                // Обновление прогрессбара
+                if (progress < 100) {
+                    progress += 20; // Увеличиваем прогресс на 20% за каждую кнопку
+                    progressBar.style.width = progress + "%";
+                }
+            });
+        });
+    });
+    
+    
+    
+  </script>
   </body>
 </html>

@@ -938,7 +938,7 @@ section {
   top: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: 999;
+  z-index: 777;
 }
 .enter-page .daha,
 .modal .daha {
@@ -1398,7 +1398,7 @@ section {
   display: none;
 }
 .button-primary.inactive {
-  cursor: unset;
+  cursor: no-drop;
   background: #d5daf1;
 }
 .button-primary.inactive:hover {
@@ -1649,6 +1649,10 @@ form input[type=number] {
 }
 
 .progress-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
   width: 100%;
   background-color: #eef1f5;
   overflow: hidden;
@@ -1662,8 +1666,12 @@ form input[type=number] {
 }
 
 .create-profile-realtor {
+  background: var(--BG-Light-grey, #EEF1F5);
   align-items: flex-start;
   position: relative;
+}
+.create-profile-realtor .wrapper.hide {
+  opacity: 0.2;
 }
 .create-profile-realtor h5 {
   padding: 0px 30px;
