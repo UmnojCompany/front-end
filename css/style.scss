@@ -1749,6 +1749,9 @@ form {
 }
 .select-container-single {
    select {
+      // position: relative;
+      // z-index: 9;
+      cursor: pointer;
       padding: 24px 20px 10px 20px;
       border-radius: 10px;
       border: 2px solid var(--Fields-Stroke, #e1edfd);
@@ -1814,7 +1817,7 @@ form {
       select {
          cursor: pointer;
          position: relative;
-         z-index: 9;
+         z-index: 99;
          &.full + .placeholder {
             font-size: 12px;
             top: 5px;
@@ -1880,6 +1883,7 @@ form {
       color: #7786a5;
       //font-weight: bold;
       font-size: 18px;
+      cursor: pointer;
    }
 }
 .add-video {
