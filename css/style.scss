@@ -1778,3 +1778,35 @@ form {
    background: var(--Fields-Form, #fff);
    flex: 1;
 }
+form {
+   .multi-select {
+      width: 300px;
+      margin-bottom: 20px;
+   }
+
+   .selected-items {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+   }
+
+   .selected-items li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+   }
+
+   .selected-items li span {
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+   }
+}

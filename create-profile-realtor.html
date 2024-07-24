@@ -155,28 +155,28 @@
             </div>
             <form class="gap" action="">
               <div class="row">
-                <div class="select-container">
-                  <label for="fruit-select"
-                    >Город недвижимости <span>*</span></label
-                  >
-                  <select id="fruit-select" name="fruits">
-                    <option value="">Выберите город</option>
-                    <option value="apple">Я клиент</option>
-                    <option value="banana">Я риелтор</option>
-                    <option value="cherry">Я застройщик</option>
+                <div class="multi-select" data-multi-select-id="1">
+                  <label for="multiSelect1">Выберите пункты:</label>
+                  <select id="multiSelect1">
+                      <option value="item1">Пункт 1</option>
+                      <option value="item2">Пункт 2</option>
+                      <option value="item3">Пункт 3</option>
+                      <option value="item4">Пункт 4</option>
                   </select>
-                </div>
+                  <ul class="selected-items"></ul>
+              </div>
               </div>
               <div class="row">
-                <div class="select-container">
-                  <label for="fruit-select">Формат сделки <span>*</span></label>
-                  <select id="fruit-select" name="fruits">
-                    <option value="">Выберите</option>
-                    <option value="apple">Я клиент</option>
-                    <option value="banana">Я риелтор</option>
-                    <option value="cherry">Я застройщик</option>
+                <div class="multi-select" data-multi-select-id="2">
+                  <label for="multiSelect2">Выберите пункты:</label>
+                  <select id="multiSelect2">
+                      <option value="itemA">Пункт A</option>
+                      <option value="itemB">Пункт B</option>
+                      <option value="itemC">Пункт C</option>
+                      <option value="itemD">Пункт D</option>
                   </select>
-                </div>
+                  <ul class="selected-items"></ul>
+              </div>
               </div>
               <div class="row">
                 <div class="select-container">
@@ -374,5 +374,40 @@
         });
       }
     </script>
+    <script>
+      document.querySelectorAll('.multi-select').forEach(multiSelect => {
+          const select = multiSelect.querySelector('select');
+          const selectedItems = multiSelect.querySelector('.selected-items');
+
+          select.addEventListener('change', () => {
+              const selectedValue = select.value;
+              const selectedText = select.options[select.selectedIndex].text;
+
+              // Проверка, что элемент уже не добавлен
+              if ([...selectedItems.children].some(li => li.dataset.value === selectedValue)) {
+                  alert('Этот пункт уже добавлен.');
+                  return;
+              }
+
+              // Создаем элемент списка
+              const li = document.createElement('li');
+              li.dataset.value = selectedValue;
+              li.textContent = selectedText;
+
+              // Создаем кнопку для удаления
+              const removeBtn = document.createElement('span');
+              removeBtn.textContent = ' ×';
+              removeBtn.addEventListener('click', () => {
+                  selectedItems.removeChild(li);
+              });
+
+              li.appendChild(removeBtn);
+              selectedItems.appendChild(li);
+
+              // Сброс выбора в селекте
+              select.value = '';
+          });
+      });
+  </script>
   </body>
 </html>

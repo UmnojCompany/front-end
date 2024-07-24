@@ -1755,4 +1755,32 @@ form input[type=number] {
 }
 .select-container-single label span {
   color: var(--Text-Error, #f34942);
+}
+
+form .multi-select {
+  width: 300px;
+  margin-bottom: 20px;
+}
+form .selected-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+form .selected-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+form .selected-items li span {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
