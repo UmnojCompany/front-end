@@ -384,6 +384,15 @@ section {
   gap: 10px;
 }
 
+.linklist a {
+  color: var(--Main-Blue, #4e6af3);
+}
+.linklist ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .trigger {
   cursor: pointer;
 }
@@ -986,6 +995,7 @@ section {
 .modal .flags {
   cursor: pointer;
   position: absolute;
+  z-index: 9;
   top: 20px;
   left: 20px;
   display: flex;
@@ -1552,7 +1562,7 @@ form .input-container .placeholder {
   transition: 0.3s;
   z-index: 0;
   position: absolute;
-  left: 20px;
+  left: 22px;
   top: 20px;
   color: var(--Fields-Title, #7786a5);
   font-size: 16px;
@@ -1694,4 +1704,55 @@ form input[type=number] {
 .create-profile-realtor .container {
   position: relative;
   padding: 40px 0px 0px 0px;
+}
+
+.select-container-single {
+  position: relative;
+  background: var(--Fields-Form, #fff);
+  flex: 1;
+}
+.select-container-single select {
+  padding: 24px 20px 10px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  background: #fff url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgc3Ryb2tlPSIjNzc4NkE1IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjUgNy43NUw4LjY0NiAxMS44OTZDOC44NDEgMTIuMDkxIDkgMTIuMDkxIDkuMzUzNSAxMS44OTZMMTMuNSA3Ljc1Ii8+PC9zdmc+") no-repeat right 20px top 50%;
+  background-size: 18px;
+  appearance: none; /* Убираем стандартный стиль браузера */
+  -webkit-appearance: none; /* Убираем стандартный стиль браузера для Safari */
+  -moz-appearance: none; /* Убираем стандартный стиль браузера для Firefox */
+  width: 100%;
+  color: var(--Fields-Text, #2a344a);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.select-container-single select:focus {
+  border: 2px solid #4e6af3;
+}
+.select-container-single select:focus:hover {
+  border: 2px solid #4e6af3;
+}
+.select-container-single select:valid + label {
+  font-size: 12px;
+  top: 5px;
+}
+.select-container-single select:focus + label {
+  font-size: 12px;
+  top: 5px;
+}
+.select-container-single label {
+  transition: 0.3s;
+  z-index: 0;
+  position: absolute;
+  left: 22px;
+  top: 20px;
+  color: var(--Fields-Title, #7786a5);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.select-container-single label span {
+  color: var(--Text-Error, #f34942);
 }/*# sourceMappingURL=style.css.map */
