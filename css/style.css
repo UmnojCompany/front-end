@@ -1863,4 +1863,36 @@ form .selected-items li span {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+}
+
+.video-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 10px;
+  background: #f6faff;
+  padding: 7px 10px 7px 7px;
+}
+
+.video-form input[type=text] {
+  padding: 13px 20px;
+  flex: 1;
+}
+
+.video-form .remove-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+}
+
+.add-video-btn.off {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.video-forms-container {
+  min-width: 100%;
 }/*# sourceMappingURL=style.css.map */
