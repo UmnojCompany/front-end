@@ -1519,6 +1519,24 @@ form {
       flex-wrap: wrap;
    }
 
+   .preview-wrapper {
+      .remove-btn {
+         position: absolute;
+         cursor: pointer;
+         right: 8px;
+         top: 8px;
+
+         width: 30px;
+         height: 30px;
+         background: url('../img/delete-img.svg') no-repeat;
+         z-index: 10;
+     }
+     
+      &:hover {
+      }
+      position: relative;
+   }
+
    .preview img {
       margin: 0px 0px 0px 0px;
       width: 130px;
@@ -1678,7 +1696,7 @@ form {
    background: var(--Main-Blue, #4e6af3);
 }
 .create-profile-realtor {
-   background: var(--BG-Light-grey, #EEF1F5);
+   background: var(--BG-Light-grey, #eef1f5);
    .wrapper {
       &.hide {
          opacity: 0.2;

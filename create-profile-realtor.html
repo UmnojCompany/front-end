@@ -10,11 +10,10 @@
   <body>
     <main>
       <div class="progress-container">
-          <div class="progress-bar" id="progressBar"></div>
-        </div>
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
 
       <section class="enter-page create-profile-realtor">
-        
         <div class="container">
           <div class="cancel">
             <svg
@@ -342,163 +341,119 @@
       }
     </script>
     <script>
+      // кнопки Далее
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".button-primary");
+        const lastButton = buttons[buttons.length - 1];
+        const createProfileButton = document.querySelector(
+          ".button-primary.hide"
+        );
+        let progress = 0;
+        const progressBar = document.getElementById("progressBar");
+
+        buttons.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            // Скрыть текущую кнопку
+            button.classList.add("hide");
+
+            // Показать следующий блок wrapper
+            const nextWrapper = button.nextElementSibling;
+            if (nextWrapper && nextWrapper.classList.contains("wrapper")) {
+              nextWrapper.classList.remove("hide");
+            }
+
+            // Показать следующую кнопку или кнопку "Создать профиль"
+            if (index < buttons.length - 2) {
+              buttons[index + 1].classList.remove("inactive");
+            } else if (index === buttons.length - 2) {
+              // Последняя кнопка "Далее" была нажата
+              createProfileButton.classList.remove("hide");
+            }
+
+            // Обновление прогрессбара
+            if (progress < 100) {
+              progress += 20; // Увеличиваем прогресс на 20% за каждую кнопку
+              progressBar.style.width = progress + "%";
+            }
+          });
+        });
+      });
+    </script>
+    <script>
       document.querySelectorAll(".upload-container").forEach((container) => {
-        const fileInput = container.querySelector('input[type="file"]');
-        const preview = container.querySelector(".preview");
-        const multiple = container.getAttribute("data-multiple") === "true";
+          const fileInput = container.querySelector('input[type="file"]');
+          const preview = container.querySelector(".preview");
+          const multiple = container.getAttribute("data-multiple") === "true";
 
-        container.addEventListener("click", () => {
-          fileInput.click();
-        });
+          container.addEventListener("click", () => {
+              fileInput.click();
+          });
 
-        container.addEventListener("dragover", (event) => {
-          event.preventDefault();
-          container.classList.add("dragover");
-        });
+          container.addEventListener("dragover", (event) => {
+              event.preventDefault();
+              container.classList.add("dragover");
+          });
 
-        container.addEventListener("dragleave", () => {
-          container.classList.remove("dragover");
-        });
+          container.addEventListener("dragleave", () => {
+              container.classList.remove("dragover");
+          });
 
-        container.addEventListener("drop", (event) => {
-          event.preventDefault();
-          container.classList.remove("dragover");
+          container.addEventListener("drop", (event) => {
+              event.preventDefault();
+              container.classList.remove("dragover");
 
-          const files = event.dataTransfer.files;
-          if (files.length) {
-            handleFiles(files, preview, multiple, container);
-          }
-        });
+              const files = event.dataTransfer.files;
+              if (files.length) {
+                  handleFiles(files, preview, multiple, container);
+              }
+          });
 
-        fileInput.addEventListener("change", (event) => {
-          handleFiles(event.target.files, preview, multiple, container);
-        });
+          fileInput.addEventListener("change", (event) => {
+              handleFiles(event.target.files, preview, multiple, container);
+          });
       });
 
       function handleFiles(files, preview, multiple, container) {
-        if (!multiple) {
-          preview.innerHTML = "";
-        }
+          if (!multiple) {
+              preview.innerHTML = "";
+          }
 
-        Array.from(files).forEach((file) => {
-          if (file && file.type.startsWith("image/")) {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-              const img = document.createElement("img");
-              img.src = event.target.result;
-              if (preview) {
-                preview.appendChild(img);
-                container.classList.add("full");
+          Array.from(files).forEach((file) => {
+              if (file && file.type.startsWith("image/")) {
+                  const reader = new FileReader();
+                  reader.onload = (event) => {
+                      // Создаем wrapper для каждого изображения
+                      const previewWrapper = document.createElement("div");
+                      previewWrapper.classList.add("preview-wrapper");
+
+                      const img = document.createElement("img");
+                      img.src = event.target.result;
+
+                      // Создаем кнопку для удаления
+                      const removeBtn = document.createElement("button");
+                      removeBtn.classList.add("remove-btn");
+                      //removeBtn.textContent = "×";
+                      removeBtn.addEventListener("click", (e) => {
+                          e.stopPropagation(); // Останавливаем всплытие события
+                          e.preventDefault(); // Останавливаем действие по умолчанию
+                          preview.removeChild(previewWrapper);
+                      });
+
+                      // Добавляем изображение и кнопку в preview-wrapper
+                      previewWrapper.appendChild(img);
+                      previewWrapper.appendChild(removeBtn);
+
+                      // Добавляем preview-wrapper в общий контейнер preview
+                      preview.appendChild(previewWrapper);
+
+                      container.classList.add("full");
+                  };
+                  reader.readAsDataURL(file);
               } else {
-                console.error("Preview element not found.");
+                  alert("Please upload an image file.");
               }
-            };
-            reader.readAsDataURL(file);
-          } else {
-            alert("Please upload an image file.");
-          }
-        });
-      }
-    </script>
-    <script>
-      document.querySelectorAll(".multi-select").forEach((multiSelect) => {
-        const select = multiSelect.querySelector("select");
-        const selectedItems = multiSelect.querySelector(".selected-items");
-
-        select.addEventListener("change", () => {
-          const selectedValue = select.value;
-          const selectedText = select.options[select.selectedIndex].text;
-
-          // Проверка, что элемент уже не добавлен
-          if (
-            [...selectedItems.children].some(
-              (li) => li.dataset.value === selectedValue
-            )
-          ) {
-            alert("Этот пункт уже добавлен.");
-            return;
-          }
-
-          // Создаем элемент списка
-          const li = document.createElement("li");
-          li.dataset.value = selectedValue;
-          li.textContent = selectedText;
-
-          // Создаем кнопку для удаления
-          const removeBtn = document.createElement("span");
-          removeBtn.textContent = " ×";
-          removeBtn.addEventListener("click", () => {
-            selectedItems.removeChild(li);
-            updateSelectClass(select, selectedItems);
-            // Показать опцию снова в селекте
-            const option = select.querySelector(
-              `option[value="${selectedValue}"]`
-            );
-            if (option) option.classList.remove("hidden");
           });
-
-          li.appendChild(removeBtn);
-          selectedItems.appendChild(li);
-
-          // Скрываем выбранную опцию
-          const option = select.querySelector(
-            `option[value="${selectedValue}"]`
-          );
-          if (option) option.classList.add("hidden");
-
-          // Обновляем класс select и сбрасываем выбор
-          updateSelectClass(select, selectedItems);
-          select.value = "";
-        });
-
-        // Функция обновления класса select
-        function updateSelectClass(select, selectedItems) {
-          if (selectedItems.children.length > 0) {
-            select.classList.add("full");
-          } else {
-            select.classList.remove("full");
-          }
-        }
-      });
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const buttons = document.querySelectorAll('.button-primary');
-        const lastButton = buttons[buttons.length - 1];
-        const createProfileButton = document.querySelector('.button-primary.hide');
-        let progress = 0;
-        const progressBar = document.getElementById("progressBar");
-    
-        buttons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                // Скрыть текущую кнопку
-                button.classList.add('hide');
-    
-                // Показать следующий блок wrapper
-                const nextWrapper = button.nextElementSibling;
-                if (nextWrapper && nextWrapper.classList.contains('wrapper')) {
-                    nextWrapper.classList.remove('hide');
-                }
-    
-                // Показать следующую кнопку или кнопку "Создать профиль"
-                if (index < buttons.length - 2) {
-                    buttons[index + 1].classList.remove('inactive');
-                } else if (index === buttons.length - 2) {
-                    // Последняя кнопка "Далее" была нажата
-                    createProfileButton.classList.remove('hide');
-                }
-    
-                // Обновление прогрессбара
-                if (progress < 100) {
-                    progress += 20; // Увеличиваем прогресс на 20% за каждую кнопку
-                    progressBar.style.width = progress + "%";
-                }
-            });
-        });
-    });
-    
-    
-    
+      }
   </script>
   </body>
 </html>
