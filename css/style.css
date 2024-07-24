@@ -1824,4 +1824,22 @@ form .selected-items li span {
   cursor: pointer;
   color: #7786a5;
   font-size: 18px;
+}
+
+.add-video {
+  margin: 30px 0px 0px 0px;
+  align-self: flex-start;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--Button-Secondary-BG-Default, #f1f7ff);
+  color: var(--Main-Blue, #4e6af3);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
 }/*# sourceMappingURL=style.css.map */
