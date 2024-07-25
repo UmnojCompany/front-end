@@ -1008,7 +1008,7 @@ section {
    .line {
       border-bottom: 2px solid var(--Stroke-Divider_form, #f1f7ff);
    }
-   form {
+   .form {
       padding: 50px 30px;
       display: flex;
       flex-direction: column;
@@ -1461,7 +1461,7 @@ section {
       padding: 20px 30px;
    }
 }
-form {
+.form {
    .up-info {
       a {
          color: var(--Main-Blue, #4e6af3);
@@ -1718,7 +1718,14 @@ form {
    h5 {
       padding: 0px 30px;
    }
-   form {
+   .gap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px 20px;
+     // margin: 30px 0px 30px 0px;
+   }
+   .form {
       gap: 0;
       margin: 0px 0px 0px 0px;
       padding: 30px;
@@ -1822,7 +1829,7 @@ form {
    background: var(--Fields-Form, #fff);
    flex: 1;
 }
-form {
+.form {
    .multi-select {
       .hidden {
          display: none;

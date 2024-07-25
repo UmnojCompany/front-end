@@ -1046,16 +1046,16 @@ section {
 .modal .line {
   border-bottom: 2px solid var(--Stroke-Divider_form, #f1f7ff);
 }
-.enter-page form,
-.modal form {
+.enter-page .form,
+.modal .form {
   padding: 50px 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
 }
-.enter-page form input,
-.modal form input {
+.enter-page .form input,
+.modal .form input {
   width: 370px;
 }
 .enter-page .info,
@@ -1470,12 +1470,12 @@ section {
   padding: 20px 30px;
 }
 
-form {
+.form {
   /* Убираем стрелки для всех браузеров */
   /* Убираем стрелки для Chrome, Safari, Edge, Opera */
   /* Убираем стрелки для IE */
 }
-form .up-info {
+.form .up-info {
   border: 2px dashed var(--Stroke-Divider, #e1edfd);
   border-radius: 10px;
   width: 100%;
@@ -1492,48 +1492,48 @@ form .up-info {
   position: relative;
   cursor: pointer;
 }
-form .up-info a {
+.form .up-info a {
   color: var(--Main-Blue, #4e6af3);
 }
-form .upload-container {
+.form .upload-container {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   min-width: 100%;
 }
-form .upload-container.full.big .up-info {
+.form .upload-container.full.big .up-info {
   width: 190px;
   height: 285px;
 }
-form .upload-container.full .up-info {
+.form .upload-container.full .up-info {
   width: 130px;
   height: 130px;
 }
-form .upload-container.full .up-info p {
+.form .upload-container.full .up-info p {
   display: none;
 }
-form .upload-container input[type=file] {
+.form .upload-container input[type=file] {
   display: none;
 }
-form .upload-container.dragover {
+.form .upload-container.dragover {
   border-color: #3e56d0;
   color: #3e56d0;
 }
-form .preview {
+.form .preview {
   display: flex;
   gap: 20px;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-form .preview.big img,
-form .preview.big .preview-wrapper {
+.form .preview.big img,
+.form .preview.big .preview-wrapper {
   width: 190px;
   height: 285px;
 }
-form .preview-wrapper {
+.form .preview-wrapper {
   position: relative;
 }
-form .preview-wrapper .remove-btn {
+.form .preview-wrapper .remove-btn {
   position: absolute;
   cursor: pointer;
   right: 8px;
@@ -1543,7 +1543,7 @@ form .preview-wrapper .remove-btn {
   background: url("../img/delete-img.svg") no-repeat;
   z-index: 10;
 }
-form .preview img {
+.form .preview img {
   margin: 0px 0px 0px 0px;
   width: 130px;
   height: 130px;
@@ -1551,7 +1551,7 @@ form .preview img {
      object-fit: cover;
   border-radius: 10px;
 }
-form .char-counter {
+.form .char-counter {
   position: absolute;
   top: 18px;
   right: 20px;
@@ -1561,10 +1561,10 @@ form .char-counter {
   font-weight: 400;
   line-height: 16px; /* 133.333% */
 }
-form .input-container.w100 {
+.form .input-container.w100 {
   min-width: 100%;
 }
-form textarea {
+.form textarea {
   border-radius: 10px;
   border: 2px solid var(--Fields-Stroke, #e1edfd);
   background: var(--Fields-Form, #fff);
@@ -1574,13 +1574,13 @@ form textarea {
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
-form.gap {
+.form.gap {
   gap: 20px;
 }
-form .input-container {
+.form .input-container {
   flex: 1;
 }
-form .input-container .placeholder {
+.form .input-container .placeholder {
   transition: 0.3s;
   z-index: 0;
   position: absolute;
@@ -1592,32 +1592,32 @@ form .input-container .placeholder {
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
-form .input-container .placeholder span {
+.form .input-container .placeholder span {
   color: var(--Text-Error, #f34942);
 }
-form .input-container textarea,
-form .input-container input {
+.form .input-container textarea,
+.form .input-container input {
   background: none;
   z-index: 1;
   min-width: 100%;
 }
-form .input-container textarea:valid + .placeholder,
-form .input-container input:valid + .placeholder {
+.form .input-container textarea:valid + .placeholder,
+.form .input-container input:valid + .placeholder {
   font-size: 12px;
   top: 5px;
 }
-form .input-container textarea:focus + .placeholder,
-form .input-container input:focus + .placeholder {
+.form .input-container textarea:focus + .placeholder,
+.form .input-container input:focus + .placeholder {
   font-size: 12px;
   top: 5px;
 }
-form .row {
+.form .row {
   min-width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-form input {
+.form input {
   border-radius: var(--Corner_radius_m, 10px);
   border: 2px solid var(--Fields-Stroke, #e1edfd);
   background: var(--Fields-Form, #fff);
@@ -1633,40 +1633,40 @@ form input {
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
-form input.labeled {
+.form input.labeled {
   padding: 26px 20px 6px 20px;
 }
-form input.phone {
+.form input.phone {
   padding: 16px 20px 16px 97px;
 }
-form input.phone.blocked {
+.form input.phone.blocked {
   border: 2px solid var(--Fields-Stroke-Error, #ffd8d8);
   background: var(--Fields-BG-Error, #fff5f5);
 }
-form input input[type=text] {
+.form input input[type=text] {
   padding: 22px 20px 10px 20px;
 }
-form input[type=email] {
+.form input[type=email] {
   padding: 26px 20px 6px 20px;
 }
-form input:focus {
+.form input:focus {
   border: 2px solid #4e6af3;
 }
-form input:focus:hover {
+.form input:focus:hover {
   border: 2px solid #4e6af3;
 }
-form input:hover {
+.form input:hover {
   border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
 }
-form input[type=number] {
+.form input[type=number] {
   -moz-appearance: textfield; /* Firefox */
 }
-form input[type=number]::-webkit-outer-spin-button,
-form input[type=number]::-webkit-inner-spin-button {
+.form input[type=number]::-webkit-outer-spin-button,
+.form input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-form input[type=number] {
+.form input[type=number] {
   -ms-appearance: none;
 }
 
@@ -1698,12 +1698,18 @@ form input[type=number] {
 .create-profile-realtor h5 {
   padding: 0px 30px;
 }
-.create-profile-realtor form {
+.create-profile-realtor .gap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+}
+.create-profile-realtor .form {
   gap: 0;
   margin: 0px 0px 0px 0px;
   padding: 30px;
 }
-.create-profile-realtor form.gap {
+.create-profile-realtor .form.gap {
   gap: 20px;
 }
 .create-profile-realtor h3 span {
@@ -1788,7 +1794,7 @@ form input[type=number] {
   color: var(--Text-Error, #f34942);
 }
 
-form .multi-select {
+.form .multi-select {
   position: relative;
   padding: 17px 20px 17px 20px;
   width: 100%;
@@ -1797,10 +1803,10 @@ form .multi-select {
   background: var(--Fields-Form, #fff);
   outline: none; /* Убираем стандартный outline */
 }
-form .multi-select .hidden {
+.form .multi-select .hidden {
   display: none;
 }
-form .multi-select select {
+.form .multi-select select {
   cursor: pointer;
   position: relative;
   z-index: 99;
@@ -1808,15 +1814,15 @@ form .multi-select select {
   height: 24px;
   background: rgba(18, 154, 222, 0);
 }
-form .multi-select select.full + .placeholder {
+.form .multi-select select.full + .placeholder {
   font-size: 12px;
   top: 5px;
 }
-form .multi-select select:focus + .placeholder {
+.form .multi-select select:focus + .placeholder {
   font-size: 12px;
   top: 5px;
 }
-form .multi-select .placeholder {
+.form .multi-select .placeholder {
   transition: 0.3s;
   z-index: 0;
   position: absolute;
@@ -1828,16 +1834,16 @@ form .multi-select .placeholder {
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
-form .multi-select .placeholder span {
+.form .multi-select .placeholder span {
   color: var(--Text-Error, #f34942);
 }
-form .selected-items {
+.form .selected-items {
   list-style-type: none;
   display: flex;
   gap: 8px;
   width: 100%;
 }
-form .selected-items li {
+.form .selected-items li {
   border-radius: 5px;
   border: 1px solid var(--Stroke-Divider, #e1edfd);
   background: var(--BG-White, #fff);
@@ -1851,7 +1857,7 @@ form .selected-items li {
   font-weight: 400;
   line-height: 16px; /* 114.286% */
 }
-form .selected-items li span {
+.form .selected-items li span {
   cursor: pointer;
   color: #7786a5;
   font-size: 22px;

@@ -49,6 +49,8 @@
               <input type="checkbox" data-value="Option 2" />
               <label>Option 2</label>
             </div>
+
+            <h4>Test</h4>
             <div class="custom-option">
               <input type="checkbox" data-value="Option 3" />
               <label>Option 3</label>
@@ -69,32 +71,70 @@
               <input type="checkbox" data-value="Option 7" />
               <label>Option 7</label>
             </div>
-            <div class="no-results">No matching options</div>
+            <div class="no-results">Нет результатов</div>
           </div>
         </div>
-
         <div class="custom-select-container">
-          <div class="custom-select" onclick="toggleOptions(this)">
-            Select other options
+          <div class="select-wrapper">
+            <div class="select-placeholder">
+              Город недвижимости <span>*</span>
+            </div>
+            <div class="custom-select" onclick="toggleOptions(this)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  d="M4.5 7.75L8.64645 11.8964C8.84171 12.0917 9.15829 12.0917 9.35355 11.8964L13.5 7.75"
+                  stroke="#7786A5"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="selected-items"></div>
           </div>
           <input
             type="text"
             class="search-input"
-            placeholder="Search..."
+            placeholder="Поиск..."
             oninput="filterOptions(this)"
           />
           <div class="custom-options">
             <div class="custom-option">
-              <input type="checkbox" data-value="Other Option 1" />
-              <label>Other Option 1</label>
+              <input type="checkbox" data-value="Option 1" />
+              <label>Option 1</label>
             </div>
             <div class="custom-option">
-              <input type="checkbox" data-value="Other Option 2" />
-              <label>Other Option 2</label>
+              <input type="checkbox" data-value="Option 2" />
+              <label>Option 2</label>
             </div>
-            <div class="no-results">No matching options</div>
+            <h4>Test</h4>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 3" />
+              <label>Option 3</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 4" />
+              <label>Option 4</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 5" />
+              <label>Option 5</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 6" />
+              <label>Option 6</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 7" />
+              <label>Option 7</label>
+            </div>
+            <div class="no-results">Нет результатов</div>
           </div>
-          <div class="selected-items"></div>
         </div>
       </div>
     </main>
@@ -133,27 +173,52 @@
 
       function filterOptions(inputElement) {
         const input = inputElement.value.toLowerCase();
-        const options = inputElement.nextElementSibling.children;
+        const container = inputElement.closest(".custom-select-container");
+        const options = container.querySelectorAll(".custom-option");
+        const headings = container.querySelectorAll("h4");
         let hasMatch = false;
 
-        Array.from(options).forEach((option) => {
-          if (option.classList.contains("custom-option")) {
-            const label = option
-              .querySelector("label")
-              .textContent.toLowerCase();
-            if (label.includes(input)) {
-              option.style.display = "block";
-              hasMatch = true;
-            } else {
-              option.style.display = "none";
-            }
+        options.forEach((option) => {
+          const label = option.querySelector("label").textContent.toLowerCase();
+          if (label.includes(input)) {
+            option.style.display = "block";
+            hasMatch = true;
+          } else {
+            option.style.display = "none";
           }
         });
 
-        inputElement.nextElementSibling.querySelector(
-          ".no-results"
-        ).style.display = hasMatch ? "none" : "block";
+        headings.forEach((heading) => {
+          let nextElement = heading.nextElementSibling;
+          let allHidden = true;
+
+          while (
+            nextElement &&
+            nextElement.classList.contains("custom-option")
+          ) {
+            if (nextElement.style.display !== "none") {
+              allHidden = false;
+              break;
+            }
+            nextElement = nextElement.nextElementSibling;
+          }
+
+          heading.style.display = allHidden ? "none" : "block";
+        });
+
+        container.querySelector(".no-results").style.display = hasMatch
+          ? "none"
+          : "block";
       }
+
+      // Обработчик клика на custom-option для переключения чекбоксов
+      document.querySelectorAll(".custom-option").forEach((option) => {
+        option.addEventListener("click", function () {
+          const checkbox = option.querySelector("input[type='checkbox']");
+          checkbox.checked = !checkbox.checked;
+          checkbox.dispatchEvent(new Event("change"));
+        });
+      });
 
       document.querySelectorAll(".custom-option input").forEach((checkbox) => {
         checkbox.addEventListener("change", () => {

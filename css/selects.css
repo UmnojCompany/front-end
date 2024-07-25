@@ -5,7 +5,12 @@
   gap: 20px;
 }
 
+.custom-selects .row {
+  min-width: 100%;
+}
+
 .custom-select-container {
+  min-width: 100%;
   position: relative;
   width: 100%;
 }
@@ -73,11 +78,22 @@
   border-left: 2px solid #e1edfd;
   background: var(--BG-White, #fff);
 }
+.custom-select-container .custom-options h4 {
+  padding: 12px 20px 4px 20px;
+  color: var(--Text-Grey, #7786A5);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
 .custom-select-container .custom-options.open {
   display: block;
 }
 .custom-select-container .custom-option {
-  padding: 10px;
+  padding: 12px 20px 13px 20px;
   cursor: pointer;
 }
 .custom-select-container .custom-option input {
