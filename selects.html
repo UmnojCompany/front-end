@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Select</title>
+<style>
+  /* Основные стили */
+  .custom-select-container {
+    position: relative;
+    width: 300px;
+  }
+  .custom-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  .custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  .custom-options.open {
+    display: block;
+  }
+  .custom-option {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .custom-option input {
+    margin-right: 10px;
+  }
+  .custom-option:hover {
+    background-color: #f0f0f0;
+  }
+  .selected-items {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .selected-item {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .selected-item span {
+    margin-right: 5px;
+  }
+  .selected-item .remove-item {
+    cursor: pointer;
+  }
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .no-results {
+    padding: 10px;
+    text-align: center;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="custom-select-container">
+  <div class="custom-select" onclick="toggleOptions()">Select options</div>
+  <input type="text" class="search-input" placeholder="Search..." oninput="filterOptions()" />
+  <div class="custom-options" id="custom-options">
+    <div class="custom-option">
+      <input type="checkbox" id="option1" data-value="Option 1">
+      <label for="option1">Option 1</label>
+    </div>
+    <div class="custom-option">
+      <input type="checkbox" id="option2" data-value="Option 2">
+      <label for="option2">Option 2</label>
+    </div>
+    <div class="no-results">No matching options</div>
+  </div>
+  <div class="selected-items" id="selected-items"></div>
+</div>
+
+<script>
+  document.addEventListener('click', function(event) {
+    const selectContainer = document.querySelector('.custom-select-container');
+    if (!selectContainer.contains(event.target)) {
+      document.getElementById('custom-options').classList.remove('open');
+    }
+  });
+
+  function toggleOptions() {
+    document.getElementById('custom-options').classList.toggle('open');
+  }
+
+  function filterOptions() {
+    const input = document.querySelector('.search-input').value.toLowerCase();
+    const options = document.querySelectorAll('.custom-option');
+    let hasMatch = false;
+
+    options.forEach(option => {
+      const label = option.querySelector('label').textContent.toLowerCase();
+      if (label.includes(input)) {
+        option.style.display = 'block';
+        hasMatch = true;
+      } else {
+        option.style.display = 'none';
+      }
+    });
+
+    document.querySelector('.no-results').style.display = hasMatch ? 'none' : 'block';
+  }
+
+  document.querySelectorAll('.custom-option input').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const selectedItems = document.getElementById('selected-items');
+      const value = checkbox.dataset.value;
+
+      if (checkbox.checked) {
+        // Проверка, есть ли уже этот элемент в списке выбранных
+        if (!selectedItems.querySelector(`.selected-item span[data-value="${value}"]`)) {
+          const item = document.createElement('div');
+          item.classList.add('selected-item');
+          item.innerHTML = `<span data-value="${value}">${value}</span><span class="remove-item" onclick="removeItem(this)">✖</span>`;
+          selectedItems.appendChild(item);
+        }
+      } else {
+        document.querySelector(`.selected-item span[data-value="${value}"]`).parentElement.remove();
+      }
+    });
+  });
+
+  function removeItem(element) {
+    const value = element.previousElementSibling.getAttribute('data-value');
+    document.querySelector(`.custom-option input[data-value="${value}"]`).checked = false;
+    element.parentElement.remove();
+  }
+</script>
+
+</body>
+</html>
