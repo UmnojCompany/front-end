@@ -1,150 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Custom Select</title>
-<style>
-  /* Основные стили */
-  .custom-select-container {
-    position: relative;
-    width: 300px;
-  }
-  .custom-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  .custom-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1000;
-  }
-  .custom-options.open {
-    display: block;
-  }
-  .custom-option {
-    padding: 10px;
-    cursor: pointer;
-  }
-  .custom-option input {
-    margin-right: 10px;
-  }
-  .custom-option:hover {
-    background-color: #f0f0f0;
-  }
-  .selected-items {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .selected-item {
-    margin: 5px;
-    padding: 5px 10px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-  }
-  .selected-item span {
-    margin-right: 5px;
-  }
-  .selected-item .remove-item {
-    cursor: pointer;
-  }
-  .search-input {
-    width: 100%;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  .no-results {
-    padding: 10px;
-    text-align: center;
-    display: none;
-  }
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Select</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/selects.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container testselects">
+        <div class="custom-select-container">
+          <div class="select-wrapper">
+            <div class="select-placeholder">
+              Город недвижимости <span>*</span>
+            </div>
+            <div class="custom-select" onclick="toggleOptions(this)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  d="M4.5 7.75L8.64645 11.8964C8.84171 12.0917 9.15829 12.0917 9.35355 11.8964L13.5 7.75"
+                  stroke="#7786A5"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="selected-items"></div>
+          </div>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Поиск..."
+            oninput="filterOptions(this)"
+          />
+          <div class="custom-options">
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 1" />
+              <label>Option 1</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 2" />
+              <label>Option 2</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 3" />
+              <label>Option 3</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 4" />
+              <label>Option 4</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 5" />
+              <label>Option 5</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 6" />
+              <label>Option 6</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Option 7" />
+              <label>Option 7</label>
+            </div>
+            <div class="no-results">No matching options</div>
+          </div>
+        </div>
 
-<div class="custom-select-container">
-  <div class="custom-select" onclick="toggleOptions()">Select options</div>
-  <input type="text" class="search-input" placeholder="Search..." oninput="filterOptions()" />
-  <div class="custom-options" id="custom-options">
-    <div class="custom-option">
-      <input type="checkbox" id="option1" data-value="Option 1">
-      <label for="option1">Option 1</label>
-    </div>
-    <div class="custom-option">
-      <input type="checkbox" id="option2" data-value="Option 2">
-      <label for="option2">Option 2</label>
-    </div>
-    <div class="no-results">No matching options</div>
-  </div>
-  <div class="selected-items" id="selected-items"></div>
-</div>
+        <div class="custom-select-container">
+          <div class="custom-select" onclick="toggleOptions(this)">
+            Select other options
+          </div>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="filterOptions(this)"
+          />
+          <div class="custom-options">
+            <div class="custom-option">
+              <input type="checkbox" data-value="Other Option 1" />
+              <label>Other Option 1</label>
+            </div>
+            <div class="custom-option">
+              <input type="checkbox" data-value="Other Option 2" />
+              <label>Other Option 2</label>
+            </div>
+            <div class="no-results">No matching options</div>
+          </div>
+          <div class="selected-items"></div>
+        </div>
+      </div>
+    </main>
 
-<script>
-  document.addEventListener('click', function(event) {
-    const selectContainer = document.querySelector('.custom-select-container');
-    if (!selectContainer.contains(event.target)) {
-      document.getElementById('custom-options').classList.remove('open');
-    }
-  });
+    <script>
+      document.addEventListener("click", function (event) {
+        document.querySelectorAll(".custom-options").forEach((options) => {
+          if (!options.parentElement.contains(event.target)) {
+            options.classList.remove("open");
+            const container = options.closest(".custom-select-container");
+            const placeholder = container.querySelector(".select-placeholder");
+            const searchInput = container.querySelector(".search-input");
+            container.classList.remove("active");
+            if (placeholder) placeholder.classList.remove("active");
+            if (searchInput) searchInput.classList.remove("active");
+          }
+        });
+      });
 
-  function toggleOptions() {
-    document.getElementById('custom-options').classList.toggle('open');
-  }
+      function toggleOptions(element) {
+        const container = element.closest(".custom-select-container");
+        const options = container.querySelector(".custom-options");
+        const placeholder = container.querySelector(".select-placeholder");
+        const searchInput = container.querySelector(".search-input");
 
-  function filterOptions() {
-    const input = document.querySelector('.search-input').value.toLowerCase();
-    const options = document.querySelectorAll('.custom-option');
-    let hasMatch = false;
+        const isOpen = options.classList.toggle("open");
+        container.classList.toggle("active", isOpen);
 
-    options.forEach(option => {
-      const label = option.querySelector('label').textContent.toLowerCase();
-      if (label.includes(input)) {
-        option.style.display = 'block';
-        hasMatch = true;
-      } else {
-        option.style.display = 'none';
-      }
-    });
-
-    document.querySelector('.no-results').style.display = hasMatch ? 'none' : 'block';
-  }
-
-  document.querySelectorAll('.custom-option input').forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-      const selectedItems = document.getElementById('selected-items');
-      const value = checkbox.dataset.value;
-
-      if (checkbox.checked) {
-        // Проверка, есть ли уже этот элемент в списке выбранных
-        if (!selectedItems.querySelector(`.selected-item span[data-value="${value}"]`)) {
-          const item = document.createElement('div');
-          item.classList.add('selected-item');
-          item.innerHTML = `<span data-value="${value}">${value}</span><span class="remove-item" onclick="removeItem(this)">✖</span>`;
-          selectedItems.appendChild(item);
+        if (placeholder) {
+          placeholder.classList.toggle("active", isOpen);
         }
-      } else {
-        document.querySelector(`.selected-item span[data-value="${value}"]`).parentElement.remove();
+        if (searchInput) {
+          searchInput.classList.toggle("active", isOpen);
+        }
       }
-    });
-  });
 
-  function removeItem(element) {
-    const value = element.previousElementSibling.getAttribute('data-value');
-    document.querySelector(`.custom-option input[data-value="${value}"]`).checked = false;
-    element.parentElement.remove();
-  }
-</script>
+      function filterOptions(inputElement) {
+        const input = inputElement.value.toLowerCase();
+        const options = inputElement.nextElementSibling.children;
+        let hasMatch = false;
 
-</body>
+        Array.from(options).forEach((option) => {
+          if (option.classList.contains("custom-option")) {
+            const label = option
+              .querySelector("label")
+              .textContent.toLowerCase();
+            if (label.includes(input)) {
+              option.style.display = "block";
+              hasMatch = true;
+            } else {
+              option.style.display = "none";
+            }
+          }
+        });
+
+        inputElement.nextElementSibling.querySelector(
+          ".no-results"
+        ).style.display = hasMatch ? "none" : "block";
+      }
+
+      document.querySelectorAll(".custom-option input").forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          const selectedItems = checkbox
+            .closest(".custom-select-container")
+            .querySelector(".selected-items");
+          const value = checkbox.dataset.value;
+
+          if (checkbox.checked) {
+            if (
+              !selectedItems.querySelector(
+                `.selected-item span[data-value="${value}"]`
+              )
+            ) {
+              const item = document.createElement("div");
+              item.classList.add("selected-item");
+              item.innerHTML = `<span data-value="${value}">${value}</span><span class="remove-item" onclick="removeItem(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3034 3.69867C12.5963 3.99157 12.5963 4.46644 12.3034 4.75933L9.06236 8.00033L12.3033 11.2412C12.5962 11.5341 12.5962 12.009 12.3033 12.3019C12.0104 12.5948 11.5355 12.5948 11.2426 12.3019L8.0017 9.06099L4.76089 12.3018C4.46799 12.5947 3.99312 12.5947 3.70023 12.3018C3.40733 12.0089 3.40733 11.534 3.70023 11.2411L6.94104 8.00033L3.70014 4.75943C3.40725 4.46653 3.40725 3.99166 3.70014 3.69877C3.99303 3.40587 4.46791 3.40587 4.7608 3.69877L8.0017 6.93967L11.2427 3.69867C11.5356 3.40578 12.0105 3.40578 12.3034 3.69867Z" fill="#7786A5"/>
+</svg></span>`;
+              selectedItems.appendChild(item);
+            }
+          } else {
+            selectedItems
+              .querySelector(`.selected-item span[data-value="${value}"]`)
+              .parentElement.remove();
+          }
+        });
+      });
+
+      function removeItem(element) {
+        const value = element.previousElementSibling.getAttribute("data-value");
+        const checkbox = document.querySelector(
+          `.custom-option input[data-value="${value}"]`
+        );
+        checkbox.checked = false;
+        element.parentElement.remove();
+      }
+    </script>
+  </body>
 </html>
