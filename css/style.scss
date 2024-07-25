@@ -1487,6 +1487,12 @@ form {
    }
    .upload-container {
       &.full {
+         &.big {
+            .up-info {
+               width: 190px;
+               height: 285px;
+            }
+         }
          .up-info {
             width: 130px;
             height: 130px;
@@ -1512,6 +1518,13 @@ form {
    }
 
    .preview {
+      &.big {
+         img,
+         .preview-wrapper {
+            width: 190px;
+            height: 285px;
+         }
+      }
       display: flex;
       //min-width: 100%;
       gap: 20px;

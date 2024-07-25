@@ -1501,6 +1501,10 @@ form .upload-container {
   flex-wrap: wrap;
   min-width: 100%;
 }
+form .upload-container.full.big .up-info {
+  width: 190px;
+  height: 285px;
+}
 form .upload-container.full .up-info {
   width: 130px;
   height: 130px;
@@ -1520,6 +1524,11 @@ form .preview {
   gap: 20px;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+form .preview.big img,
+form .preview.big .preview-wrapper {
+  width: 190px;
+  height: 285px;
 }
 form .preview-wrapper {
   position: relative;
