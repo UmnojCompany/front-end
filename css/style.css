@@ -1574,6 +1574,15 @@ section {
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
+.form textarea:focus {
+  border: 2px solid #4e6af3;
+}
+.form textarea:focus:hover {
+  border: 2px solid #4e6af3;
+}
+.form textarea:hover {
+  border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
+}
 .form.gap {
   gap: 20px;
 }
