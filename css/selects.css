@@ -29,7 +29,7 @@
   border: 2px solid var(--Fields-Stroke-Focused, #4e6af3);
 }
 .custom-select-container .select-placeholder {
-  transition: 0.3s;
+  transition: 0.1s;
   z-index: 8;
   position: absolute;
   left: 20px;
