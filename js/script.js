@@ -1,8 +1,31 @@
 jQuery(document).ready(function ($) {
   // jQuery код здесь
+   // Применение маски к элементу с классом phone
+   if (typeof Inputmask !== "undefined") {
+    Inputmask({
+      mask: "+7 (999) 999-99-99",
+      placeholder: "_",
+      showMaskOnHover: false,
+      showMaskOnFocus: true,
+    }).mask(".phone");
+  } else {
+    console.error("Inputmask is not loaded");
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Функция для применения маски к полям телефона
+  function applyInputMask() {
+    document.querySelectorAll(".phone").forEach(function (input) {
+      Inputmask({
+        mask: "+7 (999) 999-99-99",
+        placeholder: "_",
+        showMaskOnHover: false,
+        showMaskOnFocus: true
+      }).mask(input);
+    });
+  }
+
   // Функция для загрузки и отображения модальных окон
   function loadModal(modalType) {
     fetch("modals.html")
@@ -15,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("modal-body").innerHTML = modalContent;
         document.getElementById("modal").style.display = "flex"; // Показываем модальное окно
         document.body.classList.add("hold"); // Добавляем класс hold для body
+
+        applyInputMask(); // Применяем маску после загрузки модального окна
       })
       .catch((error) => console.error('Error loading modal content:', error));
   }
@@ -101,3 +126,4 @@ document.body.addEventListener("input", function (event) {
     }
   }
 });
+
