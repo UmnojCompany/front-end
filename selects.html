@@ -539,124 +539,153 @@
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8-beta.0/dist/inputmask.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-      document.addEventListener("click", function (event) {
-        document.querySelectorAll(".custom-options").forEach((options) => {
-          if (!options.parentElement.contains(event.target)) {
-            options.classList.remove("open");
-            const container = options.closest(".custom-select-container");
-            const placeholder = container.querySelector(".select-placeholder");
-            const searchInput = container.querySelector(".search-input");
-            container.classList.remove("active");
-            if (placeholder) placeholder.classList.remove("active");
-            if (searchInput) searchInput.classList.remove("active");
+      document.addEventListener("DOMContentLoaded", function () {
+        // Функция для открытия/закрытия опций
+        window.toggleOptions = function (element) {
+          // Добавляем window для глобальной области
+          const container = element.closest(".custom-select-container");
+          const options = container.querySelector(".custom-options");
+          const placeholder = container.querySelector(".select-placeholder");
+          const searchInput = container.querySelector(".search-input");
+
+          const isOpen = options.classList.toggle("open");
+          container.classList.toggle("active", isOpen);
+
+          if (placeholder) {
+            placeholder.classList.toggle("active", isOpen);
           }
-        });
-      });
-
-      function toggleOptions(element) {
-        const container = element.closest(".custom-select-container");
-        const options = container.querySelector(".custom-options");
-        const placeholder = container.querySelector(".select-placeholder");
-        const searchInput = container.querySelector(".search-input");
-
-        const isOpen = options.classList.toggle("open");
-        container.classList.toggle("active", isOpen);
-
-        if (placeholder) {
-          placeholder.classList.toggle("active", isOpen);
-        }
-        if (searchInput) {
-          searchInput.classList.toggle("active", isOpen);
-        }
-      }
-
-      function filterOptions(inputElement) {
-        const input = inputElement.value.toLowerCase();
-        const container = inputElement.closest(".custom-select-container");
-        const options = container.querySelectorAll(".custom-option");
-        const headings = container.querySelectorAll("h4");
-        let hasMatch = false;
-
-        options.forEach((option) => {
-          const label = option.querySelector("label").textContent.toLowerCase();
-          if (label.includes(input)) {
-            option.style.display = "block";
-            hasMatch = true;
-          } else {
-            option.style.display = "none";
+          if (searchInput) {
+            searchInput.classList.toggle("active", isOpen);
           }
-        });
+        };
 
-        headings.forEach((heading) => {
-          let nextElement = heading.nextElementSibling;
-          let allHidden = true;
-
-          while (
-            nextElement &&
-            nextElement.classList.contains("custom-option")
-          ) {
-            if (nextElement.style.display !== "none") {
-              allHidden = false;
-              break;
-            }
-            nextElement = nextElement.nextElementSibling;
-          }
-
-          heading.style.display = allHidden ? "none" : "block";
-        });
-
-        container.querySelector(".no-results").style.display = hasMatch
-          ? "none"
-          : "block";
-      }
-
-      // Обработчик клика на custom-option для переключения чекбоксов
-      document.querySelectorAll(".custom-option").forEach((option) => {
-        option.addEventListener("click", function () {
+        // Функция для переключения состояния чекбоксов
+        function toggleCheckbox(option) {
           const checkbox = option.querySelector("input[type='checkbox']");
-          checkbox.checked = !checkbox.checked;
-          checkbox.dispatchEvent(new Event("change"));
-        });
-      });
-
-      document.querySelectorAll(".custom-option input").forEach((checkbox) => {
-        checkbox.addEventListener("change", () => {
-          const selectedItems = checkbox
-            .closest(".custom-select-container")
-            .querySelector(".selected-items");
-          const value = checkbox.dataset.value;
-
-          if (checkbox.checked) {
-            if (
-              !selectedItems.querySelector(
-                `.selected-item span[data-value="${value}"]`
-              )
-            ) {
-              const item = document.createElement("div");
-              item.classList.add("selected-item");
-              item.innerHTML = `<span data-value="${value}">${value}</span><span class="remove-item" onclick="removeItem(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3034 3.69867C12.5963 3.99157 12.5963 4.46644 12.3034 4.75933L9.06236 8.00033L12.3033 11.2412C12.5962 11.5341 12.5962 12.009 12.3033 12.3019C12.0104 12.5948 11.5355 12.5948 11.2426 12.3019L8.0017 9.06099L4.76089 12.3018C4.46799 12.5947 3.99312 12.5947 3.70023 12.3018C3.40733 12.0089 3.40733 11.534 3.70023 11.2411L6.94104 8.00033L3.70014 4.75943C3.40725 4.46653 3.40725 3.99166 3.70014 3.69877C3.99303 3.40587 4.46791 3.40587 4.7608 3.69877L8.0017 6.93967L11.2427 3.69867C11.5356 3.40578 12.0105 3.40578 12.3034 3.69867Z" fill="#7786A5"/>
-</svg></span>`;
-              selectedItems.appendChild(item);
-            }
-          } else {
-            selectedItems
-              .querySelector(`.selected-item span[data-value="${value}"]`)
-              .parentElement.remove();
+          if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+            checkbox.dispatchEvent(new Event("change"));
           }
-        });
-      });
+        }
 
-      function removeItem(element) {
-        const value = element.previousElementSibling.getAttribute("data-value");
-        const checkbox = document.querySelector(
-          `.custom-option input[data-value="${value}"]`
-        );
-        checkbox.checked = false;
-        checkbox.dispatchEvent(new Event("change")); // Вызов события change
-        element.parentElement.remove();
-      }
-      
+        // Функция для фильтрации опций по введенному тексту
+        window.filterOptions = function (inputElement) {
+          // Добавляем window для глобальной области
+          const input = inputElement.value.toLowerCase();
+          const container = inputElement.closest(".custom-select-container");
+          const options = container.querySelectorAll(".custom-option");
+          const headings = container.querySelectorAll("h4");
+          let hasMatch = false;
+
+          options.forEach((option) => {
+            const label = option
+              .querySelector("label")
+              .textContent.toLowerCase();
+            if (label.includes(input)) {
+              option.style.display = "block";
+              hasMatch = true;
+            } else {
+              option.style.display = "none";
+            }
+          });
+
+          headings.forEach((heading) => {
+            let nextElement = heading.nextElementSibling;
+            let allHidden = true;
+
+            while (
+              nextElement &&
+              nextElement.classList.contains("custom-option")
+            ) {
+              if (nextElement.style.display !== "none") {
+                allHidden = false;
+                break;
+              }
+              nextElement = nextElement.nextElementSibling;
+            }
+
+            heading.style.display = allHidden ? "none" : "block";
+          });
+
+          container.querySelector(".no-results").style.display = hasMatch
+            ? "none"
+            : "block";
+        };
+
+        // Функция для удаления выбранного элемента
+        window.removeItem = function (element) {
+          // Добавляем window для глобальной области
+          const value =
+            element.previousElementSibling.getAttribute("data-value");
+          const container = element.closest(".custom-select-container");
+          const checkbox = container.querySelector(
+            `.custom-option input[data-value="${value}"]`
+          );
+          if (checkbox) {
+            checkbox.checked = false;
+            checkbox.dispatchEvent(new Event("change"));
+          }
+          element.parentElement.remove();
+        };
+
+        // Закрытие всех открытых списков при клике вне их области
+        document.addEventListener("click", function (event) {
+          document
+            .querySelectorAll(".custom-options.open")
+            .forEach((options) => {
+              if (!options.parentElement.contains(event.target)) {
+                options.classList.remove("open");
+                const container = options.closest(".custom-select-container");
+                container.classList.remove("active");
+                const placeholder = container.querySelector(
+                  ".select-placeholder"
+                );
+                const searchInput = container.querySelector(".search-input");
+                if (placeholder) placeholder.classList.remove("active");
+                if (searchInput) searchInput.classList.remove("active");
+              }
+            });
+        });
+
+        // Обработчики событий для всех custom-option и checkbox
+        document.querySelectorAll(".custom-option").forEach((option) => {
+          option.addEventListener("click", function (event) {
+            if (!event.target.classList.contains("remove-item")) {
+              toggleCheckbox(option);
+            }
+          });
+        });
+
+        document
+          .querySelectorAll(".custom-option input")
+          .forEach((checkbox) => {
+            checkbox.addEventListener("change", () => {
+              const container = checkbox.closest(".custom-select-container");
+              const selectedItems = container.querySelector(".selected-items");
+              const value = checkbox.dataset.value;
+
+              if (checkbox.checked) {
+                if (
+                  !selectedItems.querySelector(
+                    `.selected-item span[data-value="${value}"]`
+                  )
+                ) {
+                  const item = document.createElement("div");
+                  item.classList.add("selected-item");
+                  item.innerHTML = `<span data-value="${value}">${value}</span><span class="remove-item" onclick="removeItem(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3034 3.69867C12.5963 3.99157 12.5963 4.46644 12.3034 4.75933L9.06236 8.00033L12.3033 11.2412C12.5962 11.5341 12.5962 12.009 12.3033 12.3019C12.0104 12.5948 11.5355 12.5948 11.2426 12.3019L8.0017 9.06099L4.76089 12.3018C4.46799 12.5947 3.99312 12.5947 3.70023 12.3018C3.40733 12.0089 3.40733 11.534 3.70023 11.2411L6.94104 8.00033L3.70014 4.75943C3.40725 4.46653 3.40725 3.99166 3.70014 3.69877C3.99303 3.40587 4.46791 3.40587 4.7608 3.69877L8.0017 6.93967L11.2427 3.69867C11.5356 3.40578 12.0105 3.40578 12.3034 3.69867Z" fill="#7786A5"/>
+      </svg></span>`;
+                  selectedItems.appendChild(item);
+                }
+              } else {
+                const item = selectedItems.querySelector(
+                  `.selected-item span[data-value="${value}"]`
+                );
+                if (item) item.parentElement.remove();
+              }
+            });
+          });
+      });
     </script>
   </body>
 </html>
