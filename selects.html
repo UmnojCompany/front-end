@@ -653,8 +653,10 @@
           `.custom-option input[data-value="${value}"]`
         );
         checkbox.checked = false;
+        checkbox.dispatchEvent(new Event("change")); // Вызов события change
         element.parentElement.remove();
       }
+      
     </script>
   </body>
 </html>

@@ -224,7 +224,7 @@
                 <div class="custom-select-container">
                   <div class="select-wrapper">
                     <div class="select-placeholder">
-                      Формат сделки  <span>*</span>
+                      Формат сделки <span>*</span>
                     </div>
                     <div class="custom-select" onclick="toggleOptions(this)">
                       <svg
@@ -413,9 +413,6 @@
                   </div>
                 </div>
               </div>
-
-
-             
             </form>
           </div>
           <div class="button-primary inactive">Далее</div>
@@ -885,6 +882,7 @@
           `.custom-option input[data-value="${value}"]`
         );
         checkbox.checked = false;
+        checkbox.dispatchEvent(new Event("change")); // Вызов события change
         element.parentElement.remove();
       }
     </script>
