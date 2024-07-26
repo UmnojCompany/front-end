@@ -21,6 +21,11 @@
         z-index: 1;
     }
     &.active {
+        .custom-select{
+            svg{
+                transform: rotate(180deg);
+            }
+        }
         .select-wrapper {
             border: 2px solid var(--Fields-Stroke-Focused, #4e6af3);
         }
@@ -130,7 +135,8 @@
         }
 
         &:hover {
-            background-color: #f0f0f0;
+            //background-color: #f0f0f0;
+            background: var(--Stroke-Divider_form, #F1F7FF);
         }
     }
 

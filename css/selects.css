@@ -25,6 +25,9 @@
 .custom-select-container.active {
   z-index: 9999;
 }
+.custom-select-container.active .custom-select svg {
+  transform: rotate(180deg);
+}
 .custom-select-container.active .select-wrapper {
   border: 2px solid var(--Fields-Stroke-Focused, #4e6af3);
 }
@@ -111,7 +114,7 @@
   height: 20px;
 }
 .custom-select-container .custom-option:hover {
-  background-color: #f0f0f0;
+  background: var(--Stroke-Divider_form, #F1F7FF);
 }
 .custom-select-container .selected-items {
   display: flex;
