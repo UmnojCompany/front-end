@@ -282,6 +282,12 @@ section {
   gap: 10px;
   text-transform: uppercase;
 }
+.header .main-menu li a:hover {
+  color: #fff;
+}
+.header .main-menu li a:hover svg {
+  fill: white;
+}
 .header .site-logo-mob {
   display: none;
 }
@@ -289,6 +295,12 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
 }
 .header .right .avatar {
   cursor: pointer;
