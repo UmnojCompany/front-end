@@ -87,6 +87,9 @@ body {
 body.hold {
   overflow: hidden;
 }
+body.landing {
+  background: var(--BG-Grey_Light_L, #F5F7F9);
+}
 
 h3 {
   color: var(--Text-Black, #2a344a);
