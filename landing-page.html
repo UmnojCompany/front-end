@@ -1111,20 +1111,71 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Функция для создания эффекта бесконечного прокручивания
+        function startScrolling(container, direction) {
+          let scrollAmount = 0;
+          let scrollMax = container.scrollWidth - container.clientWidth;
+          let interval = setInterval(function () {
+            if (direction === "left") {
+              container.scrollLeft += 1;
+              if (container.scrollLeft >= scrollMax) {
+                container.scrollLeft = 0;
+              }
+            } else {
+              container.scrollLeft -= 1;
+              if (container.scrollLeft <= 0) {
+                container.scrollLeft = scrollMax;
+              }
+            }
+          }, 20); // Скорость прокручивания
+
+          // Останавливаем прокручивание при наведении
+          container.addEventListener("mouseenter", function () {
+            clearInterval(interval);
+          });
+
+          // Возобновляем прокручивание при выходе курсора
+          container.addEventListener("mouseleave", function () {
+            interval = setInterval(function () {
+              if (direction === "left") {
+                container.scrollLeft += 1;
+                if (container.scrollLeft >= scrollMax) {
+                  container.scrollLeft = 0;
+                }
+              } else {
+                container.scrollLeft -= 1;
+                if (container.scrollLeft <= 0) {
+                  container.scrollLeft = scrollMax;
+                }
+              }
+            }, 20);
+          });
+        }
+
+        // Запуск функции для элементов с классами move-left и move-right
+        startScrolling(document.querySelector(".move-left"), "left");
+        startScrolling(document.querySelector(".move-right"), "right");
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         // Находим контейнер с нужными кнопками и элементами case
         const showcaseContainer = document.querySelector(".showcases");
         if (showcaseContainer) {
           // Получаем кнопки и элементы case внутри этого контейнера
-          const buttons = showcaseContainer.querySelectorAll(".navi-buttons .butt");
+          const buttons = showcaseContainer.querySelectorAll(
+            ".navi-buttons .butt"
+          );
           const cases = showcaseContainer.querySelectorAll(".cases .case");
-      
+
           buttons.forEach((button, index) => {
-            if (cases[index]) { // Проверка, существует ли элемент case для данной кнопки
+            if (cases[index]) {
+              // Проверка, существует ли элемент case для данной кнопки
               button.addEventListener("click", () => {
                 // Убираем класс 'active' у всех кнопок и элементов case
-                buttons.forEach(btn => btn.classList.remove("active"));
-                cases.forEach(cs => cs.classList.remove("active"));
-      
+                buttons.forEach((btn) => btn.classList.remove("active"));
+                cases.forEach((cs) => cs.classList.remove("active"));
+
                 // Добавляем класс 'active' к нажатой кнопке и соответствующему элементу case
                 button.classList.add("active");
                 cases[index].classList.add("active");
@@ -1137,8 +1188,6 @@
           console.error("No showcase container found.");
         }
       });
-      
-      
     </script>
   </body>
 </html>
