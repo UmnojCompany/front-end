@@ -1,5 +1,15 @@
 body {
     &.landing {
+        section{
+            margin: 0px 0px 0px 0px;
+        }
+        h2 {
+            color: var(--Text-Black, #2a344a);
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 67.2px */
+        }
         .container {
             max-width: 1180px;
         }
@@ -303,7 +313,6 @@ body {
 .showcases {
     .indicators {
         .info {
-
             color: var(--Text-Grey_Dark, #3b4a69);
 
             /* Landing/Desktop_Tablet/Body_2 */
@@ -325,7 +334,7 @@ body {
         }
         .item {
             padding: 0px 20px 0px 0px;
-            &:last-child{
+            &:last-child {
                 border-right: none;
             }
             min-width: 250px;
@@ -421,4 +430,56 @@ body {
         flex-direction: column;
         gap: 40px;
     }
+    padding: 0px 0px 150px 0px;
+}
+.how-it-work {
+    p {
+        color: var(--Text-Grey_Dark, #3b4a69);
+
+        /* Landing/Desktop_Tablet/Body_2 */
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+    }
+    img {
+        max-width: 100%;
+        border-radius: var(--Corner_radius_m, 10px);
+        overflow: hidden;
+    }
+    .item {
+        border-radius: var(--Corner_radius_m, 10px);
+        background: var(--BG-White, #fff);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+    }
+    .wrapp {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    h3 {
+        padding: 0px 0px 0px 0px;
+        span {
+            margin: 0px 0px 0px 0px;
+            display: block;
+            color: var(--Main-Blue, #4e6af3);
+        }
+        color: var(--Text-Black, #2a344a);
+
+        /* Landing/Desktop_Tablet/H_3 B */
+        font-family: Roboto;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+    h2 {
+        margin: 0px 0px 50px 0px;
+    }
+    padding: 0px 0px 150px 0px;
 }
