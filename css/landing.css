@@ -512,4 +512,92 @@ body.landing .container {
   font-weight: 400;
   line-height: 150%; /* 27px */
   padding: 20px 0px 50px 0px;
+}
+
+.top-20 {
+  padding: 0px 0px 150px 0px;
+}
+.top-20 .reviews {
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.top-20 .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.top-20 .line {
+  background: #c7d2e9;
+  width: 1px;
+  height: 12px;
+}
+.top-20 .raiting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.top-20 .status {
+  overflow: hidden;
+  color: var(--BG-Black, #2a344a);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  flex-grow: 1;
+}
+.top-20 .name {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Accent_16 (S) */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.top-20 .info {
+  display: flex;
+  flex-direction: column;
+}
+.top-20 .item {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: var(--BG-White, #fff);
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+}
+.top-20 .wrapp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.top-20 .subtitle {
+  color: var(--Text-Grey_Dark, #3b4a69);
+  /* Landing/Desktop_Tablet/Body_2 */
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  padding: 20px 0px 50px 0px;
 }/*# sourceMappingURL=landing.css.map */
