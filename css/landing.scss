@@ -961,6 +961,7 @@ body {
         line-height: 120%; /* 60px */
     }
     .days {
+        min-height: 51px;
         padding: 15px 20px 0px 20px;
         display: flex;
         align-items: center;
