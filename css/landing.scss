@@ -670,10 +670,7 @@ body {
         overflow-x: scroll;
     }
     .item {
-        .text 
-        
-        p {
-           
+        .text p {
             color: var(--Text-Grey_Dark, #3b4a69);
             font-family: Roboto;
             font-size: 16px;
@@ -795,6 +792,69 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    padding: 0px 0px 150px 0px;
+}
+.partners {
+    .logos-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+        gap: 20px;
+    }
+
+    .logo-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px 60px;
+    }
+
+    .logo-item img {
+        max-width: 100%;
+        max-height: 100px; /* Ограничиваем максимальную высоту логотипа */
+        object-fit: contain;
+    }
+
+    .logo-item.special {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--Main-Blue, #4e6af3);
+
+        /* Landing/Desktop_Tablet/H_1 B */
+        font-family: Roboto;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 60px */
+
+        grid-column-start: 3; /* Начинается с 3-й колонки */
+        grid-column-end: 5; /* Заканчивается 5-й колонкой (включительно) */
+        grid-row: 3; /* Находится в третьей строке */
+    }
+
+    .logo-item.special p {
+       // margin-top: 10px;
+        color: var(--Text-Grey_Dark, #3b4a69);
+
+        /* Landing/Desktop_Tablet/Body_2 */
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+    }
+
+    h2 {
+        max-width: 880px;
+        margin: 0px 0px 50px 0px;
     }
     padding: 0px 0px 150px 0px;
 }
