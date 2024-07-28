@@ -201,7 +201,8 @@ section {
             &:hover{
                color: #fff;
                svg{
-                  fill: white;
+                  path{ fill: #ffffff;}
+                 
                }
             }
             padding: 11px 20px;

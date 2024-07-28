@@ -288,8 +288,8 @@ section {
 .header .main-menu li a:hover {
   color: #fff;
 }
-.header .main-menu li a:hover svg {
-  fill: white;
+.header .main-menu li a:hover svg path {
+  fill: #ffffff;
 }
 .header .site-logo-mob {
   display: none;
