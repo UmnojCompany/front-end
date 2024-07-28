@@ -301,8 +301,72 @@ body {
     background: url("../img/bg-intro.png") #f5f7f9 -2534px -422.052px / 298.229% 140.418% no-repeat;
 }
 .showcases {
-    .cases{
-        img{
+    .indicators {
+        .info {
+
+            color: var(--Text-Grey_Dark, #3b4a69);
+
+            /* Landing/Desktop_Tablet/Body_2 */
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 27px */
+        }
+        .data {
+            color: var(--Main-Blue, #4e6af3);
+
+            /* Landing/Desktop_Tablet/H_1 B */
+            font-family: Roboto;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 60px */
+        }
+        .item {
+            padding: 0px 20px 0px 0px;
+            &:last-child{
+                border-right: none;
+            }
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-right: 1px solid var(--Stroke-Divider, #e1edfd);
+        }
+        border-radius: var(--Corner_radius_m, 10px);
+        background: var(--BG-White, #fff);
+
+        display: flex;
+        padding: 30px 40px;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .cases {
+        .case {
+            display: none;
+            &.active {
+                display: flex;
+            }
+
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        p {
+            color: var(--Text-Grey_Dark, #3b4a69);
+            text-align: center;
+
+            /* Landing/Desktop_Tablet/Body_2 */
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 27px */
+
+            max-width: 700px;
+        }
+        img {
             max-width: 100%;
         }
     }
@@ -312,20 +376,20 @@ body {
             &:hover {
                 color: var(--Main-Blue, #4e6af3);
                 background: var(--BG-White, #fff);
-                svg{
-                    &.inactive{
+                svg {
+                    &.inactive {
                         display: none;
                     }
-                    &.active{
+                    &.active {
                         display: block;
                     }
                 }
             }
-            svg{
-                &.inactive{
+            svg {
+                &.inactive {
                     display: block;
                 }
-                &.active{
+                &.active {
                     display: none;
                 }
             }
