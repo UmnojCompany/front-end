@@ -860,10 +860,9 @@ body {
 }
 .tarifs {
     .button {
-        &:hover{
-            background: var(--Button-Primary-BG-Default, #4E6AF3);
-            color: var(--Button-Primary-Text-Default, #FFF);
-
+        &:hover {
+            background: var(--Button-Primary-BG-Default, #4e6af3);
+            color: var(--Button-Primary-Text-Default, #fff);
         }
         transition: 0.1s;
         border-radius: 10px;
@@ -974,8 +973,64 @@ body {
         font-weight: 600;
         line-height: 140%; /* 30.8px */
     }
+    .sale {
+        border-radius: 100px;
+        background: var(--Text-Black, #2a344a);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        color: var(--Text-White, #fff);
+
+        /* Platform/Button Link/Medium */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 125% */
+
+        span {
+            color: var(--Text-Grey, #7786a5);
+
+            /* Platform/Button Link/Medium */
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 125% */
+        }
+    }
     .item {
         &.recommended {
+            .button {
+                &:hover {
+                    color: var(--Main-Blue, #4e6af3);
+                    background: #fff;
+                }
+                background: #6880f5;
+            }
+            li {
+                &.inactive {
+                    color: #8396f7;
+
+                    &::before {
+                        background: url("../img/li-ico-off.svg");
+                    }
+                }
+                &::before {
+                    background: url("../img/li-ico-rec.svg");
+                }
+            }
+            .subtitle {
+                color: #cfd7fa;
+            }
+            .button,
+            li,
+            .price,
+            .days {
+                color: var(--Text-White, #fff);
+            }
+
             background: var(--Main-Blue, #4e6af3);
         }
         border-radius: var(--Corner_radius_m, 10px);

@@ -817,8 +817,8 @@ body.landing .container {
   margin: 0px 20px 20px 20px;
 }
 .tarifs .button:hover {
-  background: var(--Button-Primary-BG-Default, #4E6AF3);
-  color: var(--Button-Primary-Text-Default, #FFF);
+  background: var(--Button-Primary-BG-Default, #4e6af3);
+  color: var(--Button-Primary-Text-Default, #fff);
 }
 .tarifs ul {
   padding: 5px 20px 15px 20px;
@@ -899,6 +899,30 @@ body.landing .container {
   font-weight: 600;
   line-height: 140%; /* 30.8px */
 }
+.tarifs .sale {
+  border-radius: 100px;
+  background: var(--Text-Black, #2a344a);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: var(--Text-White, #fff);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.tarifs .sale span {
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
 .tarifs .item {
   border-radius: var(--Corner_radius_m, 10px);
   background: #fff;
@@ -909,6 +933,31 @@ body.landing .container {
 }
 .tarifs .item.recommended {
   background: var(--Main-Blue, #4e6af3);
+}
+.tarifs .item.recommended .button {
+  background: #6880f5;
+}
+.tarifs .item.recommended .button:hover {
+  color: var(--Main-Blue, #4e6af3);
+  background: #fff;
+}
+.tarifs .item.recommended li.inactive {
+  color: #8396f7;
+}
+.tarifs .item.recommended li.inactive::before {
+  background: url("../img/li-ico-off.svg");
+}
+.tarifs .item.recommended li::before {
+  background: url("../img/li-ico-rec.svg");
+}
+.tarifs .item.recommended .subtitle {
+  color: #cfd7fa;
+}
+.tarifs .item.recommended .button,
+.tarifs .item.recommended li,
+.tarifs .item.recommended .price,
+.tarifs .item.recommended .days {
+  color: var(--Text-White, #fff);
 }
 .tarifs .wrapp {
   display: flex;
