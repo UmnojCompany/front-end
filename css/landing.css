@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body.landing .modal-content {
+  max-width: 700px;
+}
 body.landing section {
   margin: 0px 0px 0px 0px;
 }
@@ -1232,8 +1235,4 @@ body.landing .container {
 }
 .modal .more {
   display: none;
-}
-.modal .modal-content {
-  max-width: 700px;
-  margin: auto;
 }/*# sourceMappingURL=landing.css.map */

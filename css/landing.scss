@@ -1,5 +1,9 @@
 body {
     &.landing {
+        .modal-content {
+            max-width: 700px;
+            //margin: auto;
+        }
         section {
             margin: 0px 0px 0px 0px;
         }
@@ -1338,7 +1342,7 @@ body {
         display: none;
     }
     .modal-content {
-        max-width: 700px;
-        margin: auto;
+        //max-width: 700px;
+        //margin: auto;
     }
 }
