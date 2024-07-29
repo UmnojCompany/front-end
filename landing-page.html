@@ -2125,7 +2125,7 @@
                 с благодарностью пишу данный отзыв.
               </p>
             </div>
-            <div class="more">Открыть еще</div>
+            <div class="more" onclick="openModal(this)">Открыть еще</div>
           </div>
           <div class="item">
             <div class="head">
@@ -2185,7 +2185,7 @@
                 данный отзыв.
               </p>
             </div>
-            <div class="more">Открыть еще</div>
+            <div class="more" onclick="openModal(this)">Открыть еще</div>
           </div>
           <div class="item">
             <div class="head">
@@ -2244,7 +2244,7 @@
                 бесплатно.
               </p>
             </div>
-            <div class="more">Открыть еще</div>
+            <div class="more" onclick="openModal(this)">Открыть еще</div>
           </div>
           <div class="item">
             <div class="head">
@@ -2306,7 +2306,7 @@
                 чат, чтобы уточнить их потребности и предложить им варианты.
               </p>
             </div>
-            <div class="more">Открыть еще</div>
+            <div class="more" onclick="openModal(this)">Открыть еще</div>
           </div>
           <div class="item">
             <div class="head">
@@ -2364,7 +2364,7 @@
                 обоснованные решения и улучшить свою работу как риелтора.
               </p>
             </div>
-            <div class="more">Открыть еще</div>
+            <div class="more" onclick="openModal(this)">Открыть еще</div>
           </div>
           <div class="item">
             <div class="head">
@@ -2421,7 +2421,7 @@
                 и достигать успеха в сфере недвижимости
               </p>
             </div>
-            <div class="more">Открыть еще</div>
+            <div class="more" onclick="openModal(this)">Открыть еще</div>
           </div>
         </div>
       </section>
@@ -3073,6 +3073,34 @@
         faqItem.classList.toggle("active");
         element.classList.toggle("active");
       }
+    </script>
+    <script>
+      function openModal(element) {
+        // Находим элемент item, содержащий кнопку more
+        const item = element.closest('.item');
+        
+        // Копируем содержимое item в модальное окно
+        const modalBody = document.getElementById('modal-body');
+        modalBody.innerHTML = item.innerHTML;
+      
+        // Показываем модальное окно
+        const modal = document.getElementById('modal');
+        modal.style.display = "block";
+      }
+      
+      function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = "none";
+      }
+      
+      // Закрытие модального окна при клике вне его области
+      window.onclick = function(event) {
+        const modal = document.getElementById('modal');
+        if (event.target === modal) {
+          closeModal();
+        }
+      }
+      
     </script>
   </body>
 </html>
