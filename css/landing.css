@@ -603,6 +603,13 @@ body.landing .container {
   display: flex;
   gap: 15px;
 }
+.top-20 .item img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
 .top-20 .wrapp {
   display: flex;
   flex-wrap: wrap;

@@ -639,6 +639,12 @@ body {
         flex-direction: column;
     }
     .item {
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
         //width: calc(33.333% - 20px); /* Три карточки в строке */
         flex: 1 1 calc(33.333% - 20px);
         box-sizing: border-box;
@@ -1242,8 +1248,7 @@ body {
     }
     .text {
         flex-grow: 1;
-       padding: 0px 30px 30px 30px;
-
+        padding: 0px 30px 30px 30px;
     }
     .text p {
         color: var(--Text-Grey_Dark, #3b4a69);
