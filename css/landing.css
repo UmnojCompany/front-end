@@ -1107,7 +1107,7 @@ body.landing .container {
   justify-content: space-between;
 }
 
-.next svg {
+.prew svg {
   transform: rotate(180deg);
 }
 

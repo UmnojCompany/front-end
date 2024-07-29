@@ -1200,13 +1200,14 @@ body {
     }
     padding: 0px 0px 150px 0px;
 }
-.next {
+.prew {
     svg {
         transform: rotate(180deg);
     }
 }
 .next,
 .prew {
+    
     &:hover {
         background: var(--Main-Blue, #4e6af3);
         svg {
