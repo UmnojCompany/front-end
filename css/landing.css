@@ -711,20 +711,6 @@ body.landing .container {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main-reviews .next svg {
-  transform: rotate(180deg);
-}
-.main-reviews .next,
-.main-reviews .prew {
-  border-radius: 40px;
-  background: var(--BG-White, #fff);
-  display: flex;
-  padding: 11px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
 .main-reviews .buttons {
   display: flex;
   align-items: center;
@@ -1099,20 +1085,6 @@ body.landing .container {
   line-height: 150%; /* 27px */
   padding: 0px 0px 50px 0px;
 }
-.relises .next svg {
-  transform: rotate(180deg);
-}
-.relises .next,
-.relises .prew {
-  border-radius: 40px;
-  background: var(--BG-White, #fff);
-  display: flex;
-  padding: 11px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
 .relises .buttons {
   display: flex;
   align-items: center;
@@ -1123,4 +1095,28 @@ body.landing .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.next svg {
+  transform: rotate(180deg);
+}
+
+.next,
+.prew {
+  border-radius: 40px;
+  background: var(--BG-White, #fff);
+  display: flex;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.next:hover,
+.prew:hover {
+  background: var(--Main-Blue, #4E6AF3);
+}
+.next:hover svg path,
+.prew:hover svg path {
+  fill: #fff;
 }/*# sourceMappingURL=landing.css.map */

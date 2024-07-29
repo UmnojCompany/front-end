@@ -765,23 +765,7 @@ body {
         align-items: flex-start;
         gap: 15px;
     }
-    .next {
-        svg {
-            transform: rotate(180deg);
-        }
-    }
-    .next,
-    .prew {
-        border-radius: 40px;
-        background: var(--BG-White, #fff);
 
-        display: flex;
-        padding: 11px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-    }
     .buttons {
         display: flex;
         align-items: center;
@@ -1189,23 +1173,7 @@ body {
         line-height: 150%; /* 27px */
         padding: 0px 0px 50px 0px;
     }
-    .next {
-        svg {
-            transform: rotate(180deg);
-        }
-    }
-    .next,
-    .prew {
-        border-radius: 40px;
-        background: var(--BG-White, #fff);
 
-        display: flex;
-        padding: 11px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-    }
     .buttons {
         display: flex;
         align-items: center;
@@ -1218,4 +1186,29 @@ body {
         justify-content: space-between;
     }
     padding: 0px 0px 150px 0px;
+}
+.next {
+    svg {
+        transform: rotate(180deg);
+    }
+}
+.next,
+.prew {
+    &:hover{
+        background: var(--Main-Blue, #4E6AF3);
+        svg{
+            path{
+                fill: #fff;
+            }
+        }
+    }
+    border-radius: 40px;
+    background: var(--BG-White, #fff);
+
+    display: flex;
+    padding: 11px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
