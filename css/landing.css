@@ -1133,4 +1133,97 @@ body.landing .container {
   line-height: 150%; /* 24px */
   cursor: pointer;
   margin-top: -15px;
+}
+
+.modal .text {
+  flex-grow: 1;
+}
+.modal .text p {
+  color: var(--Text-Grey_Dark, #3b4a69);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 24px */
+  /* Ограничение количества строк */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 8; /* Ограничение до 8 строк */
+}
+.modal .title {
+  align-self: flex-start;
+  color: var(--Text-Black, #2a344a);
+  /* Landing/Desktop_Tablet/H_4 S */
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 26.4px */
+}
+.modal .stars-5 {
+  align-self: flex-start;
+}
+.modal .head {
+  align-self: flex-start;
+  margin: 0px 0px 15px 0px;
+  display: flex;
+  gap: 15px;
+}
+.modal .head .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.modal .head .status {
+  align-self: flex-start;
+  flex-grow: 1;
+  overflow: hidden;
+  color: var(--BG-Black, #2a344a);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.modal .head .info {
+  display: flex;
+  flex-direction: column;
+}
+.modal .head .name {
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Accent_16 (S) */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.modal .head img {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--Corner_radius_m, 10px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal .more {
+  display: none;
+}
+.modal .modal-content {
+  max-width: 700px;
+  margin: auto;
 }/*# sourceMappingURL=landing.css.map */
