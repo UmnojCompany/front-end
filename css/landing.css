@@ -634,6 +634,9 @@ body.landing .container {
   align-items: flex-start;
   gap: 15px;
 }
+.main-reviews .item .modal-head {
+  display: none;
+}
 .main-reviews .item .text {
   flex-grow: 1;
 }
@@ -1116,7 +1119,7 @@ body.landing .container {
 }
 .next:hover,
 .prew:hover {
-  background: var(--Main-Blue, #4E6AF3);
+  background: var(--Main-Blue, #4e6af3);
 }
 .next:hover svg path,
 .prew:hover svg path {
@@ -1124,7 +1127,7 @@ body.landing .container {
 }
 
 .more {
-  color: var(--Main-Blue, #4E6AF3);
+  color: var(--Main-Blue, #4e6af3);
   /* Landing/Desktop_Tablet/Body_3 */
   font-family: Roboto;
   font-size: 16px;
@@ -1135,8 +1138,13 @@ body.landing .container {
   margin-top: -15px;
 }
 
+.modal .modal-head {
+  display: block;
+  min-width: 100%;
+}
 .modal .text {
   flex-grow: 1;
+  padding: 0px 30px 30px 30px;
 }
 .modal .text p {
   color: var(--Text-Grey_Dark, #3b4a69);
@@ -1145,14 +1153,14 @@ body.landing .container {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5; /* 24px */
-  /* Ограничение количества строк */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 8; /* Ограничение до 8 строк */
+  display: block; /* или inline, в зависимости от ваших нужд */
+  -webkit-box-orient: initial; /* Восстановление стандартного значения */
+  overflow: visible; /* Снять скрытие переполненного контента */
+  text-overflow: clip; /* Удалить троеточие */
+  -webkit-line-clamp: none; /* Снять ограничение по количеству строк */
 }
 .modal .title {
+  padding: 15px 30px;
   align-self: flex-start;
   color: var(--Text-Black, #2a344a);
   /* Landing/Desktop_Tablet/H_4 S */
@@ -1164,10 +1172,12 @@ body.landing .container {
 }
 .modal .stars-5 {
   align-self: flex-start;
+  padding: 0px 30px;
 }
 .modal .head {
+  padding: 0px 30px;
   align-self: flex-start;
-  margin: 0px 0px 15px 0px;
+  margin: 40px 0px 15px 0px;
   display: flex;
   gap: 15px;
 }

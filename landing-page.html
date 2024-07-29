@@ -2064,6 +2064,10 @@
         </div>
         <div class="rew-wrapper">
           <div class="item">
+            <div class="modal-head">
+              <h3>Отзыв риелтора</h3>
+              <div class="line"></div>
+            </div>
             <div class="head">
               <img src="img/rew/01.png" alt="" />
               <div class="info">
@@ -3086,11 +3090,17 @@
         // Показываем модальное окно
         const modal = document.getElementById('modal');
         modal.style.display = "flex";
+      
+        // Добавляем класс hold к body
+        document.body.classList.add('hold');
       }
       
       function closeModal() {
         const modal = document.getElementById('modal');
         modal.style.display = "none";
+      
+        // Убираем класс hold с body
+        document.body.classList.remove('hold');
       }
       
       // Закрытие модального окна при клике вне его области
@@ -3100,6 +3110,7 @@
           closeModal();
         }
       }
+      
       
     </script>
   </body>
