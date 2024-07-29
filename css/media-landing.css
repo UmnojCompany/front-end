@@ -2,7 +2,33 @@
   display: none;
 }
 
-@media (max-width: 1179px) {
+@media (max-width: 1279px) {
+  .intro {
+    background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
+    background-size: auto;
+  }
+  .main-reviews,
+  .partners,
+  .tarifs,
+  .faq-main,
+  .relises,
+  .top-20,
+  .parameters,
+  .how-it-work,
+  .showcases {
+    padding: 0px 0px 100px 0px;
+  }
+  .intro .header .right .create {
+    display: flex;
+  }
+  .intro {
+    padding: 0px 0px 159px 0px;
+  }
+  .intro h1 {
+    font-size: 72px;
+    max-width: 80%;
+    margin-bottom: -10px;
+  }
   .showcases .indicators .info {
     font-size: 16px;
     max-width: 60%;
