@@ -675,11 +675,7 @@ body {
 }
 
 .main-reviews {
-    .rew-wrapper {
-        display: flex;
-        gap: 20px;
-        overflow-x: scroll;
-    }
+
     .item {
         .modal-head {
             display: none;
@@ -1351,3 +1347,31 @@ body {
         //margin: auto;
     }
 }
+.reviews-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .reviews-container {
+    max-width: 1180px;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .reviews-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: max-content; /* Установите ширину содержимого под содержимое */
+    gap: 20px;
+  }
+  
+  .review-item {
+    flex: 0 0 380px; /* Установите фиксированную ширину для каждого элемента */
+    max-width: 380px;
+    box-sizing: border-box;
+    // padding: 10px;
+    // background: #f0f0f0; /* Примерный фон для видимости */
+    // margin: 0 5px; /* Примерный отступ между карточками */
+  }
