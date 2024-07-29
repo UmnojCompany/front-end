@@ -509,7 +509,7 @@ body {
         flex-wrap: wrap;
     }
     .title {
-        width: 320px;
+        min-width: 320px;
         display: flex;
         align-items: center;
         gap: 15px;

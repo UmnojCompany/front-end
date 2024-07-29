@@ -3,6 +3,9 @@
 }
 
 @media (max-width: 1279px) {
+  .top-20 .item {
+    flex: 1 1 calc(50% - 20px);
+  }
   .intro {
     background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
     background-size: auto;

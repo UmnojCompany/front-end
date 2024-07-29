@@ -480,7 +480,7 @@ body.landing .container {
   line-height: 20px; /* 125% */
 }
 .parameters .title {
-  width: 320px;
+  min-width: 320px;
   display: flex;
   align-items: center;
   gap: 15px;
