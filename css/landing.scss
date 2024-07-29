@@ -670,14 +670,19 @@ body {
         overflow-x: scroll;
     }
     .item {
+        .text{
+            flex-grow: 1;
+            
+        }
         .text p {
+           
             color: var(--Text-Grey_Dark, #3b4a69);
             font-family: Roboto;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: 1.5; /* 24px */
-            margin: 0px 0px 10px 0px;
+            //margin: 0px 0px 10px 0px;
 
             /* Ограничение количества строк */
             display: -webkit-box;
@@ -1211,4 +1216,16 @@ body {
     align-items: center;
     gap: 8px;
     cursor: pointer;
+}
+.more{
+    color: var(--Main-Blue, #4E6AF3);
+
+/* Landing/Desktop_Tablet/Body_3 */
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+cursor: pointer;
+margin-top: -15px;
 }
