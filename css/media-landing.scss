@@ -311,7 +311,9 @@
     }
 }
 @media (max-width: 767px) {
-   
+    .mob-menu{
+        overflow: auto;
+    }
     .top-20 .wrapp {
         max-height: 1080px;
         overflow: hidden;
