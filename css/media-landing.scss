@@ -1,41 +1,77 @@
 .showcases .indicators.mob {
     display: none;
 }
-.header.landing-page{
-    .burger{
+.header.landing-page {
+    .burger {
         display: none;
         cursor: pointer;
     }
 }
-.button-primary.create{
+.button-primary.create {
     margin: 0px 0px 0px 0px;
 }
 @media (max-width: 1279px) {
+    .intro {
+        background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
+        background-size: auto;
+    }
+}
+@media (max-width: 1179px) {
+    .parameters .item{
+        align-items: flex-start;
+    }
+    .parameters .title{
+        min-width: 220px;
+    }
+    .parameters .subtitle{
+        padding: 10px 0px 40px 0px;
+    }
+    .how-it-work img{
+        object-fit: cover;
+        max-width: 280px;
+    }
+    .how-it-work .item{
+        max-height: 285px;
+        flex-direction: row;
+    }
+    .how-it-work .wrapp{
+        flex-direction: column;
+    }
+    .tarifs h2{
+        padding: 0px 0px 40px 0px;
+    }
+    .how-it-work h2{
+        margin: 0px 0px 40px 0px;
 
-    .header .right{
+    }
+    body.landing h2{
+        font-size: 44px;
+    }
+    .container {
+        margin: 0px 10px;
+    }
+
+    .header .right {
         flex: 1;
         justify-content: flex-end;
     }
-    .header .left{
+    .header .left {
         flex: 1;
         justify-content: center;
     }
-    .header.landing-page{
-        .nav-dt{
+    .header.landing-page {
+        .nav-dt {
             display: none;
         }
-        .burger{
+        .burger {
             display: block;
             flex: 1;
         }
     }
-    .top-20 .item{
+    .top-20 .item {
         flex: 1 1 calc(50% - 20px);
     }
-    .intro{
-        background: url("../img/bg-intro.png") #f5f7f9  no-repeat;
-        background-size: auto;
-    }
+
     .main-reviews,
     .partners,
     .tarifs,
@@ -51,7 +87,7 @@
         display: flex;
     }
     .intro {
-        padding: 0px 0px 159px 0px;
+        padding: 0px 0px 139px 0px;
     }
     .intro h1 {
         font-size: 72px;

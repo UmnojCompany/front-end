@@ -295,6 +295,9 @@ body {
         line-height: 100%; /* 80px */
     }
     .wrapp {
+        .button-primary{
+            padding: 20px 36px ;
+        }
         .subtitle {
             color: var(--Text-Grey_Dark, #3b4a69);
             text-align: center;
@@ -470,7 +473,7 @@ body {
         gap: 20px;
     }
     h3 {
-        padding: 0px 0px 0px 0px;
+        padding: 0px 0px 20px 0px;
         span {
             margin: 0px 0px 0px 0px;
             display: block;

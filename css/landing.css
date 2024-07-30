@@ -291,6 +291,9 @@ body.landing .container {
   align-items: center;
   margin: 100px 0px;
 }
+.intro .wrapp .button-primary {
+  padding: 20px 36px;
+}
 .intro .wrapp .subtitle {
   color: var(--Text-Grey_Dark, #3b4a69);
   text-align: center;
@@ -444,7 +447,7 @@ body.landing .container {
   gap: 20px;
 }
 .how-it-work h3 {
-  padding: 0px 0px 0px 0px;
+  padding: 0px 0px 20px 0px;
   color: var(--Text-Black, #2a344a);
   /* Landing/Desktop_Tablet/H_3 B */
   font-family: Roboto;
