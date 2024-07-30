@@ -189,7 +189,7 @@
         gap: 12px;
     }
     .landing-footer {
-        padding: 20px 0px ;
+        padding: 20px 0px;
         border-radius: 10px 10px 0 0;
     }
     .showcases .indicators {
@@ -199,7 +199,61 @@
         }
         display: none;
     }
+    .header .buttons .button {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
+    .landing-footer .navigations .telegram {
+        max-width: 100%;
+        text-align: center;
+    }
+    .top-20 .item {
+        flex: 1 1 100%;
+    }
+    .partners .logo-item.special {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 6;
+    }
+    .partners .logos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .parameters .item {
+        flex-direction: column;
+    }
+    .showcases .navi-buttons {
+        overflow-x: scroll;
+    }
+    .landing-footer .navigations .nav ul li {
+        min-width: 155px;
+    }
+
+    .landing-footer .navigations {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .landing-footer .navigations .nav {
+        width: 100%;
+    }
+    .landing-footer {
+        .button-primary{
+            min-width: 100%;
+        }
+        .row-item {
+            flex: 1;
+        }
+    }
+    .landing-footer .start-free h2{
+        font-size: 26px;
+        line-height: 120%;
+    }
+    .landing-footer .navigations .telegram p{
+        font-size: 14px;
+    }
+    .landing-footer .copy-wrapp{
+        font-size: 12px;
+    }
 }
