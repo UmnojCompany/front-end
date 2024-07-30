@@ -802,6 +802,17 @@ body.landing .container {
 .tarifs {
   padding: 0px 0px 150px 0px;
 }
+.tarifs .head-section {
+  padding: 0px 0px 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tarifs .buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .tarifs .button {
   transition: 0.1s;
   border-radius: 10px;
@@ -936,7 +947,8 @@ body.landing .container {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  flex: 1;
+  flex: 0 0 380px;
+  width: 380px;
 }
 .tarifs .item.recommended {
   background: var(--Main-Blue, #4e6af3);
