@@ -301,6 +301,9 @@
   }
 }
 @media (max-width: 767px) {
+  body.landing .modal-content {
+    overflow: auto;
+  }
   .mob-menu {
     overflow: auto;
   }
