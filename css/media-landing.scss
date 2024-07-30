@@ -24,11 +24,12 @@
         background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
         background-size: auto;
     }
+
+}
+@media (max-width: 1179px) {
     .button-primary.create {
         display: none;
     }
-}
-@media (max-width: 1179px) {
     .tarifs .head-section{
         padding: 0px 20px 40px 20px;
     }
