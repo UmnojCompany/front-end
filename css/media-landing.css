@@ -2,7 +2,31 @@
   display: none;
 }
 
+.header.landing-page .burger {
+  display: none;
+  cursor: pointer;
+}
+
+.button-primary.create {
+  margin: 0px 0px 0px 0px;
+}
+
 @media (max-width: 1279px) {
+  .header .right {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .header .left {
+    flex: 1;
+    justify-content: center;
+  }
+  .header.landing-page .nav-dt {
+    display: none;
+  }
+  .header.landing-page .burger {
+    display: block;
+    flex: 1;
+  }
   .top-20 .item {
     flex: 1 1 calc(50% - 20px);
   }

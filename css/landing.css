@@ -187,6 +187,10 @@ body.landing .container {
   line-height: 140%; /* 44.8px */
 }
 
+.header.landing-page {
+  margin: 10px 10px 0px 10px;
+}
+
 .intro {
   padding: 0px 0px 189px 0px;
   background: url("../img/bg-intro.png") #f5f7f9 -2534px -422.052px/298.229% 140.418% no-repeat;
