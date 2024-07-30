@@ -610,6 +610,9 @@ body.landing .container {
   display: flex;
   gap: 15px;
 }
+.top-20 .item .more {
+  margin: 0px 0px 0px 0px;
+}
 .top-20 .item img {
   width: 70px;
   height: 70px;

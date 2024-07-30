@@ -17,12 +17,19 @@
     }
 }
 @media (max-width: 1179px) {
+    .top-20 .item{
+        &:last-child{
+            padding: 36px 0px 35px 0px;
+           
+        }
+    }
     .parameters .item{
         align-items: flex-start;
     }
     .parameters .title{
         min-width: 220px;
     }
+    .top-20 .subtitle,
     .parameters .subtitle{
         padding: 10px 0px 40px 0px;
     }

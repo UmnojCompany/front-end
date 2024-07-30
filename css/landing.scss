@@ -645,6 +645,10 @@ body {
         flex-direction: column;
     }
     .item {
+        .more{
+             margin: 0px 0px 0px 0px;
+        }
+       
         img {
             width: 70px;
             height: 70px;
