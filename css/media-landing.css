@@ -16,6 +16,9 @@
     background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
     background-size: auto;
   }
+  .button-primary.create {
+    display: none;
+  }
 }
 @media (max-width: 1179px) {
   .landing-footer .navigations .branding {
@@ -136,9 +139,6 @@
   .showcases {
     padding: 0px 0px 100px 0px;
   }
-  .intro .header .right .create {
-    display: flex;
-  }
   .intro {
     padding: 0px 0px 139px 0px;
   }
@@ -193,10 +193,18 @@
     flex-wrap: wrap;
   }
   .header .buttons .button {
-    display: none;
+    border-radius: 10px;
+    background: var(--Button-Primary-BG-Default, #4e6af3);
+    padding: 12px 20px;
+  }
+  .header .buttons .button span {
+    color: #fff;
   }
 }
 @media (max-width: 767px) {
+  .intro .wrapp .subtitle {
+    font-size: 16px;
+  }
   .landing-footer .navigations .telegram {
     max-width: 100%;
     text-align: center;
@@ -245,7 +253,14 @@
   .landing-footer .copy-wrapp {
     font-size: 12px;
   }
-  .main-reviews, .partners, .faq-main, .relises, .top-20, .parameters, .how-it-work, .showcases {
+  .main-reviews,
+  .partners,
+  .faq-main,
+  .relises,
+  .top-20,
+  .parameters,
+  .how-it-work,
+  .showcases {
     padding: 0px 0px 80px 0px;
   }
   .relises .wrapp .title {
@@ -330,7 +345,8 @@
   .main-reviews .head-section {
     padding: 0px 0px 30px 0px;
   }
-  .top-20 .subtitle, .parameters .subtitle {
+  .top-20 .subtitle,
+  .parameters .subtitle {
     font-size: 16px;
     padding: 10px 0px 30px 0px;
   }
@@ -373,7 +389,7 @@
   .showcases .indicators .item {
     width: 100%;
     padding: 20px 0px;
-    border-bottom: 1px solid var(--Stroke-Divider, #E1EDFD);
+    border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
     flex-direction: row;
     gap: 28px;
     border-radius: 0;
@@ -407,5 +423,16 @@
   }
   .intro .row {
     padding: 0px 0px 10px 0px;
+  }
+  .header {
+    border-radius: 10px;
+  }
+  .intro .wrapp {
+    margin: 80px 0px 50px 0px;
+    gap: 30px;
+  }
+  .intro h1 {
+    font-size: 42px;
+    max-width: 100%;
   }
 }/*# sourceMappingURL=media-landing.css.map */
