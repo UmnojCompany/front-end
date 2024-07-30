@@ -245,4 +245,167 @@
   .landing-footer .copy-wrapp {
     font-size: 12px;
   }
+  .main-reviews, .partners, .faq-main, .relises, .top-20, .parameters, .how-it-work, .showcases {
+    padding: 0px 0px 80px 0px;
+  }
+  .relises .wrapp .title {
+    font-size: 18px;
+  }
+  .relises .wrapp img {
+    width: 320px;
+    height: 320px;
+  }
+  .review-item {
+    flex: 0 0 320px;
+    max-width: 320px;
+    box-sizing: border-box;
+  }
+  .relises .subtitle {
+    font-size: 16px;
+    padding: 0px 0px 30px 0px;
+  }
+  .relises .head-section {
+    padding: 0px 0px 6px 0px;
+  }
+  body.landing h2 {
+    font-size: 26px;
+  }
+  .faq-main .faq-container .faq-question {
+    font-size: 22px;
+  }
+  .faq-main .subtitle {
+    font-size: 16px;
+  }
+  .faq-main .wrapp {
+    gap: 30px;
+  }
+  .tarifs .days {
+    font-size: 20px;
+  }
+  .tarifs .price {
+    font-size: 32px;
+  }
+  .tarifs .subtitle {
+    font-size: 14px;
+  }
+  .tarifs ul li {
+    font-size: 16px;
+  }
+  .tarifs .item {
+    gap: 6px;
+  }
+  .tarifs .subtitle {
+    margin: 2px 0px 9px 0px;
+  }
+  .tarifs ul {
+    gap: 12px;
+  }
+  .tarifs ul {
+    padding: 9px 20px 19px 20px;
+  }
+  .tarifs .button {
+    padding: 15px 36px;
+  }
+  .tarifs h2 {
+    padding: 0px 10px 30px 10px;
+  }
+  .partners .logo-item.special {
+    font-size: 22px;
+  }
+  .partners .logo-item.special p {
+    font-size: 16px;
+  }
+  .partners .logo-item.special {
+    padding: 20px 60px;
+  }
+  .partners .logos-container {
+    gap: 10px;
+  }
+  .partners .logo-item {
+    padding: 0px 60px;
+  }
+  .partners h2 {
+    margin: 0px 0px 30px 0px;
+  }
+  .main-reviews .head-section {
+    padding: 0px 0px 30px 0px;
+  }
+  .top-20 .subtitle, .parameters .subtitle {
+    font-size: 16px;
+    padding: 10px 0px 30px 0px;
+  }
+  .parameters .title {
+    font-size: 20px;
+  }
+  .parameters ul li {
+    font-size: 14px;
+  }
+  .parameters .item {
+    gap: 15px;
+  }
+  .how-it-work .item {
+    flex-direction: column;
+  }
+  .how-it-work img {
+    max-width: 100%;
+  }
+  .how-it-work .item {
+    max-height: unset;
+  }
+  .how-it-work p {
+    font-size: 16px;
+  }
+  .how-it-work h3 {
+    font-size: 22px;
+  }
+  .how-it-work h2 {
+    margin: 0px 0px 30px 0px;
+  }
+  .showcases .indicators.mob {
+    display: none;
+  }
+  .showcases .indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0px 20px;
+  }
+  .showcases .indicators .item {
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--Stroke-Divider, #E1EDFD);
+    flex-direction: row;
+    gap: 28px;
+    border-radius: 0;
+  }
+  .showcases .indicators .item:last-child {
+    border-bottom: none;
+  }
+  .showcases .indicators .data {
+    font-size: 26px;
+    min-width: 82px;
+  }
+  .showcases .container {
+    gap: 20px;
+  }
+  .showcases .cases .case {
+    gap: 20px;
+  }
+  .showcases .cases p {
+    font-size: 16px;
+  }
+  .showcases .navi-buttons {
+    justify-content: flex-start;
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px -10px 0px;
+  }
+  .showcases .navi-buttons .butt {
+    background: var(--BG-White, #fff);
+  }
+  .intro {
+    padding: 0px 0px 90px 0px;
+  }
+  .intro .row {
+    padding: 0px 0px 10px 0px;
+  }
 }/*# sourceMappingURL=media-landing.css.map */
