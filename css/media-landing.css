@@ -11,6 +11,14 @@
   margin: 0px 0px 0px 0px;
 }
 
+.butt-open-more {
+  display: none;
+}
+
+.mob-menu {
+  display: none;
+}
+
 @media (max-width: 1279px) {
   .intro {
     background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
@@ -21,6 +29,84 @@
   }
 }
 @media (max-width: 1179px) {
+  .header.landing-page {
+    margin: 0px 0px 0px 0px;
+  }
+  .mob-menu {
+    transition: 0.3s;
+    padding: 0px 0px 50px 0px;
+    display: block;
+    background: #2a344a;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: -5000px;
+    min-width: 100%;
+    height: 100%;
+  }
+  .mob-menu.active {
+    left: 0;
+  }
+  .mob-menu .telegram {
+    min-width: 100%;
+  }
+  .mob-menu p {
+    color: var(--Text-Grey, #7786a5);
+    text-align: center;
+    /* Platform/Desktop/Body-2 R */
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+  }
+  .mob-menu p a {
+    color: var(--Text-Success, #0ab258);
+  }
+  .mob-menu .bottom {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .mob-menu ul {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .mob-menu ul li {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--BG-Grey, #3a465d);
+  }
+  .mob-menu ul li a {
+    color: var(--Text-Disabled, #b8c6e3);
+    /* Platform/Accent_12_CAPS (S) */
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+  }
+  .mob-menu .head {
+    padding: 8px 20px 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 1px solid var(--BG-Grey, #3a465d);
+  }
+  .mob-menu .wrapp {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  .mob-menu .button-telegram {
+    max-width: 320px;
+    margin: 0px auto;
+  }
   .landing-footer .navigations .branding {
     display: none;
   }
@@ -202,6 +288,32 @@
   }
 }
 @media (max-width: 767px) {
+  .top-20 .wrapp {
+    max-height: 1080px;
+    overflow: hidden;
+  }
+  .top-20 .wrapp.active {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  .butt-open-more {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--Main-Blue, #4e6af3);
+    /* Fields/Placeholder */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    padding: 20px 0px 0px 0px;
+  }
+  .butt-open-more.active {
+    display: none;
+  }
   .intro .wrapp .subtitle {
     font-size: 16px;
   }
@@ -286,7 +398,7 @@
     font-size: 26px;
   }
   .faq-main .faq-container .faq-question {
-    font-size: 22px;
+    font-size: 18px;
   }
   .faq-main .subtitle {
     font-size: 16px;
