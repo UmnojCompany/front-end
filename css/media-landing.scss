@@ -30,7 +30,7 @@
         font-size: 16px;
     }
     .header.landing-page {
-        width: 100%;
+       // width: 100%;
     }
     .header .site-logo-dt {
         display: block;
@@ -45,9 +45,7 @@
     .tarifs .buttons {
         display: flex;
     }
-    .header.landing-page {
-        margin: 0px 0px 0px 0px;
-    }
+
     .mob-menu {
         transition: 0.3s;
         &.active {
@@ -233,7 +231,7 @@
         justify-content: center;
     }
     .header.landing-page {
-        border-radius: 0 0 10px 10px;
+        //border-radius: 0 0 10px 10px;
         .nav-dt {
             display: none;
         }
@@ -326,6 +324,11 @@
     }
 }
 @media (max-width: 767px) {
+    .header.landing-page {
+        margin: 0px 0px 0px 0px;
+        border-radius: 0 0 10px 10px;
+        // width: 100%;
+     }
     .showcases .navi-buttons {
         justify-content: flex-start;
         margin: 0px 0px -10px 0px;

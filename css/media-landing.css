@@ -34,9 +34,6 @@
   .intro .wrapp .button-primary {
     font-size: 16px;
   }
-  .header.landing-page {
-    width: 100%;
-  }
   .header .site-logo-dt {
     display: block;
     width: 100px;
@@ -49,9 +46,6 @@
   }
   .tarifs .buttons {
     display: flex;
-  }
-  .header.landing-page {
-    margin: 0px 0px 0px 0px;
   }
   .mob-menu {
     transition: 0.3s;
@@ -229,9 +223,6 @@
     flex: 1;
     justify-content: center;
   }
-  .header.landing-page {
-    border-radius: 0 0 10px 10px;
-  }
   .header.landing-page .nav-dt {
     display: none;
   }
@@ -318,6 +309,10 @@
   }
 }
 @media (max-width: 767px) {
+  .header.landing-page {
+    margin: 0px 0px 0px 0px;
+    border-radius: 0 0 10px 10px;
+  }
   .showcases .navi-buttons {
     justify-content: flex-start;
     margin: 0px 0px -10px 0px;
