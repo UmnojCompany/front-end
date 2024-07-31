@@ -289,7 +289,7 @@ body.landing .container {
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  margin: 100px 0px;
+  margin: 170px 0px 100px 0px;
 }
 .intro .wrapp .button-primary {
   padding: 20px 36px;

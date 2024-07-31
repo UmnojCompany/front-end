@@ -30,6 +30,13 @@
   }
 }
 @media (max-width: 1179px) {
+  .header.landing-page {
+    width: 100%;
+  }
+  .header .site-logo-dt {
+    display: block;
+    width: 100px;
+  }
   .button-primary.create {
     display: none;
   }
