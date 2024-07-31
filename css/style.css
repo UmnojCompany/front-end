@@ -157,9 +157,14 @@ section {
   z-index: 555;
 }
 .header a {
+  position: relative;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0);
   transition: 0.3s;
+}
+.header a.logo-dt:hover, .header a.logo-dt:focus {
+  border: 2px solid rgba(255, 255, 255, 0);
+  background: none;
 }
 .header a.create:hover {
   background: var(--Button-Primary-BG-Hover, #3e56d0);
@@ -293,6 +298,16 @@ section {
 }
 .header .main-menu li a:hover svg path {
   fill: #ffffff;
+}
+.header .site-logo-dt {
+  width: 140px;
+  height: 30px;
+  background-image: url("../img/logo.svg");
+  background-position: 0 0;
+  content: "";
+}
+.header .site-logo-dt:hover {
+  background-position: 0 -30px;
 }
 .header .site-logo-mob {
   display: none;
@@ -1949,4 +1964,28 @@ section {
 
 .video-forms-container {
   min-width: 100%;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: -2px;
+  white-space: nowrap;
+  z-index: 100;
+  border-radius: 10px;
+  background: var(--BG-Grey, #3a465d);
+  padding: 10px;
+  color: var(--Text-White, #fff);
+  /* Platform/Fields/Description */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  text-transform: none;
+}
+
+.tooltip:hover .tooltip-text {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

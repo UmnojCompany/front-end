@@ -70,7 +70,14 @@ section {
    margin: 0px auto;
 }
 .header {
-   a {
+   a { position: relative;
+      &.logo-dt {
+         &:hover,
+         &:focus {
+            border: 2px solid #ffffff00;
+            background: none;
+         }
+      }
       &.create {
          &:hover {
             background: var(--Button-Primary-BG-Hover, #3e56d0);
@@ -94,8 +101,9 @@ section {
    .buttons {
       .button {
          &:hover {
-            span{color: #fff;}
-            
+            span {
+               color: #fff;
+            }
          }
          //border-radius: 10px;
          display: flex;
@@ -234,7 +242,17 @@ section {
       align-items: center;
       gap: 10px;
    }
-
+   .site-logo-dt {
+      //transition: 0.2s;
+      &:hover {
+         background-position: 0 -30px;
+      }
+      width: 140px;
+      height: 30px;
+      background-image: url("../img/logo.svg");
+      background-position: 0 0;
+      content: "";
+   }
    .site-logo-mob {
       display: none;
    }
@@ -1999,4 +2017,32 @@ section {
 }
 .video-forms-container {
    min-width: 100%;
+}
+.tooltip-text {
+   display: none;
+   position: absolute;
+  
+   top: calc(100% + 5px);
+   right: -2px;
+
+   white-space: nowrap;
+   z-index: 100;
+
+   border-radius: 10px;
+   background: var(--BG-Grey, #3a465d);
+   padding: 10px;
+
+   color: var(--Text-White, #fff);
+
+   /* Platform/Fields/Description */
+   font-family: Roboto;
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 16px; /* 133.333% */
+   text-transform: none;
+}
+
+.tooltip:hover .tooltip-text {
+   display: block;
 }
