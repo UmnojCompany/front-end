@@ -26,7 +26,7 @@
     }
 }
 @media (max-width: 1179px) {
-    .header.landing-page{
+    .header.landing-page {
         width: 100%;
     }
     .header .site-logo-dt {
@@ -97,7 +97,7 @@
             flex-direction: column;
             overflow-y: auto;
         }
-        .close{
+        .close {
             position: absolute;
             top: 17px;
             left: 20px;
@@ -323,10 +323,31 @@
     }
 }
 @media (max-width: 767px) {
+    .showcases .navi-buttons {
+        justify-content: flex-start;
+        margin: 0px 0px -10px 0px;
+        overflow-x: scroll;
+        gap: 10px;
+        padding: 0px 0px 10px 20px;
+
+        -ms-overflow-style: none; /* для Internet Explorer и Edge */
+        scrollbar-width: none; /* для Firefox */
+        &::-webkit-scrollbar {
+            display: none; /* для Chrome, Safari и Opera */
+          }
+    }
+    .showcases .container.mod {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 20px 0px;
+    }
+    .showcases .navi-buttons .butt {
+        padding: 10px;
+        gap: 6px;
+        min-width: 120px;
+    }
     body.landing .modal-content {
         overflow: auto;
     }
-
     .mob-menu {
         overflow: auto;
     }
@@ -379,9 +400,7 @@
     .parameters .item {
         flex-direction: column;
     }
-    .showcases .navi-buttons {
-        overflow-x: scroll;
-    }
+
     .landing-footer .navigations .nav ul li {
         min-width: 155px;
     }
@@ -578,11 +597,7 @@
     .showcases .cases p {
         font-size: 16px;
     }
-    .showcases .navi-buttons {
-        justify-content: flex-start;
-        padding: 0px 0px 10px 0px;
-        margin: 0px 0px -10px 0px;
-    }
+
     .showcases .navi-buttons .butt {
         //color: var(--Main-Blue, #4e6af3);
         background: var(--BG-White, #fff);

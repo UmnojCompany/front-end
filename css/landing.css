@@ -427,6 +427,9 @@ main {
   flex-direction: column;
   gap: 40px;
 }
+.showcases .container.mod {
+  padding: 0px 0px 40px 0px;
+}
 
 .how-it-work {
   padding: 0px 0px 150px 0px;

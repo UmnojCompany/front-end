@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .showcases .indicators.mob {
   display: none;
 }
@@ -314,6 +315,27 @@
   }
 }
 @media (max-width: 767px) {
+  .showcases .navi-buttons {
+    justify-content: flex-start;
+    margin: 0px 0px -10px 0px;
+    overflow-x: scroll;
+    gap: 10px;
+    padding: 0px 0px 10px 20px;
+    -ms-overflow-style: none; /* для Internet Explorer и Edge */
+    scrollbar-width: none; /* для Firefox */
+  }
+  .showcases .navi-buttons::-webkit-scrollbar {
+    display: none; /* для Chrome, Safari и Opera */
+  }
+  .showcases .container.mod {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 20px 0px;
+  }
+  .showcases .navi-buttons .butt {
+    padding: 10px;
+    gap: 6px;
+    min-width: 120px;
+  }
   body.landing .modal-content {
     overflow: auto;
   }
@@ -366,9 +388,6 @@
   }
   .parameters .item {
     flex-direction: column;
-  }
-  .showcases .navi-buttons {
-    overflow-x: scroll;
   }
   .landing-footer .navigations .nav ul li {
     min-width: 155px;
@@ -559,11 +578,6 @@
   }
   .showcases .cases p {
     font-size: 16px;
-  }
-  .showcases .navi-buttons {
-    justify-content: flex-start;
-    padding: 0px 0px 10px 0px;
-    margin: 0px 0px -10px 0px;
   }
   .showcases .navi-buttons .butt {
     background: var(--BG-White, #fff);

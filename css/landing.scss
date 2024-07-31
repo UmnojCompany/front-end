@@ -451,6 +451,9 @@ main{
         gap: 10px;
     }
     .container {
+        &.mod{
+            padding: 0px 0px 40px 0px;
+        }
         display: flex;
         flex-direction: column;
         gap: 40px;
