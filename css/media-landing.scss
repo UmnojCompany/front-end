@@ -324,6 +324,9 @@
     }
 }
 @media (max-width: 767px) {
+    .showcases .indicators .info{
+        max-width: 100%;
+    }
     .header.landing-page {
         margin: 0px 0px 0px 0px;
         border-radius: 0 0 10px 10px;
@@ -584,7 +587,7 @@
         padding: 20px 0px;
         border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
         flex-direction: row;
-        gap: 28px;
+        gap: 16px;
         border-radius: 0;
         &:last-child {
             border-bottom: none;
