@@ -3290,91 +3290,82 @@
     <script>
       let currentIndex = 0;
 
-      function updateSliderPosition() {
-        const track = document.querySelector(".reviews-track");
-        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-      }
+function updateSliderPosition() {
+  const track = document.querySelector(".reviews-track");
+  const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
+  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
 
-      function slideLeft() {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateSliderPosition();
-        }
-      }
+function slideLeft() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSliderPosition();
+  }
+}
 
-      function slideRight() {
-        const track = document.querySelector(".reviews-track");
-        const items = track.querySelectorAll(".review-item").length;
-        if (currentIndex < items - 1) {
-          // Переключаемся на одну карточку вправо
-          currentIndex++;
-          updateSliderPosition();
-        }
-      }
+function slideRight() {
+  const track = document.querySelector(".reviews-track");
+  const items = track.querySelectorAll(".review-item").length;
+  const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
 
-      let currentIndexSecond = 0;
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    updateSliderPosition();
+  }
+}
 
-      function updateSliderPositionSecond() {
-        const track = document.querySelector(
-          ".second-reviews-wrapper .reviews-track"
-        );
-        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-        track.style.transform = `translateX(-${
-          currentIndexSecond * slideWidth
-        }px)`;
-      }
+let currentIndexSecond = 0;
 
-      function slideLeftSecond() {
-        if (currentIndexSecond > 0) {
-          currentIndexSecond--;
-          updateSliderPositionSecond();
-        }
-      }
+function updateSliderPositionSecond() {
+  const track = document.querySelector(".second-reviews-wrapper .reviews-track");
+  const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
+  track.style.transform = `translateX(-${currentIndexSecond * slideWidth}px)`;
+}
 
-      function slideRightSecond() {
-        const track = document.querySelector(
-          ".second-reviews-wrapper .reviews-track"
-        );
-        const items = track.querySelectorAll(".review-item").length;
-        if (currentIndexSecond < items - 1) {
-          // Переключаемся на одну карточку вправо
-          currentIndexSecond++;
-          updateSliderPositionSecond();
-        }
-      }
+function slideLeftSecond() {
+  if (currentIndexSecond > 0) {
+    currentIndexSecond--;
+    updateSliderPositionSecond();
+  }
+}
 
+function slideRightSecond() {
+  const track = document.querySelector(".second-reviews-wrapper .reviews-track");
+  const items = track.querySelectorAll(".review-item").length;
+  const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
 
-      let currentIndexTar = 0;
+  if (currentIndexSecond < maxIndex) {
+    currentIndexSecond++;
+    updateSliderPositionSecond();
+  }
+}
 
-      function updateSliderPositionTar() {
-        const track = document.querySelector(
-          ".tar-reviews-wrapper .reviews-track"
-        );
-        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-        track.style.transform = `translateX(-${
-          currentIndexTar * slideWidth
-        }px)`;
-      }
+let currentIndexTar = 0;
 
-      function slideLeftTar() {
-        if (currentIndexTar > 0) {
-          currentIndexTar--;
-          updateSliderPositionTar();
-        }
-      }
+function updateSliderPositionTar() {
+  const track = document.querySelector(".tar-reviews-wrapper .reviews-track");
+  const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
+  track.style.transform = `translateX(-${currentIndexTar * slideWidth}px)`;
+}
 
-      function slideRightTar() {
-        const track = document.querySelector(
-          ".tar-reviews-wrapper .reviews-track"
-        );
-        const items = track.querySelectorAll(".review-item").length;
-        if (currentIndexTar < items - 1) {
-          // Переключаемся на одну карточку вправо
-          currentIndexTar++;
-          updateSliderPositionTar();
-        }
-      }
+function slideLeftTar() {
+  if (currentIndexTar > 0) {
+    currentIndexTar--;
+    updateSliderPositionTar();
+  }
+}
+
+function slideRightTar() {
+  const track = document.querySelector(".tar-reviews-wrapper .reviews-track");
+  const items = track.querySelectorAll(".review-item").length;
+  const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
+
+  if (currentIndexTar < maxIndex) {
+    currentIndexTar++;
+    updateSliderPositionTar();
+  }
+}
+
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
