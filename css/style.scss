@@ -55,6 +55,7 @@ h5 {
    line-height: 120%; /* 24px */
 }
 main {
+   padding: 90px 0px 0px 0px;
    flex-grow: 1;
    .wrapper {
       padding: 30px;
@@ -389,6 +390,7 @@ section {
 .trigger {
    cursor: pointer;
 }
+
 .page-head,
 .head-profile {
    .wrapper {
@@ -438,6 +440,7 @@ section {
       gap: 30px;
       position: relative;
    }
+   
 }
 .info-profile {
    .buttons {
