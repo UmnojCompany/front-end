@@ -26,6 +26,10 @@
     }
 }
 @media (max-width: 1179px) {
+
+    .landing-footer .start-free p{
+        text-align: center;
+    }
     .how-it-work h3 span {
         display: inline-block;
     }
@@ -327,6 +331,10 @@
     }
 }
 @media (max-width: 767px) {
+    .landing-footer .navigations .nav ul .dtop{
+
+        display: none;
+    }
     .top-20 .wrapp {
         gap: 12px;
     }
