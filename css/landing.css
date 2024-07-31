@@ -973,6 +973,9 @@ main {
 .tarifs .item.recommended {
   background: var(--Main-Blue, #4e6af3);
 }
+.tarifs .item.recommended .line {
+  border-top: 1px solid var(--Stroke-Divider, #6880F5);
+}
 .tarifs .item.recommended .button {
   background: #6880f5;
 }
@@ -984,7 +987,7 @@ main {
   color: #8396f7;
 }
 .tarifs .item.recommended li.inactive::before {
-  background: url("../img/li-ico-off.svg");
+  background: url("../img/inactive-rec.svg");
 }
 .tarifs .item.recommended li::before {
   background: url("../img/li-ico-rec.svg");

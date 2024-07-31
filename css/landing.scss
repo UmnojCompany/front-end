@@ -1045,6 +1045,10 @@ main{
     }
     .item {
         &.recommended {
+
+            .line{
+                border-top: 1px solid var(--Stroke-Divider, #6880F5);
+            }
             .button {
                 &:hover {
                     color: var(--Main-Blue, #4e6af3);
@@ -1054,11 +1058,12 @@ main{
             }
             li {
                 &.inactive {
+                    &::before {
+                        background: url("../img/inactive-rec.svg");
+                    }
                     color: #8396f7;
 
-                    &::before {
-                        background: url("../img/li-ico-off.svg");
-                    }
+                  
                 }
                 &::before {
                     background: url("../img/li-ico-rec.svg");
