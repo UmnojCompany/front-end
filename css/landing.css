@@ -516,6 +516,9 @@ main {
   font-weight: 500;
   line-height: 120%; /* 28.8px */
 }
+.parameters .title svg path {
+  fill: #3B4A69;
+}
 .parameters .item {
   display: flex;
   align-items: center;

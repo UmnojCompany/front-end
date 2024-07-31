@@ -534,6 +534,11 @@ main{
         flex-wrap: wrap;
     }
     .title {
+        svg{
+            path{
+                fill: #3B4A69;
+            }
+        }
         min-width: 320px;
         display: flex;
         align-items: center;
