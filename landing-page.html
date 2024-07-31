@@ -88,12 +88,21 @@
             </a>
           </div>
           <a href="">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="40" rx="10" fill="#3A465D"/>
-              <rect x="5" y="5" width="30" height="30" rx="10" fill="#3A465D"/>
-              <path d="M20.7369 25.25C15.0995 25.25 11.884 21.3086 11.75 14.75H14.5739C14.6666 19.5638 16.7484 21.6029 18.3974 22.0233V14.75H21.0564V18.9017C22.6847 18.723 24.3955 16.8311 24.9727 14.75H27.6316C27.4142 15.8293 26.9806 16.8512 26.3582 17.7519C25.7358 18.6525 24.9378 19.4125 24.0142 19.9842C25.0452 20.5067 25.9557 21.2461 26.6859 22.1538C27.416 23.0615 27.9491 24.1168 28.25 25.25H25.3231C25.053 24.2657 24.504 23.3846 23.745 22.7171C22.986 22.0496 22.0507 21.6255 21.0564 21.4977V25.25H20.7369Z" fill="white"/>
-              </svg>
-        </a>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="40" height="40" rx="10" fill="#3A465D" />
+              <rect x="5" y="5" width="30" height="30" rx="10" fill="#3A465D" />
+              <path
+                d="M20.7369 25.25C15.0995 25.25 11.884 21.3086 11.75 14.75H14.5739C14.6666 19.5638 16.7484 21.6029 18.3974 22.0233V14.75H21.0564V18.9017C22.6847 18.723 24.3955 16.8311 24.9727 14.75H27.6316C27.4142 15.8293 26.9806 16.8512 26.3582 17.7519C25.7358 18.6525 24.9378 19.4125 24.0142 19.9842C25.0452 20.5067 25.9557 21.2461 26.6859 22.1538C27.416 23.0615 27.9491 24.1168 28.25 25.25H25.3231C25.053 24.2657 24.504 23.3846 23.745 22.7171C22.986 22.0496 22.0507 21.6255 21.0564 21.4977V25.25H20.7369Z"
+                fill="white"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -144,7 +153,6 @@
                   </div>
                   Заявки</a
                 >
-               
               </li>
               <li class="tooltip" data-tooltip="Функционал в разработке!">
                 <a href="#"
@@ -843,8 +851,8 @@
             </div>
           </div>
         </div>
-          
-          <div class="container">
+
+        <div class="container">
           <div class="cases">
             <div class="case active">
               <p>
@@ -2506,7 +2514,7 @@
               <img src="img/partners/p10.svg" alt="Berkshire Hathaway" />
             </div>
             <div class="logo-item special">
-              <span>130+</span>
+              <span>130 +</span>
               <p>Агентств из разных стран мира</p>
             </div>
           </div>
@@ -2551,7 +2559,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="reviews-wrapper tar-reviews-wrapper">
             <div class="reviews-container">
               <div class="wrapp reviews-track">
@@ -2622,11 +2630,10 @@
               </div>
             </div>
           </div>
-
         </div>
         <div id="faq"></div>
       </section>
-     
+
       <section class="faq-main">
         <div class="container">
           <div class="wrapp">
@@ -3270,102 +3277,112 @@
       });
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         var burger = document.querySelector(".burger");
         var mobMenu = document.querySelector(".mob-menu");
         var close = mobMenu.querySelector(".close");
-      
-        burger.addEventListener("click", function() {
+
+        burger.addEventListener("click", function () {
           document.body.classList.add("hold");
           mobMenu.classList.add("active");
         });
-      
-        close.addEventListener("click", function() {
+
+        close.addEventListener("click", function () {
           document.body.classList.remove("hold");
           mobMenu.classList.remove("active");
         });
       });
-      
     </script>
     <script>
       let currentIndex = 0;
 
-function updateSliderPosition() {
-  const track = document.querySelector(".reviews-track");
-  const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
+      function updateSliderPosition() {
+        const track = document.querySelector(".reviews-track");
+        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
 
-function slideLeft() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSliderPosition();
-  }
-}
+      function slideLeft() {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSliderPosition();
+        }
+      }
 
-function slideRight() {
-  const track = document.querySelector(".reviews-track");
-  const items = track.querySelectorAll(".review-item").length;
-  const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
+      function slideRight() {
+        const track = document.querySelector(".reviews-track");
+        const items = track.querySelectorAll(".review-item").length;
+        const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
 
-  if (currentIndex < maxIndex) {
-    currentIndex++;
-    updateSliderPosition();
-  }
-}
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateSliderPosition();
+        }
+      }
 
-let currentIndexSecond = 0;
+      let currentIndexSecond = 0;
 
-function updateSliderPositionSecond() {
-  const track = document.querySelector(".second-reviews-wrapper .reviews-track");
-  const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-  track.style.transform = `translateX(-${currentIndexSecond * slideWidth}px)`;
-}
+      function updateSliderPositionSecond() {
+        const track = document.querySelector(
+          ".second-reviews-wrapper .reviews-track"
+        );
+        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
+        track.style.transform = `translateX(-${
+          currentIndexSecond * slideWidth
+        }px)`;
+      }
 
-function slideLeftSecond() {
-  if (currentIndexSecond > 0) {
-    currentIndexSecond--;
-    updateSliderPositionSecond();
-  }
-}
+      function slideLeftSecond() {
+        if (currentIndexSecond > 0) {
+          currentIndexSecond--;
+          updateSliderPositionSecond();
+        }
+      }
 
-function slideRightSecond() {
-  const track = document.querySelector(".second-reviews-wrapper .reviews-track");
-  const items = track.querySelectorAll(".review-item").length;
-  const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
+      function slideRightSecond() {
+        const track = document.querySelector(
+          ".second-reviews-wrapper .reviews-track"
+        );
+        const items = track.querySelectorAll(".review-item").length;
+        const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
 
-  if (currentIndexSecond < maxIndex) {
-    currentIndexSecond++;
-    updateSliderPositionSecond();
-  }
-}
+        if (currentIndexSecond < maxIndex) {
+          currentIndexSecond++;
+          updateSliderPositionSecond();
+        }
+      }
 
-let currentIndexTar = 0;
+      let currentIndexTar = 0;
 
-function updateSliderPositionTar() {
-  const track = document.querySelector(".tar-reviews-wrapper .reviews-track");
-  const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-  track.style.transform = `translateX(-${currentIndexTar * slideWidth}px)`;
-}
+      function updateSliderPositionTar() {
+        const track = document.querySelector(
+          ".tar-reviews-wrapper .reviews-track"
+        );
+        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
+        track.style.transform = `translateX(-${
+          currentIndexTar * slideWidth
+        }px)`;
+      }
 
-function slideLeftTar() {
-  if (currentIndexTar > 0) {
-    currentIndexTar--;
-    updateSliderPositionTar();
-  }
-}
+      function slideLeftTar() {
+        if (currentIndexTar > 0) {
+          currentIndexTar--;
+          updateSliderPositionTar();
+        }
+      }
 
-function slideRightTar() {
-  const track = document.querySelector(".tar-reviews-wrapper .reviews-track");
-  const items = track.querySelectorAll(".review-item").length;
-  const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
+      function slideRightTar() {
+        const track = document.querySelector(
+          ".tar-reviews-wrapper .reviews-track"
+        );
+        const items = track.querySelectorAll(".review-item").length;
+        const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
 
-  if (currentIndexTar < maxIndex) {
-    currentIndexTar++;
-    updateSliderPositionTar();
-  }
-}
-
+        if (currentIndexTar < maxIndex) {
+          currentIndexTar++;
+          updateSliderPositionTar();
+        }
+      }
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
