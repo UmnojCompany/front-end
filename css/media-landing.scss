@@ -26,14 +26,14 @@
     }
 }
 @media (max-width: 1179px) {
-    .how-it-work h3 span{
+    .how-it-work h3 span {
         display: inline-block;
     }
-    .intro .wrapp .button-primary{
+    .intro .wrapp .button-primary {
         font-size: 16px;
     }
     .header.landing-page {
-       // width: 100%;
+        // width: 100%;
     }
     .header .site-logo-dt {
         display: block;
@@ -327,14 +327,17 @@
     }
 }
 @media (max-width: 767px) {
-    .showcases .indicators .info{
+    .top-20 .wrapp {
+        gap: 12px;
+    }
+    .showcases .indicators .info {
         max-width: 100%;
     }
     .header.landing-page {
         margin: 0px 0px 0px 0px;
         border-radius: 0 0 10px 10px;
         // width: 100%;
-     }
+    }
     .showcases .navi-buttons {
         justify-content: flex-start;
         margin: 0px 0px -10px 0px;
@@ -346,7 +349,7 @@
         scrollbar-width: none; /* для Firefox */
         &::-webkit-scrollbar {
             display: none; /* для Chrome, Safari и Opera */
-          }
+        }
     }
     .showcases .container.mod {
         margin: 0px 0px 0px 0px;
