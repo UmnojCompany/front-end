@@ -902,10 +902,7 @@ main{
         gap: 20px;
     }
     .button {
-        &:hover {
-            background: var(--Button-Primary-BG-Default, #4e6af3);
-            color: var(--Button-Primary-Text-Default, #fff);
-        }
+       
         transition: 0.1s;
         border-radius: 10px;
         background: var(--Button-Secondary-BG-Default, #f1f7ff);
@@ -1044,15 +1041,30 @@ main{
         }
     }
     .item {
+        &:hover{
+            .button{
+                background: var(--Button-Primary-BG-Default, #4e6af3);
+                color: var(--Button-Primary-Text-Default, #fff);
+            }
+        }
         &.recommended {
+
+            &:hover{
+                .button{
+                    color: var(--Main-Blue, #4e6af3);
+                    background: #fff;
+                //background: var(--Button-Primary-BG-Default, #4e6af3);
+                    //color: var(--Button-Primary-Text-Default, #fff);
+                }
+            }
 
             .line{
                 border-top: 1px solid var(--Stroke-Divider, #6880F5);
             }
             .button {
                 &:hover {
-                    color: var(--Main-Blue, #4e6af3);
-                    background: #fff;
+                    // color: var(--Main-Blue, #4e6af3);
+                    // background: #fff;
                 }
                 background: #6880f5;
             }

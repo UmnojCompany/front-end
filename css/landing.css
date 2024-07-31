@@ -853,10 +853,6 @@ main {
   line-height: 24px; /* 120% */
   margin: 0px 20px 20px 20px;
 }
-.tarifs .button:hover {
-  background: var(--Button-Primary-BG-Default, #4e6af3);
-  color: var(--Button-Primary-Text-Default, #fff);
-}
 .tarifs ul {
   padding: 5px 20px 15px 20px;
   display: flex;
@@ -970,18 +966,22 @@ main {
   flex: 0 0 380px;
   width: 380px;
 }
+.tarifs .item:hover .button {
+  background: var(--Button-Primary-BG-Default, #4e6af3);
+  color: var(--Button-Primary-Text-Default, #fff);
+}
 .tarifs .item.recommended {
   background: var(--Main-Blue, #4e6af3);
+}
+.tarifs .item.recommended:hover .button {
+  color: var(--Main-Blue, #4e6af3);
+  background: #fff;
 }
 .tarifs .item.recommended .line {
   border-top: 1px solid var(--Stroke-Divider, #6880F5);
 }
 .tarifs .item.recommended .button {
   background: #6880f5;
-}
-.tarifs .item.recommended .button:hover {
-  color: var(--Main-Blue, #4e6af3);
-  background: #fff;
 }
 .tarifs .item.recommended li.inactive {
   color: #8396f7;
