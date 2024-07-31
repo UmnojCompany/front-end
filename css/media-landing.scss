@@ -97,10 +97,16 @@
             flex-direction: column;
             overflow-y: auto;
         }
+        .close{
+            position: absolute;
+            top: 17px;
+            left: 20px;
+        }
         .head {
-            padding: 8px 20px 12px 20px;
+            padding: 15px 20px 14px 20px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 50px;
             border-bottom: 1px solid var(--BG-Grey, #3a465d);
         }
