@@ -86,11 +86,11 @@ section {
 
       &:focus {
          border: 2px solid var(--Header-Stroke-Focused, #f845fc);
-         background: var(--Header-BG-Focused, #414d65);
+         background: var(--Header-BG-Focused, #3A465D);
       }
       &.active,
       &:hover {
-         background: var(--Header-BG-Focused, #414d65);
+         background: var(--Header-BG-Focused, #3A465D);
          //color: #ffffff;
       }
       border-radius: 10px;
@@ -218,7 +218,7 @@ section {
                   }
                }
             }
-            padding: 11px 20px;
+            padding: 9px 20px;
 
             color: var(--Header-Text_Default, #d5daf1);
 

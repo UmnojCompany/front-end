@@ -196,8 +196,22 @@ body {
 }
 .header.landing-page{
     margin: 10px 10px 0px 10px;
+    .right{
+        span{
+            color: #ffffff;
+        }
+    }
+}
+#faq{
+   
 }
 .intro {
+    .header .buttons .button{
+        padding: 10px 20px ;
+    }
+    .button-primary.create{
+        color: #ffffff;
+    }
     .row-item {
         ul {
             li {

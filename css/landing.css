@@ -190,10 +190,19 @@ body.landing .container {
 .header.landing-page {
   margin: 10px 10px 0px 10px;
 }
+.header.landing-page .right span {
+  color: #ffffff;
+}
 
 .intro {
   padding: 0px 0px 189px 0px;
   background: url("../img/bg-intro.png") #f5f7f9 -2534px -422.052px/298.229% 140.418% no-repeat;
+}
+.intro .header .buttons .button {
+  padding: 10px 20px;
+}
+.intro .button-primary.create {
+  color: #ffffff;
 }
 .intro .row-item {
   padding: 8px 10px 10px 10px;
