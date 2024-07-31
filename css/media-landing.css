@@ -31,6 +31,9 @@
   }
 }
 @media (max-width: 1179px) {
+  .intro .wrapp .button-primary {
+    font-size: 16px;
+  }
   .header.landing-page {
     width: 100%;
   }

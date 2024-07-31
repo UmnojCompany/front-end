@@ -306,6 +306,7 @@ main {
 }
 .intro .wrapp .button-primary {
   padding: 20px 36px;
+  font-size: 20px;
 }
 .intro .wrapp .subtitle {
   color: var(--Text-Grey_Dark, #3b4a69);
