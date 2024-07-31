@@ -1047,6 +1047,7 @@ main {
 }
 .faq-main .faq-container .arrow {
   transition: transform 0.3s;
+  align-self: flex-start;
 }
 .faq-main .faq-container .faq-question.active .arrow {
   transform: rotate(180deg);
@@ -1062,6 +1063,7 @@ main {
   display: none;
   min-width: 100%;
   padding: 20px 0px 0px 0px;
+  margin: 0px 0px -10px 0px;
 }
 .faq-main .faq-container .faq-answer a {
   color: var(--Main-Blue, #4e6af3);

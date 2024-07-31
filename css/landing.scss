@@ -1120,6 +1120,7 @@ main{
 
             display: flex;
             padding: 20px;
+            
 
             align-items: center;
             flex-direction: column;
@@ -1147,6 +1148,7 @@ main{
 
         .arrow {
             transition: transform 0.3s;
+            align-self: flex-start;
         }
         .faq-question.active .arrow {
             transform: rotate(180deg);
@@ -1177,6 +1179,7 @@ main{
             display: none;
             min-width: 100%;
             padding: 20px 0px 0px 0px;
+            margin: 0px 0px -10px 0px;
         }
 
         .faq-item.active .faq-answer {
