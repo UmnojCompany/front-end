@@ -3152,26 +3152,21 @@
           function scrollStep() {
             if (direction === "left") {
               container.scrollLeft += scrollAmount;
-              // Проверяем, если прокрутка достигла середины контента, сбрасываем
               if (container.scrollLeft >= container.scrollWidth / 2) {
                 container.scrollLeft = 0;
               }
             } else {
               container.scrollLeft -= scrollAmount;
-              // Проверяем, если прокрутка достигла начала (для направления "right"), сбрасываем на середину контента
               if (container.scrollLeft <= 0) {
                 container.scrollLeft = container.scrollWidth / 2;
               }
             }
-            // Продолжает вызовы функции
             requestAnimationFrame(scrollStep);
           }
       
-          // Начинаем анимацию прокрутки
           requestAnimationFrame(scrollStep);
         }
       
-        // Запуск функции для элементов с классами move-left и move-right
         startScrolling(document.querySelector(".move-left"), "left");
         startScrolling(document.querySelector(".move-right"), "right");
       });
