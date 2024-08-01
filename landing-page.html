@@ -196,7 +196,7 @@
                   риелторам</a
                 >
               </li>
-              <li class="" >
+              <li class="">
                 <a href="#faq"
                   ><div class="icon">
                     <svg
@@ -2047,7 +2047,7 @@
           <div class="head-section">
             <h2>Отзывы</h2>
             <div class="buttons">
-              <div class="prew" onclick="slideLeft()">
+              <div class="prew" onclick="mainSliderSlideLeft()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2063,7 +2063,7 @@
                   />
                 </svg>
               </div>
-              <div class="next" onclick="slideRight()">
+              <div class="next" onclick="mainSliderSlideRight()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2525,7 +2525,7 @@
           <div class="head-section">
             <h2>Тарифы</h2>
             <div class="buttons">
-              <div class="prew" onclick="slideLeftTar()">
+              <div class="prew" onclick="tarSliderSlideLeft()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2541,7 +2541,7 @@
                   />
                 </svg>
               </div>
-              <div class="next" onclick="slideRightTar()">
+              <div class="next" onclick="tarSliderSlideRight()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2905,7 +2905,7 @@
           <div class="head-section">
             <h2>Релизы</h2>
             <div class="buttons">
-              <div class="prew" onclick="slideLeftSecond()">
+              <div class="prew" onclick="secondSliderSlideLeft()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2921,7 +2921,7 @@
                   />
                 </svg>
               </div>
-              <div class="next" onclick="slideRightSecond()">
+              <div class="next" onclick="secondSliderSlideRight()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2969,20 +2969,15 @@
               </div>
               <div class="item review-item">
                 <img src="img/relises/05.png" alt="" />
-                <div class="title">
-                  <span>05.</span>Таблица этапов платежей
-                </div>
+                <div class="title"><span>05.</span>Таблица этапов платежей</div>
               </div>
               <div class="item review-item">
                 <img src="img/relises/06.png" alt="" />
-                <div class="title">
-                  <span>06.</span>График изменения цены
-                </div>
+                <div class="title"><span>06.</span>График изменения цены</div>
               </div>
             </div>
           </div>
         </div>
-        
       </section>
     </main>
     <footer class="landing-footer">
@@ -3020,10 +3015,26 @@
             /></a>
             <p>Новый поиск недвижимости в Москве и Санкт-Петербурге</p>
             <a href="#" class="vk">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <rect width="40" height="40" rx="10" fill="#3A465D"></rect>
-                <rect x="5" y="5" width="30" height="30" rx="10" fill="#3A465D"></rect>
-                <path d="M20.7369 25.25C15.0995 25.25 11.884 21.3086 11.75 14.75H14.5739C14.6666 19.5638 16.7484 21.6029 18.3974 22.0233V14.75H21.0564V18.9017C22.6847 18.723 24.3955 16.8311 24.9727 14.75H27.6316C27.4142 15.8293 26.9806 16.8512 26.3582 17.7519C25.7358 18.6525 24.9378 19.4125 24.0142 19.9842C25.0452 20.5067 25.9557 21.2461 26.6859 22.1538C27.416 23.0615 27.9491 24.1168 28.25 25.25H25.3231C25.053 24.2657 24.504 23.3846 23.745 22.7171C22.986 22.0496 22.0507 21.6255 21.0564 21.4977V25.25H20.7369Z" fill="white"></path>
+                <rect
+                  x="5"
+                  y="5"
+                  width="30"
+                  height="30"
+                  rx="10"
+                  fill="#3A465D"
+                ></rect>
+                <path
+                  d="M20.7369 25.25C15.0995 25.25 11.884 21.3086 11.75 14.75H14.5739C14.6666 19.5638 16.7484 21.6029 18.3974 22.0233V14.75H21.0564V18.9017C22.6847 18.723 24.3955 16.8311 24.9727 14.75H27.6316C27.4142 15.8293 26.9806 16.8512 26.3582 17.7519C25.7358 18.6525 24.9378 19.4125 24.0142 19.9842C25.0452 20.5067 25.9557 21.2461 26.6859 22.1538C27.416 23.0615 27.9491 24.1168 28.25 25.25H25.3231C25.053 24.2657 24.504 23.3846 23.745 22.7171C22.986 22.0496 22.0507 21.6255 21.0564 21.4977V25.25H20.7369Z"
+                  fill="white"
+                ></path>
               </svg>
             </a>
           </div>
@@ -3146,9 +3157,9 @@
           // Дублируем содержимое контейнера
           const content = container.innerHTML;
           container.innerHTML += content;
-      
+
           let scrollAmount = 1; // Количество пикселей для прокрутки за один шаг
-      
+
           function scrollStep() {
             if (direction === "left") {
               container.scrollLeft += scrollAmount;
@@ -3163,14 +3174,13 @@
             }
             requestAnimationFrame(scrollStep);
           }
-      
+
           requestAnimationFrame(scrollStep);
         }
-      
+
         startScrolling(document.querySelector(".move-left"), "left");
         startScrolling(document.querySelector(".move-right"), "right");
       });
-            
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -3284,95 +3294,100 @@
       });
     </script>
     <script>
-      let currentIndex = 0;
-
-      function updateSliderPosition() {
-        const track = document.querySelector(".reviews-track");
-        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-      }
-
-      function slideLeft() {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateSliderPosition();
+      document.addEventListener("DOMContentLoaded", function () {
+        function initializeSlider(containerSelector, sliderName) {
+          let currentIndex = 0;
+          let isDragging = false;
+          let startPos = 0;
+          let currentTranslate = 0;
+          let prevTranslate = 0;
+          let animationID;
+      
+          const track = document.querySelector(containerSelector);
+          const items = track.querySelectorAll(".review-item");
+          const slideWidth = items[0].offsetWidth + 20; // Учитывая отступы
+          const maxIndex = window.innerWidth > 768 ? items.length - 2 : items.length - 1;
+      
+          // Mouse events
+          track.addEventListener('mousedown', startDragging);
+          track.addEventListener('mouseup', stopDragging);
+          track.addEventListener('mousemove', onDrag);
+          track.addEventListener('mouseleave', stopDragging);
+      
+          // Touch events
+          track.addEventListener('touchstart', startDragging);
+          track.addEventListener('touchend', stopDragging);
+          track.addEventListener('touchmove', onDrag);
+      
+          function startDragging(event) {
+            isDragging = true;
+            startPos = getPositionX(event);
+            animationID = requestAnimationFrame(animation);
+          }
+      
+          function stopDragging() {
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+      
+            const movedBy = currentTranslate - prevTranslate;
+      
+            if (movedBy < -100 && currentIndex < maxIndex) currentIndex++;
+            if (movedBy > 100 && currentIndex > 0) currentIndex--;
+      
+            setPositionByIndex();
+          }
+      
+          function onDrag(event) {
+            if (isDragging) {
+              const currentPosition = getPositionX(event);
+              currentTranslate = prevTranslate + currentPosition - startPos;
+            }
+          }
+      
+          function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+          }
+      
+          function animation() {
+            setSliderPosition();
+            if (isDragging) requestAnimationFrame(animation);
+          }
+      
+          function setSliderPosition() {
+            track.style.transform = `translateX(${currentTranslate}px)`;
+          }
+      
+          function setPositionByIndex() {
+            currentTranslate = currentIndex * -slideWidth;
+            prevTranslate = currentTranslate;
+            setSliderPosition();
+          }
+      
+          function slideLeft() {
+            if (currentIndex > 0) {
+              currentIndex--;
+              setPositionByIndex();
+            }
+          }
+      
+          function slideRight() {
+            if (currentIndex < maxIndex) {
+              currentIndex++;
+              setPositionByIndex();
+            }
+          }
+      
+          // Expose functions to global scope for button controls
+          window[`${sliderName}SlideLeft`] = slideLeft;
+          window[`${sliderName}SlideRight`] = slideRight;
         }
-      }
-
-      function slideRight() {
-        const track = document.querySelector(".reviews-track");
-        const items = track.querySelectorAll(".review-item").length;
-        const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
-
-        if (currentIndex < maxIndex) {
-          currentIndex++;
-          updateSliderPosition();
-        }
-      }
-
-      let currentIndexSecond = 0;
-
-      function updateSliderPositionSecond() {
-        const track = document.querySelector(
-          ".second-reviews-wrapper .reviews-track"
-        );
-        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-        track.style.transform = `translateX(-${
-          currentIndexSecond * slideWidth
-        }px)`;
-      }
-
-      function slideLeftSecond() {
-        if (currentIndexSecond > 0) {
-          currentIndexSecond--;
-          updateSliderPositionSecond();
-        }
-      }
-
-      function slideRightSecond() {
-        const track = document.querySelector(
-          ".second-reviews-wrapper .reviews-track"
-        );
-        const items = track.querySelectorAll(".review-item").length;
-        const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
-
-        if (currentIndexSecond < maxIndex) {
-          currentIndexSecond++;
-          updateSliderPositionSecond();
-        }
-      }
-
-      let currentIndexTar = 0;
-
-      function updateSliderPositionTar() {
-        const track = document.querySelector(
-          ".tar-reviews-wrapper .reviews-track"
-        );
-        const slideWidth = track.querySelector(".review-item").offsetWidth + 20; // Учитывая отступы
-        track.style.transform = `translateX(-${
-          currentIndexTar * slideWidth
-        }px)`;
-      }
-
-      function slideLeftTar() {
-        if (currentIndexTar > 0) {
-          currentIndexTar--;
-          updateSliderPositionTar();
-        }
-      }
-
-      function slideRightTar() {
-        const track = document.querySelector(
-          ".tar-reviews-wrapper .reviews-track"
-        );
-        const items = track.querySelectorAll(".review-item").length;
-        const maxIndex = window.innerWidth > 768 ? items - 2 : items - 1;
-
-        if (currentIndexTar < maxIndex) {
-          currentIndexTar++;
-          updateSliderPositionTar();
-        }
-      }
+      
+        // Initialize all sliders
+        initializeSlider(".reviews-track", "mainSlider");
+        initializeSlider(".second-reviews-wrapper .reviews-track", "secondSlider");
+        initializeSlider(".tar-reviews-wrapper .reviews-track", "tarSlider");
+      });
+      
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
