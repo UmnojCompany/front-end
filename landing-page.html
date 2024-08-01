@@ -3143,49 +3143,39 @@
       document.addEventListener("DOMContentLoaded", function () {
         // Функция для создания эффекта бесконечного прокручивания
         function startScrolling(container, direction) {
-          let scrollAmount = 0;
-          let scrollMax = container.scrollWidth - container.clientWidth;
-          let interval = setInterval(function () {
+          // Дублируем содержимое контейнера
+          const content = container.innerHTML;
+          container.innerHTML += content;
+      
+          let scrollAmount = 1; // Количество пикселей для прокрутки за один шаг
+      
+          function scrollStep() {
             if (direction === "left") {
-              container.scrollLeft += 1;
-              if (container.scrollLeft >= scrollMax) {
+              container.scrollLeft += scrollAmount;
+              // Проверяем, если прокрутка достигла середины контента, сбрасываем
+              if (container.scrollLeft >= container.scrollWidth / 2) {
                 container.scrollLeft = 0;
               }
             } else {
-              container.scrollLeft -= 1;
+              container.scrollLeft -= scrollAmount;
+              // Проверяем, если прокрутка достигла начала (для направления "right"), сбрасываем на середину контента
               if (container.scrollLeft <= 0) {
-                container.scrollLeft = scrollMax;
+                container.scrollLeft = container.scrollWidth / 2;
               }
             }
-          }, 20); // Скорость прокручивания
-
-          // Останавливаем прокручивание при наведении
-          container.addEventListener("mouseenter", function () {
-            clearInterval(interval);
-          });
-
-          // Возобновляем прокручивание при выходе курсора
-          container.addEventListener("mouseleave", function () {
-            interval = setInterval(function () {
-              if (direction === "left") {
-                container.scrollLeft += 1;
-                if (container.scrollLeft >= scrollMax) {
-                  container.scrollLeft = 0;
-                }
-              } else {
-                container.scrollLeft -= 1;
-                if (container.scrollLeft <= 0) {
-                  container.scrollLeft = scrollMax;
-                }
-              }
-            }, 20);
-          });
+            // Продолжает вызовы функции
+            requestAnimationFrame(scrollStep);
+          }
+      
+          // Начинаем анимацию прокрутки
+          requestAnimationFrame(scrollStep);
         }
-
+      
         // Запуск функции для элементов с классами move-left и move-right
         startScrolling(document.querySelector(".move-left"), "left");
         startScrolling(document.querySelector(".move-right"), "right");
       });
+            
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
