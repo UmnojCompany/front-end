@@ -194,10 +194,10 @@
   line-height: 140%; /* 19.6px */
 }
 .col-head .infobutt {
-  width: 18px;
-  height: 18px;
   cursor: pointer;
-  background: url("../img/column/icon_container.svg") no-repeat;
+}
+.col-head .infobutt:hover svg path {
+  fill: #4E6AF3;
 }
 .col-head h4 {
   display: flex;

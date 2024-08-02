@@ -208,10 +208,14 @@
         line-height: 140%; /* 19.6px */
     }
     .infobutt {
-        width: 18px;
-        height: 18px;
+        &:hover{
+            svg{
+                path{
+                    fill: #4E6AF3;
+                }
+            }
+        }
         cursor: pointer;
-        background: url("../img/column/icon_container.svg") no-repeat;
     }
     h4 {
         display: flex;
