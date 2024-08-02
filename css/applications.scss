@@ -189,6 +189,8 @@
     display: flex;
     gap: 20px;
     overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .column {
     min-width: 340px;
@@ -226,7 +228,7 @@
         padding: 0px 0px 0px 0px;
     }
     border-radius: var(--Corner_radius_m, 10px);
-    
+
     padding: 15px 20px 19px 20px;
 }
 .row-item {
@@ -309,23 +311,33 @@
     display: flex;
     flex-direction: column;
 }
-.col-01{
-    .col-head{
+.col-01 {
+    .col-head {
         background: linear-gradient(180deg, #fff 94.81%, #4e6af3 94.81%, #54b7ff 94.81%);
     }
 }
-.col-02{
-    .col-head{background: linear-gradient(180deg, #FFF 94.81%, #54B7FF 94.81%);}
+.col-02 {
+    .col-head {
+        background: linear-gradient(180deg, #fff 94.81%, #54b7ff 94.81%);
+    }
 }
-.col-03{
-    .col-head{background: linear-gradient(180deg, #FFF 94.81%, #FFD64C 94.81%);}
+.col-03 {
+    .col-head {
+        background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
+    }
 }
-.col-04{
-    .col-head{background: linear-gradient(180deg, #FFF 94.81%, #FFD64C 94.81%);}
+.col-04 {
+    .col-head {
+        background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
+    }
 }
-.col-05{
-    .col-head{background: linear-gradient(180deg, #FFF 94.81%, #FFD64C 94.81%);}
+.col-05 {
+    .col-head {
+        background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
+    }
 }
-.col-06{
-    .col-head{background: linear-gradient(180deg, #FFF 94.81%, #FFD64C 94.81%);}
+.col-06 {
+    .col-head {
+        background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
+    }
 }
