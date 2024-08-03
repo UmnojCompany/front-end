@@ -393,62 +393,66 @@
 .client-card .card-status .status-select {
   padding: 10px 20px;
   border-radius: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
 }
 .client-card .card-status .new {
-  background-color: #e0f7fa;
-  color: #00796b;
+  background: var(--BG-Light-Blue, #F1F7FF);
+  color: #54B7FF;
 }
 .client-card .card-status .sent {
-  background-color: #fce4ec;
-  color: #d81b60;
+  background: var(--BG-Light-Blue, #F1F7FF);
+  color: #54B7FF;
 }
 .client-card .card-status .contact {
-  background-color: #fff3e0;
-  color: #e65100;
+  background: var(--Fields-BG-Validation, #FFFBF4);
+  color: #FF8A21;
 }
 .client-card .card-status .need {
-  background-color: #e8f5e9;
-  color: #2e7d32;
+  background: var(--Fields-BG-Validation, #FFFBF4);
+  color: #FF8A21;
 }
 .client-card .card-status .repeat {
-  background-color: #e1f5fe;
-  color: #0277bd;
+  background: var(--Fields-BG-Validation, #FFFBF4);
+  color: #FF8A21;
 }
 .client-card .card-status .approved {
-  background-color: #f3e5f5;
-  color: #6a1b9a;
+  background: var(--Fields-BG-Validation, #FFFBF4);
+  color: #FF8A21;
 }
 .client-card .card-status .scheduled {
-  background-color: #f9fbe7;
-  color: #827717;
+  background: var(--Fields-BG-Validation, #FFFBF4);
+  color: #FF8A21;
 }
 .client-card .card-status .shown {
-  background-color: #fbe9e7;
-  color: #bf360c;
+  background: var(--Fields-BG-Validation, #FFFBF4);
+  color: #FF8A21;
 }
 .client-card .card-status .signed {
-  background-color: #ede7f6;
-  color: #4527a0;
+  background: var(--Fields-BG-Validation, #FFFBF4);
+  color: #FF8A21;
 }
 .client-card .card-status .paid-reservation {
-  background-color: #f1f8e9;
-  color: #33691e;
+  background: var(--BG-Green, #EAFFF3);
+  color: var(--Text-Success, #0AB258);
 }
 .client-card .card-status .first-payment {
-  background-color: #fffde7;
-  color: #f57f17;
+  background: var(--BG-Green, #EAFFF3);
+  color: var(--Text-Success, #0AB258);
 }
 .client-card .card-status .paid-full {
-  background-color: #ffebee;
-  color: #b71c1c;
+  background: var(--BG-Green, #EAFFF3);
+  color: var(--Text-Success, #0AB258);
 }
 .client-card .card-status .ownership {
-  background-color: #e0f2f1;
-  color: #004d40;
+  background: var(--BG-Green, #EAFFF3);
+  color: var(--Text-Success, #0AB258);
 }
 .client-card .card-status .closed {
-  background-color: #eeeeee;
-  color: #424242;
+  background: var(--Fields-BG-Error, #FFF5F5);
+  color: var(--Text-Error, #F34942);
 }
 .client-card .button-primary {
   padding: 10px 20px;
