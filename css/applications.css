@@ -147,7 +147,6 @@
   padding: 0px 20px;
   margin: 10px 10px 10px 10px;
   max-width: 100%;
-  overflow-x: hidden;
 }
 .applications-menu .wrapp div {
   box-sizing: border-box;
@@ -310,4 +309,24 @@
 
 .col-06 .col-head {
   background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
+}
+
+.col-07 .col-head {
+  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+}
+
+.col-08 .col-head {
+  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+}
+
+.col-09 .col-head {
+  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+}
+
+.col-10 .col-head {
+  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+}
+
+.col-11 .col-head {
+  background: linear-gradient(180deg, #FFF 94.81%, #F34942 94.81%);
 }/*# sourceMappingURL=applications.css.map */
