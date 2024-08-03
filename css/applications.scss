@@ -430,7 +430,32 @@
     padding: 20px 0px 0px 0px;
 }
 .client-card {
+    .button-primary{
+        padding: 10px 20px;
+
+    }
+    .dashboard{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .price-range {
+        color: var(--Main-Blue, #4e6af3);
+
+        /* Platform/Accent_20 (B) */
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 24px */
+    }
+    .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .favorites {
+        cursor: pointer;
         border-radius: 5px;
         background: var(--BG-Light-Blue, #f1f7ff);
         display: flex;
