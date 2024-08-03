@@ -161,8 +161,12 @@
 }
 
 .applications-container {
+  display: none;
   overflow: hidden;
   padding: 0px 0px 0px 10px;
+}
+.applications-container.active {
+  display: block;
 }
 
 .applications-track {
@@ -202,19 +206,19 @@
   background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
 }
 .column.col-07 .col-head {
-  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+  background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
 }
 .column.col-08 .col-head {
-  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+  background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
 }
 .column.col-09 .col-head {
-  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+  background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
 }
 .column.col-10 .col-head {
-  background: linear-gradient(180deg, #FFF 94.81%, #0AB258 94.81%);
+  background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
 }
 .column.col-11 .col-head {
-  background: linear-gradient(180deg, #FFF 94.81%, #F34942 94.81%);
+  background: linear-gradient(180deg, #fff 94.81%, #f34942 94.81%);
 }
 .column .col-head {
   border-radius: var(--Corner_radius_m, 10px);
@@ -232,7 +236,7 @@
   cursor: pointer;
 }
 .column .col-head .infobutt:hover svg path {
-  fill: #4E6AF3;
+  fill: #4e6af3;
 }
 .column .col-head h4 {
   display: flex;
@@ -321,4 +325,34 @@
 }
 .row-item .head .name .status {
   color: var(--Text-Grey, #7786a5);
+}
+
+.vertical ul::after {
+  display: none;
+}
+.vertical ul li {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.vertical .list-wrapp {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0px 0px 10px 0px;
+}
+.vertical .wrapper {
+  overflow: hidden;
+}
+.vertical .forline {
+  position: relative;
+}
+.vertical .forline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--Stroke-Divider, #e1edfd);
+  bottom: 0px;
+  left: 0;
 }/*# sourceMappingURL=applications.css.map */
