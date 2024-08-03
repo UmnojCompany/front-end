@@ -387,6 +387,65 @@
   background: var(--BG-White, #fff);
   padding: 20px 30px;
 }
+.client-card .card-status {
+  /* Specific styles for each option value */
+}
+.client-card .card-status .new {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+.client-card .card-status .sent {
+  background-color: #fce4ec;
+  color: #d81b60;
+}
+.client-card .card-status .contact {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+.client-card .card-status .need {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+.client-card .card-status .repeat {
+  background-color: #e1f5fe;
+  color: #0277bd;
+}
+.client-card .card-status .approved {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+.client-card .card-status .scheduled {
+  background-color: #f9fbe7;
+  color: #827717;
+}
+.client-card .card-status .shown {
+  background-color: #fbe9e7;
+  color: #bf360c;
+}
+.client-card .card-status .signed {
+  background-color: #ede7f6;
+  color: #4527a0;
+}
+.client-card .card-status .paid-reservation {
+  background-color: #f1f8e9;
+  color: #33691e;
+}
+.client-card .card-status .first-payment {
+  background-color: #fffde7;
+  color: #f57f17;
+}
+.client-card .card-status .paid-full {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+.client-card .card-status .ownership {
+  background-color: #e0f2f1;
+  color: #004d40;
+}
+.client-card .card-status .closed {
+  background-color: #eeeeee;
+  color: #424242;
+}
 .client-card .button-primary {
   padding: 10px 20px;
 }

@@ -1172,21 +1172,21 @@
                   <div class="price-range">1 500 000 – 5 000 000 ₽</div>
                   <div class="dashboard">
                     <div class="card-status">
-                      <select class="custom-select" id="" name="" required="">
-                        <option value="">Новая заявка</option>
-                        <option value="">Отправлено предложение</option>
-                        <option value="">Получен контакт</option>
-                        <option value="">Выявлена потребность</option>
-                        <option value="">Повторное предложение</option>
-                        <option value="">Объект согласован</option>
-                        <option value="">Запланирован показ</option>
-                        <option value="">Проведен показ</option>
-                        <option value="">Подписан договор</option>
-                        <option value="">Оплачена бронь</option>
-                        <option value="">Оплачен первый взнос</option>
-                        <option value="">Оплачено 100%</option>
-                        <option value="">Получено право соб-сти</option>
-                        <option value="">Закрыто</option>
+                      <select class="status-select" id="statusSelect" name="" required="">
+                        <option value="new">Новая заявка</option>
+                        <option value="sent">Отправлено предложение</option>
+                        <option value="contact">Получен контакт</option>
+                        <option value="need">Выявлена потребность</option>
+                        <option value="repeat">Повторное предложение</option>
+                        <option value="approved">Объект согласован</option>
+                        <option value="scheduled">Запланирован показ</option>
+                        <option value="shown">Проведен показ</option>
+                        <option value="signed">Подписан договор</option>
+                        <option value="paid-reservation">Оплачена бронь</option>
+                        <option value="first-payment">Оплачен первый взнос</option>
+                        <option value="paid-full">Оплачено 100%</option>
+                        <option value="ownership">Получено право соб-сти</option>
+                        <option value="closed">Закрыто</option>
                       </select>
                     </div>
                     <div class="button-primary">Предложить</div>
@@ -1296,21 +1296,21 @@
                   <div class="price-range">1 500 000 – 5 000 000 ₽</div>
                   <div class="dashboard">
                     <div class="card-status">
-                      <select class="custom-select" id="" name="" required="">
-                        <option value="">Новая заявка</option>
-                        <option value="">Отправлено предложение</option>
-                        <option value="">Получен контакт</option>
-                        <option value="">Выявлена потребность</option>
-                        <option value="">Повторное предложение</option>
-                        <option value="">Объект согласован</option>
-                        <option value="">Запланирован показ</option>
-                        <option value="">Проведен показ</option>
-                        <option value="">Подписан договор</option>
-                        <option value="">Оплачена бронь</option>
-                        <option value="">Оплачен первый взнос</option>
-                        <option value="">Оплачено 100%</option>
-                        <option value="">Получено право соб-сти</option>
-                        <option value="">Закрыто</option>
+                      <select class="status-select" id="statusSelect" name="" required="">
+                        <option value="new">Новая заявка</option>
+                        <option value="sent">Отправлено предложение</option>
+                        <option value="contact">Получен контакт</option>
+                        <option value="need">Выявлена потребность</option>
+                        <option value="repeat">Повторное предложение</option>
+                        <option value="approved">Объект согласован</option>
+                        <option value="scheduled">Запланирован показ</option>
+                        <option value="shown">Проведен показ</option>
+                        <option value="signed">Подписан договор</option>
+                        <option value="paid-reservation">Оплачена бронь</option>
+                        <option value="first-payment">Оплачен первый взнос</option>
+                        <option value="paid-full">Оплачено 100%</option>
+                        <option value="ownership">Получено право соб-сти</option>
+                        <option value="closed">Закрыто</option>
                       </select>
                     </div>
                     <div class="button-primary">Предложить</div>
@@ -1639,6 +1639,25 @@
           verticalBlock.classList.remove("active");
         });
       });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const selects = document.querySelectorAll('.status-select');
+      
+        selects.forEach(function(select) {
+          function applyStyles() {
+            const selectedOption = select.options[select.selectedIndex];
+            select.className = 'status-select ' + selectedOption.value;
+          }
+      
+          select.addEventListener('change', applyStyles);
+      
+          // Initial style application
+          applyStyles();
+        });
+      });
+      
+      
     </script>
   </body>
 </html>

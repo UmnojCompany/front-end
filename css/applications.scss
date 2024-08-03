@@ -387,7 +387,6 @@
                 display: none;
             }
             li {
-               
                 min-width: fit-content;
                 span {
                     margin: 0px 0px 0px 10px;
@@ -443,6 +442,65 @@
     padding: 20px 0px 0px 0px;
 }
 .client-card {
+    .card-status {
+        /* Specific styles for each option value */
+        .new {
+            background-color: #e0f7fa;
+            color: #00796b;
+        }
+        .sent {
+            background-color: #fce4ec;
+            color: #d81b60;
+        }
+        .contact {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+        .need {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        .repeat {
+            background-color: #e1f5fe;
+            color: #0277bd;
+        }
+        .approved {
+            background-color: #f3e5f5;
+            color: #6a1b9a;
+        }
+        .scheduled {
+            background-color: #f9fbe7;
+            color: #827717;
+        }
+        .shown {
+            background-color: #fbe9e7;
+            color: #bf360c;
+        }
+        .signed {
+            background-color: #ede7f6;
+            color: #4527a0;
+        }
+        .paid-reservation {
+            background-color: #f1f8e9;
+            color: #33691e;
+        }
+        .first-payment {
+            background-color: #fffde7;
+            color: #f57f17;
+        }
+        .paid-full {
+            background-color: #ffebee;
+            color: #b71c1c;
+        }
+        .ownership {
+            background-color: #e0f2f1;
+            color: #004d40;
+        }
+        .closed {
+            background-color: #eeeeee;
+            color: #424242;
+        }
+    }
     .button-primary {
         padding: 10px 20px;
     }
