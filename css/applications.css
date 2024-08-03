@@ -356,6 +356,7 @@
 }
 .vertical .page-head .wrapper {
   overflow: hidden;
+  padding: 30px 30px 10px 30px;
 }
 .vertical .page-head .forline {
   position: relative;
