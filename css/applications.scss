@@ -387,7 +387,19 @@
                 display: none;
             }
             li {
+               
                 min-width: fit-content;
+                span {
+                    margin: 0px 0px 0px 10px;
+                    color: var(--Text-Grey, #7786a5);
+
+                    /* Platform/Button Link/Medium */
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 125% */
+                }
             }
         }
 
@@ -430,11 +442,10 @@
     padding: 20px 0px 0px 0px;
 }
 .client-card {
-    .button-primary{
+    .button-primary {
         padding: 10px 20px;
-
     }
-    .dashboard{
+    .dashboard {
         display: flex;
         align-items: center;
         gap: 10px;
@@ -543,7 +554,8 @@
     }
     .menu {
         cursor: pointer;
-        margin-left: -5px;
+        //margin-left: -5px;
+        margin: 0px -10px 0px -5px;
     }
     .views {
         display: flex;

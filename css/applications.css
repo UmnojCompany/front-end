@@ -338,6 +338,16 @@
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
+.vertical .page-head ul li span {
+  margin: 0px 0px 0px 10px;
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
 .vertical .page-head .list-wrapp {
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -483,7 +493,7 @@
 }
 .client-card .menu {
   cursor: pointer;
-  margin-left: -5px;
+  margin: 0px -10px 0px -5px;
 }
 .client-card .views {
   display: flex;
