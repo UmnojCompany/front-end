@@ -390,6 +390,10 @@
 .client-card .card-status {
   /* Specific styles for each option value */
 }
+.client-card .card-status .status-select {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 .client-card .card-status .new {
   background-color: #e0f7fa;
   color: #00796b;
