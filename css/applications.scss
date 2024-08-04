@@ -443,6 +443,18 @@
 }
 .client-card {
     .card-status {
+        position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                background: url('../img/arrow-selection.svg');
+                pointer-events: none;
+            }
         .status-select {
             padding: 10px 20px;
             border-radius: 10px;
@@ -450,65 +462,70 @@
             font-style: normal;
             font-weight: 400;
             line-height: 20px; /* 125% */
+
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            
         }
 
         /* Specific styles for each option value */
         .new {
-            background: var(--BG-Light-Blue, #F1F7FF);
-            color: #54B7FF;
+           
+            background: var(--BG-Light-Blue, #f1f7ff);
+            color: #54b7ff;
         }
         .sent {
-            background: var(--BG-Light-Blue, #F1F7FF);
-            color: #54B7FF;
+            background: var(--BG-Light-Blue, #f1f7ff);
+            color: #54b7ff;
         }
         .contact {
-            background: var(--Fields-BG-Validation, #FFFBF4);
-            color: #FF8A21;
+            background: var(--Fields-BG-Validation, #fffbf4);
+            color: #ff8a21;
         }
         .need {
-            background: var(--Fields-BG-Validation, #FFFBF4);
-            color: #FF8A21;
+            background: var(--Fields-BG-Validation, #fffbf4);
+            color: #ff8a21;
         }
         .repeat {
-            background: var(--Fields-BG-Validation, #FFFBF4);
-            color: #FF8A21;
+            background: var(--Fields-BG-Validation, #fffbf4);
+            color: #ff8a21;
         }
         .approved {
-            background: var(--Fields-BG-Validation, #FFFBF4);
-            color: #FF8A21;
+            background: var(--Fields-BG-Validation, #fffbf4);
+            color: #ff8a21;
         }
         .scheduled {
-            background: var(--Fields-BG-Validation, #FFFBF4);
-            color: #FF8A21;
+            background: var(--Fields-BG-Validation, #fffbf4);
+            color: #ff8a21;
         }
         .shown {
-            background: var(--Fields-BG-Validation, #FFFBF4);
-            color: #FF8A21;
+            background: var(--Fields-BG-Validation, #fffbf4);
+            color: #ff8a21;
         }
         .signed {
-            background: var(--Fields-BG-Validation, #FFFBF4);
-            color: #FF8A21;
+            background: var(--Fields-BG-Validation, #fffbf4);
+            color: #ff8a21;
         }
         .paid-reservation {
-            background: var(--BG-Green, #EAFFF3);
-            color: var(--Text-Success, #0AB258);
+            background: var(--BG-Green, #eafff3);
+            color: var(--Text-Success, #0ab258);
         }
         .first-payment {
-            background: var(--BG-Green, #EAFFF3);
-            color: var(--Text-Success, #0AB258);
+            background: var(--BG-Green, #eafff3);
+            color: var(--Text-Success, #0ab258);
         }
         .paid-full {
-            background: var(--BG-Green, #EAFFF3);
-            color: var(--Text-Success, #0AB258);
+            background: var(--BG-Green, #eafff3);
+            color: var(--Text-Success, #0ab258);
         }
         .ownership {
-            background: var(--BG-Green, #EAFFF3);
-            color: var(--Text-Success, #0AB258);
+            background: var(--BG-Green, #eafff3);
+            color: var(--Text-Success, #0ab258);
         }
         .closed {
-            background: var(--Fields-BG-Error, #FFF5F5);
-            color: var(--Text-Error, #F34942);
-
+            background: var(--Fields-BG-Error, #fff5f5);
+            color: var(--Text-Error, #f34942);
         }
     }
     .button-primary {
@@ -609,8 +626,8 @@
         line-height: 140%; /* 19.6px */
     }
     h5 {
-        &.viewed{
-            color: var(--Text-Grey, #7786A5);
+        &.viewed {
+            color: var(--Text-Grey, #7786a5);
         }
         color: var(--Text-Black, #2a344a);
 
@@ -625,6 +642,14 @@
         padding: 17px 0px 21px 0px;
     }
     .menu {
+        &:hover {
+            border-radius: 50px;
+            background: var(--Button-Secondary-BG-Click, #e1edfd);
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
         cursor: pointer;
         //margin-left: -5px;
         margin: 0px -10px 0px -5px;
@@ -660,7 +685,6 @@
         line-height: 140%; /* 19.6px */
     }
     .name {
-        
         color: var(--Main-Blue, #4e6af3);
 
         /* Platform/Desktop/Body-2 R */
@@ -691,9 +715,8 @@
     border-radius: var(--Corner_radius_m, 10px);
     background: var(--BG-White, #fff);
     padding: 20px 30px;
-    &:hover{
-        border: 2px solid var(--Stroke-Light-Grey, #D4DDEE);
+    &:hover {
+        border: 2px solid var(--Stroke-Light-Grey, #d4ddee);
     }
-    border: 2px solid var(--Stroke-Light-Grey, #D4DDEE00);
-
+    border: 2px solid var(--Stroke-Light-Grey, #d4ddee00);
 }

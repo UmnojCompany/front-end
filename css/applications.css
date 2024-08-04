@@ -389,7 +389,19 @@
   border: 2px solid var(--Stroke-Light-Grey, rgba(212, 221, 238, 0));
 }
 .client-card .card-status {
+  position: relative;
   /* Specific styles for each option value */
+}
+.client-card .card-status::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: url("../img/arrow-selection.svg");
+  pointer-events: none;
 }
 .client-card .card-status .status-select {
   padding: 10px 20px;
@@ -398,62 +410,65 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .client-card .card-status .new {
-  background: var(--BG-Light-Blue, #F1F7FF);
-  color: #54B7FF;
+  background: var(--BG-Light-Blue, #f1f7ff);
+  color: #54b7ff;
 }
 .client-card .card-status .sent {
-  background: var(--BG-Light-Blue, #F1F7FF);
-  color: #54B7FF;
+  background: var(--BG-Light-Blue, #f1f7ff);
+  color: #54b7ff;
 }
 .client-card .card-status .contact {
-  background: var(--Fields-BG-Validation, #FFFBF4);
-  color: #FF8A21;
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
 .client-card .card-status .need {
-  background: var(--Fields-BG-Validation, #FFFBF4);
-  color: #FF8A21;
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
 .client-card .card-status .repeat {
-  background: var(--Fields-BG-Validation, #FFFBF4);
-  color: #FF8A21;
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
 .client-card .card-status .approved {
-  background: var(--Fields-BG-Validation, #FFFBF4);
-  color: #FF8A21;
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
 .client-card .card-status .scheduled {
-  background: var(--Fields-BG-Validation, #FFFBF4);
-  color: #FF8A21;
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
 .client-card .card-status .shown {
-  background: var(--Fields-BG-Validation, #FFFBF4);
-  color: #FF8A21;
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
 .client-card .card-status .signed {
-  background: var(--Fields-BG-Validation, #FFFBF4);
-  color: #FF8A21;
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
 .client-card .card-status .paid-reservation {
-  background: var(--BG-Green, #EAFFF3);
-  color: var(--Text-Success, #0AB258);
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
 }
 .client-card .card-status .first-payment {
-  background: var(--BG-Green, #EAFFF3);
-  color: var(--Text-Success, #0AB258);
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
 }
 .client-card .card-status .paid-full {
-  background: var(--BG-Green, #EAFFF3);
-  color: var(--Text-Success, #0AB258);
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
 }
 .client-card .card-status .ownership {
-  background: var(--BG-Green, #EAFFF3);
-  color: var(--Text-Success, #0AB258);
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
 }
 .client-card .card-status .closed {
-  background: var(--Fields-BG-Error, #FFF5F5);
-  color: var(--Text-Error, #F34942);
+  background: var(--Fields-BG-Error, #fff5f5);
+  color: var(--Text-Error, #f34942);
 }
 .client-card .button-primary {
   padding: 10px 20px;
@@ -558,14 +573,22 @@
   line-height: 120%; /* 24px */
 }
 .client-card h5.viewed {
-  color: var(--Text-Grey, #7786A5);
+  color: var(--Text-Grey, #7786a5);
 }
 .client-card .card-body {
   padding: 17px 0px 21px 0px;
 }
 .client-card .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
   cursor: pointer;
   margin: 0px -10px 0px -5px;
+}
+.client-card .menu:hover {
+  border-radius: 50px;
+  background: var(--Button-Secondary-BG-Click, #e1edfd);
 }
 .client-card .views {
   display: flex;
@@ -622,5 +645,5 @@
   justify-content: space-between;
 }
 .client-card:hover {
-  border: 2px solid var(--Stroke-Light-Grey, #D4DDEE);
+  border: 2px solid var(--Stroke-Light-Grey, #d4ddee);
 }/*# sourceMappingURL=applications.css.map */
