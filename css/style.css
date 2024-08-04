@@ -176,10 +176,10 @@ section {
 }
 .header a:focus {
   border: 2px solid var(--Header-Stroke-Focused, #f845fc);
-  background: var(--Header-BG-Focused, #3A465D);
+  background: var(--Header-BG-Focused, #3a465d);
 }
 .header a.active, .header a:hover {
-  background: var(--Header-BG-Focused, #3A465D);
+  background: var(--Header-BG-Focused, #3a465d);
 }
 .header .buttons {
   display: flex;
@@ -1066,6 +1066,10 @@ section {
 .enter-page .subtitle a,
 .modal .subtitle a {
   color: #4e6af3;
+}
+.enter-page .full-width,
+.modal .full-width {
+  max-width: 90vw;
 }
 .enter-page .mw700,
 .modal .mw700 {
@@ -2018,4 +2022,38 @@ section {
 
 .tooltip:hover .tooltip-text {
   display: block;
+}
+
+.filter-modal .head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 0px 20px 0px;
+}
+.filter-modal .row {
+  padding: 25px 20px 20px 20px;
+  border-top: 2px solid var(--Stroke-Divider_form, #F1F7FF);
+}
+.filter-modal .content-filter-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0px 0px 20px 0px;
+}
+.filter-modal .search-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  margin: -10px 20px 21px 20px;
+  cursor: pointer;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  color: var(--Fields-Title, #7786a5);
+  /* Platform/Fields/Placeholder */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 }/*# sourceMappingURL=style.css.map */
