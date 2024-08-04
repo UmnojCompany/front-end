@@ -26,8 +26,7 @@
     }
 }
 @media (max-width: 1199px) {
-
-    .landing-footer .start-free p{
+    .landing-footer .start-free p {
         text-align: center;
     }
     .how-it-work h3 span {
@@ -331,8 +330,13 @@
     }
 }
 @media (max-width: 767px) {
-    .landing-footer .navigations .nav ul .dtop{
-
+    .showcases .navi-buttons .butt {
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .landing-footer .navigations .nav ul .dtop {
         display: none;
     }
     .top-20 .wrapp {
