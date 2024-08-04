@@ -659,4 +659,10 @@
         font-size: 42px;
         max-width: 100%;
     }
+    .tarifs .item,
+    .main-reviews .item{
+        max-width: 320px;
+        min-width: 320px;
+        width: 320px;
+    }
 }
