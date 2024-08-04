@@ -392,6 +392,48 @@
   position: relative;
   /* Specific styles for each option value */
 }
+.client-card .card-status.new::after {
+  background: none;
+}
+.client-card .card-status.sent::after {
+  background: none;
+}
+.client-card .card-status.contact::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.client-card .card-status.need::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.client-card .card-status.repeat::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.client-card .card-status.approved::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.client-card .card-status.scheduled::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.client-card .card-status.shown::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.client-card .card-status.signed::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.client-card .card-status.paid-reservation::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.client-card .card-status.first-payment::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.client-card .card-status.paid-full::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.client-card .card-status.ownership::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.client-card .card-status.closed::after {
+  background: url("../img/cards/arrow-red.svg");
+}
 .client-card .card-status::after {
   content: "";
   position: absolute;
@@ -400,11 +442,10 @@
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
-  background: url("../img/arrow-selection.svg");
   pointer-events: none;
 }
 .client-card .card-status .status-select {
-  padding: 10px 20px;
+  padding: 10px 35px 10px 20px;
   border-radius: 10px;
   font-size: 16px;
   font-style: normal;

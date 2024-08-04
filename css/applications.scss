@@ -444,19 +444,91 @@
 .client-card {
     .card-status {
         position: relative;
+        &.new {
             &::after {
-                content: "";
-                position: absolute;
-                right: 10px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 18px;
-                height: 18px;
-                background: url('../img/arrow-selection.svg');
-                pointer-events: none;
+                background: none;
             }
+        }
+        &.sent {
+            &::after {
+                background: none;
+            }
+        }
+        &.contact {
+            &::after {
+               background: url("../img/cards/arrow-orange.svg");
+            }
+        }
+        &.need {
+            &::after {
+               background: url("../img/cards/arrow-orange.svg");
+            }
+        }
+        &.repeat {
+            &::after {
+               background: url("../img/cards/arrow-orange.svg");
+            }
+        }
+        &.approved {
+            &::after {
+               background: url("../img/cards/arrow-orange.svg");
+            }
+        }
+        &.scheduled {
+            &::after {
+               background: url("../img/cards/arrow-orange.svg");
+            }
+        }
+        &.shown {
+            &::after {
+               background: url("../img/cards/arrow-orange.svg");
+            }
+        }
+        &.signed {
+            &::after {
+               background: url("../img/cards/arrow-orange.svg");
+            }
+        }
+        &.paid-reservation {
+            &::after {
+               background: url("../img/cards/arrow-green.svg");
+            }
+        }
+        &.first-payment {
+            &::after {
+               background: url("../img/cards/arrow-green.svg");
+            }
+        }
+        &.paid-full {
+            &::after {
+               background: url("../img/cards/arrow-green.svg");
+            }
+        }
+        &.ownership {
+            &::after {
+               background: url("../img/cards/arrow-green.svg");
+            }
+        }
+        &.closed {
+            &::after {
+               background: url("../img/cards/arrow-red.svg");
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            //background: url("../img/arrow-selection.svg");
+            pointer-events: none;
+        }
         .status-select {
-            padding: 10px 20px;
+            //padding: 10px 20px;
+            padding: 10px 35px 10px 20px;
             border-radius: 10px;
             font-size: 16px;
             font-style: normal;
@@ -466,12 +538,10 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            
         }
 
         /* Specific styles for each option value */
         .new {
-           
             background: var(--BG-Light-Blue, #f1f7ff);
             color: #54b7ff;
         }

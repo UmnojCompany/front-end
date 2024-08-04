@@ -1647,7 +1647,15 @@
         selects.forEach(function(select) {
           function applyStyles() {
             const selectedOption = select.options[select.selectedIndex];
+            const parentCard = select.closest('.card-status');
+      
+            // Apply class to the select element
             select.className = 'status-select ' + selectedOption.value;
+      
+            // Apply class to the parent .card-status element
+            if (parentCard) {
+              parentCard.className = 'card-status ' + selectedOption.value;
+            }
           }
       
           select.addEventListener('change', applyStyles);
@@ -1656,6 +1664,7 @@
           applyStyles();
         });
       });
+      
       
       
       
