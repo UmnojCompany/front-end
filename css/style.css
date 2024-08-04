@@ -1152,7 +1152,7 @@ section {
 .content-text {
   max-height: 69vh;
   overflow: scroll;
-  padding: 30px 0px 30px 0px;
+  padding: 30px 30px 30px 30px;
 }
 .content-text h5 {
   padding: 40px 30px 20px 30px;
@@ -1165,7 +1165,7 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
-  padding: 0px 30px;
+  padding: 0px 0px;
 }
 .content-text p span {
   display: inline-block;

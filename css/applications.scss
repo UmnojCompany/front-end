@@ -32,7 +32,6 @@
     display: inline-block;
 }
 .applications-menu {
-    
     .statistic {
         span {
             color: var(--Text-Black, #2a344a);
@@ -117,7 +116,7 @@
     }
     .selected-items {
         display: none;
-        &.active{
+        &.active {
             display: flex;
         }
         flex-grow: 1;
@@ -125,9 +124,9 @@
         ul {
             li {
                 &:hover {
-                    span{
-                        svg{
-                            path{
+                    span {
+                        svg {
+                            path {
                                 fill: #4e6af3;
                             }
                         }
@@ -239,17 +238,17 @@
     }
     &.col-07 {
         .col-head {
-            background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
+            background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
         }
     }
     &.col-08 {
         .col-head {
-            background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
+            background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
         }
     }
     &.col-09 {
         .col-head {
-            background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
+            background: linear-gradient(180deg, #fff 94.81%, #ffd64c 94.81%);
         }
     }
     &.col-10 {
@@ -258,6 +257,21 @@
         }
     }
     &.col-11 {
+        .col-head {
+            background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
+        }
+    }
+    &.col-12 {
+        .col-head {
+            background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
+        }
+    }
+    &.col-13 {
+        .col-head {
+            background: linear-gradient(180deg, #fff 94.81%, #0ab258 94.81%);
+        }
+    }
+    &.col-14 {
         .col-head {
             background: linear-gradient(180deg, #fff 94.81%, #f34942 94.81%);
         }
@@ -806,4 +820,30 @@
         border: 2px solid var(--Stroke-Light-Grey, #d4ddee);
     }
     border: 2px solid var(--Stroke-Light-Grey, #d4ddee00);
+}
+.content-status {
+    overflow-y: auto;
+    max-height: 700px;
+    .images {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0px;
+    }
+    img {
+        max-width: 100%;
+    }
+    span {
+        color: var(--Text-Black, #2a344a);
+        font-weight: 500;
+    }
+    color: var(--Text-Grey_Dark, #3b4a69);
+
+    /* Platform/Desktop/Body-1 R */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    padding: 40px 30px;
 }
