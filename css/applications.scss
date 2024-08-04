@@ -32,6 +32,7 @@
     display: inline-block;
 }
 .applications-menu {
+    
     .statistic {
         span {
             color: var(--Text-Black, #2a344a);
@@ -115,10 +116,25 @@
         }
     }
     .selected-items {
+        display: none;
+        &.active{
+            display: flex;
+        }
         flex-grow: 1;
 
         ul {
             li {
+                &:hover {
+                    span{
+                        svg{
+                            path{
+                                fill: #4e6af3;
+                            }
+                        }
+                    }
+                    background: var(--Stroke-Divider, #e1edfd);
+                    color: var(--Main-Blue, #4e6af3);
+                }
                 span {
                     display: flex;
                     align-items: center;
@@ -155,6 +171,7 @@
         scrollbar-width: none;
     }
     .wrapp {
+        min-height: 66px;
         display: flex;
         //justify-content: space-between;
         align-items: center;
@@ -456,62 +473,62 @@
         }
         &.contact {
             &::after {
-               background: url("../img/cards/arrow-orange.svg");
+                background: url("../img/cards/arrow-orange.svg");
             }
         }
         &.need {
             &::after {
-               background: url("../img/cards/arrow-orange.svg");
+                background: url("../img/cards/arrow-orange.svg");
             }
         }
         &.repeat {
             &::after {
-               background: url("../img/cards/arrow-orange.svg");
+                background: url("../img/cards/arrow-orange.svg");
             }
         }
         &.approved {
             &::after {
-               background: url("../img/cards/arrow-orange.svg");
+                background: url("../img/cards/arrow-orange.svg");
             }
         }
         &.scheduled {
             &::after {
-               background: url("../img/cards/arrow-orange.svg");
+                background: url("../img/cards/arrow-orange.svg");
             }
         }
         &.shown {
             &::after {
-               background: url("../img/cards/arrow-orange.svg");
+                background: url("../img/cards/arrow-orange.svg");
             }
         }
         &.signed {
             &::after {
-               background: url("../img/cards/arrow-orange.svg");
+                background: url("../img/cards/arrow-orange.svg");
             }
         }
         &.paid-reservation {
             &::after {
-               background: url("../img/cards/arrow-green.svg");
+                background: url("../img/cards/arrow-green.svg");
             }
         }
         &.first-payment {
             &::after {
-               background: url("../img/cards/arrow-green.svg");
+                background: url("../img/cards/arrow-green.svg");
             }
         }
         &.paid-full {
             &::after {
-               background: url("../img/cards/arrow-green.svg");
+                background: url("../img/cards/arrow-green.svg");
             }
         }
         &.ownership {
             &::after {
-               background: url("../img/cards/arrow-green.svg");
+                background: url("../img/cards/arrow-green.svg");
             }
         }
         &.closed {
             &::after {
-               background: url("../img/cards/arrow-red.svg");
+                background: url("../img/cards/arrow-red.svg");
             }
         }
 
