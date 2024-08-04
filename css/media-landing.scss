@@ -19,6 +19,12 @@
 .tarifs .buttons {
     display: none;
 }
+.landing-footer .navigations .nav ul .mob {
+    display: none;
+}
+.landing-footer .navigations .nav ul .dtop {
+    display: block;
+}
 @media (max-width: 1279px) {
     .intro {
         background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
@@ -338,6 +344,9 @@
             width: 24px;
             height: 24px;
         }
+    }
+    .landing-footer .navigations .nav ul .mob {
+        display: block;
     }
     .landing-footer .navigations .nav ul .dtop {
         display: none;
