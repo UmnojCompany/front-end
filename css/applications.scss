@@ -609,6 +609,9 @@
         line-height: 140%; /* 19.6px */
     }
     h5 {
+        &.viewed{
+            color: var(--Text-Grey, #7786A5);
+        }
         color: var(--Text-Black, #2a344a);
 
         /* Platform/Desktop/H-5 M */
@@ -657,6 +660,7 @@
         line-height: 140%; /* 19.6px */
     }
     .name {
+        
         color: var(--Main-Blue, #4e6af3);
 
         /* Platform/Desktop/Body-2 R */
@@ -687,4 +691,9 @@
     border-radius: var(--Corner_radius_m, 10px);
     background: var(--BG-White, #fff);
     padding: 20px 30px;
+    &:hover{
+        border: 2px solid var(--Stroke-Light-Grey, #D4DDEE);
+    }
+    border: 2px solid var(--Stroke-Light-Grey, #D4DDEE00);
+
 }
