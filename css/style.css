@@ -2024,6 +2024,26 @@ section {
   display: block;
 }
 
+.filter-modal .select-container-single {
+  width: 250px;
+}
+.filter-modal .form {
+  padding: 0px 0px 0px 0px;
+  flex-direction: row;
+  gap: 10px;
+}
+.filter-modal .subrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
 .filter-modal .head {
   display: flex;
   align-items: center;
@@ -2032,13 +2052,15 @@ section {
 }
 .filter-modal .row {
   padding: 25px 20px 20px 20px;
-  border-top: 2px solid var(--Stroke-Divider_form, #F1F7FF);
+  border-top: 2px solid var(--Stroke-Divider_form, #f1f7ff);
 }
 .filter-modal .content-filter-modal {
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding: 0px 0px 20px 0px;
+  overflow-y: auto;
+  max-height: 700px;
 }
 .filter-modal .search-items {
   display: flex;
