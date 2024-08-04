@@ -2085,6 +2085,11 @@ section {
    display: block;
 }
 .filter-modal {
+   .column{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+   }
    .select-container-single{
       width: 250px;
    }

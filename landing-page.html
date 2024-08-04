@@ -3157,30 +3157,42 @@
           // Дублируем содержимое контейнера
           const content = container.innerHTML;
           container.innerHTML += content;
-
+      
           let scrollAmount = 1; // Количество пикселей для прокрутки за один шаг
-
+          let scrolling = true; // Флаг для управления прокруткой
+      
           function scrollStep() {
-            if (direction === "left") {
-              container.scrollLeft += scrollAmount;
-              if (container.scrollLeft >= container.scrollWidth / 2) {
-                container.scrollLeft = 0;
-              }
-            } else {
-              container.scrollLeft -= scrollAmount;
-              if (container.scrollLeft <= 0) {
-                container.scrollLeft = container.scrollWidth / 2;
+            if (scrolling) {
+              if (direction === "left") {
+                container.scrollLeft += scrollAmount;
+                if (container.scrollLeft >= container.scrollWidth / 2) {
+                  container.scrollLeft = 0;
+                }
+              } else {
+                container.scrollLeft -= scrollAmount;
+                if (container.scrollLeft <= 0) {
+                  container.scrollLeft = container.scrollWidth / 2;
+                }
               }
             }
             requestAnimationFrame(scrollStep);
           }
-
+      
+          container.addEventListener("mouseenter", function () {
+            scrolling = false; // Остановить прокрутку при наведении курсора
+          });
+      
+          container.addEventListener("mouseleave", function () {
+            scrolling = true; // Возобновить прокрутку при выходе курсора
+          });
+      
           requestAnimationFrame(scrollStep);
         }
-
+      
         startScrolling(document.querySelector(".move-left"), "left");
         startScrolling(document.querySelector(".move-right"), "right");
       });
+      
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
