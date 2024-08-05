@@ -143,6 +143,14 @@ body {
         }
         .branding {
             .vk {
+                max-width: fit-content;
+                &:hover {
+                  svg{
+                    rect{
+                        fill: #3E56D0;
+                    }
+                  }
+                }
                 margin: 10px 0px 0px 0px;
             }
             p {

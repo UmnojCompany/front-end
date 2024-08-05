@@ -155,7 +155,12 @@ body.landing .container {
   max-width: 230px;
 }
 .landing-footer .navigations .branding .vk {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   margin: 10px 0px 0px 0px;
+}
+.landing-footer .navigations .branding .vk:hover svg rect {
+  fill: #3E56D0;
 }
 .landing-footer .navigations .branding p {
   color: var(--Text-Grey, #7786a5);
