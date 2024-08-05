@@ -336,6 +336,9 @@
     }
 }
 @media (max-width: 767px) {
+    .enter-page .modal-content, .modal .modal-content{
+        border-radius: 10px 10px 0 0;
+    }
     .modal .text{
         padding: 0px 20px 20px 20px;
     }
