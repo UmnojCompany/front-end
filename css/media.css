@@ -38,6 +38,16 @@
   }
 }
 @media (max-width: 767px) {
+  .content-text {
+    max-height: 79vh;
+  }
+  .modal .modal-content {
+    max-height: 95vh;
+    height: 95vh;
+  }
+  .modal {
+    align-items: flex-end;
+  }
   .content-text h5 {
     padding: 40px 0px 15px 0px;
   }
@@ -77,10 +87,12 @@
   .wrapper {
     padding: 20px 20px 30px 20px;
   }
-  .enter-page .mw700, .modal .mw700 {
+  .enter-page .mw700,
+  .modal .mw700 {
     width: 100%;
   }
-  .enter-page, .modal {
+  .enter-page,
+  .modal {
     padding: 0px 0px;
   }
 }
@@ -102,7 +114,8 @@
     gap: 10px;
     width: 100%;
   }
-  .footer .wrapp.mob .left, .footer .wrapp.mob .right {
+  .footer .wrapp.mob .left,
+  .footer .wrapp.mob .right {
     gap: 0px;
     justify-content: space-around;
   }

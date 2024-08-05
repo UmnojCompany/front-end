@@ -36,15 +36,25 @@
     .data-profile {
         //display: none;
     }
-    .content-text h5{
+    .content-text h5 {
         font-size: 18px;
     }
 }
 @media (max-width: 767px) {
-    .content-text h5{
+    .content-text{
+        max-height: 79vh;
+    }
+    .modal .modal-content{
+        max-height: 95vh;
+        height: 95vh;
+    }
+    .modal {
+        align-items: flex-end;
+    }
+    .content-text h5 {
         padding: 40px 0px 15px 0px;
     }
-    .payments-balance .wrapper{
+    .payments-balance .wrapper {
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
@@ -59,7 +69,6 @@
     }
     .footer .wrapp.mob {
         display: block;
-       
     }
     h4 {
         font-size: 18px;
@@ -81,34 +90,36 @@
     .wrapper {
         padding: 20px 20px 30px 20px;
     }
-    .enter-page .mw700, .modal .mw700{
+    .enter-page .mw700,
+    .modal .mw700 {
         width: 100%;
     }
-    .enter-page, .modal{
-        padding: 0px 0px ;
+    .enter-page,
+    .modal {
+        padding: 0px 0px;
     }
-  
 }
 @media (max-width: 640px) {
-    .payments-balance .right form input[type=submit]{
+    .payments-balance .right form input[type="submit"] {
         min-width: 100%;
     }
-    .payments-balance .right form input[type=number]{
+    .payments-balance .right form input[type="number"] {
         width: 100%;
     }
     .payments-balance .right {
-        .input-container{
+        .input-container {
             min-width: 100%;
         }
         min-width: 100%;
-        form{
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
+        form {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
     }
-    }
-    
-    .footer .wrapp.mob .left, .footer .wrapp.mob .right{
+
+    .footer .wrapp.mob .left,
+    .footer .wrapp.mob .right {
         gap: 0px;
         justify-content: space-around;
     }
