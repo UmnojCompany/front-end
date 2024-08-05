@@ -55,6 +55,12 @@ body {
         .geo,
         .copy,
         .politic {
+            a{
+                transition: 0.3s;
+                &:hover {
+                  color: #fff;
+                }
+            }
             flex: 1;
         }
         .geo {

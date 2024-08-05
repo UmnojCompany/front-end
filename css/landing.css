@@ -67,6 +67,16 @@ body.landing .container {
 .landing-footer .copy-wrapp .politic {
   flex: 1;
 }
+.landing-footer .copy-wrapp .geo a,
+.landing-footer .copy-wrapp .copy a,
+.landing-footer .copy-wrapp .politic a {
+  transition: 0.3s;
+}
+.landing-footer .copy-wrapp .geo a:hover,
+.landing-footer .copy-wrapp .copy a:hover,
+.landing-footer .copy-wrapp .politic a:hover {
+  color: #fff;
+}
 .landing-footer .copy-wrapp .geo {
   display: flex;
   align-items: center;
