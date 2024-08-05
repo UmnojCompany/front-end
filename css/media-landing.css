@@ -323,6 +323,9 @@
   }
 }
 @media (max-width: 767px) {
+  .intro .wrapp .button-primary {
+    padding: 13px 36px;
+  }
   .landing-footer .start-free h2 {
     text-align: center;
   }
