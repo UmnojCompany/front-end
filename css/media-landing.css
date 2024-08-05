@@ -326,6 +326,9 @@
   .landing-footer .start-free h2 {
     text-align: center;
   }
+  .showcases .navi-buttons .butt {
+    font-size: 18px;
+  }
   .showcases .navi-buttons .butt svg {
     width: 24px;
     height: 24px;

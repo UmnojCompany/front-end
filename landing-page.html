@@ -3322,16 +3322,19 @@
           const slideWidth = items[0].offsetWidth + 20; // Учитывая отступы
           const maxIndex = window.innerWidth > 768 ? items.length - 2 : items.length - 1;
       
-          // Mouse events
-          track.addEventListener('mousedown', startDragging);
-          track.addEventListener('mouseup', stopDragging);
-          track.addEventListener('mousemove', onDrag);
-          track.addEventListener('mouseleave', stopDragging);
+          // Only add drag event listeners if screen width is less than 768px
+          if (window.innerWidth < 768) {
+            // Mouse events
+            track.addEventListener('mousedown', startDragging);
+            track.addEventListener('mouseup', stopDragging);
+            track.addEventListener('mousemove', onDrag);
+            track.addEventListener('mouseleave', stopDragging);
       
-          // Touch events
-          track.addEventListener('touchstart', startDragging);
-          track.addEventListener('touchend', stopDragging);
-          track.addEventListener('touchmove', onDrag);
+            // Touch events
+            track.addEventListener('touchstart', startDragging);
+            track.addEventListener('touchend', stopDragging);
+            track.addEventListener('touchmove', onDrag);
+          }
       
           function startDragging(event) {
             isDragging = true;
@@ -3401,6 +3404,8 @@
         initializeSlider(".second-reviews-wrapper .reviews-track", "secondSlider");
         initializeSlider(".tar-reviews-wrapper .reviews-track", "tarSlider");
       });
+      
+      
       
     </script>
     <script>
