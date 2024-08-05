@@ -1674,6 +1674,9 @@ section {
 .form .input-container .placeholder span {
   color: var(--Text-Error, #f34942);
 }
+.form .input-container .placeholder span.black {
+  color: var(--Fields-Text, #2a344a);
+}
 .form .input-container .number-input {
   width: 250px;
 }
@@ -1759,6 +1762,29 @@ section {
 .form input[type=number] {
   -ms-appearance: none;
 }
+.form .chek-lists-single {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.form .chek-lists-single li {
+  cursor: pointer;
+  border-radius: 8px;
+  background: var(--Request-BG-Default, #f1f7ff);
+  padding: 6px 15px;
+  color: var(--Request-Text-Default, #2a344a);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.form .chek-lists-single li.active {
+  background: var(--Request-BG-Active, #4e6af3);
+  color: var(--Request-Text-Active, #fff);
+}
 .form .chek-lists {
   display: flex;
   align-items: center;
@@ -1779,8 +1805,8 @@ section {
   line-height: 20px; /* 125% */
 }
 .form .chek-lists li.active {
-  background: var(--Request-BG-Active, #4E6AF3);
-  color: var(--Request-Text-Active, #FFF);
+  background: var(--Request-BG-Active, #4e6af3);
+  color: var(--Request-Text-Active, #fff);
 }
 
 .progress-container {
@@ -2073,7 +2099,7 @@ section {
 }
 .filter-modal .subrow {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   color: var(--Text-Black, #2a344a);
   /* Platform/Desktop/Body-1 R */

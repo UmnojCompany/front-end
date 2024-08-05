@@ -15,7 +15,22 @@ jQuery(document).ready(function ($) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  // чек-листы
+  // чек-листы одиночный выбор
+
+  const listItems2 = document.querySelectorAll('.form .chek-lists-single li');
+
+  listItems2.forEach(function(item) {
+    item.addEventListener('click', function() {
+      // Снять класс active со всех пунктов списка
+      listItems2.forEach(function(el) {
+        el.classList.remove('active');
+      });
+      // Добавить класс active к выбранному пункту
+      item.classList.add('active');
+    });
+  });
+
+  // чек-листы мультивыбор
 
   const listItems = document.querySelectorAll('.form .chek-lists li');
 
@@ -30,10 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const numberInputs = document.querySelectorAll('.number-input');
 
   numberInputs.forEach(function(input) {
+    function formatNumber(value) {
+      return value.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+
     function applyStyles() {
       const parent = input.closest('.input-container');
       const placeholder = parent.querySelector('.placeholder');
-      
+
       if (input.value) {
         input.classList.add('filled');
         placeholder.classList.add('filled');
@@ -44,26 +63,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     input.addEventListener('input', function() {
-      applyStyles();
-      
-      // Ensure the value respects the min, max and maxlength constraints
-      const value = input.value;
-      const min = input.getAttribute('min');
-      const max = input.getAttribute('max');
-      const maxLength = input.getAttribute('maxlength');
+      // Remove all non-digit characters
+      let value = input.value.replace(/\s+/g, '').replace(/\D/g, '');
 
-      // Ensure the value is within min and max range
-      if (min !== null && value < min) {
-        input.value = min;
-      }
-      if (max !== null && value > max) {
-        input.value = max;
-      }
+      // Ensure the value respects the min, max and maxlength constraints
+      const min = parseInt(input.getAttribute('min'), 10);
+      const max = parseInt(input.getAttribute('max'), 10);
+      const maxLength = parseInt(input.getAttribute('maxlength'), 10);
 
       // Limit the length of the input
-      if (maxLength !== null && value.length > maxLength) {
-        input.value = value.slice(0, maxLength);
+      if (maxLength && value.length > maxLength) {
+        value = value.slice(0, maxLength);
       }
+
+      // Only set value if it's within the min and max range and has maxLength digits
+      if (value && value.length === maxLength) {
+        const intValue = parseInt(value, 10);
+        if (intValue < min) {
+          value = min.toString();
+        } else if (intValue > max) {
+          value = max.toString();
+        }
+      }
+
+      input.value = value;
+      // Apply styles
+      applyStyles();
     });
 
     // Initial check to add filled class if input is already filled
