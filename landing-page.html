@@ -3320,10 +3320,23 @@
           const track = document.querySelector(containerSelector);
           const items = track.querySelectorAll(".review-item");
           const slideWidth = items[0].offsetWidth + 20; // Учитывая отступы
-          const maxIndex = items.length - 1;
+          let maxIndex;
       
           const rightButton = document.querySelector(`.${sliderName}Right`);
           const leftButton = document.querySelector(`.${sliderName}Left`);
+      
+          // Update maxIndex based on screen width
+          function updateMaxIndex() {
+            if (window.innerWidth > 1199) {
+              maxIndex = items.length - 3;
+            } else if (window.innerWidth > 768) {
+              maxIndex = items.length - 2;
+            } else {
+              maxIndex = items.length - 1;
+            }
+          }
+      
+          updateMaxIndex();
       
           // Only add drag event listeners if screen width is less than 768px
           if (window.innerWidth < 768) {
@@ -3414,6 +3427,12 @@
           // Initial update of button states
           updateButtonStates();
       
+          // Add resize listener to update maxIndex on window resize
+          window.addEventListener('resize', function() {
+            updateMaxIndex();
+            updateButtonStates();
+          });
+      
           // Expose functions to global scope for button controls
           window[`${sliderName}SlideLeft`] = slideLeft;
           window[`${sliderName}SlideRight`] = slideRight;
@@ -3424,6 +3443,7 @@
         initializeSlider(".second-reviews-wrapper .reviews-track", "secondSlider");
         initializeSlider(".tar-reviews-wrapper .reviews-track", "tarSlider");
       });
+      
       
       
       
