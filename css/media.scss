@@ -75,6 +75,12 @@
     .wrapper {
         padding: 20px 20px 30px 20px;
     }
+    .enter-page .mw700, .modal .mw700{
+        width: 100%;
+    }
+    .enter-page, .modal{
+        padding: 0px 10px ;
+    }
 }
 @media (max-width: 640px) {
     .payments-balance .right form input[type=submit]{
