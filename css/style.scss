@@ -90,7 +90,7 @@ section {
       }
 
       &:focus {
-         border: 2px solid var(--Header-Stroke-Focused, #f845fc);
+         //border: 2px solid var(--Header-Stroke-Focused, #f845fc);
          background: var(--Header-BG-Focused, #3a465d);
       }
       &.active,

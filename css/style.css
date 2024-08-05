@@ -175,7 +175,6 @@ section {
   background: var(--Button-Primary-BG-Hover, #3e56d0);
 }
 .header a:focus {
-  border: 2px solid var(--Header-Stroke-Focused, #f845fc);
   background: var(--Header-BG-Focused, #3a465d);
 }
 .header a.active, .header a:hover {
