@@ -1759,6 +1759,29 @@ section {
 .form input[type=number] {
   -ms-appearance: none;
 }
+.form .chek-lists {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.form .chek-lists li {
+  cursor: pointer;
+  border-radius: 30px;
+  background: var(--Request-BG-Default, #f1f7ff);
+  padding: 6px 15px;
+  color: var(--Request-Text-Default, #2a344a);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.form .chek-lists li.active {
+  background: var(--Request-BG-Active, #4E6AF3);
+  color: var(--Request-Text-Active, #FFF);
+}
 
 .progress-container {
   position: fixed;

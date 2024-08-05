@@ -15,6 +15,16 @@ jQuery(document).ready(function ($) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  // чек-листы
+
+  const listItems = document.querySelectorAll('.form .chek-lists li');
+
+  listItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      item.classList.toggle('active');
+    });
+  });
+
   //обработка числовых полей
   
   const numberInputs = document.querySelectorAll('.number-input');
