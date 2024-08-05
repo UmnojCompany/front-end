@@ -1158,7 +1158,7 @@ section {
   padding: 30px 30px 30px 30px;
 }
 .content-text h5 {
-  padding: 40px 30px 20px 30px;
+  padding: 40px 30px 20px 0px;
 }
 .content-text p {
   color: var(--Text-Grey_Dark, #3b4a69);

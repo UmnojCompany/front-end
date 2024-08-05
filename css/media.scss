@@ -36,8 +36,14 @@
     .data-profile {
         //display: none;
     }
+    .content-text h5{
+        font-size: 18px;
+    }
 }
 @media (max-width: 767px) {
+    .content-text h5{
+        padding: 40px 0px 15px 0px;
+    }
     .payments-balance .wrapper{
         flex-direction: column;
         gap: 20px;
@@ -79,8 +85,9 @@
         width: 100%;
     }
     .enter-page, .modal{
-        padding: 0px 10px ;
+        padding: 0px 0px ;
     }
+  
 }
 @media (max-width: 640px) {
     .payments-balance .right form input[type=submit]{
