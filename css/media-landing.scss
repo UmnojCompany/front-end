@@ -336,6 +336,9 @@
     }
 }
 @media (max-width: 767px) {
+    .content-text{
+        padding: 30px 20px ;
+    }
     .next:hover, .prew:hover{
         background: #ffffff;
         svg {
