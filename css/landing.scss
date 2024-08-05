@@ -1224,6 +1224,8 @@ main{
 }
 .relises {
     .wrapp {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
         .title {
             margin: 15px 0px 0px 0px;
             color: var(--Text-Black, #2a344a);

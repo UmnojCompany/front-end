@@ -1117,6 +1117,8 @@ main {
   padding: 0px 0px 150px 0px;
 }
 .relises .wrapp {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   display: flex;
   gap: 20px;
   overflow-x: scroll;
