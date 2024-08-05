@@ -1678,6 +1678,11 @@ section {
       gap: 20px;
    }
    .input-container {
+      &.w110{
+         input{
+            width: 110px;
+         }
+      }
       &.years{
          input{
             width: 140px;
@@ -2186,7 +2191,7 @@ section {
          min-width: 160px;
       }
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 20px;
 
       color: var(--Text-Black, #2a344a);

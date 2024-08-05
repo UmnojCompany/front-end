@@ -1657,6 +1657,9 @@ section {
 .form .input-container {
   flex: 1;
 }
+.form .input-container.w110 input {
+  width: 110px;
+}
 .form .input-container.years input {
   width: 140px;
 }
@@ -2107,7 +2110,7 @@ section {
 }
 .filter-modal .subrow {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   color: var(--Text-Black, #2a344a);
   /* Platform/Desktop/Body-1 R */
