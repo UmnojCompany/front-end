@@ -41,7 +41,8 @@ body.landing .container {
 .landing-footer {
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--BG-Black, #2a344a);
-  padding: 50px 0px;
+  padding: 50px 10px 50px 10px;
+  margin: 0px 10px 0px 10px;
 }
 .landing-footer .copy-wrapp {
   color: var(--Text-Grey, #7786a5);
@@ -195,6 +196,10 @@ body.landing .container {
   font-style: normal;
   font-weight: 700;
   line-height: 140%; /* 44.8px */
+}
+
+.kostil {
+  padding: 10px 0px 0px 0px;
 }
 
 .header.landing-page {
@@ -527,7 +532,7 @@ main {
   line-height: 120%; /* 28.8px */
 }
 .parameters .title svg path {
-  fill: #3B4A69;
+  fill: #3b4a69;
 }
 .parameters .item {
   display: flex;
@@ -988,7 +993,7 @@ main {
   background: #fff;
 }
 .tarifs .item.recommended .line {
-  border-top: 1px solid var(--Stroke-Divider, #6880F5);
+  border-top: 1px solid var(--Stroke-Divider, #6880f5);
 }
 .tarifs .item.recommended .button {
   background: #6880f5;
@@ -1181,21 +1186,17 @@ main {
   gap: 8px;
   cursor: pointer;
 }
-.next.off,
-.prew.off {
-  cursor: no-drop;
-}
 .next.off:hover,
 .prew.off:hover {
   background: var(--BG-White, #fff);
 }
 .next.off:hover svg path,
 .prew.off:hover svg path {
-  fill: #B8C6E3;
+  fill: #b8c6e3;
 }
 .next.off svg path,
 .prew.off svg path {
-  fill: #B8C6E3;
+  fill: #b8c6e3;
 }
 .next:hover,
 .prew:hover {

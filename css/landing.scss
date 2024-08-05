@@ -55,10 +55,10 @@ body {
         .geo,
         .copy,
         .politic {
-            a{
+            a {
                 transition: 0.3s;
                 &:hover {
-                  color: #fff;
+                    color: #fff;
                 }
             }
             flex: 1;
@@ -198,24 +198,30 @@ body {
     }
     border-radius: var(--Corner_radius_m, 10px);
     background: var(--BG-Black, #2a344a);
-    padding: 50px 0px;
+    //padding: 50px 0px;
+    padding: 50px 10px 50px 10px;
+   
+    margin: 0px 10px 0px 10px;
 }
-.header.landing-page{
+.kostil{
+    padding: 10px 0px 0px 0px;
+}
+.header.landing-page {
     margin: 10px 10px 0px 10px;
-    .right{
-        span{
+    .right {
+        span {
             color: #ffffff;
         }
     }
 }
-main{
-   padding: 0px 0px 0px 0px;
+main {
+    padding: 0px 0px 0px 0px;
 }
 .intro {
-    .header .buttons .button{
-        padding: 10px 20px ;
+    .header .buttons .button {
+        padding: 10px 20px;
     }
-    .button-primary.create{
+    .button-primary.create {
         color: #ffffff;
     }
     .row-item {
@@ -315,8 +321,8 @@ main{
         line-height: 100%; /* 80px */
     }
     .wrapp {
-        .button-primary{
-            padding: 20px 36px ;
+        .button-primary {
+            padding: 20px 36px;
             font-size: 20px;
         }
         .subtitle {
@@ -458,7 +464,7 @@ main{
         gap: 10px;
     }
     .container {
-        &.mod{
+        &.mod {
             padding: 0px 0px 40px 0px;
         }
         display: flex;
@@ -540,9 +546,9 @@ main{
         flex-wrap: wrap;
     }
     .title {
-        svg{
-            path{
-                fill: #3B4A69;
+        svg {
+            path {
+                fill: #3b4a69;
             }
         }
         min-width: 320px;
@@ -675,10 +681,10 @@ main{
         flex-direction: column;
     }
     .item {
-        .more{
-             margin: 0px 0px 0px 0px;
+        .more {
+            margin: 0px 0px 0px 0px;
         }
-       
+
         img {
             width: 70px;
             height: 70px;
@@ -715,7 +721,6 @@ main{
 }
 
 .main-reviews {
-
     .item {
         .modal-head {
             display: none;
@@ -908,7 +913,6 @@ main{
         gap: 20px;
     }
     .button {
-       
         transition: 0.1s;
         border-radius: 10px;
         background: var(--Button-Secondary-BG-Default, #f1f7ff);
@@ -1047,25 +1051,24 @@ main{
         }
     }
     .item {
-        &:hover{
-            .button{
+        &:hover {
+            .button {
                 background: var(--Button-Primary-BG-Default, #4e6af3);
                 color: var(--Button-Primary-Text-Default, #fff);
             }
         }
         &.recommended {
-
-            &:hover{
-                .button{
+            &:hover {
+                .button {
                     color: var(--Main-Blue, #4e6af3);
                     background: #fff;
-                //background: var(--Button-Primary-BG-Default, #4e6af3);
+                    //background: var(--Button-Primary-BG-Default, #4e6af3);
                     //color: var(--Button-Primary-Text-Default, #fff);
                 }
             }
 
-            .line{
-                border-top: 1px solid var(--Stroke-Divider, #6880F5);
+            .line {
+                border-top: 1px solid var(--Stroke-Divider, #6880f5);
             }
             .button {
                 &:hover {
@@ -1080,8 +1083,6 @@ main{
                         background: url("../img/inactive-rec.svg");
                     }
                     color: #8396f7;
-
-                  
                 }
                 &::before {
                     background: url("../img/li-ico-rec.svg");
@@ -1126,7 +1127,6 @@ main{
 
             display: flex;
             padding: 20px;
-            
 
             align-items: center;
             flex-direction: column;
@@ -1282,22 +1282,22 @@ main{
 }
 .next,
 .prew {
-    &.off{
+    &.off {
         &:hover {
             background: var(--BG-White, #fff);
             svg {
                 path {
-                    fill: #B8C6E3;
+                    fill: #b8c6e3;
                 }
             }
         }
         svg {
             path {
-                fill: #B8C6E3;
+                fill: #b8c6e3;
             }
         }
-       
-        cursor: no-drop;
+
+        //cursor: no-drop;
     }
     &:hover {
         background: var(--Main-Blue, #4e6af3);
@@ -1444,26 +1444,26 @@ main{
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-  }
-  
-  .reviews-container {
+}
+
+.reviews-container {
     max-width: 1180px;
     position: relative;
     margin: 0 auto;
-  }
-  
-  .reviews-track {
+}
+
+.reviews-track {
     display: flex;
     transition: transform 0.3s ease;
     width: max-content; /* Установите ширину содержимого под содержимое */
     gap: 20px;
-  }
-  
-  .review-item {
+}
+
+.review-item {
     flex: 0 0 380px; /* Установите фиксированную ширину для каждого элемента */
     max-width: 380px;
     box-sizing: border-box;
     // padding: 10px;
     // background: #f0f0f0; /* Примерный фон для видимости */
     // margin: 0 5px; /* Примерный отступ между карточками */
-  }
+}

@@ -39,6 +39,12 @@
   }
 }
 @media (max-width: 1199px) {
+  .landing-footer {
+    margin: 0px 0px 0px 0px;
+  }
+  .kostil {
+    display: none;
+  }
   .landing-footer .start-free p {
     text-align: center;
   }
