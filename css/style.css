@@ -1674,6 +1674,17 @@ section {
 .form .input-container .placeholder span {
   color: var(--Text-Error, #f34942);
 }
+.form .input-container .number-input {
+  width: 250px;
+}
+.form .input-container .number-input.filled + .placeholder {
+  font-size: 12px;
+  top: 5px;
+}
+.form .input-container .number-input.filled + .placeholder {
+  font-size: 12px;
+  top: 5px;
+}
 .form .input-container textarea,
 .form .input-container input {
   background: none;
@@ -2048,6 +2059,9 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+.filter-modal .subrow .title {
+  min-width: 160px;
 }
 .filter-modal .head {
   display: flex;

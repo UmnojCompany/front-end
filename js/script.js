@@ -14,6 +14,55 @@ jQuery(document).ready(function ($) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  //обработка числовых полей
+  
+  const numberInputs = document.querySelectorAll('.number-input');
+
+  numberInputs.forEach(function(input) {
+    function applyStyles() {
+      const parent = input.closest('.input-container');
+      const placeholder = parent.querySelector('.placeholder');
+      
+      if (input.value) {
+        input.classList.add('filled');
+        placeholder.classList.add('filled');
+      } else {
+        input.classList.remove('filled');
+        placeholder.classList.remove('filled');
+      }
+    }
+
+    input.addEventListener('input', function() {
+      applyStyles();
+      
+      // Ensure the value respects the min, max and maxlength constraints
+      const value = input.value;
+      const min = input.getAttribute('min');
+      const max = input.getAttribute('max');
+      const maxLength = input.getAttribute('maxlength');
+
+      // Ensure the value is within min and max range
+      if (min !== null && value < min) {
+        input.value = min;
+      }
+      if (max !== null && value > max) {
+        input.value = max;
+      }
+
+      // Limit the length of the input
+      if (maxLength !== null && value.length > maxLength) {
+        input.value = value.slice(0, maxLength);
+      }
+    });
+
+    // Initial check to add filled class if input is already filled
+    applyStyles();
+  });
+  
+  
+
+
   // Функция для применения маски к полям телефона
   function applyInputMask() {
     document.querySelectorAll(".phone").forEach(function (input) {
