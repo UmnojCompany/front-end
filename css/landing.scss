@@ -1133,6 +1133,9 @@ main {
         }
 
         .faq-question {
+            &:hover {
+                color: var(--Main-Blue, #4e6af3);
+            }
             &.active {
                 color: var(--Main-Blue, #4e6af3);
             }
