@@ -1659,6 +1659,16 @@ section {
 .form .input-container {
   flex: 1;
 }
+.form .input-container.years input {
+  width: 140px;
+}
+.form .input-container.years::after {
+  content: "г";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: var(--Fields-Title, #7786a5);
+}
 .form .input-container .placeholder {
   transition: 0.3s;
   z-index: 0;
