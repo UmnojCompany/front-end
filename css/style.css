@@ -1154,7 +1154,7 @@ section {
 
 .content-text {
   max-height: 69vh;
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 30px 30px 30px 30px;
 }
 .content-text h5 {

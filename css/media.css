@@ -39,7 +39,7 @@
 }
 @media (max-width: 767px) {
   .content-text {
-    max-height: 79vh;
+    max-height: 84vh;
   }
   .modal .modal-content {
     max-height: 95vh;
