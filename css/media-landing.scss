@@ -336,40 +336,43 @@
     }
 }
 @media (max-width: 767px) {
-    .enter-page .modal-content, .modal .modal-content{
+    .enter-page .modal-content,
+    .modal .modal-content {
+        padding: 20px 0px 0px 0px;
         border-radius: 10px 10px 0 0;
     }
-    .modal .text{
+    .modal .text {
         padding: 0px 20px 20px 20px;
     }
-    .modal .title{
-        padding: 15px 20px ;
+    .modal .title {
+        padding: 15px 20px;
     }
     .modal .stars-5,
-    .modal .head{
+    .modal .head {
         padding: 0px 0px 0px 20px;
     }
-     .modal h3{
-padding: 0px 50px 0px 20px;
+    .modal h3 {
+        padding: 0px 50px 0px 20px;
     }
-    .content-text{
-        padding: 30px 20px ;
+    .content-text {
+        padding: 30px 20px;
     }
-    .next:hover, .prew:hover{
+    .next:hover,
+    .prew:hover {
         background: #ffffff;
         svg {
             path {
-                fill: #2A344A;
+                fill: #2a344a;
             }
         }
     }
-    .mob-menu p{
-        padding: 0px 20px ;
+    .mob-menu p {
+        padding: 0px 20px;
     }
-    .intro .wrapp .button-primary{
-        padding: 13px 36px ;
+    .intro .wrapp .button-primary {
+        padding: 13px 36px;
     }
-    .landing-footer .start-free h2{
+    .landing-footer .start-free h2 {
         text-align: center;
     }
     .showcases .navi-buttons .butt {
@@ -693,15 +696,15 @@ padding: 0px 50px 0px 20px;
         max-width: 100%;
     }
     .tarifs .item,
-    .main-reviews .item{
+    .main-reviews .item {
         max-width: 320px;
         min-width: 320px;
         width: 320px;
     }
-    .showcases .cases img{
+    .showcases .cases img {
         border-radius: 10px;
     }
-    .intro .row{
+    .intro .row {
         gap: 10px;
     }
 }

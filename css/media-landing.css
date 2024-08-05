@@ -323,7 +323,9 @@
   }
 }
 @media (max-width: 767px) {
-  .enter-page .modal-content, .modal .modal-content {
+  .enter-page .modal-content,
+  .modal .modal-content {
+    padding: 20px 0px 0px 0px;
     border-radius: 10px 10px 0 0;
   }
   .modal .text {
@@ -342,11 +344,13 @@
   .content-text {
     padding: 30px 20px;
   }
-  .next:hover, .prew:hover {
+  .next:hover,
+  .prew:hover {
     background: #ffffff;
   }
-  .next:hover svg path, .prew:hover svg path {
-    fill: #2A344A;
+  .next:hover svg path,
+  .prew:hover svg path {
+    fill: #2a344a;
   }
   .mob-menu p {
     padding: 0px 20px;
