@@ -642,4 +642,7 @@
   .showcases .cases img {
     border-radius: 10px;
   }
+  .intro .row {
+    gap: 10px;
+  }
 }/*# sourceMappingURL=media-landing.css.map */
