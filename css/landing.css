@@ -302,6 +302,9 @@ main {
   color: var(--Text-Grey, #7786a5);
 }
 .intro .row {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none;
   overflow: hidden;
   white-space: nowrap;
   display: flex;
@@ -680,6 +683,9 @@ main {
   padding: 0px 0px 150px 0px;
 }
 .main-reviews .item {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none;
   border-radius: 10px;
   background: var(--BG-White, #fff);
   display: flex;
@@ -1127,6 +1133,9 @@ main {
 }
 
 .relises {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none;
   padding: 0px 0px 150px 0px;
 }
 .relises .wrapp {
