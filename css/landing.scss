@@ -1280,7 +1280,23 @@ main{
 }
 .next,
 .prew {
-    
+    &.off{
+        &:hover {
+            background: var(--BG-White, #fff);
+            svg {
+                path {
+                    fill: #B8C6E3;
+                }
+            }
+        }
+        svg {
+            path {
+                fill: #B8C6E3;
+            }
+        }
+       
+        cursor: no-drop;
+    }
     &:hover {
         background: var(--Main-Blue, #4e6af3);
         svg {

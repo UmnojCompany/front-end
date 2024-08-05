@@ -2048,7 +2048,7 @@
           <div class="head-section">
             <h2>Отзывы</h2>
             <div class="buttons">
-              <div class="prew" onclick="mainSliderSlideLeft()">
+              <div class="prew mainSliderLeft" onclick="mainSliderSlideLeft()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2064,7 +2064,7 @@
                   />
                 </svg>
               </div>
-              <div class="next" onclick="mainSliderSlideRight()">
+              <div class="next mainSliderRight" onclick="mainSliderSlideRight()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2526,7 +2526,7 @@
           <div class="head-section">
             <h2>Тарифы</h2>
             <div class="buttons">
-              <div class="prew" onclick="tarSliderSlideLeft()">
+              <div class="prew tarSliderLeft" onclick="tarSliderSlideLeft()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2542,7 +2542,7 @@
                   />
                 </svg>
               </div>
-              <div class="next" onclick="tarSliderSlideRight()">
+              <div class="next tarSliderRight" onclick="tarSliderSlideRight()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2906,7 +2906,7 @@
           <div class="head-section">
             <h2>Релизы</h2>
             <div class="buttons">
-              <div class="prew" onclick="secondSliderSlideLeft()">
+              <div class="prew secondSliderLeft" onclick="secondSliderSlideLeft()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -2922,7 +2922,7 @@
                   />
                 </svg>
               </div>
-              <div class="next" onclick="secondSliderSlideRight()">
+              <div class="next secondSliderRight" onclick="secondSliderSlideRight()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -3320,7 +3320,10 @@
           const track = document.querySelector(containerSelector);
           const items = track.querySelectorAll(".review-item");
           const slideWidth = items[0].offsetWidth + 20; // Учитывая отступы
-          const maxIndex = window.innerWidth > 768 ? items.length - 2 : items.length - 1;
+          const maxIndex = items.length - 1;
+      
+          const rightButton = document.querySelector(`.${sliderName}Right`);
+          const leftButton = document.querySelector(`.${sliderName}Left`);
       
           // Only add drag event listeners if screen width is less than 768px
           if (window.innerWidth < 768) {
@@ -3378,6 +3381,7 @@
             currentTranslate = currentIndex * -slideWidth;
             prevTranslate = currentTranslate;
             setSliderPosition();
+            updateButtonStates();
           }
       
           function slideLeft() {
@@ -3394,6 +3398,22 @@
             }
           }
       
+          function updateButtonStates() {
+            if (currentIndex >= maxIndex) {
+              rightButton.classList.add('off');
+            } else {
+              rightButton.classList.remove('off');
+            }
+            if (currentIndex === 0) {
+              leftButton.classList.add('off');
+            } else {
+              leftButton.classList.remove('off');
+            }
+          }
+      
+          // Initial update of button states
+          updateButtonStates();
+      
           // Expose functions to global scope for button controls
           window[`${sliderName}SlideLeft`] = slideLeft;
           window[`${sliderName}SlideRight`] = slideRight;
@@ -3404,6 +3424,7 @@
         initializeSlider(".second-reviews-wrapper .reviews-track", "secondSlider");
         initializeSlider(".tar-reviews-wrapper .reviews-track", "tarSlider");
       });
+      
       
       
       

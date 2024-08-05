@@ -1179,6 +1179,22 @@ main {
   gap: 8px;
   cursor: pointer;
 }
+.next.off,
+.prew.off {
+  cursor: no-drop;
+}
+.next.off:hover,
+.prew.off:hover {
+  background: var(--BG-White, #fff);
+}
+.next.off:hover svg path,
+.prew.off:hover svg path {
+  fill: #B8C6E3;
+}
+.next.off svg path,
+.prew.off svg path {
+  fill: #B8C6E3;
+}
 .next:hover,
 .prew:hover {
   background: var(--Main-Blue, #4e6af3);
