@@ -336,7 +336,14 @@
     }
 }
 @media (max-width: 767px) {
-  
+    .next:hover, .prew:hover{
+        background: #ffffff;
+        svg {
+            path {
+                fill: #2A344A;
+            }
+        }
+    }
     .mob-menu p{
         padding: 0px 20px ;
     }
