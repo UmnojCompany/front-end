@@ -334,6 +334,11 @@ section {
     }
     .to {
         &.duble {
+            padding: 0px 0px 0px 50px;
+            .avatar{
+                display: none;
+               
+            }
             .messege {
                 border-radius: 10px;
                 margin-bottom: -5px;

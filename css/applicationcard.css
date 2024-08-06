@@ -305,6 +305,12 @@ section {
   background: var(--BG-White, #fff);
   padding: var(--Corner_radius_m, 10px) 20px;
 }
+.messeges .to.duble {
+  padding: 0px 0px 0px 50px;
+}
+.messeges .to.duble .avatar {
+  display: none;
+}
 .messeges .to.duble .messege {
   border-radius: 10px;
   margin-bottom: -5px;
