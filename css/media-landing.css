@@ -32,12 +32,6 @@
   display: block;
 }
 
-@media (max-width: 1279px) {
-  .intro {
-    background: url("../img/bg-intro.png") #f5f7f9 no-repeat;
-    background-size: auto;
-  }
-}
 @media (max-width: 1199px) {
   .landing-footer {
     margin: 0px 0px 0px 0px;

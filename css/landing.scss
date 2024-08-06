@@ -358,7 +358,12 @@ main {
     }
     //min-height: 1033px;
     padding: 0px 0px 189px 0px;
-    background: url("../img/bg-intro.png") #f5f7f9 -2534px -422.052px / 298.229% 140.418% no-repeat;
+    background: url('../img/bg-intro2.png') #f5f7f9  no-repeat;
+    background-size: cover;
+    
+    background-position-x: right;
+    background-position-y: bottom;
+    //background: url("../img/bg-intro2.png") #f5f7f9 -2534px -422.052px / 298.229% 140.418% no-repeat;
 }
 .showcases {
     .indicators {
