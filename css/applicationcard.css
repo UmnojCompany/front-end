@@ -390,4 +390,20 @@ section {
   width: 100%;
   max-width: 1060px;
   margin: 0px auto;
+}
+
+.card-status {
+  color: var(--Text-White, #FFF);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.card-status.new span {
+  display: block;
+}
+.card-status span {
+  display: none;
 }/*# sourceMappingURL=applicationcard.css.map */
