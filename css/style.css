@@ -2133,7 +2133,11 @@ section {
   padding: 25px 20px 20px 20px;
   border-top: 2px solid var(--Stroke-Divider_form, #f1f7ff);
 }
+.filter-modal .row:first-child {
+  border-top: none;
+}
 .filter-modal .content-filter-modal {
+  border-top: 2px solid var(--Stroke-Divider_form, #f1f7ff);
   display: flex;
   flex-direction: column;
   gap: 25px;

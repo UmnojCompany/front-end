@@ -2211,9 +2211,14 @@ section {
    }
    .row {
       padding: 25px 20px 20px 20px;
+      &:first-child{
+         border-top: none;
+      }
       border-top: 2px solid var(--Stroke-Divider_form, #f1f7ff);
    }
    .content-filter-modal {
+      border-top: 2px solid var(--Stroke-Divider_form, #f1f7ff);
+
       display: flex;
       flex-direction: column;
       gap: 25px;
@@ -2223,6 +2228,7 @@ section {
       max-height: 700px;
    }
    .search-items {
+
       display: flex;
       align-items: center;
       gap: 10px;
