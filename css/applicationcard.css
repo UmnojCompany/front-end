@@ -25,7 +25,7 @@ section {
 
 .app-info {
   max-width: 580px;
-  background: #FFF;
+  background: #fff;
 }
 .app-info .title {
   min-width: 150px;
@@ -151,6 +151,11 @@ section {
 }
 .app-info .options {
   overflow-y: scroll;
+}
+.app-info .options.max {
+  max-height: 50vh;
+}
+.app-info .options.min {
   max-height: 70vh;
 }
 .app-info .head {
@@ -206,15 +211,6 @@ section {
   align-items: center;
   gap: 20px;
 }
-.messeger .mess-form {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  padding: 10px;
-  border-radius: var(--Corner_radius_m, 10px);
-  border: 1px solid var(--Stroke-Divider, #e1edfd);
-  background: var(--BG-White, #fff);
-}
 .messeger .messeges {
   display: none;
 }
@@ -257,10 +253,6 @@ section {
 .messeger .null-mess.active {
   display: flex;
 }
-.messeger .wrapp {
-  flex-grow: 1;
-  overflow-y: scroll;
-}
 .messeger .exit {
   cursor: pointer;
   border-radius: 50px;
@@ -272,4 +264,124 @@ section {
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+.day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 710px;
+}
+.day-list .day {
+  align-self: flex-end;
+  color: var(--Text-Grey, #7786a5);
+  text-align: center;
+  /* Platform/Mobile/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
+.messeges .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.messeges ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.messeges li {
+  display: flex;
+  gap: 10px;
+}
+.messeges .from .messege {
+  border-radius: var(--Corner_radius_m, 10px) var(--Corner_radius_m, 10px) var(--Corner_radius_m, 10px) 0px;
+  background: var(--BG-White, #fff);
+  padding: var(--Corner_radius_m, 10px) 20px;
+}
+.messeges .to.duble .messege {
+  border-radius: 10px;
+  margin-bottom: -5px;
+}
+.messeges .to .messege {
+  border-radius: var(--Corner_radius_m, 10px) var(--Corner_radius_m, 10px) var(--Corner_radius_m, 10px) 0px;
+  background: var(--Other-BG-Message, #cfe2fc);
+  padding: var(--Corner_radius_m, 10px) 20px;
+}
+.messeges .comment .title {
+  color: #ffb74c;
+  /* Platform/Fields/Title (caption) */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+.messeges .comment .messege {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--Fields-BG-Validation, #fffbf4);
+  padding: var(--Corner_radius_m, 10px) 20px;
+  gap: 0;
+}
+.messeges .messege {
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  display: flex;
+  gap: 10px;
+}
+.messeges .info {
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+.messeges .info .status {
+  display: flex;
+  align-items: flex-end;
+}
+.messeges .info .time {
+  display: flex;
+  align-items: flex-end;
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Fields/Description */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
+.wrapp {
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 0px 100px 0px 0px;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0px auto;
+}
+
+.mess-form {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+  border-radius: var(--Corner_radius_m, 10px);
+  border: 1px solid var(--Stroke-Divider, #e1edfd);
+  background: var(--BG-White, #fff);
+  width: 100%;
+  max-width: 1060px;
+  margin: 0px auto;
 }/*# sourceMappingURL=applicationcard.css.map */
