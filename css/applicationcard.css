@@ -401,6 +401,17 @@ section {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
+.card-status select {
+  margin: 0px 0px 0px -4px;
+  color: var(--Text-White, #FFF);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  background: var(--BG-Black, #2A344A);
+}
 .card-status.new span {
   display: block;
 }
