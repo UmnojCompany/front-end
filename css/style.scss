@@ -55,6 +55,9 @@ h5 {
    line-height: 120%; /* 24px */
 }
 main {
+   &.app-card{
+      padding: 0px 0px 0px 0px;
+   }
    &.no-padding {
       padding: 0px 0px 200px 0px;
    }

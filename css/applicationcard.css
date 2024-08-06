@@ -1,0 +1,276 @@
+section {
+  margin: 0px 0px 0px 0px;
+}
+
+.application-card {
+  max-height: 100vh;
+  padding: 10px;
+  background: var(--overlay, rgba(60, 75, 97, 0.6));
+  /* overlay */
+  -webkit-backdrop-filter: blur(11px);
+          backdrop-filter: blur(11px);
+}
+.application-card main {
+  padding: 0px 0px 0px 0px;
+  flex-grow: 0;
+}
+
+.app-card-wrapp {
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  border-radius: 10px;
+  background: var(--BG-Light-grey, #eef1f5);
+}
+
+.app-info {
+  max-width: 580px;
+  background: #FFF;
+}
+.app-info .title {
+  min-width: 150px;
+  color: var(--Text-Grey, #7786a5);
+  /* Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.app-info li {
+  border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+  padding: 15px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: var(--Text-Black, #2a344a);
+  /* Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.app-info .client-contacts {
+  border-bottom: 5px solid var(--Stroke-Divider, #e1edfd);
+}
+.app-info .client-contacts .sonra {
+  display: none;
+  color: var(--Text-Success, #0ab258);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  padding: 15px 20px;
+}
+.app-info .client-contacts .sonra.active {
+  display: block;
+}
+.app-info .client-contacts .opened {
+  display: none;
+}
+.app-info .client-contacts .opened.active {
+  display: block;
+}
+.app-info .butt-open {
+  display: none;
+  align-items: center;
+}
+.app-info .butt-open.active {
+  display: flex;
+}
+.app-info .butt-open svg {
+  cursor: pointer;
+}
+.app-info .col {
+  display: flex;
+  flex-direction: column;
+}
+.app-info .col .status {
+  color: var(--Text-Black, #2a344a);
+  /* Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.app-info .col .name {
+  color: var(--Text-Black, #2a344a);
+  text-align: center;
+  /* Platform/Accent_16 (S) */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.app-info .client {
+  display: flex;
+  gap: 15px;
+  flex-grow: 1;
+}
+.app-info .client .avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.app-info .app-from .left {
+  width: 150px;
+}
+.app-info .app-from .top {
+  display: flex;
+  gap: 15px;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+}
+.app-info h5 {
+  color: var(--Text-White, #fff);
+  /* Platform/Desktop/H-5 M */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app-info h5 .app-id {
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.app-info .options {
+  overflow-y: scroll;
+  max-height: 50vh;
+  padding: 0px 0px 50px 0px;
+}
+.app-info .head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--Corner_radius_m, 10px) 0px 0px 0px;
+  background: var(--BG-Black, #2a344a);
+  padding: 20px;
+}
+
+.messeger {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.messeger .mess-input-container {
+  flex: 1 0 0;
+}
+.messeger .mess-input-container input {
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.messeger .send-butt {
+  border-radius: 10px;
+  background: var(--BG-Disabled, #eff3fb);
+  display: flex;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.messeger .butt-insert {
+  border-radius: 10px;
+  background: var(--Button-Primary-BG-Default, #4e6af3);
+  display: flex;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  cursor: pointer;
+}
+.messeger .send-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.messeger .mess-form {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+  border-radius: var(--Corner_radius_m, 10px);
+  border: 1px solid var(--Stroke-Divider, #e1edfd);
+  background: var(--BG-White, #fff);
+}
+.messeger .messeges {
+  display: none;
+}
+.messeger .messeges.active {
+  display: block;
+}
+.messeger .null-mess {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.messeger .null-mess .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.messeger .null-mess .content .title {
+  color: var(--Text-Black, #2a344a);
+  text-align: center;
+  /* Platform/Desktop/H-5 M */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+}
+.messeger .null-mess .content p {
+  max-width: 320px;
+  color: var(--Text-Grey, #7786a5);
+  text-align: center;
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.messeger .null-mess.active {
+  display: flex;
+}
+.messeger .wrapp {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+.messeger .exit {
+  cursor: pointer;
+  border-radius: 50px;
+  background: #fff;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}/*# sourceMappingURL=applicationcard.css.map */

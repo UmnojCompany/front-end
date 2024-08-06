@@ -131,6 +131,9 @@ main {
   padding: 90px 0px 200px 0px;
   flex-grow: 1;
 }
+main.app-card {
+  padding: 0px 0px 0px 0px;
+}
 main.no-padding {
   padding: 0px 0px 200px 0px;
 }
