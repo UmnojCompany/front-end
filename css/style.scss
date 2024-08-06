@@ -813,6 +813,15 @@ section {
 }
 .edit-profile {
    .edit-butt {
+      color: var(--BG-Grey, #3a465d);
+      text-align: center;
+
+      /* Platform/Button Link/Medium */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 125% */
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -1678,18 +1687,18 @@ section {
       gap: 20px;
    }
    .input-container {
-      &.w110{
-         input{
+      &.w110 {
+         input {
             width: 110px;
          }
       }
-      &.years{
-         input{
+      &.years {
+         input {
             width: 140px;
          }
-         
-         &::after{
-            content: 'г';
+
+         &::after {
+            content: "г";
             position: absolute;
             right: 20px;
             top: 20px;
@@ -1702,8 +1711,6 @@ section {
          span {
             &.black {
                color: var(--Fields-Text, #2a344a);
-
-             
             }
             color: var(--Text-Error, #f34942);
          }
@@ -2031,7 +2038,6 @@ section {
          transition: 0.3s;
          z-index: 0;
          span {
-           
             color: var(--Text-Error, #f34942);
          }
          position: absolute;
@@ -2211,7 +2217,7 @@ section {
    }
    .row {
       padding: 25px 20px 20px 20px;
-      &:first-child{
+      &:first-child {
          border-top: none;
       }
       border-top: 2px solid var(--Stroke-Divider_form, #f1f7ff);
@@ -2228,7 +2234,6 @@ section {
       max-height: 700px;
    }
    .search-items {
-
       display: flex;
       align-items: center;
       gap: 10px;

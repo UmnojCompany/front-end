@@ -827,6 +827,14 @@ section {
 }
 
 .edit-profile .edit-butt {
+  color: var(--BG-Grey, #3a465d);
+  text-align: center;
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
   cursor: pointer;
   display: flex;
   align-items: center;
