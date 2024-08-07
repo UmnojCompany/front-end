@@ -1494,6 +1494,9 @@ section {
 .button-primary.inactive {
   display: none;
 }
+.button-primary.inactive.active {
+  display: flex;
+}
 .button-primary.inactive:hover {
   background: #d5daf1;
 }
