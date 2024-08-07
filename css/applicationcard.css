@@ -51,8 +51,14 @@ section {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
+.sidebar li:last-child {
+  border-bottom: none;
+}
 .sidebar .client-contacts {
   border-bottom: 5px solid var(--Stroke-Divider, #e1edfd);
+}
+.sidebar .client-contacts.closed {
+  display: none;
 }
 .sidebar .client-contacts .sonra {
   display: none;
@@ -77,6 +83,9 @@ section {
 .sidebar .butt-open {
   display: none;
   align-items: center;
+}
+.sidebar .butt-open.rotate svg {
+  transform: rotate(180deg);
 }
 .sidebar .butt-open.active {
   display: flex;
@@ -154,6 +163,9 @@ section {
 }
 .sidebar .options.max {
   max-height: 50vh;
+}
+.sidebar .options.max.min {
+  max-height: 76vh;
 }
 .sidebar .options.min {
   max-height: 70vh;

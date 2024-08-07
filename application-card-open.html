@@ -72,7 +72,7 @@
                 <div class="status">Клиент</div>
               </div>
             </div>
-            <div class="butt-open active">
+            <div class="butt-open active ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -89,7 +89,7 @@
               </svg>
             </div>
           </div>
-          <div class="client-contacts">
+          <div class="client-contacts ">
             <div class="sonra ">
               Здесь появятся контакты покупателя, когда он решит ими поделиться
               с вами
@@ -587,5 +587,20 @@
     <!-- Подключение Inputmask -->
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8-beta.0/dist/inputmask.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const sidebar = document.querySelector('.sidebar');
+          const buttOpen = sidebar.querySelector('.butt-open');
+          const clientContacts = sidebar.querySelector('.client-contacts');
+          const options = sidebar.querySelector('.options');
+
+          buttOpen.addEventListener('click', function () {
+              buttOpen.classList.toggle('rotate');
+              clientContacts.classList.toggle('closed');
+              options.classList.toggle('min');
+          });
+      });
+  </script>
   </body>
 </html>

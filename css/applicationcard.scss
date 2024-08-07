@@ -33,6 +33,9 @@ section {
         line-height: 140%; /* 19.6px */
     }
     li {
+        &:last-child{
+            border-bottom: none;
+        }
         border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
         padding: 15px 20px;
         display: flex;
@@ -49,6 +52,9 @@ section {
         line-height: 140%; /* 19.6px */
     }
     .client-contacts {
+        &.closed{
+            display: none;
+        }
         .sonra {
             display: none;
             &.active {
@@ -76,10 +82,15 @@ section {
     }
     .butt-open {
         display: none;
+        &.rotate{
+            svg{
+
+                transform: rotate(180deg);
+            }
+        }
         &.active {
             display: flex;
         }
-
         align-items: center;
         svg {
             cursor: pointer;
@@ -161,14 +172,18 @@ section {
 
     .options {
         &.max {
+            &.min {
+                max-height: 76vh;
+                
+            }
             max-height: 50vh;
         }
         &.min {
             max-height: 70vh;
+            
         }
         overflow-y: scroll;
 
-        //padding: 0px 0px 50px 0px;
     }
     .head {
         display: flex;
