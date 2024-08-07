@@ -475,6 +475,18 @@ section {
   cursor: pointer;
   line-height: 32px; /* 125% */
 }
+.page-head ul li span,
+.head-profile ul li span {
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+}
 .page-head ul li.active,
 .head-profile ul li.active {
   color: #4e6af3;
@@ -2188,4 +2200,60 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+}
+
+.plug {
+  height: 100%;
+}
+.plug .button-primary {
+  width: 160px;
+  padding: 8px;
+  margin: 0px auto;
+}
+.plug p {
+  color: var(--Text-Grey, #7786a5);
+  text-align: center;
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.plug p a {
+  color: var(--Main-Blue, #4e6af3);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.plug .title {
+  color: var(--Text-Black, #2a344a);
+  text-align: center;
+  /* Platform/Desktop/H-5 M */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  margin: 0px 0px 10px 0px;
+}
+.plug .wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 320px;
+  text-align: center;
+}
+.plug .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-return {
+  margin: 0px 10px 0px 0px;
 }/*# sourceMappingURL=style.css.map */

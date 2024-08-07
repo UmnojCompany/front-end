@@ -54,19 +54,19 @@ h5 {
    font-weight: 500;
    line-height: 120%; /* 24px */
 }
-.main-page{
-   ol{
+.main-page {
+   ol {
       padding: 0px 0px 0px 30px;
       display: flex;
       flex-direction: column;
       gap: 20px;
    }
-   h4{
+   h4 {
       padding: 50px 0px 20px 0px;
    }
 }
 main {
-   &.app-card{
+   &.app-card {
       padding: 0px 0px 0px 0px;
    }
    &.no-padding {
@@ -424,6 +424,18 @@ section {
    }
    ul {
       li {
+         span {
+            color: var(--Text-Grey, #7786a5);
+
+            /* Platform/Button Link/Medium */
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 125% */
+            display: inline-block;
+            margin: 0px 0px 0px 10px;
+         }
          position: relative;
          cursor: pointer;
          &.active {
@@ -1468,7 +1480,7 @@ section {
       display: none;
    }
    &.inactive {
-      &.active{
+      &.active {
          display: flex;
       }
       //cursor: no-drop;
@@ -2273,4 +2285,62 @@ section {
       font-weight: 400;
       line-height: 24px; /* 150% */
    }
+}
+.plug {
+   
+   .button-primary {
+      width: 160px;
+      padding: 8px;
+      margin: 0px auto;
+   }
+   p {
+      a {
+         color: var(--Main-Blue, #4e6af3);
+   
+         /* Platform/Desktop/Body-1 R */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 150%;
+      }
+      color: var(--Text-Grey, #7786a5);
+      text-align: center;
+
+      /* Platform/Desktop/Body-1 R */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+   }
+   .title {
+      color: var(--Text-Black, #2a344a);
+      text-align: center;
+
+      /* Platform/Desktop/H-5 M */
+      font-family: Roboto;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 24px */
+      margin: 0px 0px 10px 0px;
+   }
+   .wrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 320px;
+      text-align: center;
+   }
+   .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   height: 100%;
+}
+.button-return{
+   margin: 0px 10px 0px 0px;
 }
