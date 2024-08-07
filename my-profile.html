@@ -876,18 +876,6 @@
     <!-- Подключение Inputmask -->
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8-beta.0/dist/inputmask.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var tooltips = document.querySelectorAll(".tooltip");
 
-        tooltips.forEach(function (tooltip) {
-          var text = tooltip.getAttribute("data-tooltip");
-          var tooltipText = document.createElement("div");
-          tooltipText.className = "tooltip-text";
-          tooltipText.innerText = text;
-          tooltip.appendChild(tooltipText);
-        });
-      });
-    </script>
   </body>
 </html>

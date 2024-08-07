@@ -15,6 +15,16 @@ jQuery(document).ready(function ($) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  var tooltips = document.querySelectorAll(".tooltip");
+
+  tooltips.forEach(function (tooltip) {
+    var text = tooltip.getAttribute("data-tooltip");
+    var tooltipText = document.createElement("div");
+    tooltipText.className = "tooltip-text";
+    tooltipText.innerText = text;
+    tooltip.appendChild(tooltipText);
+  });
+
   // чек-листы одиночный выбор
 
   // const listItems2 = document.querySelectorAll('.form .chek-lists-single li');
