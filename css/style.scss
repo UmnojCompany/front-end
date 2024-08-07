@@ -2287,6 +2287,42 @@ section {
    }
 }
 .my-objects {
+   .edit-profile{
+      margin: 20px 0px 0px 0px;
+   }
+   .options {
+      .title {
+         min-width: 190px;
+
+         color: var(--Text-Grey, #7786a5);
+
+         /* Platform/Desktop/Body-1 R */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 150%; /* 24px */
+      }
+      li {
+         &:last-child {
+            border-bottom: none;
+         }
+         border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+         padding: 20px 0px;
+         display: flex;
+         align-items: flex-start;
+         gap: 15px;
+
+         color: var(--Text-Black, #2a344a);
+
+         /* Platform/Desktop/Body-1 R */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 150%; /* 24px */
+      }
+   }
    .page-head {
       h3 {
          display: flex;
