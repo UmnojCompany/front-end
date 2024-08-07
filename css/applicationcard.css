@@ -463,6 +463,9 @@ section {
   align-items: center;
   gap: 15px;
 }
+.mess-form .add .item:hover {
+  color: #4E6AF3;
+}
 .mess-form .add.active {
   display: flex;
 }/*# sourceMappingURL=applicationcard.css.map */

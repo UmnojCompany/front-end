@@ -470,6 +470,9 @@ section {
             align-items: center;
         }
         .item {
+            &:hover {
+              color: #4E6AF3;
+            }
             min-width: 230px;
             cursor: pointer;
             color: var(--Text-Black, #2a344a);
