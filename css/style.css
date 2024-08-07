@@ -2208,6 +2208,7 @@ section {
   gap: 10px;
 }
 
+.customer-profile .online,
 .realtor-profile .online {
   color: var(--Text-Success, #0ab258);
   /* Platform/Desktop/Body-2 R */
@@ -2217,11 +2218,13 @@ section {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
+.customer-profile .info-profile .button-return,
 .realtor-profile .info-profile .button-return {
   position: absolute;
   top: 0;
   right: calc(100% + 20px);
 }
+.customer-profile .info-profile .container,
 .realtor-profile .info-profile .container {
   position: relative;
 }
