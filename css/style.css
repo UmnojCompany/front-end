@@ -127,6 +127,16 @@ h5 {
   line-height: 120%; /* 24px */
 }
 
+.main-page ol {
+  padding: 0px 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-page h4 {
+  padding: 50px 0px 20px 0px;
+}
+
 main {
   padding: 90px 0px 200px 0px;
   flex-grow: 1;

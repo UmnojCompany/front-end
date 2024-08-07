@@ -54,6 +54,17 @@ h5 {
    font-weight: 500;
    line-height: 120%; /* 24px */
 }
+.main-page{
+   ol{
+      padding: 0px 0px 0px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   h4{
+      padding: 50px 0px 20px 0px;
+   }
+}
 main {
    &.app-card{
       padding: 0px 0px 0px 0px;
