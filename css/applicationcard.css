@@ -391,7 +391,35 @@ section {
   margin: 0px auto;
 }
 
+.card-status {
+  color: var(--Text-White, #fff);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.card-status select {
+  margin: 0px 0px 0px -4px;
+  color: var(--Text-White, #fff);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  background: var(--BG-Black, #2a344a);
+}
+.card-status.new span {
+  display: block;
+}
+.card-status span {
+  display: none;
+}
+
 .mess-form {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 50px;
@@ -403,30 +431,38 @@ section {
   max-width: 1060px;
   margin: 0px auto;
 }
-
-.card-status {
-  color: var(--Text-White, #FFF);
-  /* Platform/Desktop/Body-1 R */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-}
-.card-status select {
-  margin: 0px 0px 0px -4px;
-  color: var(--Text-White, #FFF);
-  /* Platform/Desktop/Body-1 R */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-  background: var(--BG-Black, #2A344A);
-}
-.card-status.new span {
-  display: block;
-}
-.card-status span {
+.mess-form .add {
   display: none;
+  flex-direction: column;
+  gap: 7px;
+  padding: var(--Corner_radius_m, 10px);
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--BG-White, #fff);
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 5px);
+}
+.mess-form .add .icon {
+  border-radius: 10px;
+  background: var(--Button-Secondary-BG-Default, #f1f7ff);
+  display: flex;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+}
+.mess-form .add .item {
+  min-width: 230px;
+  cursor: pointer;
+  color: var(--Text-Black, #2a344a);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.mess-form .add.active {
+  display: flex;
 }/*# sourceMappingURL=applicationcard.css.map */
