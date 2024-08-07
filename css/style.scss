@@ -2286,8 +2286,38 @@ section {
       line-height: 24px; /* 150% */
    }
 }
+.my-objects {
+   .page-head {
+      h3 {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+      }
+   }
+}
+.realtor-profile {
+   .online {
+      color: var(--Text-Success, #0ab258);
+
+      /* Platform/Desktop/Body-2 R */
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+   }
+   .info-profile {
+      .button-return {
+         position: absolute;
+         top: 0;
+         right: calc(100% + 20px);
+      }
+      .container {
+         position: relative;
+      }
+   }
+}
 .plug {
-   
    .button-primary {
       width: 160px;
       padding: 8px;
@@ -2296,7 +2326,7 @@ section {
    p {
       a {
          color: var(--Main-Blue, #4e6af3);
-   
+
          /* Platform/Desktop/Body-1 R */
          font-family: Roboto;
          font-size: 16px;
@@ -2341,6 +2371,13 @@ section {
    }
    height: 100%;
 }
-.button-return{
-   margin: 0px 10px 0px 0px;
+.button-return {
+   border-radius: 50px;
+   background: var(--BG-White, #fff);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 8px;
+   max-width: fit-content;
 }
