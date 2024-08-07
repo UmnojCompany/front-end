@@ -23,11 +23,11 @@ section {
   background: var(--BG-Light-grey, #eef1f5);
 }
 
-.app-info {
+.sidebar {
   max-width: 580px;
   background: #fff;
 }
-.app-info .title {
+.sidebar .title {
   min-width: 150px;
   color: var(--Text-Grey, #7786a5);
   /* Desktop/Body-2 R */
@@ -37,7 +37,7 @@ section {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
-.app-info li {
+.sidebar li {
   border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
   padding: 15px 20px;
   display: flex;
@@ -51,10 +51,10 @@ section {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
-.app-info .client-contacts {
+.sidebar .client-contacts {
   border-bottom: 5px solid var(--Stroke-Divider, #e1edfd);
 }
-.app-info .client-contacts .sonra {
+.sidebar .client-contacts .sonra {
   display: none;
   color: var(--Text-Success, #0ab258);
   /* Platform/Desktop/Body-2 R */
@@ -65,30 +65,30 @@ section {
   line-height: 140%; /* 19.6px */
   padding: 15px 20px;
 }
-.app-info .client-contacts .sonra.active {
+.sidebar .client-contacts .sonra.active {
   display: block;
 }
-.app-info .client-contacts .opened {
+.sidebar .client-contacts .opened {
   display: none;
 }
-.app-info .client-contacts .opened.active {
+.sidebar .client-contacts .opened.active {
   display: block;
 }
-.app-info .butt-open {
+.sidebar .butt-open {
   display: none;
   align-items: center;
 }
-.app-info .butt-open.active {
+.sidebar .butt-open.active {
   display: flex;
 }
-.app-info .butt-open svg {
+.sidebar .butt-open svg {
   cursor: pointer;
 }
-.app-info .col {
+.sidebar .col {
   display: flex;
   flex-direction: column;
 }
-.app-info .col .status {
+.sidebar .col .status {
   color: var(--Text-Black, #2a344a);
   /* Desktop/Body-2 R */
   font-family: Roboto;
@@ -97,7 +97,7 @@ section {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
-.app-info .col .name {
+.sidebar .col .name {
   color: var(--Text-Black, #2a344a);
   text-align: center;
   /* Platform/Accent_16 (S) */
@@ -107,28 +107,28 @@ section {
   font-weight: 600;
   line-height: 120%; /* 19.2px */
 }
-.app-info .client {
+.sidebar .client {
   display: flex;
   gap: 15px;
   flex-grow: 1;
 }
-.app-info .client .avatar img {
+.sidebar .client .avatar img {
   width: 48px;
   height: 48px;
   border-radius: 48px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.app-info .app-from .left {
+.sidebar .app-from .left {
   width: 150px;
 }
-.app-info .app-from .top {
+.sidebar .app-from .top {
   display: flex;
   gap: 15px;
   padding: 15px 20px;
   border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
 }
-.app-info h5 {
+.sidebar h5 {
   color: var(--Text-White, #fff);
   /* Platform/Desktop/H-5 M */
   font-family: Roboto;
@@ -140,7 +140,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-.app-info h5 .app-id {
+.sidebar h5 .app-id {
   color: var(--Text-Grey, #7786a5);
   /* Platform/Desktop/Body-1 R */
   font-family: Roboto;
@@ -149,16 +149,16 @@ section {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-.app-info .options {
+.sidebar .options {
   overflow-y: scroll;
 }
-.app-info .options.max {
+.sidebar .options.max {
   max-height: 50vh;
 }
-.app-info .options.min {
+.sidebar .options.min {
   max-height: 70vh;
 }
-.app-info .head {
+.sidebar .head {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -373,7 +373,7 @@ section {
 .wrapp {
   flex-grow: 1;
   overflow-y: scroll;
-  padding: 0px 100px 0px 0px;
+  padding: 0px 100px 150px 0px;
   width: 100%;
   max-width: 1060px;
   margin: 0px auto;

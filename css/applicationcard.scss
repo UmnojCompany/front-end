@@ -19,7 +19,7 @@ section {
     border-radius: 10px;
     background: var(--BG-Light-grey, #eef1f5);
 }
-.app-info {
+.sidebar {
     .title {
         min-width: 150px;
 
@@ -413,7 +413,7 @@ section {
     flex-grow: 1;
     //overflow: hidden;
     overflow-y: scroll;
-    padding: 0px 100px 0px 0px;
+    padding: 0px 100px 150px 0px;
     width: 100%;
     max-width: 1060px;
     margin: 0px auto;
