@@ -1482,6 +1482,9 @@ section {
   max-width: fit-content;
   margin: 0px auto;
 }
+.button-primary.full {
+  width: 100%;
+}
 .button-primary.w370 {
   width: 370px;
 }

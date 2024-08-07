@@ -1458,6 +1458,9 @@ section {
       max-width: fit-content;
       margin: 0px auto;
    }
+   &.full {
+      width: 100%;
+   }
    &.w370 {
       width: 370px;
    }
