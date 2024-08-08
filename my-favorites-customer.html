@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Umnoj Project GitHub</title>
+    <title>My Profile</title>
     <link
       rel="icon"
       type="image/png"
@@ -206,7 +206,11 @@
       </div>
       <div class="right">
         <div class="buttons">
-          <a href="#" class="button tooltip" data-tooltip="Функционал в разработке!">
+          <a
+            href="#"
+            class="button tooltip"
+            data-tooltip="Функционал в разработке!"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -222,7 +226,11 @@
               />
             </svg>
           </a>
-          <a href="#" class="button tooltip" data-tooltip="Функционал в разработке!">
+          <a
+            href="#"
+            class="button tooltip"
+            data-tooltip="Функционал в разработке!"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -238,7 +246,11 @@
               />
             </svg>
           </a>
-          <a href="payment.html" class="button tooltip" data-tooltip="Функционал в разработке!">
+          <a
+            href="payment.html"
+            class="button tooltip"
+            data-tooltip="Функционал в разработке!"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -255,7 +267,11 @@
             ><span>0 €</span>
           </a>
         </div>
-        <a href="#" class="button-primary create tooltip" data-tooltip="Функционал в разработке!">
+        <a
+          href="#"
+          class="button-primary create tooltip"
+          data-tooltip="Функционал в разработке!"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -276,50 +292,36 @@
         </a>
       </div>
     </header>
-    <main class="main-page">
-      <section class="linklist">
+    <main>
+      <section class="head-profile page-head">
         <div class="container">
           <div class="wrapper">
+            <h3>Избранное</h3>
             <ul>
-              <li><a href="landing-page.html">Лэндинг</a></li>
-              <li><a href="modals.html">Модальные окна</a></li>
-              <li><a href="selects.html">Мультиселекты с поисковиком</a></li>
-
+              <li class="active">Объекты</li>
+              <li class="">Заявки</li>
+              <li class="">Пользователи</li>
             </ul>
-            <h4>Для риелтора</h4>
-            <ol>
-              <li><a href="registration-page.html">Регистрация</a></li>
-              <li><a href="enter-page.html">Вход в профиль</a></li>
-              <li><a href="create-profile-realtor.html">Создать профиль риелтора</a></li>
-              <li><a href="edit-profile-realtor.html">Редактировать профиль риелтора</a></li>
-              <li><a href="my-profile.html">Профиль риелтора</a></li>
-              <li><a href="payment.html">Счет и оплата</a></li>
-              <li><a href="applications.html">Applications</a></li>
-              <li><a href="application-card.html">Карточка заявки (Анонимная)</a></li>
-              <li><a href="application-card-open.html">Карточка заявки (Открытая)</a></li>
-              <li><a href="my-objects.html">Мои объекты (заглушка)</a></li>
-            </ol>
-            <h4>Для заказчика</h4>
-            <ol>
-              <li><a href="registration-page.html">Регистрация</a></li>
-              <li><a href="enter-page-customer.html">Вход в профиль</a></li>
-              <li><a href="realtor-profile.html">Профиль риелтора</a></li>
-              <li><a href="customer-profile.html">Профиль клиента</a></li>
-              <li><a href="my-applications.html">Страница моей заявки</a></li>
-              <li><a href="my-applications.html">Предложения по заявке (Заглушка)</a></li>
-              <li><a href="my-applications.html">Исполнители по заявке (Заглушка)</a></li>
-              <li><a href="my-applications.html">Отказы по заявке (Заглушка)</a></li>
-              <li><a href="create-profile-customer.html">Создание профиля клиента</a></li>
-              <li><a href="edit-profile-customer.html">Редактирование профиля клиента</a></li>
-              <li><a href="my-profile-customer.html">Мой профиль клиента (Личные данные)</a></li>
-              <li><a href="my-profile-customer.html">Мой профиль (Уведомления)</a></li>
-              <li><a href="my-profile-customer.html">Мой профиль (Безопасность)</a></li>
-              <li><a href="my-favorites-customer.html">Избранное (Заглушка)</a></li>
-            </ol>
-          </div>
           </div>
         </div>
       </section>
+      <div class="page-content-1 page-list plug active">
+        <div class="container">
+          <div class="wrapp">
+            <div class="img">
+              <img src="img/plug-favorites.svg" alt="" />
+            </div>
+            <div class="text">
+              <div class="title">В избранном нет объектов</div>
+              <p>
+                Отмечайте понравившиеся объекты, нажав на иконку в карточке
+                объекта
+              </p>
+            </div>
+            <a href="#" class="button-primary">Перейти к объектам</a>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="wrapp mob">
@@ -455,6 +457,7 @@
         <div id="modal-body"></div>
       </div>
       <script>
+        // Первый скрипт для обработки кликов на элементах с классом form-next
         document.body.addEventListener("click", function (event) {
           if (event.target.classList.contains("form-next")) {
             event.target.classList.add("hide");
@@ -468,6 +471,15 @@
             }
           }
         });
+
+        // Второй скрипт для ограничения ввода одной цифрой в инпутах с классом single-digit
+        document.body.addEventListener("input", function (event) {
+          if (event.target.classList.contains("single-digit")) {
+            if (event.target.value.length > 1) {
+              event.target.value = event.target.value.slice(0, 1);
+            }
+          }
+        });
       </script>
     </div>
     <!-- Подключение jQuery -->
@@ -475,7 +487,5 @@
     <!-- Подключение Inputmask -->
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8-beta.0/dist/inputmask.min.js"></script>
     <script src="js/script.js"></script>
-
-
   </body>
 </html>

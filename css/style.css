@@ -2227,8 +2227,9 @@ section {
   height: 100%;
 }
 .plug .button-primary {
-  width: 160px;
-  padding: 8px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 8px 20px;
   margin: 0px auto;
 }
 .plug p {

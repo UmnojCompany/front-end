@@ -2311,8 +2311,9 @@ section {
 }
 .plug {
    .button-primary {
-      width: 160px;
-      padding: 8px;
+      //width: 160px;
+      max-width: fit-content;
+      padding: 8px 20px;
       margin: 0px auto;
    }
    p {
