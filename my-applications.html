@@ -401,7 +401,7 @@
                   name=""
                   required=""
                 >
-                  <option value="new">Новая заявка</option>
+                  <!-- <option value="new">Новая заявка</option>
                   <option value="sent">Отправлено предложение</option>
                   <option value="contact">Получен контакт</option>
                   <option value="need">Выявлена потребность</option>
@@ -409,8 +409,8 @@
                   <option value="approved">Объект согласован</option>
                   <option value="scheduled">Запланирован показ</option>
                   <option value="shown">Проведен показ</option>
-                  <option value="signed">Подписан договор</option>
-                  <option value="paid-reservation">Оплачена бронь</option>
+                  <option value="signed">Подписан договор</option> -->
+                  <option value="paid-reservation">Опубликованные</option>
                   <option value="first-payment">Оплачен первый взнос</option>
                   <option value="paid-full">Оплачено 100%</option>
                   <option value="ownership">Получено право соб-сти</option>
@@ -751,5 +751,31 @@
     <!-- Подключение Inputmask -->
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8-beta.0/dist/inputmask.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const selects = document.querySelectorAll(".status-select");
+
+        selects.forEach(function (select) {
+          function applyStyles() {
+            const selectedOption = select.options[select.selectedIndex];
+            const parentCard = select.closest(".app-status");
+
+            // Apply class to the select element
+            select.className = "status-select " + selectedOption.value;
+
+            // Apply class to the parent .app-status element
+            if (parentCard) {
+              parentCard.className = "app-status " + selectedOption.value;
+            }
+          }
+
+          select.addEventListener("change", applyStyles);
+
+          // Initial style application
+          applyStyles();
+        });
+      });
+    </script>
   </body>
 </html>

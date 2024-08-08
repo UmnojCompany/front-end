@@ -2202,6 +2202,90 @@ section {
   line-height: 24px; /* 150% */
 }
 
+.customer-profile .online,
+.realtor-profile .online {
+  color: var(--Text-Success, #0ab258);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.customer-profile .info-profile .button-return,
+.realtor-profile .info-profile .button-return {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 20px);
+}
+.customer-profile .info-profile .container,
+.realtor-profile .info-profile .container {
+  position: relative;
+}
+
+.plug {
+  height: 100%;
+}
+.plug .button-primary {
+  width: 160px;
+  padding: 8px;
+  margin: 0px auto;
+}
+.plug p {
+  color: var(--Text-Grey, #7786a5);
+  text-align: center;
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.plug p a {
+  color: var(--Main-Blue, #4e6af3);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.plug .title {
+  color: var(--Text-Black, #2a344a);
+  text-align: center;
+  /* Platform/Desktop/H-5 M */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  margin: 0px 0px 10px 0px;
+}
+.plug .wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 320px;
+  text-align: center;
+}
+.plug .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-return {
+  border-radius: 50px;
+  background: var(--BG-White, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
 .my-objects .dashboard {
   border-bottom: 1px solid var(--Stroke-Divider, #E1EDFD);
   display: flex;
@@ -2310,86 +2394,126 @@ section {
   gap: 10px;
 }
 
-.customer-profile .online,
-.realtor-profile .online {
-  color: var(--Text-Success, #0ab258);
-  /* Platform/Desktop/Body-2 R */
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%; /* 19.6px */
-}
-.customer-profile .info-profile .button-return,
-.realtor-profile .info-profile .button-return {
-  position: absolute;
-  top: 0;
-  right: calc(100% + 20px);
-}
-.customer-profile .info-profile .container,
-.realtor-profile .info-profile .container {
+.app-status {
   position: relative;
+  /* Specific styles for each option value */
 }
-
-.plug {
-  height: 100%;
+.app-status.new::after {
+  background: none;
 }
-.plug .button-primary {
-  width: 160px;
-  padding: 8px;
-  margin: 0px auto;
+.app-status.sent::after {
+  background: none;
 }
-.plug p {
-  color: var(--Text-Grey, #7786a5);
-  text-align: center;
-  /* Platform/Desktop/Body-1 R */
-  font-family: Roboto;
+.app-status.contact::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.app-status.need::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.app-status.repeat::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.app-status.approved::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.app-status.scheduled::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.app-status.shown::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.app-status.signed::after {
+  background: url("../img/cards/arrow-orange.svg");
+}
+.app-status.paid-reservation::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.app-status.first-payment::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.app-status.paid-full::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.app-status.ownership::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.app-status.closed::after {
+  background: url("../img/cards/arrow-red.svg");
+}
+.app-status::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+.app-status .status-select {
+  padding: 10px 35px 10px 20px;
+  border-radius: 10px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 20px; /* 125% */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
-.plug p a {
-  color: var(--Main-Blue, #4e6af3);
-  /* Platform/Desktop/Body-1 R */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
+.app-status .new {
+  background: var(--BG-Light-Blue, #f1f7ff);
+  color: #54b7ff;
 }
-.plug .title {
-  color: var(--Text-Black, #2a344a);
-  text-align: center;
-  /* Platform/Desktop/H-5 M */
-  font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%; /* 24px */
-  margin: 0px 0px 10px 0px;
+.app-status .sent {
+  background: var(--BG-Light-Blue, #f1f7ff);
+  color: #54b7ff;
 }
-.plug .wrapp {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 320px;
-  text-align: center;
+.app-status .contact {
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
-.plug .container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.app-status .need {
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
 }
-
-.button-return {
-  border-radius: 50px;
-  background: var(--BG-White, #fff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+.app-status .repeat {
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
+}
+.app-status .approved {
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
+}
+.app-status .scheduled {
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
+}
+.app-status .shown {
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
+}
+.app-status .signed {
+  background: var(--Fields-BG-Validation, #fffbf4);
+  color: #ff8a21;
+}
+.app-status .paid-reservation {
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
+}
+.app-status .first-payment {
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
+}
+.app-status .paid-full {
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
+}
+.app-status .ownership {
+  background: var(--BG-Green, #eafff3);
+  color: var(--Text-Success, #0ab258);
+}
+.app-status .closed {
+  background: var(--Fields-BG-Error, #fff5f5);
+  color: var(--Text-Error, #f34942);
 }/*# sourceMappingURL=style.css.map */

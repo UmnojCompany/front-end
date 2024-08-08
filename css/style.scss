@@ -2286,6 +2286,93 @@ section {
       line-height: 24px; /* 150% */
    }
 }
+.customer-profile,
+.realtor-profile {
+   .online {
+      color: var(--Text-Success, #0ab258);
+
+      /* Platform/Desktop/Body-2 R */
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+   }
+   .info-profile {
+      .button-return {
+         position: absolute;
+         top: 0;
+         right: calc(100% + 20px);
+      }
+      .container {
+         position: relative;
+      }
+   }
+}
+.plug {
+   .button-primary {
+      width: 160px;
+      padding: 8px;
+      margin: 0px auto;
+   }
+   p {
+      a {
+         color: var(--Main-Blue, #4e6af3);
+
+         /* Platform/Desktop/Body-1 R */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 150%;
+      }
+      color: var(--Text-Grey, #7786a5);
+      text-align: center;
+
+      /* Platform/Desktop/Body-1 R */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+   }
+   .title {
+      color: var(--Text-Black, #2a344a);
+      text-align: center;
+
+      /* Platform/Desktop/H-5 M */
+      font-family: Roboto;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 24px */
+      margin: 0px 0px 10px 0px;
+   }
+   .wrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 320px;
+      text-align: center;
+   }
+   .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   height: 100%;
+}
+.button-return {
+   border-radius: 50px;
+   background: var(--BG-White, #fff);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 8px;
+   max-width: fit-content;
+}
 .my-objects {
    .dashboard {
       .arrow{
@@ -2408,90 +2495,159 @@ section {
       }
    }
 }
-.customer-profile,
-.realtor-profile {
-   .online {
-      color: var(--Text-Success, #0ab258);
+.app-status {
+   position: relative;
+   &.new {
+       &::after {
+           background: none;
+       }
+   }
+   &.sent {
+       &::after {
+           background: none;
+       }
+   }
+   &.contact {
+       &::after {
+           background: url("../img/cards/arrow-orange.svg");
+       }
+   }
+   &.need {
+       &::after {
+           background: url("../img/cards/arrow-orange.svg");
+       }
+   }
+   &.repeat {
+       &::after {
+           background: url("../img/cards/arrow-orange.svg");
+       }
+   }
+   &.approved {
+       &::after {
+           background: url("../img/cards/arrow-orange.svg");
+       }
+   }
+   &.scheduled {
+       &::after {
+           background: url("../img/cards/arrow-orange.svg");
+       }
+   }
+   &.shown {
+       &::after {
+           background: url("../img/cards/arrow-orange.svg");
+       }
+   }
+   &.signed {
+       &::after {
+           background: url("../img/cards/arrow-orange.svg");
+       }
+   }
+   &.paid-reservation {
+       &::after {
+           background: url("../img/cards/arrow-green.svg");
+       }
+   }
+   &.first-payment {
+       &::after {
+           background: url("../img/cards/arrow-green.svg");
+       }
+   }
+   &.paid-full {
+       &::after {
+           background: url("../img/cards/arrow-green.svg");
+       }
+   }
+   &.ownership {
+       &::after {
+           background: url("../img/cards/arrow-green.svg");
+       }
+   }
+   &.closed {
+       &::after {
+           background: url("../img/cards/arrow-red.svg");
+       }
+   }
 
-      /* Platform/Desktop/Body-2 R */
-      font-family: Roboto;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 19.6px */
+   &::after {
+       content: "";
+       position: absolute;
+       right: 10px;
+       top: 50%;
+       transform: translateY(-50%);
+       width: 18px;
+       height: 18px;
+       //background: url("../img/arrow-selection.svg");
+       pointer-events: none;
    }
-   .info-profile {
-      .button-return {
-         position: absolute;
-         top: 0;
-         right: calc(100% + 20px);
-      }
-      .container {
-         position: relative;
-      }
-   }
-}
-.plug {
-   .button-primary {
-      width: 160px;
-      padding: 8px;
-      margin: 0px auto;
-   }
-   p {
-      a {
-         color: var(--Main-Blue, #4e6af3);
+   .status-select {
+       //padding: 10px 20px;
+       padding: 10px 35px 10px 20px;
+       border-radius: 10px;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 400;
+       line-height: 20px; /* 125% */
 
-         /* Platform/Desktop/Body-1 R */
-         font-family: Roboto;
-         font-size: 16px;
-         font-style: normal;
-         font-weight: 400;
-         line-height: 150%;
-      }
-      color: var(--Text-Grey, #7786a5);
-      text-align: center;
+       appearance: none;
+       -webkit-appearance: none;
+       -moz-appearance: none;
+   }
 
-      /* Platform/Desktop/Body-1 R */
-      font-family: Roboto;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%; /* 24px */
+   /* Specific styles for each option value */
+   .new {
+       background: var(--BG-Light-Blue, #f1f7ff);
+       color: #54b7ff;
    }
-   .title {
-      color: var(--Text-Black, #2a344a);
-      text-align: center;
-
-      /* Platform/Desktop/H-5 M */
-      font-family: Roboto;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 120%; /* 24px */
-      margin: 0px 0px 10px 0px;
+   .sent {
+       background: var(--BG-Light-Blue, #f1f7ff);
+       color: #54b7ff;
    }
-   .wrapp {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 320px;
-      text-align: center;
+   .contact {
+       background: var(--Fields-BG-Validation, #fffbf4);
+       color: #ff8a21;
    }
-   .container {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+   .need {
+       background: var(--Fields-BG-Validation, #fffbf4);
+       color: #ff8a21;
    }
-   height: 100%;
-}
-.button-return {
-   border-radius: 50px;
-   background: var(--BG-White, #fff);
-
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 8px;
-   max-width: fit-content;
+   .repeat {
+       background: var(--Fields-BG-Validation, #fffbf4);
+       color: #ff8a21;
+   }
+   .approved {
+       background: var(--Fields-BG-Validation, #fffbf4);
+       color: #ff8a21;
+   }
+   .scheduled {
+       background: var(--Fields-BG-Validation, #fffbf4);
+       color: #ff8a21;
+   }
+   .shown {
+       background: var(--Fields-BG-Validation, #fffbf4);
+       color: #ff8a21;
+   }
+   .signed {
+       background: var(--Fields-BG-Validation, #fffbf4);
+       color: #ff8a21;
+   }
+   .paid-reservation {
+       background: var(--BG-Green, #eafff3);
+       color: var(--Text-Success, #0ab258);
+   }
+   .first-payment {
+       background: var(--BG-Green, #eafff3);
+       color: var(--Text-Success, #0ab258);
+   }
+   .paid-full {
+       background: var(--BG-Green, #eafff3);
+       color: var(--Text-Success, #0ab258);
+   }
+   .ownership {
+       background: var(--BG-Green, #eafff3);
+       color: var(--Text-Success, #0ab258);
+   }
+   .closed {
+       background: var(--Fields-BG-Error, #fff5f5);
+       color: var(--Text-Error, #f34942);
+   }
 }
