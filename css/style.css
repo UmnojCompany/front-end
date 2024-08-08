@@ -2518,4 +2518,8 @@ section {
 .app-status .closed {
   background: var(--Fields-BG-Error, #fff5f5);
   color: var(--Text-Error, #f34942);
+}
+
+.my-apps.applications {
+  padding: 90px 0px 200px 0px;
 }/*# sourceMappingURL=style.css.map */
