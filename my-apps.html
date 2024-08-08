@@ -1079,6 +1079,7 @@
             const clientCard = select.closest(".client-card");
             const appTitle = clientCard.querySelector(".app-title");
             const buttonApps = clientCard.querySelector(".button-apps");
+            const cardStatus = clientCard.querySelector(".card-status");
 
             // Apply class to the select element
             select.className = "status-select " + selectedOption.value;
@@ -1096,6 +1097,11 @@
             // Apply class to the .button-apps element
             if (buttonApps) {
               buttonApps.className = "button-apps " + selectedOption.value;
+            }
+
+            // Apply class to the .card-status element
+            if (cardStatus) {
+              cardStatus.className = "card-status " + selectedOption.value;
             }
           }
 
