@@ -2268,6 +2268,7 @@ section {
   gap: 20px;
   max-width: 320px;
   text-align: center;
+  min-height: 350px;
 }
 .plug .container {
   height: 100%;
