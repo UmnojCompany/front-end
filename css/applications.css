@@ -419,6 +419,12 @@
 .client-card .card-status.sent::after {
   background: none;
 }
+.client-card .card-status.published::after {
+  background: url("../img/cards/arrow-green.svg");
+}
+.client-card .card-status.unpublished::after {
+  background: url("../img/cards/arrow-grey.svg");
+}
 .client-card .card-status.contact::after {
   background: url("../img/cards/arrow-orange.svg");
 }
@@ -475,6 +481,14 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+.client-card .card-status .published {
+  background: var(--BG-Green, #EAFFF3);
+  color: var(--Text-Success, #0AB258);
+}
+.client-card .card-status .unpublished {
+  background: var(--BG-Grey_Light_L, #F5F7F9);
+  color: var(--Text-Grey, #7786A5);
 }
 .client-card .card-status .new {
   background: var(--BG-Light-Blue, #f1f7ff);
@@ -633,6 +647,9 @@
   font-style: normal;
   font-weight: 500;
   line-height: 120%; /* 24px */
+}
+.client-card h5.unpublished {
+  color: var(--Text-Grey, #7786a5);
 }
 .client-card h5.viewed {
   color: var(--Text-Grey, #7786a5);

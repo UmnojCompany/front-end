@@ -485,6 +485,16 @@
                 background: none;
             }
         }
+        &.published {
+            &::after {
+                background: url("../img/cards/arrow-green.svg");
+            }
+        }
+        &.unpublished {
+            &::after {
+                background: url("../img/cards/arrow-grey.svg");
+            }
+        }
         &.contact {
             &::after {
                 background: url("../img/cards/arrow-orange.svg");
@@ -572,6 +582,15 @@
         }
 
         /* Specific styles for each option value */
+        .published {
+            background: var(--BG-Green, #EAFFF3);
+            color: var(--Text-Success, #0AB258);
+        }
+        .unpublished {
+            background: var(--BG-Grey_Light_L, #F5F7F9);
+            color: var(--Text-Grey, #7786A5);
+
+        }
         .new {
             background: var(--BG-Light-Blue, #f1f7ff);
             color: #54b7ff;
@@ -727,6 +746,9 @@
         line-height: 140%; /* 19.6px */
     }
     h5 {
+        &.unpublished {
+            color: var(--Text-Grey, #7786a5);
+        }
         &.viewed {
             color: var(--Text-Grey, #7786a5);
         }

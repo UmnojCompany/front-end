@@ -2289,7 +2289,7 @@ section {
 }
 
 .my-objects .dashboard {
-  border-bottom: 1px solid var(--Stroke-Divider, #E1EDFD);
+  border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
   display: flex;
   padding: 20px 0px;
   justify-content: space-between;
@@ -2300,7 +2300,7 @@ section {
   cursor: pointer;
 }
 .my-objects .dashboard .price {
-  color: var(--Main-Blue, #4E6AF3);
+  color: var(--Main-Blue, #4e6af3);
   /* Platform/Desktop/H-3 M */
   font-family: Roboto;
   font-size: 32px;
@@ -2522,4 +2522,60 @@ section {
 
 .my-apps.applications {
   padding: 90px 0px 200px 0px;
+}
+.my-apps.applications .button-apps {
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--Button-Secondary-BG-Default, #f1f7ff);
+  color: var(--Button-Secondary-Text-Default, #2a344a);
+  text-align: center;
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.my-apps.applications .button-apps.published {
+  cursor: pointer;
+}
+.my-apps.applications .button-apps.published span {
+  background: var(--Main-Blue, #4e6af3);
+}
+.my-apps.applications .button-apps.unpublished {
+  cursor: pointer;
+}
+.my-apps.applications .button-apps.unpublished span {
+  background: var(--Text-Disabled, #B8C6E3);
+}
+.my-apps.applications .button-apps span {
+  border-radius: 20px;
+  display: flex;
+  padding: 4px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Corner_radius_m, 10px);
+  color: var(--Text-Disabled_2, #fff);
+  text-align: center;
+  /* Platform/Accent_14 (M) */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+}
+.my-apps.applications .client-card .card-footer {
+  border-top: 1px solid var(--Stroke-Divider, #e1edfd);
+  padding: 10px 0px 0px 0px;
+}
+.my-apps.applications .client-card .options {
+  padding: 0px 0px 21px 0px;
+}
+.my-apps.applications .client-card .card-body {
+  padding: 0px 0px 0px 0px;
 }/*# sourceMappingURL=style.css.map */
