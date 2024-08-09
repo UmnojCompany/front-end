@@ -403,6 +403,20 @@
   padding: 20px 0px 0px 0px;
 }
 
+.client-card .menu,
+.app-card .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 0px -10px 0px -5px;
+}
+.client-card .menu:hover,
+.app-card .menu:hover {
+  border-radius: 50px;
+  background: var(--Button-Secondary-BG-Click, #e1edfd);
+}
 .client-card .card-status,
 .app-card .card-status {
   position: relative;
@@ -693,18 +707,6 @@
 }
 .client-card .card-body {
   padding: 17px 0px 21px 0px;
-}
-.client-card .menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  cursor: pointer;
-  margin: 0px -10px 0px -5px;
-}
-.client-card .menu:hover {
-  border-radius: 50px;
-  background: var(--Button-Secondary-BG-Click, #e1edfd);
 }
 .client-card .views {
   display: flex;

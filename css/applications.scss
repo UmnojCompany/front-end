@@ -474,6 +474,19 @@
 }
 .client-card,
 .app-card{
+    .menu {
+        &:hover {
+            border-radius: 50px;
+            background: var(--Button-Secondary-BG-Click, #e1edfd);
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        cursor: pointer;
+        //margin-left: -5px;
+        margin: 0px -10px 0px -5px;
+    }
         .card-status {
         position: relative;
         &.new {
@@ -769,19 +782,7 @@
     .card-body {
         padding: 17px 0px 21px 0px;
     }
-    .menu {
-        &:hover {
-            border-radius: 50px;
-            background: var(--Button-Secondary-BG-Click, #e1edfd);
-        }
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s;
-        cursor: pointer;
-        //margin-left: -5px;
-        margin: 0px -10px 0px -5px;
-    }
+
     .views {
         display: flex;
         align-items: center;
