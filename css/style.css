@@ -2616,7 +2616,7 @@ section {
 .proposal .p-footer .to-favorit {
   cursor: pointer;
   display: flex;
-  padding: 11px;
+  padding: 12px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -2627,7 +2627,7 @@ section {
   fill: none;
 }
 .proposal .p-footer .to-favorit.active svg path {
-  fill: #4E6AF3;
+  fill: #4e6af3;
 }
 .proposal .p-footer .button-primary {
   padding: 8px 20px;
@@ -2636,6 +2636,7 @@ section {
   cursor: pointer;
   display: flex;
   padding: 8px 20px;
+  min-height: 40px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -2761,4 +2762,64 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 19.6px */
+}
+.proposal .open .button-primary {
+  display: none;
+}
+.proposal .iptal .to-chat span {
+  display: none !important;
+}
+.proposal .iptal .contact-buttons {
+  display: none;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.contact-buttons .zoom {
+  background: #4a8cff;
+}
+.contact-buttons .zoom:hover {
+  background: #337dff;
+}
+.contact-buttons .viber {
+  background: #7161e6;
+}
+.contact-buttons .viber:hover {
+  background: #5a46ea;
+}
+.contact-buttons .whatsapp {
+  background: #26a685;
+}
+.contact-buttons .whatsapp:hover {
+  background: #139573;
+}
+.contact-buttons .telegram {
+  background: #31a7e3;
+}
+.contact-buttons .telegram:hover {
+  background: #1299de;
+}
+.contact-buttons .phone {
+  width: 190px;
+  background: #4e6af3;
+}
+.contact-buttons a {
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: var(--Button-Primary-Text-Default, #fff);
+  text-align: center;
+  /* Platform/Button Link/Medium */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
 }/*# sourceMappingURL=style.css.map */

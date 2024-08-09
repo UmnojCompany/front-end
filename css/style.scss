@@ -2735,32 +2735,29 @@ section {
    }
    padding: 90px 0px 200px 0px;
 }
-.proposals-wrapp{
+.proposals-wrapp {
    display: flex;
    flex-direction: column;
    gap: 10px;
 }
 .proposal {
-   
    .p-footer {
       .to-favorit {
-         svg{
-            path{
+         svg {
+            path {
                fill: none;
             }
-            
-          }
+         }
          &.active {
-             svg{
-               path{
-                  fill: #4E6AF3;
+            svg {
+               path {
+                  fill: #4e6af3;
                }
-               
-             }
+            }
          }
          cursor: pointer;
          display: flex;
-         padding: 11px;
+         padding: 12px;
          justify-content: center;
          align-items: center;
          gap: 8px;
@@ -2793,6 +2790,7 @@ section {
          }
          display: flex;
          padding: 8px 20px;
+         min-height: 40px;
          justify-content: center;
          align-items: center;
          gap: 10px;
@@ -2918,6 +2916,24 @@ section {
       align-items: flex-start;
    }
 
+   .open {
+      .button-primary {
+         display: none;
+      }
+   }
+
+   .iptal {
+      .to-chat {
+         span {
+            display: none !important;
+         }
+      }
+
+      .contact-buttons {
+         display: none;
+      }
+   }
+
    display: flex;
    flex-direction: column;
    gap: 20px;
@@ -2926,4 +2942,63 @@ section {
    background: var(--BG-White, #fff);
 
    padding: 20px 30px;
+}
+
+.contact-buttons {
+   .zoom {
+      &:hover {
+         background: #337dff;
+      }
+
+      background: #4a8cff;
+   }
+   .viber {
+      &:hover {
+         background: #5a46ea;
+      }
+
+      background: #7161e6;
+   }
+   .whatsapp {
+      &:hover {
+         background: #139573;
+      }
+      background: #26a685;
+   }
+   .telegram {
+      &:hover {
+         background: #1299de;
+      }
+      background: #31a7e3;
+   }
+   .phone {
+      width: 190px;
+      background: #4e6af3;
+   }
+   a {
+      transition: 0.3s;
+
+      border-radius: 10px;
+      padding: 10px 16px;
+
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 10px;
+
+      color: var(--Button-Primary-Text-Default, #fff);
+      text-align: center;
+
+      /* Platform/Button Link/Medium */
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 125% */
+   }
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
 }
