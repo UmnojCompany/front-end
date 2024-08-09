@@ -2594,6 +2594,12 @@ section {
   padding: 0px 0px 0px 0px;
 }
 
+.proposals-wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .proposal {
   display: flex;
   flex-direction: column;

@@ -2735,8 +2735,13 @@ section {
    }
    padding: 90px 0px 200px 0px;
 }
-
+.proposals-wrapp{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
 .proposal {
+   
    .p-footer {
       .to-favorit {
          svg{
