@@ -472,8 +472,9 @@
     gap: 20px;
     padding: 20px 0px 0px 0px;
 }
-.client-card {
-    .card-status {
+.client-card,
+.app-card{
+        .card-status {
         position: relative;
         &.new {
             &::after {
@@ -647,6 +648,9 @@
             color: var(--Text-Error, #f34942);
         }
     }
+}
+.client-card {
+
     .button-primary {
         padding: 10px 20px;
     }

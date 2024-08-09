@@ -403,65 +403,77 @@
   padding: 20px 0px 0px 0px;
 }
 
-.client-card {
-  border-radius: var(--Corner_radius_m, 10px);
-  background: var(--BG-White, #fff);
-  padding: 20px 30px;
-  border: 2px solid var(--Stroke-Light-Grey, rgba(212, 221, 238, 0));
-}
-.client-card .card-status {
+.client-card .card-status,
+.app-card .card-status {
   position: relative;
   /* Specific styles for each option value */
 }
-.client-card .card-status.new::after {
+.client-card .card-status.new::after,
+.app-card .card-status.new::after {
   background: none;
 }
-.client-card .card-status.sent::after {
+.client-card .card-status.sent::after,
+.app-card .card-status.sent::after {
   background: none;
 }
-.client-card .card-status.published::after {
+.client-card .card-status.published::after,
+.app-card .card-status.published::after {
   background: url("../img/cards/arrow-green.svg");
 }
-.client-card .card-status.unpublished::after {
+.client-card .card-status.unpublished::after,
+.app-card .card-status.unpublished::after {
   background: url("../img/cards/arrow-grey.svg");
 }
-.client-card .card-status.contact::after {
+.client-card .card-status.contact::after,
+.app-card .card-status.contact::after {
   background: url("../img/cards/arrow-orange.svg");
 }
-.client-card .card-status.need::after {
+.client-card .card-status.need::after,
+.app-card .card-status.need::after {
   background: url("../img/cards/arrow-orange.svg");
 }
-.client-card .card-status.repeat::after {
+.client-card .card-status.repeat::after,
+.app-card .card-status.repeat::after {
   background: url("../img/cards/arrow-orange.svg");
 }
-.client-card .card-status.approved::after {
+.client-card .card-status.approved::after,
+.app-card .card-status.approved::after {
   background: url("../img/cards/arrow-orange.svg");
 }
-.client-card .card-status.scheduled::after {
+.client-card .card-status.scheduled::after,
+.app-card .card-status.scheduled::after {
   background: url("../img/cards/arrow-orange.svg");
 }
-.client-card .card-status.shown::after {
+.client-card .card-status.shown::after,
+.app-card .card-status.shown::after {
   background: url("../img/cards/arrow-orange.svg");
 }
-.client-card .card-status.signed::after {
+.client-card .card-status.signed::after,
+.app-card .card-status.signed::after {
   background: url("../img/cards/arrow-orange.svg");
 }
-.client-card .card-status.paid-reservation::after {
+.client-card .card-status.paid-reservation::after,
+.app-card .card-status.paid-reservation::after {
   background: url("../img/cards/arrow-green.svg");
 }
-.client-card .card-status.first-payment::after {
+.client-card .card-status.first-payment::after,
+.app-card .card-status.first-payment::after {
   background: url("../img/cards/arrow-green.svg");
 }
-.client-card .card-status.paid-full::after {
+.client-card .card-status.paid-full::after,
+.app-card .card-status.paid-full::after {
   background: url("../img/cards/arrow-green.svg");
 }
-.client-card .card-status.ownership::after {
+.client-card .card-status.ownership::after,
+.app-card .card-status.ownership::after {
   background: url("../img/cards/arrow-green.svg");
 }
-.client-card .card-status.closed::after {
+.client-card .card-status.closed::after,
+.app-card .card-status.closed::after {
   background: url("../img/cards/arrow-red.svg");
 }
-.client-card .card-status::after {
+.client-card .card-status::after,
+.app-card .card-status::after {
   content: "";
   position: absolute;
   right: 10px;
@@ -471,7 +483,8 @@
   height: 18px;
   pointer-events: none;
 }
-.client-card .card-status .status-select {
+.client-card .card-status .status-select,
+.app-card .card-status .status-select {
   padding: 10px 35px 10px 20px;
   border-radius: 10px;
   font-size: 16px;
@@ -482,69 +495,92 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.client-card .card-status .published {
+.client-card .card-status .published,
+.app-card .card-status .published {
   background: var(--BG-Green, #eafff3);
   color: var(--Text-Success, #0ab258);
 }
-.client-card .card-status .unpublished {
+.client-card .card-status .unpublished,
+.app-card .card-status .unpublished {
   background: var(--BG-Grey_Light_L, #f5f7f9);
   color: var(--Text-Grey, #7786a5);
 }
-.client-card .card-status .new {
+.client-card .card-status .new,
+.app-card .card-status .new {
   background: var(--BG-Light-Blue, #f1f7ff);
   color: #54b7ff;
 }
-.client-card .card-status .sent {
+.client-card .card-status .sent,
+.app-card .card-status .sent {
   background: var(--BG-Light-Blue, #f1f7ff);
   color: #54b7ff;
 }
-.client-card .card-status .contact {
+.client-card .card-status .contact,
+.app-card .card-status .contact {
   background: var(--Fields-BG-Validation, #fffbf4);
   color: #ff8a21;
 }
-.client-card .card-status .need {
+.client-card .card-status .need,
+.app-card .card-status .need {
   background: var(--Fields-BG-Validation, #fffbf4);
   color: #ff8a21;
 }
-.client-card .card-status .repeat {
+.client-card .card-status .repeat,
+.app-card .card-status .repeat {
   background: var(--Fields-BG-Validation, #fffbf4);
   color: #ff8a21;
 }
-.client-card .card-status .approved {
+.client-card .card-status .approved,
+.app-card .card-status .approved {
   background: var(--Fields-BG-Validation, #fffbf4);
   color: #ff8a21;
 }
-.client-card .card-status .scheduled {
+.client-card .card-status .scheduled,
+.app-card .card-status .scheduled {
   background: var(--Fields-BG-Validation, #fffbf4);
   color: #ff8a21;
 }
-.client-card .card-status .shown {
+.client-card .card-status .shown,
+.app-card .card-status .shown {
   background: var(--Fields-BG-Validation, #fffbf4);
   color: #ff8a21;
 }
-.client-card .card-status .signed {
+.client-card .card-status .signed,
+.app-card .card-status .signed {
   background: var(--Fields-BG-Validation, #fffbf4);
   color: #ff8a21;
 }
-.client-card .card-status .paid-reservation {
+.client-card .card-status .paid-reservation,
+.app-card .card-status .paid-reservation {
   background: var(--BG-Green, #eafff3);
   color: var(--Text-Success, #0ab258);
 }
-.client-card .card-status .first-payment {
+.client-card .card-status .first-payment,
+.app-card .card-status .first-payment {
   background: var(--BG-Green, #eafff3);
   color: var(--Text-Success, #0ab258);
 }
-.client-card .card-status .paid-full {
+.client-card .card-status .paid-full,
+.app-card .card-status .paid-full {
   background: var(--BG-Green, #eafff3);
   color: var(--Text-Success, #0ab258);
 }
-.client-card .card-status .ownership {
+.client-card .card-status .ownership,
+.app-card .card-status .ownership {
   background: var(--BG-Green, #eafff3);
   color: var(--Text-Success, #0ab258);
 }
-.client-card .card-status .closed {
+.client-card .card-status .closed,
+.app-card .card-status .closed {
   background: var(--Fields-BG-Error, #fff5f5);
   color: var(--Text-Error, #f34942);
+}
+
+.client-card {
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--BG-White, #fff);
+  padding: 20px 30px;
+  border: 2px solid var(--Stroke-Light-Grey, rgba(212, 221, 238, 0));
 }
 .client-card .button-primary {
   padding: 10px 20px;
