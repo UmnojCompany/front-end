@@ -2654,23 +2654,36 @@ section {
    }
 }
 .my-apps.applications {
+   .butt-open {
+      &.active {
+         transform: rotate(0deg);
+      }
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transform: rotate(180deg);
+   }
+   .price-range {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+   }
    .button-apps {
-      &.published{
+      &.published {
          cursor: pointer;
-         span{
-
+         span {
             background: var(--Main-Blue, #4e6af3);
          }
       }
-      &.unpublished{
+      &.unpublished {
          cursor: pointer;
-         span{
-            background: var(--Text-Disabled, #B8C6E3);
+         span {
+            background: var(--Text-Disabled, #b8c6e3);
          }
       }
       span {
          border-radius: 20px;
-        
+
          display: flex;
          padding: 4px 8px;
          flex-direction: column;

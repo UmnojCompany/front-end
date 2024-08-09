@@ -2523,6 +2523,20 @@ section {
 .my-apps.applications {
   padding: 90px 0px 200px 0px;
 }
+.my-apps.applications .butt-open {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transform: rotate(180deg);
+}
+.my-apps.applications .butt-open.active {
+  transform: rotate(0deg);
+}
+.my-apps.applications .price-range {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .my-apps.applications .button-apps {
   display: flex;
   padding: 8px 20px;
@@ -2550,7 +2564,7 @@ section {
   cursor: pointer;
 }
 .my-apps.applications .button-apps.unpublished span {
-  background: var(--Text-Disabled, #B8C6E3);
+  background: var(--Text-Disabled, #b8c6e3);
 }
 .my-apps.applications .button-apps span {
   border-radius: 20px;
