@@ -314,6 +314,78 @@ main {
   gap: 20px;
   padding: 0px 0px 20px 0px;
 }
+.intro .row.row-realtors .row-item {
+  height: 90px;
+  flex-direction: row;
+  gap: 15px;
+}
+.intro .row.row-realtors .row-item img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.intro .row.row-realtors .reviews {
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.intro .row.row-realtors .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.intro .row.row-realtors .line {
+  background: #c7d2e9;
+  width: 1px;
+  height: 12px;
+}
+.intro .row.row-realtors .raiting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.intro .row.row-realtors .status {
+  overflow: hidden;
+  color: var(--BG-Black, #2a344a);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  flex-grow: 1;
+}
+.intro .row.row-realtors .name {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Accent_16 (S) */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+.intro .row.row-realtors .info {
+  display: flex;
+  flex-direction: column;
+}
 .intro h1 {
   color: var(--Text-Black, #2a344a);
   text-align: center;
