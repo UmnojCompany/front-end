@@ -2633,6 +2633,7 @@ section {
   padding: 8px 20px;
 }
 .proposal .p-footer .to-chat {
+  transition: 0.3s;
   cursor: pointer;
   display: flex;
   padding: 8px 20px;
@@ -2650,6 +2651,9 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+}
+.proposal .p-footer .to-chat:hover {
+  color: var(--Button-Secondary-Text-Hover, #4E6AF3);
 }
 .proposal .p-footer .to-chat span {
   border-radius: 20px;

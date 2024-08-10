@@ -2768,6 +2768,11 @@ section {
          padding: 8px 20px;
       }
       .to-chat {
+         transition: 0.3s;
+         &:hover {
+            color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+
+         }
          cursor: pointer;
          span {
             border-radius: 20px;
