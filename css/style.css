@@ -2822,4 +2822,64 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+}
+
+.my-objects .search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.my-objects .filters {
+  padding: 30px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.object-card {
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--BG-White, #fff);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.object-card .grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  align-items: start;
+  max-width: 400px;
+}
+.object-card .main-image-wrapper {
+  position: relative;
+  grid-column: 1/2;
+}
+.object-card .main-image {
+  width: 290px;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.object-card .status-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #d7f3e3;
+  color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14;
+}
+.object-card .thumbnail-wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 1fr;
+}
+.object-card .thumbnail {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

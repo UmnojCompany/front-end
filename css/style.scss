@@ -2943,7 +2943,6 @@ section {
 
    padding: 20px 30px;
 }
-
 .contact-buttons {
    .zoom {
       &:hover {
@@ -3001,4 +3000,71 @@ section {
    display: flex;
    flex-wrap: wrap;
    gap: 10px;
+}
+.my-objects {
+   .search-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+   .filters {
+      padding: 30px 0px 0px 0px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+}
+.object-card {
+   .grid-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 10px;
+      align-items: start;
+
+      max-width: 400px;
+   }
+
+   .main-image-wrapper {
+      position: relative;
+      grid-column: 1 / 2;
+   }
+
+   .main-image {
+      width: 290px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 10px;
+   }
+
+   .status-label {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #d7f3e3;
+      color: #4caf50;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14;
+   }
+
+   .thumbnail-wrapper {
+      display: grid;
+      gap: 10px;
+      grid-template-rows: 1fr 1fr;
+   }
+
+   .thumbnail {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+   }
+
+   border-radius: var(--Corner_radius_m, 10px);
+   background: var(--BG-White, #fff);
+   padding: 20px;
+
+   display: flex;
+   gap: 20px;
 }
