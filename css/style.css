@@ -2653,7 +2653,7 @@ section {
   line-height: 20px; /* 125% */
 }
 .proposal .p-footer .to-chat:hover {
-  color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+  color: var(--Button-Secondary-Text-Hover, #4e6af3);
 }
 .proposal .p-footer .to-chat span {
   border-radius: 20px;
@@ -2886,4 +2886,150 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+.chat .sidebar .col .pass-true {
+  display: flex;
+  align-items: center;
+}
+.chat .sidebar .col .pass-true svg {
+  width: 18px;
+  height: 18px;
+}
+.chat .sidebar .col .stars {
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chat .sidebar .col .stars svg {
+  width: 14px;
+  height: 14px;
+}
+.chat .sidebar .col .name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.chat .sidebar .app-from .left {
+  color: var(--Text-Grey, #7786a5);
+  /* Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.chat .sidebar .client-contacts {
+  border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+}
+.chat .agent-info {
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat .agent-info p {
+  color: var(--Text-Grey, #7786a5);
+  text-align: center;
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.chat .agent-info .button-primary {
+  padding: 10px 20px;
+  margin: 50px 0px 20px 0px;
+}
+.chat .agent-info .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chat .agent-info .stars svg {
+  width: 14px;
+  height: 14px;
+}
+.chat .agent-info .raiting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chat .agent-info .raiting .line {
+  width: 1px;
+  height: 16px;
+  background: #c7d2e9;
+}
+.chat .agent-info .row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.chat .agent-info .passport {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chat .agent-info .passport .icon {
+  display: flex;
+  align-items: center;
+}
+.chat .agent-info .passport svg {
+  width: 18px;
+  height: 18px;
+}
+.chat .agent-info .id-info {
+  color: var(--Text-Grey, #7786a5);
+  text-align: right;
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.chat .agent-info .id-info .online {
+  color: var(--Text-Success, #0ab258);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.chat .agent-info .id-info .line {
+  width: 1px;
+  height: 16px;
+  background: #c7d2e9;
+}
+.chat .agent-info .info-prf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.chat .agent-info .avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

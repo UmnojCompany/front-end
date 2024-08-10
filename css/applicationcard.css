@@ -24,6 +24,7 @@ section {
 }
 
 .sidebar {
+  min-width: 580px;
   max-width: 580px;
   background: #fff;
 }
@@ -169,6 +170,9 @@ section {
 }
 .sidebar .options.min {
   max-height: 70vh;
+}
+.sidebar .options.orta {
+  max-height: 75vh;
 }
 .sidebar .head {
   display: flex;

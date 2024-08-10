@@ -179,6 +179,9 @@ section {
         &.min {
             max-height: 70vh;
         }
+        &.orta {
+            max-height: 75vh;
+        }
         overflow-y: scroll;
     }
     .head {
@@ -189,6 +192,7 @@ section {
         background: var(--BG-Black, #2a344a);
         padding: 20px;
     }
+    min-width: 580px;
     max-width: 580px;
     background: #fff;
     //overflow: hidden;

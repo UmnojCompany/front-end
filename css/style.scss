@@ -2770,8 +2770,7 @@ section {
       .to-chat {
          transition: 0.3s;
          &:hover {
-            color: var(--Button-Secondary-Text-Hover, #4E6AF3);
-
+            color: var(--Button-Secondary-Text-Hover, #4e6af3);
          }
          cursor: pointer;
          span {
@@ -3072,4 +3071,168 @@ section {
 
    display: flex;
    gap: 20px;
+}
+.chat {
+   .sidebar {
+      .col {
+         .pass-true {
+            svg {
+               width: 18px;
+               height: 18px;
+            }
+            display: flex;
+            align-items: center;
+         }
+         .stars {
+            color: var(--Text-Black, #2a344a);
+
+            /* Platform/Desktop/Body-2 R */
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
+            svg {
+               width: 14px;
+               height: 14px;
+            }
+            display: flex;
+            align-items: center;
+            gap: 5px;
+         }
+         .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+         }
+      }
+      .app-from {
+         .left {
+            color: var(--Text-Grey, #7786a5);
+
+            /* Desktop/Body-2 R */
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
+         }
+      }
+      .client-contacts {
+         border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+      }
+   }
+
+   .agent-info {
+      p {
+         //max-width: 400px;
+         color: var(--Text-Grey, #7786a5);
+         text-align: center;
+
+         /* Platform/Desktop/Body-1 R */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 150%; /* 24px */
+      }
+      .button-primary {
+         padding: 10px 20px;
+
+         margin: 50px 0px 20px 0px;
+      }
+      .stars {
+         svg {
+            width: 14px;
+            height: 14px;
+         }
+         display: flex;
+         align-items: center;
+         gap: 5px;
+      }
+      .raiting {
+         display: flex;
+         align-items: center;
+         gap: 8px;
+
+         .line {
+            width: 1px;
+            height: 16px;
+            background: #c7d2e9;
+         }
+      }
+      .row {
+         display: flex;
+         align-items: center;
+         gap: 15px;
+         color: var(--Text-Black, #2a344a);
+
+         /* Platform/Desktop/Body-2 R */
+         font-family: Roboto;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 19.6px */
+      }
+      .passport {
+         .icon {
+            display: flex;
+            align-items: center;
+         }
+         svg {
+            width: 18px;
+            height: 18px;
+         }
+         display: flex;
+         align-items: center;
+         gap: 5px;
+      }
+      .id-info {
+         color: var(--Text-Grey, #7786a5);
+         text-align: right;
+
+         /* Platform/Desktop/Body-2 R */
+         font-family: Roboto;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 19.6px */
+         .online {
+            color: var(--Text-Success, #0ab258);
+
+            /* Platform/Desktop/Body-2 R */
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
+         }
+         .line {
+            width: 1px;
+            height: 16px;
+            background: #c7d2e9;
+         }
+         display: flex;
+         justify-content: center;
+         gap: 10px;
+      }
+      .info-prf {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 5px;
+      }
+      .avatar {
+         img {
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            object-fit: cover;
+         }
+      }
+      padding: 50px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
 }
