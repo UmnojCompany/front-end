@@ -315,6 +315,7 @@ main {
   padding: 0px 0px 20px 0px;
 }
 .intro .row.row-realtors .row-item {
+  padding: 10px;
   height: 90px;
   flex-direction: row;
   gap: 15px;
