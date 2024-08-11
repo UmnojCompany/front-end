@@ -3306,16 +3306,23 @@ section {
    }
 }
 .create-app {
+   .form {
+      &.start {
+         flex-direction: row;
+      }
+   }
    .row {
       .text {
-         p{color: var(--Text-Black, #2A344A);
+         p {
+            color: var(--Text-Black, #2a344a);
 
             /* Platform/Desktop/Body-2 R */
             font-family: Roboto;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
-            line-height: 140%; /* 19.6px */}
+            line-height: 140%; /* 19.6px */
+         }
          span {
             display: block;
             flex-grow: 1;

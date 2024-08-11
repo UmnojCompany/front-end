@@ -3111,6 +3111,9 @@ section {
      object-fit: cover;
 }
 
+.create-app .form.start {
+  flex-direction: row;
+}
 .create-app .row {
   padding: 10px 30px 40px 30px;
   display: flex;
@@ -3123,7 +3126,7 @@ section {
   gap: 2px;
 }
 .create-app .row .text p {
-  color: var(--Text-Black, #2A344A);
+  color: var(--Text-Black, #2a344a);
   /* Platform/Desktop/Body-2 R */
   font-family: Roboto;
   font-size: 14px;
