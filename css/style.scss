@@ -2669,7 +2669,12 @@ section {
       gap: 5px;
    }
    .button-apps {
+      transition: 0.3s;
+         &:hover {
+           color: #4e6af3;
+         }
       &.published {
+         
          cursor: pointer;
          span {
             background: var(--Main-Blue, #4e6af3);
@@ -3125,7 +3130,7 @@ section {
 
    .agent-info {
       p {
-         //max-width: 400px;
+         max-width: 400px;
          color: var(--Text-Grey, #7786a5);
          text-align: center;
 
@@ -3223,6 +3228,7 @@ section {
          gap: 5px;
       }
       .avatar {
+         margin: 0px 0px 10px 0px;
          img {
             width: 80px;
             height: 80px;
