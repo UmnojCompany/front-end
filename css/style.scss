@@ -211,7 +211,7 @@ section {
       &.logo-dt {
          &:hover,
          &:focus {
-           // border: 2px solid #ffffff00;
+            // border: 2px solid #ffffff00;
             background: none;
          }
       }
@@ -1105,22 +1105,22 @@ section {
 }
 .enter-page,
 .modal {
-   .not-more{
+   .not-more {
       max-width: fit-content;
       display: flex;
       align-items: center;
       gap: 10px;
 
-      color: var(--Text-Black, #2A344A);
+      color: var(--Text-Black, #2a344a);
 
-/* Platform/Desktop/Body-2 R */
-font-family: Roboto;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 19.6px */
+      /* Platform/Desktop/Body-2 R */
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
 
-margin: 40px auto 0px auto;
+      margin: 40px auto 0px auto;
    }
    .daha {
       span {
@@ -1986,6 +1986,7 @@ margin: 40px auto 0px auto;
    border-radius: 0px 2px 2px 0px;
    background: var(--Main-Blue, #4e6af3);
 }
+.create-app,
 .create-profile-realtor {
    background: var(--BG-Light-grey, #eef1f5);
    .wrapper {
@@ -3302,5 +3303,71 @@ margin: 40px auto 0px auto;
       display: flex;
       flex-direction: column;
       align-items: center;
+   }
+}
+.create-app {
+   .row {
+      .text {
+         p{color: var(--Text-Black, #2A344A);
+
+            /* Platform/Desktop/Body-2 R */
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */}
+         span {
+            display: block;
+            flex-grow: 1;
+            color: var(--Main-Blue, #4e6af3);
+
+            /* H-4 M */
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 22.4px */
+         }
+         display: flex;
+         flex-direction: column;
+         gap: 2px;
+      }
+      .num {
+         position: absolute;
+         left: 0;
+         bottom: 0;
+
+         border-radius: 40px;
+         background: var(--Main-Blue, #4e6af3);
+
+         display: inline-flex;
+         padding: 4px;
+
+         width: 28px;
+         height: 28px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         color: var(--Text-White, #fff);
+         text-align: center;
+
+         /* Platform/Desktop/Body-2 R */
+         font-family: Roboto;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 19.6px */
+      }
+      .item {
+         position: relative;
+         display: flex;
+         gap: 22px;
+      }
+
+      padding: 10px 30px 40px 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
    }
 }

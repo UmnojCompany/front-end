@@ -1127,7 +1127,7 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--Text-Black, #2A344A);
+  color: var(--Text-Black, #2a344a);
   /* Platform/Desktop/Body-2 R */
   font-family: Roboto;
   font-size: 14px;
@@ -1934,34 +1934,42 @@ section {
   background: var(--Main-Blue, #4e6af3);
 }
 
+.create-app,
 .create-profile-realtor {
   background: var(--BG-Light-grey, #eef1f5);
   align-items: flex-start;
   position: relative;
 }
+.create-app .wrapper.hide,
 .create-profile-realtor .wrapper.hide {
   display: none;
 }
+.create-app h5,
 .create-profile-realtor h5 {
   padding: 0px 30px;
 }
+.create-app .gap,
 .create-profile-realtor .gap {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 30px 20px;
 }
+.create-app .form,
 .create-profile-realtor .form {
   gap: 0;
   margin: 0px 0px 0px 0px;
   padding: 30px;
 }
+.create-app .form.gap,
 .create-profile-realtor .form.gap {
   gap: 20px;
 }
+.create-app h3 span,
 .create-profile-realtor h3 span {
   color: var(--Text-Error, #f34942);
 }
+.create-app .id-realtor,
 .create-profile-realtor .id-realtor {
   padding: 9px 30px;
   font-size: 14px;
@@ -1969,11 +1977,13 @@ section {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
 }
+.create-app .head,
 .create-profile-realtor .head {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
+.create-app .cancel,
 .create-profile-realtor .cancel {
   position: absolute;
   top: 40px;
@@ -1984,6 +1994,7 @@ section {
   padding: 8px;
   display: inline-flex;
 }
+.create-app .container,
 .create-profile-realtor .container {
   position: relative;
   padding: 40px 0px 0px 0px;
@@ -3098,4 +3109,63 @@ section {
   border-radius: 80px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.create-app .row {
+  padding: 10px 30px 40px 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.create-app .row .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.create-app .row .text p {
+  color: var(--Text-Black, #2A344A);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.create-app .row .text span {
+  display: block;
+  flex-grow: 1;
+  color: var(--Main-Blue, #4e6af3);
+  /* H-4 M */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+}
+.create-app .row .num {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 40px;
+  background: var(--Main-Blue, #4e6af3);
+  display: inline-flex;
+  padding: 4px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Text-White, #fff);
+  text-align: center;
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.create-app .row .item {
+  position: relative;
+  display: flex;
+  gap: 22px;
 }/*# sourceMappingURL=style.css.map */
