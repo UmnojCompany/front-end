@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page Cuctomer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <main>
+      <section class="enter-page registration-page">
+        <div class="container">
+          <div class="wrapper">
+            <h3>Пройдите простую регистрацию</h3>
+            <div class="subtitle">
+              Укажите ваши данные для регистрации или
+              <a href="my-profile-customer.html">войдите в свой профиль</a>
+            </div>
+            <form class="form" action="">
+              <div class="top">
+                <div class="select-container">
+                  <label for="fruit-select">Статус <span>*</span></label>
+                  <select id="fruit-select" name="fruits">
+                    <option value="">Выберите ваш статус</option>
+                    <option value="apple">Я клиент</option>
+                    <option value="banana">Я риелтор</option>
+                    <option value="cherry">Я застройщик</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bott">
+                <div class="input-container">
+                  <input type="text" name="" id="" required />
+                  <div class="placeholder">Имя <span>*</span></div>
+                </div>
+                <div class="input-container">
+                  <div class="flags">
+                    <ul>
+                      <li><img src="img/Flag-tr.svg" alt="" /></li>
+                      <li></li>
+                    </ul>
+                    <div class="drop">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.5 7.75L8.64645 11.8964C8.84171 12.0917 9.15829 12.0917 9.35355 11.8964L13.5 7.75"
+                          stroke="#7786A5"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <input
+                    class="phone"
+                    type="tel"
+                    name=""
+                    id=""
+                    placeholder="+7 (919) 777–77–77"
+                  />
+                  <span class="blocked-text hide">Профиль заблокирован</span>
+                </div>
+              </div>
+
+              <!-- <div class="restore-access">Восстановить доступ</div> -->
+            </form>
+          </div>
+          <div class="button-primary next-button active">Далее</div>
+          <div class="wrapper confirm">
+            <h3>Подтвердите номер телефона</h3>
+            <div class="subtitle">
+              На номер +7 919 777-77-77 был отправлен СМС-код для подтверждения.
+              Если код не поступил, тогда напишите в <a href="#">поддержку</a>
+            </div>
+            <form class="form" action="">
+              <div class="numbers">
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="single-digit"
+                  min="0"
+                  max="9"
+                  maxlength="1"
+                  required
+                />
+              </div>
+              <div class="daha">
+                Отправить код ещё раз через <span>(2:59)</span>
+              </div>
+            </form>
+          </div>
+          <a href="create-profile-customer.html" class="button-primary enter-button">Зарегистрироваться</a>
+          <p>
+            Нажимая на кнопку «Далее», вы соглашаетесь с обработкой
+            <a class="politic trigger" data-modal-type="politikaModal"
+              >персональных данных и политикой конфиденциальности</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.3647 5.63567C18.7552 6.02619 18.7552 6.65936 18.3647 7.04988L13.4148 11.9998L18.3646 16.9495C18.7551 17.34 18.7551 17.9732 18.3646 18.3637C17.974 18.7543 17.3409 18.7543 16.9504 18.3637L12.0006 13.414L7.05099 18.3636C6.66047 18.7541 6.0273 18.7541 5.63678 18.3636C5.24625 17.9731 5.24625 17.3399 5.63678 16.9494L10.5864 11.9998L5.63664 7.05002C5.24612 6.6595 5.24612 6.02633 5.63664 5.63581C6.02717 5.24528 6.66033 5.24528 7.05086 5.63581L12.0006 10.5856L16.9505 5.63567C17.341 5.24514 17.9742 5.24514 18.3647 5.63567Z"
+              fill="#7786A5"
+            /></svg
+        ></span>
+        <div id="modal-body"></div>
+      </div>
+      <script>
+        document.body.addEventListener("click", function (event) {
+          if (event.target.classList.contains("form-next")) {
+            event.target.classList.add("hide");
+
+            var modalContent = event.target.closest(".modal-content");
+
+            var confirmElement = modalContent.querySelector(".confirm");
+
+            if (confirmElement) {
+              confirmElement.classList.add("active");
+            }
+          }
+        });
+      </script>
+    </div>
+    <!-- Подключение jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Подключение Inputmask -->
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8-beta.0/dist/inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.body.addEventListener("click", function (event) {
+        if (event.target.classList.contains("next-button")) {
+          event.target.classList.add("hide");
+
+          var modalContent = event.target.closest(".enter-page");
+
+          var confirmElement = modalContent.querySelector(".confirm");
+          if (confirmElement) {
+            confirmElement.classList.add("active");
+          }
+
+          var phoneElement = modalContent.querySelector(".phone");
+          if (phoneElement) {
+            phoneElement.classList.remove("blocked");
+          }
+
+          var blockedTextElement = modalContent.querySelector(".next-button");
+          if (blockedTextElement) {
+            blockedTextElement.classList.add("hide");
+          }
+
+          var enterButtonElement = modalContent.querySelector(".enter-button");
+          if (enterButtonElement) {
+            enterButtonElement.classList.add("active");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

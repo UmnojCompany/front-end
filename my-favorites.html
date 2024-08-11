@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Umnoj Project GitHub</title>
+    <title>My Profile</title>
     <link
       rel="icon"
       type="image/png"
@@ -26,7 +26,6 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <link rel="stylesheet" href="css/myobjects.css" />
   </head>
 
   <body>
@@ -277,15 +276,15 @@
         </a>
       </div>
     </header>
-    <main class="my-objects">
-      <section class="page-head">
+    <main>
+      <section class="head-profile page-head">
         <div class="container">
           <div class="wrapper">
-            <h3>Мои объекты</h3>
+            <h3>Избранное</h3>
             <ul>
-              <li class="active">Все</li>
-              <li class="">Опубликованные</li>
-              <li class="">В архиве</li>
+              <li class="active">Объекты</li>
+              <li class="">Заявки</li>
+              <li class="">Пользователи</li>
             </ul>
           </div>
         </div>
@@ -294,16 +293,16 @@
         <div class="container">
           <div class="wrapp">
             <div class="img">
-              <img src="img/objects-plug.svg" alt="" />
+              <img src="img/plug-favorites.svg" alt="" />
             </div>
             <div class="text">
-              <div class="title">Нет созданных объектов</div>
+              <div class="title">В избранном нет объектов</div>
               <p>
-                Вы еще не загрузили на платформу свои объекты. Но вы можете
-                сделать это прямо сейчас!
+                Отмечайте понравившиеся объекты, нажав на иконку в карточке
+                объекта
               </p>
             </div>
-            <a href="#" class="button-primary">Создать объект</a>
+            <a href="#" class="button-primary">Перейти к объектам</a>
           </div>
         </div>
       </div>
@@ -311,16 +310,16 @@
         <div class="container">
           <div class="wrapp">
             <div class="img">
-              <img src="img/objects-plug.svg" alt="" />
+              <img src="img/plug-favorites.svg" alt="" />
             </div>
             <div class="text">
-              <div class="title">Нет созданных объектов</div>
+              <div class="title">В избранном нет объектов</div>
               <p>
-                Вы еще не загрузили на платформу свои объекты. Но вы можете
-                сделать это прямо сейчас!
+                Отмечайте понравившиеся объекты, нажав на иконку в карточке
+                объекта
               </p>
             </div>
-            <a href="#" class="button-primary">Создать объект</a>
+            <a href="#" class="button-primary">Перейти к объектам</a>
           </div>
         </div>
       </div>
@@ -328,16 +327,16 @@
         <div class="container">
           <div class="wrapp">
             <div class="img">
-              <img src="img/objects-plug.svg" alt="" />
+              <img src="img/plug-favorites.svg" alt="" />
             </div>
             <div class="text">
-              <div class="title">Нет созданных объектов</div>
+              <div class="title">В избранном нет объектов</div>
               <p>
-                Вы еще не загрузили на платформу свои объекты. Но вы можете
-                сделать это прямо сейчас!
+                Отмечайте понравившиеся объекты, нажав на иконку в карточке
+                объекта
               </p>
             </div>
-            <a href="#" class="button-primary">Создать объект</a>
+            <a href="#" class="button-primary">Перейти к объектам</a>
           </div>
         </div>
       </div>
@@ -476,6 +475,7 @@
         <div id="modal-body"></div>
       </div>
       <script>
+        // Первый скрипт для обработки кликов на элементах с классом form-next
         document.body.addEventListener("click", function (event) {
           if (event.target.classList.contains("form-next")) {
             event.target.classList.add("hide");
@@ -486,6 +486,15 @@
 
             if (confirmElement) {
               confirmElement.classList.add("active");
+            }
+          }
+        });
+
+        // Второй скрипт для ограничения ввода одной цифрой в инпутах с классом single-digit
+        document.body.addEventListener("input", function (event) {
+          if (event.target.classList.contains("single-digit")) {
+            if (event.target.value.length > 1) {
+              event.target.value = event.target.value.slice(0, 1);
             }
           }
         });
