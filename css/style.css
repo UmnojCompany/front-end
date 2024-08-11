@@ -1120,6 +1120,22 @@ section {
   min-height: 100%;
   z-index: 777;
 }
+.enter-page .not-more,
+.modal .not-more {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Text-Black, #2A344A);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  margin: 40px auto 0px auto;
+}
 .enter-page .daha,
 .modal .daha {
   color: var(--Text-Disabled, #b8c6e3);
