@@ -177,7 +177,6 @@ section {
 .header a {
   position: relative;
   border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0);
   transition: 0.3s;
 }
 .header a.logo-dt:hover, .header a.logo-dt:focus {
@@ -296,7 +295,7 @@ section {
   display: flex;
 }
 .header .main-menu li a {
-  padding: 9px 20px;
+  padding: 11px 20px;
   color: var(--Header-Text_Default, #d5daf1);
   /* Platform/Accent_12_CAPS (S) */
   font-size: 12px;
@@ -341,6 +340,7 @@ section {
   text-transform: uppercase;
 }
 .header .right .avatar {
+  border: none;
   cursor: pointer;
 }
 .header .right .avatar img {
@@ -1478,7 +1478,8 @@ section {
 }
 .button-primary.create {
   margin: 0px 10px 0px 0px;
-  padding: 10px 20px;
+  padding: 11px 20px;
+  border: none;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;

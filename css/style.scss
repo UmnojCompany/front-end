@@ -113,7 +113,7 @@ section {
          //color: #ffffff;
       }
       border-radius: 10px;
-      border: 2px solid #ffffff00;
+      //border: 2px solid #ffffff00;
       transition: 0.3s;
    }
 
@@ -237,7 +237,7 @@ section {
                   }
                }
             }
-            padding: 9px 20px;
+            padding: 11px 20px;
 
             color: var(--Header-Text_Default, #d5daf1);
 
@@ -277,6 +277,7 @@ section {
    }
    .right {
       .avatar {
+         border: none;
          cursor: pointer;
          img {
             width: 40px;
@@ -1457,8 +1458,8 @@ section {
          color: #fff;
       }
       margin: 0px 10px 0px 0px;
-      padding: 10px 20px;
-
+      padding: 11px 20px;
+      border: none;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
@@ -2670,11 +2671,10 @@ section {
    }
    .button-apps {
       transition: 0.3s;
-         &:hover {
-           color: #4e6af3;
-         }
+      &:hover {
+         color: #4e6af3;
+      }
       &.published {
-         
          cursor: pointer;
          span {
             background: var(--Main-Blue, #4e6af3);
