@@ -3321,21 +3321,21 @@ section {
 }
 .create-app {
    .info-profile {
-      .reviews{
-         span{
-            color: var(--Text-Grey, #7786A5);
+      .reviews {
+         span {
+            color: var(--Text-Grey, #7786a5);
 
-/* Platform/Desktop/Body-2 R */
-font-family: Roboto;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 19.6px */
+            /* Platform/Desktop/Body-2 R */
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
          }
       }
       .stars {
          span {
-            color: var(--Text-Black, #2A344A);
+            color: var(--Text-Black, #2a344a);
 
             /* Platform/Desktop/Body-2 R */
             font-family: Roboto;
@@ -3444,6 +3444,19 @@ line-height: 140%; /* 19.6px */
 
             &::after {
                content: "м²";
+               position: absolute;
+               right: 20px;
+               top: 20px;
+               color: var(--Fields-Title, #7786a5);
+            }
+         }
+         &.sotok {
+            input {
+               width: 200px;
+            }
+
+            &::after {
+               content: "сот.";
                position: absolute;
                right: 20px;
                top: 20px;

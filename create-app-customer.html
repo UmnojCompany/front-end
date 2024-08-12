@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/selects.css" />
   </head>
   <body>
-    <main class="no-padding l">
+    <main class="no-padding">
       <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
       </div>
@@ -224,7 +224,7 @@
                 </div>
                 <span>Квартира</span>
               </div>
-              <div class="cat cat-02">
+              <div class="cat cat-02 ">
                 <div class="ico">
                   <svg
                     width="87"
@@ -425,7 +425,7 @@
                 </div>
                 <span>Дом</span>
               </div>
-              <div class="cat cat-03">
+              <div class="cat cat-03 ">
                 <div class="ico">
                   <svg
                     width="58"
@@ -454,7 +454,7 @@
                 </div>
                 <span>Земля</span>
               </div>
-              <div class="cat cat-04">
+              <div class="cat cat-04 ">
                 <div class="ico">
                   <svg
                     width="66"
@@ -631,7 +631,7 @@
                 </ul>
               </div>
             </div>
-            <div class="pcat pcat-02">
+            <div class="pcat pcat-02 ">
               <div class="form start">
                 <ul class="chek-lists-single">
                   <li>Коттедж</li>
@@ -647,7 +647,7 @@
                 </ul>
               </div>
             </div>
-            <div class="pcat pcat-03">
+            <div class="pcat pcat-03 ">
               <div class="form start">
                 <ul class="chek-lists-single">
                   <li>Участок земли</li>
@@ -656,7 +656,7 @@
                 </ul>
               </div>
             </div>
-            <div class="pcat pcat-04">
+            <div class="pcat pcat-04 ">
               <div class="form start">
                 <ul class="chek-lists-single">
                   <li>Отель</li>
@@ -1022,9 +1022,796 @@
               
             </div>
           </div>
-          <div class="pcat pcat-02"><div class="wrapper">2</div></div>
-          <div class="pcat pcat-03"><div class="wrapper">3</div></div>
-          <div class="pcat pcat-04"><div class="wrapper">4</div></div>
+          <div class="pcat pcat-02">
+            <div class="wrapper">
+              <h3>Состояние <span>*</span></h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Новый</li>
+                  <li>Вторичный</li>
+                  <li>Неважно</li>
+                </ul>
+              </div>
+              <h5 class="mbott">Год постройки</h5>
+              <div class="form start">
+                <div class="input-container years">
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    class="number-input"
+                    min="1973"
+                    max="2024"
+                    maxlength="4"
+                    required=""
+                  />
+                  <div class="placeholder">
+                    От <span class="black">1973</span>
+                  </div>
+                </div>
+                <div class="input-container years">
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    class="number-input"
+                    min="1973"
+                    max="2024"
+                    maxlength="4"
+                    required=""
+                  />
+                  <div class="placeholder">
+                    До <span class="black">2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Всего комнат <span>*</span></h3>
+              <div class="line"></div>
+              <div class="column">
+                <div class="subrow">
+                  <div class="form">
+                    <ul class="chek-lists">
+                      <li>Студия</li>
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6 +</li>
+                      <li>Свободная планировка</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="subrow">
+                  <div class="title">Спальня</div>
+                  <div class="form">
+                    <ul class="chek-lists">
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6 +</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="subrow">
+                  <div class="title">Санузел</div>
+                  <div class="form">
+                    <ul class="chek-lists">
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6 +</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="subrow">
+                  <div class="title">Балкон</div>
+                  <div class="form">
+                    <ul class="chek-lists">
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6 +</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Общая площадь <span>*</span></h3>
+              <div class="line"></div>
+              <div class="column">
+                <div class="subrow">
+                  <div class="form start">
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        От <span class="black">1</span>
+                      </div>
+                    </div>
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        До <span class="black">150</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subrow">
+                  <div class="title">Площадь участка</div>
+                  <div class="form start">
+                    <div class="input-container sotok">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        От <span class="black">1</span>
+                      </div>
+                    </div>
+                    <div class="input-container sotok">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        До <span class="black">150</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subrow">
+                  <div class="title">Жилая площадь</div>
+                  <div class="form start">
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        От <span class="black">1</span>
+                      </div>
+                    </div>
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        До <span class="black">150</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subrow">
+                  <div class="title">Площадь кухни</div>
+                  <div class="form start">
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        От <span class="black">1</span>
+                      </div>
+                    </div>
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        До <span class="black">150</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Ваш бюджет <span>*</span></h3>
+              <div class="line"></div>
+              <div class="column">
+                <div class="subrow">
+                  <div class="form start">
+                    <div class="input-container">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="200000"
+                        max="999999999"
+                        maxlength="9"
+                        required=""
+                      />
+                      <div class="placeholder">От 2 000 000</div>
+                    </div>
+                    <div class="input-container">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="2000000"
+                        max="999999999"
+                        maxlength="9"
+                        required=""
+                      />
+                      <div class="placeholder">До 999 999 999</div>
+                    </div>
+                    <div class="select-container-single currency">
+                      <select class="" id="" name="" required="">
+                        <option value=""></option>
+                        <option value="ruble">₽</option>
+                        <option value="dollar">$</option>
+                        <option value="euro">€</option>
+                      </select>
+                      <label for="">Валюта</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Цель покупки <span>*</span></h3>
+              <div class="subtitle">
+                Укажите самое подходящее назначение для этой недвижимости
+              </div>
+              <div class="form start">
+                <ul class="chek-lists">
+                  <li>Для проживания</li>
+                  <li>Сдавать в аренду</li>
+                  <li>Перепродать</li>
+                  <li>Сохранить деньги</li>
+                  <li>Получить ВНЖ</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Срочность покупки <span>*</span></h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Срочно</li>
+                  <li>Сразу, как найду</li>
+                  <li>1–3 месяца</li>
+                  <li>3–6 месяца</li>
+                  <li>Пока просто изучаю</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Способ покупки</h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>В ипотеку</li>
+                  <li>В рассрочку</li>
+                  <li>Наличными</li>
+                  <li>Сертификатом</li>
+                  <li>Другой способ</li>
+                </ul>
+              </div>
+
+              <h5 class="mbott">Ипотека уже одобрена?</h5>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Да</li>
+                  <li>Нет</li>
+                  <li>В процессе</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Остались пожелания?</h3>
+              <div class="line"></div>
+              <form class="form" action="">
+                <div class="input-container w100">
+                  <textarea id="myTextarea" maxlength="500" rows="10" required=""></textarea>
+                  <div class="placeholder">О себе</div>
+                  <div class="char-counter" id="charCounter">0/500</div>
+                </div>
+
+              </form>
+            </div>
+            <div class="wrapper">
+              <h3>Ваш профиль</h3>
+              <div class="subtitle">Заявка будет опубликована от имени вашего профиля. Вы можете войти в другой профиль или зарегистрировать новый </div>
+              <div class="info-profile">
+                <div class="cart">
+                <div class="avatar">
+                  <img src="img/avatar-customer.png" alt="">
+                </div>
+                <div class="info-prf">
+                  <h5>Светлана Гридасова</h5>
+                  <span>Клиент</span>
+                  <div class="raiting">
+                    <div class="stars">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7514 3.46659L15.1904 8.38059C15.3114 8.62859 15.5464 8.80059 15.8194 8.84159L21.2774 9.63259C21.4984 9.66159 21.6984 9.77859 21.8334 9.95659C22.0874 10.2876 22.0494 10.7596 21.7444 11.0456L17.7904 14.8856C17.5904 15.0726 17.5004 15.3506 17.5524 15.6186L18.5054 21.0316C18.5714 21.4816 18.2664 21.8996 17.8194 21.9736C17.6334 22.0026 17.4434 21.9726 17.2764 21.8886L12.4084 19.3376C12.1644 19.2046 11.8704 19.2046 11.6274 19.3376L6.72738 21.9066C6.31838 22.1126 5.82238 21.9576 5.60038 21.5596C5.51538 21.3986 5.48438 21.2126 5.51438 21.0316L6.46738 15.6186C6.51338 15.3506 6.42438 15.0756 6.22938 14.8856L2.24438 11.0446C1.91938 10.7206 1.91838 10.1946 2.24238 9.86859L2.24438 9.86659C2.37738 9.74559 2.54238 9.66359 2.72038 9.63259L8.17838 8.84159C8.44938 8.79759 8.68438 8.62559 8.80738 8.38059L11.2464 3.46659C11.3434 3.26659 11.5174 3.11359 11.7284 3.04359C11.9394 2.97259 12.1704 2.98859 12.3704 3.08959C12.5344 3.17159 12.6674 3.30359 12.7514 3.46659Z" fill="#FFD64C"></path>
+                      </svg>
+                      <span>4.8</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="reviews">
+                      <span>28 отзывов</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="pcat pcat-03 ">
+
+            <div class="wrapper">
+              <h3>Площадь <span>*</span></h3>
+              <div class="line"></div>
+              <div class="column">
+
+                <div class="subrow">
+                
+                  <div class="form start">
+                    <div class="input-container sotok">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        От <span class="black">1</span>
+                      </div>
+                    </div>
+                    <div class="input-container sotok">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        До <span class="black">150</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Ваш бюджет <span>*</span></h3>
+              <div class="line"></div>
+              <div class="column">
+                <div class="subrow">
+                  <div class="form start">
+                    <div class="input-container">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="200000"
+                        max="999999999"
+                        maxlength="9"
+                        required=""
+                      />
+                      <div class="placeholder">От 2 000 000</div>
+                    </div>
+                    <div class="input-container">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="2000000"
+                        max="999999999"
+                        maxlength="9"
+                        required=""
+                      />
+                      <div class="placeholder">До 999 999 999</div>
+                    </div>
+                    <div class="select-container-single currency">
+                      <select class="" id="" name="" required="">
+                        <option value=""></option>
+                        <option value="ruble">₽</option>
+                        <option value="dollar">$</option>
+                        <option value="euro">€</option>
+                      </select>
+                      <label for="">Валюта</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Цель покупки <span>*</span></h3>
+              <div class="subtitle">
+                Укажите самое подходящее назначение для этой недвижимости
+              </div>
+              <div class="form start">
+                <ul class="chek-lists">
+                  <li>Жилая застройка</li>
+                  <li>Коммерческая застройка</li>
+                  <li>Для сельского хозяйства</li>
+                  <li>Сдавать в аренду</li>
+                  <li>Перепродать</li>
+                  <li>Другое</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Срочность покупки <span>*</span></h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Срочно</li>
+                  <li>Сразу, как найду</li>
+                  <li>1–3 месяца</li>
+                  <li>3–6 месяца</li>
+                  <li>Пока просто изучаю</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Способ покупки</h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>В ипотеку</li>
+                  <li>В рассрочку</li>
+                  <li>Наличными</li>
+                  <li>Сертификатом</li>
+                  <li>Другой способ</li>
+                </ul>
+              </div>
+
+              <h5 class="mbott">Ипотека уже одобрена?</h5>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Да</li>
+                  <li>Нет</li>
+                  <li>В процессе</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Остались пожелания?</h3>
+              <div class="line"></div>
+              <form class="form" action="">
+                <div class="input-container w100">
+                  <textarea id="myTextarea" maxlength="500" rows="10" required=""></textarea>
+                  <div class="placeholder">О себе</div>
+                  <div class="char-counter" id="charCounter">0/500</div>
+                </div>
+
+              </form>
+            </div>
+            <div class="wrapper">
+              <h3>Ваш профиль</h3>
+              <div class="subtitle">Заявка будет опубликована от имени вашего профиля. Вы можете войти в другой профиль или зарегистрировать новый </div>
+              <div class="info-profile">
+                <div class="cart">
+                <div class="avatar">
+                  <img src="img/avatar-customer.png" alt="">
+                </div>
+                <div class="info-prf">
+                  <h5>Светлана Гридасова</h5>
+                  <span>Клиент</span>
+                  <div class="raiting">
+                    <div class="stars">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7514 3.46659L15.1904 8.38059C15.3114 8.62859 15.5464 8.80059 15.8194 8.84159L21.2774 9.63259C21.4984 9.66159 21.6984 9.77859 21.8334 9.95659C22.0874 10.2876 22.0494 10.7596 21.7444 11.0456L17.7904 14.8856C17.5904 15.0726 17.5004 15.3506 17.5524 15.6186L18.5054 21.0316C18.5714 21.4816 18.2664 21.8996 17.8194 21.9736C17.6334 22.0026 17.4434 21.9726 17.2764 21.8886L12.4084 19.3376C12.1644 19.2046 11.8704 19.2046 11.6274 19.3376L6.72738 21.9066C6.31838 22.1126 5.82238 21.9576 5.60038 21.5596C5.51538 21.3986 5.48438 21.2126 5.51438 21.0316L6.46738 15.6186C6.51338 15.3506 6.42438 15.0756 6.22938 14.8856L2.24438 11.0446C1.91938 10.7206 1.91838 10.1946 2.24238 9.86859L2.24438 9.86659C2.37738 9.74559 2.54238 9.66359 2.72038 9.63259L8.17838 8.84159C8.44938 8.79759 8.68438 8.62559 8.80738 8.38059L11.2464 3.46659C11.3434 3.26659 11.5174 3.11359 11.7284 3.04359C11.9394 2.97259 12.1704 2.98859 12.3704 3.08959C12.5344 3.17159 12.6674 3.30359 12.7514 3.46659Z" fill="#FFD64C"></path>
+                      </svg>
+                      <span>4.8</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="reviews">
+                      <span>28 отзывов</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="pcat pcat-04 ">
+            <div class="wrapper">
+              <h3>Состояние <span>*</span></h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Новая</li>
+                  <li>Вторичная</li>
+                  <li>Неважно</li>
+                </ul>
+              </div>
+              <h5 class="mbott">Год постройки</h5>
+              <div class="form start">
+                <div class="input-container years">
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    class="number-input"
+                    min="1973"
+                    max="2024"
+                    maxlength="4"
+                    required=""
+                  />
+                  <div class="placeholder">
+                    От <span class="black">1973</span>
+                  </div>
+                </div>
+                <div class="input-container years">
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    class="number-input"
+                    min="1973"
+                    max="2024"
+                    maxlength="4"
+                    required=""
+                  />
+                  <div class="placeholder">
+                    До <span class="black">2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Площадь <span>*</span></h3>
+              <div class="line"></div>
+              <div class="column">
+
+                <div class="subrow">
+                
+                  <div class="form start">
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        От <span class="black">1</span>
+                      </div>
+                    </div>
+                    <div class="input-container metrs">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="1"
+                        max="150"
+                        maxlength="4"
+                        required=""
+                      />
+                      <div class="placeholder">
+                        До <span class="black">150</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Ваш бюджет <span>*</span></h3>
+              <div class="line"></div>
+              <div class="column">
+                <div class="subrow">
+                  <div class="form start">
+                    <div class="input-container">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="200000"
+                        max="999999999"
+                        maxlength="9"
+                        required=""
+                      />
+                      <div class="placeholder">От 2 000 000</div>
+                    </div>
+                    <div class="input-container">
+                      <input
+                        type="number"
+                        name=""
+                        id=""
+                        class="number-input"
+                        min="2000000"
+                        max="999999999"
+                        maxlength="9"
+                        required=""
+                      />
+                      <div class="placeholder">До 999 999 999</div>
+                    </div>
+                    <div class="select-container-single currency">
+                      <select class="" id="" name="" required="">
+                        <option value=""></option>
+                        <option value="ruble">₽</option>
+                        <option value="dollar">$</option>
+                        <option value="euro">€</option>
+                      </select>
+                      <label for="">Валюта</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Цель покупки <span>*</span></h3>
+              <div class="subtitle">
+                Укажите самое подходящее назначение для этой недвижимости
+              </div>
+              <div class="form start">
+                <ul class="chek-lists">
+                  <li>Сдавать в аренду</li>
+                  <li>Перепродать</li>
+                  <li>Для своего дела</li>
+                  <li>Другое</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Срочность покупки <span>*</span></h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Срочно</li>
+                  <li>Сразу, как найду</li>
+                  <li>1–3 месяца</li>
+                  <li>3–6 месяца</li>
+                  <li>Пока просто изучаю</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Способ покупки</h3>
+              <div class="line"></div>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>В ипотеку</li>
+                  <li>В рассрочку</li>
+                  <li>Наличными</li>
+                  <li>Сертификатом</li>
+                  <li>Другой способ</li>
+                </ul>
+              </div>
+
+              <h5 class="mbott">Ипотека уже одобрена?</h5>
+              <div class="form start">
+                <ul class="chek-lists-single">
+                  <li>Да</li>
+                  <li>Нет</li>
+                  <li>В процессе</li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <h3>Остались пожелания?</h3>
+              <div class="line"></div>
+              <form class="form" action="">
+                <div class="input-container w100">
+                  <textarea id="myTextarea" maxlength="500" rows="10" required=""></textarea>
+                  <div class="placeholder">О себе</div>
+                  <div class="char-counter" id="charCounter">0/500</div>
+                </div>
+
+              </form>
+            </div>
+            <div class="wrapper">
+              <h3>Ваш профиль</h3>
+              <div class="subtitle">Заявка будет опубликована от имени вашего профиля. Вы можете войти в другой профиль или зарегистрировать новый </div>
+              <div class="info-profile">
+                <div class="cart">
+                <div class="avatar">
+                  <img src="img/avatar-customer.png" alt="">
+                </div>
+                <div class="info-prf">
+                  <h5>Светлана Гридасова</h5>
+                  <span>Клиент</span>
+                  <div class="raiting">
+                    <div class="stars">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7514 3.46659L15.1904 8.38059C15.3114 8.62859 15.5464 8.80059 15.8194 8.84159L21.2774 9.63259C21.4984 9.66159 21.6984 9.77859 21.8334 9.95659C22.0874 10.2876 22.0494 10.7596 21.7444 11.0456L17.7904 14.8856C17.5904 15.0726 17.5004 15.3506 17.5524 15.6186L18.5054 21.0316C18.5714 21.4816 18.2664 21.8996 17.8194 21.9736C17.6334 22.0026 17.4434 21.9726 17.2764 21.8886L12.4084 19.3376C12.1644 19.2046 11.8704 19.2046 11.6274 19.3376L6.72738 21.9066C6.31838 22.1126 5.82238 21.9576 5.60038 21.5596C5.51538 21.3986 5.48438 21.2126 5.51438 21.0316L6.46738 15.6186C6.51338 15.3506 6.42438 15.0756 6.22938 14.8856L2.24438 11.0446C1.91938 10.7206 1.91838 10.1946 2.24238 9.86859L2.24438 9.86659C2.37738 9.74559 2.54238 9.66359 2.72038 9.63259L8.17838 8.84159C8.44938 8.79759 8.68438 8.62559 8.80738 8.38059L11.2464 3.46659C11.3434 3.26659 11.5174 3.11359 11.7284 3.04359C11.9394 2.97259 12.1704 2.98859 12.3704 3.08959C12.5344 3.17159 12.6674 3.30359 12.7514 3.46659Z" fill="#FFD64C"></path>
+                      </svg>
+                      <span>4.8</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="reviews">
+                      <span>28 отзывов</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+            </div>
+          </div>
 
           <a href="my-applications.html" class="button-primary "
             >Опубликовать заявку</a

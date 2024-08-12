@@ -3125,7 +3125,7 @@ section {
   padding: 30px;
 }
 .create-app .info-profile .reviews span {
-  color: var(--Text-Grey, #7786A5);
+  color: var(--Text-Grey, #7786a5);
   /* Platform/Desktop/Body-2 R */
   font-family: Roboto;
   font-size: 14px;
@@ -3134,7 +3134,7 @@ section {
   line-height: 140%; /* 19.6px */
 }
 .create-app .info-profile .stars span {
-  color: var(--Text-Black, #2A344A);
+  color: var(--Text-Black, #2a344a);
   /* Platform/Desktop/Body-2 R */
   font-family: Roboto;
   font-size: 14px;
@@ -3225,6 +3225,16 @@ section {
 }
 .create-app .form .input-container.metrs::after {
   content: "м²";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: var(--Fields-Title, #7786a5);
+}
+.create-app .form .input-container.sotok input {
+  width: 200px;
+}
+.create-app .form .input-container.sotok::after {
+  content: "сот.";
   position: absolute;
   right: 20px;
   top: 20px;
