@@ -3111,6 +3111,53 @@ section {
      object-fit: cover;
 }
 
+.create-app .pcat {
+  display: none;
+}
+.create-app .pcat.active {
+  display: block;
+}
+.create-app h5.mbott {
+  margin-bottom: -15px;
+}
+.create-app h5 span {
+  color: var(--Text-Error, #F34942);
+}
+.create-app .cats.row {
+  padding: 30px 30px 40px 30px;
+  justify-content: flex-start;
+}
+.create-app .cats .cat {
+  transition: 0.3s;
+  display: flex;
+  width: 135px;
+  padding: 17px var(--Corner_radius_m, 10px) 8px var(--Corner_radius_m, 10px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--Request-BG-Default, #f1f7ff);
+  cursor: pointer;
+}
+.create-app .cats .cat:hover, .create-app .cats .cat.active {
+  background: var(--Request-BG-Active, #4e6af3);
+}
+.create-app .cats .cat:hover svg path, .create-app .cats .cat.active svg path {
+  fill: #fff;
+}
+.create-app .cats .cat:hover span, .create-app .cats .cat.active span {
+  color: #fff;
+}
+.create-app .cats .cat span {
+  color: var(--Request-Text-Default, #2a344a);
+  text-align: center;
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
 .create-app .form.start {
   flex-direction: row;
 }
