@@ -3307,6 +3307,31 @@ section {
    }
 }
 .create-app {
+   .column{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 30px;
+   }
+   .subrow {
+      
+      .title {
+         padding: 0px 0px 15px 0px;
+         color: var(--Text-Black, #2a344a);
+
+         /* Platform/Desktop/H-5 M */
+         font-family: Roboto;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: 120%; /* 24px */
+      }
+      .form {
+         padding: 0px 0px 0px 0px;
+         //justify-content: flex-start;
+         align-items: flex-start;
+      }
+   }
    .form {
       &.start {
          gap: 10px;
