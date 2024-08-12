@@ -3320,14 +3320,86 @@ section {
    }
 }
 .create-app {
-   .column{
+   .info-profile {
+      .reviews{
+         span{
+            color: var(--Text-Grey, #7786A5);
+
+/* Platform/Desktop/Body-2 R */
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+         }
+      }
+      .stars {
+         span {
+            color: var(--Text-Black, #2A344A);
+
+            /* Platform/Desktop/Body-2 R */
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
+         }
+
+         svg {
+            width: 14px;
+            height: 14px;
+         }
+      }
+      .raiting {
+         gap: 8px;
+         .line {
+            height: 12px;
+            width: 1px;
+         }
+         margin: 0px 0px 0px 0px;
+      }
+      .info-prf {
+         gap: 0;
+      }
+      span {
+         display: block;
+         flex-grow: 1;
+         overflow: hidden;
+         color: var(--BG-Black, #2a344a);
+         text-overflow: ellipsis;
+         white-space: nowrap;
+
+         /* Platform/Desktop/Body-2 R */
+         font-family: Roboto;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 19.6px */
+      }
+      .avatar {
+         width: 70px;
+         height: 70px;
+      }
+      h5 {
+         padding: 0px 0px 0px 0px;
+         color: var(--Text-Black, #2a344a);
+
+         /* Platform/Accent_16 (S) */
+         font-family: Roboto;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 600;
+         line-height: 120%; /* 19.2px */
+      }
+      padding: 30px;
+   }
+   .column {
       display: flex;
       flex-direction: column;
       gap: 40px;
       padding: 30px;
    }
    .subrow {
-      
       .title {
          padding: 0px 0px 15px 0px;
          color: var(--Text-Black, #2a344a);
@@ -3346,7 +3418,14 @@ section {
       }
    }
    .form {
-      input{
+      .select-container-single {
+         &.currency {
+            select {
+               width: 200px;
+            }
+         }
+      }
+      input {
          padding: 20px 20px 10px 20px;
       }
       &.start {
@@ -3362,7 +3441,7 @@ section {
             input {
                width: 200px;
             }
-   
+
             &::after {
                content: "м²";
                position: absolute;
@@ -3375,7 +3454,7 @@ section {
             input {
                width: 140px;
             }
-   
+
             &::after {
                content: "г";
                position: absolute;
@@ -3396,7 +3475,7 @@ section {
             position: absolute;
             left: 22px;
             top: 20px;
-   
+
             color: var(--Fields-Title, #7786a5);
             font-size: 16px;
             font-style: normal;
@@ -3405,8 +3484,9 @@ section {
          }
          input[type="number"] {
          }
+
          .number-input {
-            width: 250px;
+            width: 200px;
          }
          .number-input.filled + .placeholder {
             font-size: 12px;
@@ -3416,7 +3496,7 @@ section {
             font-size: 12px;
             top: 5px;
          }
-   
+
          textarea,
          input {
             background: none;

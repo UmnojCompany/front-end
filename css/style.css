@@ -3121,6 +3121,70 @@ section {
      object-fit: cover;
 }
 
+.create-app .info-profile {
+  padding: 30px;
+}
+.create-app .info-profile .reviews span {
+  color: var(--Text-Grey, #7786A5);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.create-app .info-profile .stars span {
+  color: var(--Text-Black, #2A344A);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.create-app .info-profile .stars svg {
+  width: 14px;
+  height: 14px;
+}
+.create-app .info-profile .raiting {
+  gap: 8px;
+  margin: 0px 0px 0px 0px;
+}
+.create-app .info-profile .raiting .line {
+  height: 12px;
+  width: 1px;
+}
+.create-app .info-profile .info-prf {
+  gap: 0;
+}
+.create-app .info-profile span {
+  display: block;
+  flex-grow: 1;
+  overflow: hidden;
+  color: var(--BG-Black, #2a344a);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.create-app .info-profile .avatar {
+  width: 70px;
+  height: 70px;
+}
+.create-app .info-profile h5 {
+  padding: 0px 0px 0px 0px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Accent_16 (S) */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
 .create-app .column {
   display: flex;
   flex-direction: column;
@@ -3140,6 +3204,9 @@ section {
 .create-app .subrow .form {
   padding: 0px 0px 0px 0px;
   align-items: flex-start;
+}
+.create-app .form .select-container-single.currency select {
+  width: 200px;
 }
 .create-app .form input {
   padding: 20px 20px 10px 20px;
@@ -3192,7 +3259,7 @@ section {
   color: var(--Fields-Text, #2a344a);
 }
 .create-app .form .input-container .number-input {
-  width: 250px;
+  width: 200px;
 }
 .create-app .form .input-container .number-input.filled + .placeholder {
   font-size: 12px;
