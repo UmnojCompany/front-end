@@ -1788,6 +1788,19 @@ section {
             width: 110px;
          }
       }
+      &.metrs {
+         input {
+            width: 200px;
+         }
+
+         &::after {
+            content: "м2";
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: var(--Fields-Title, #7786a5);
+         }
+      }
       &.years {
          input {
             width: 140px;
@@ -3333,10 +3346,91 @@ section {
       }
    }
    .form {
+      input{
+         padding: 20px 20px 10px 20px;
+      }
       &.start {
          gap: 10px;
       }
       .input-container {
+         &.w110 {
+            input {
+               width: 110px;
+            }
+         }
+         &.metrs {
+            input {
+               width: 200px;
+            }
+   
+            &::after {
+               content: "м²";
+               position: absolute;
+               right: 20px;
+               top: 20px;
+               color: var(--Fields-Title, #7786a5);
+            }
+         }
+         &.years {
+            input {
+               width: 140px;
+            }
+   
+            &::after {
+               content: "г";
+               position: absolute;
+               right: 20px;
+               top: 20px;
+               color: var(--Fields-Title, #7786a5);
+            }
+         }
+         .placeholder {
+            transition: 0.3s;
+            z-index: 0;
+            span {
+               &.black {
+                  color: var(--Fields-Text, #2a344a);
+               }
+               color: var(--Text-Error, #f34942);
+            }
+            position: absolute;
+            left: 22px;
+            top: 20px;
+   
+            color: var(--Fields-Title, #7786a5);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+         }
+         input[type="number"] {
+         }
+         .number-input {
+            width: 250px;
+         }
+         .number-input.filled + .placeholder {
+            font-size: 12px;
+            top: 5px;
+         }
+         .number-input.filled + .placeholder {
+            font-size: 12px;
+            top: 5px;
+         }
+   
+         textarea,
+         input {
+            background: none;
+            z-index: 1;
+            min-width: 100%;
+            &:valid + .placeholder {
+               font-size: 12px;
+               top: 5px;
+            }
+            &:focus + .placeholder {
+               font-size: 12px;
+               top: 5px;
+            }
+         }
          flex: 0;
       }
    }
