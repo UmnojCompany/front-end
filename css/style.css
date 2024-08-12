@@ -3137,7 +3137,7 @@ section {
   margin-bottom: -15px;
 }
 .create-app h5 span {
-  color: var(--Text-Error, #F34942);
+  color: var(--Text-Error, #f34942);
 }
 .create-app .cats.row {
   padding: 30px 30px 40px 30px;
@@ -3158,7 +3158,7 @@ section {
   cursor: pointer;
 }
 .create-app .cats .cat:hover {
-  background: var(--Request-BG-Hover, #E1EDFD);
+  background: var(--Request-BG-Hover, #e1edfd);
 }
 .create-app .cats .cat.active {
   background: var(--Request-BG-Active, #4e6af3);

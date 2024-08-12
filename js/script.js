@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  var tooltips = document.querySelectorAll(".tooltip");
+  //var tooltips = document.querySelectorAll(".tooltip");
 
   tooltips.forEach(function (tooltip) {
     var text = tooltip.getAttribute("data-tooltip");
