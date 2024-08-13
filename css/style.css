@@ -3467,4 +3467,7 @@ section {
 }
 .create-app .form .chek-lists li {
   padding: var(--Corner_radius_m, 10px) 20px;
+}
+.create-app .select-container-single select {
+  padding: 20px 20px 9px 20px;
 }/*# sourceMappingURL=style.css.map */
