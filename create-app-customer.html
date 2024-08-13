@@ -2415,14 +2415,10 @@
         const numberInputs = document.querySelectorAll(".number-input");
     
         numberInputs.forEach(function (input) {
-          function formatNumberWithoutSpaces(value) {
-            return value.replace(/\D/g, "").slice(0, 4);
-          }
-    
           function formatNumberWithSpaces(value) {
             return value
-              .replace(/\D/g, "")
-              .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+              .replace(/\D/g, "") // Удаляем все нечисловые символы
+              .replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Добавляем пробелы
           }
     
           function applyStyles() {
@@ -2437,37 +2433,40 @@
             }
           }
     
-          input.addEventListener("input", function () {
-            let value;
-    
-            if (input.closest(".input-container.years")) {
-              value = formatNumberWithoutSpaces(input.value);
-            } else {
-              value = formatNumberWithSpaces(input.value);
-            }
-    
+          function validateInput() {
+            const parent = input.closest(".input-container");
+            const value = input.value.replace(/\s/g, ""); // Убираем пробелы для сравнения
+            const intValue = parseInt(value, 10);
             const min = parseInt(input.getAttribute("min"), 10);
             const max = parseInt(input.getAttribute("max"), 10);
     
-            if (value) {
-              const intValue = parseInt(value.replace(/\s/g, ""), 10); // Убираем пробелы для сравнения
-    
-              // Проверяем, чтобы значение не выходило за пределы min и max
-              if (intValue < min) {
-                value = intValue.toString(); // Только обновляем значение, не применяем min
-              } else if (intValue > max) {
-                value = max.toString();
-              }
+            if (intValue < min) {
+              parent.classList.add("error"); // Добавляем класс error
+            } else if (intValue > max) {
+              input.value = formatNumberWithSpaces(max.toString());
+              parent.classList.remove("error");
+            } else {
+              parent.classList.remove("error");
             }
+          }
     
+          input.addEventListener("input", function () {
+            let value = formatNumberWithSpaces(input.value);
             input.value = value;
             applyStyles();
+          });
+    
+          input.addEventListener("blur", function () {
+            validateInput(); // Проверка при потере фокуса
           });
     
           applyStyles(); // Начальная проверка
         });
       });
     </script>
+    
+    
+    
     
     
 

@@ -3481,6 +3481,14 @@ section {
          gap: 10px;
       }
       .input-container {
+         &.error{
+            input{
+               border: 2px solid var(--Fields-Stroke-Error, #FFD8D8);
+   
+               background: var(--Fields-BG-Error, #FFF5F5);
+            }
+           // background: #0ab258;
+         }
          &.w110 {
             input {
                width: 110px;
@@ -3530,7 +3538,7 @@ section {
          }
          .placeholder {
             transition: 0.3s;
-            z-index: 0;
+            z-index: 999;
             span {
                &.black {
                   color: var(--Fields-Text, #2a344a);

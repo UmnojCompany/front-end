@@ -3258,6 +3258,10 @@ section {
 .create-app .form .input-container {
   flex: 0;
 }
+.create-app .form .input-container.error input {
+  border: 2px solid var(--Fields-Stroke-Error, #FFD8D8);
+  background: var(--Fields-BG-Error, #FFF5F5);
+}
 .create-app .form .input-container.w110 input {
   width: 110px;
 }
@@ -3296,7 +3300,7 @@ section {
 }
 .create-app .form .input-container .placeholder {
   transition: 0.3s;
-  z-index: 0;
+  z-index: 999;
   position: absolute;
   left: 22px;
   top: 20px;
