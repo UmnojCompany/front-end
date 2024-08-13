@@ -3258,12 +3258,21 @@ section {
 .create-app .form .input-container {
   flex: 0;
 }
+.create-app .form .input-container.error.years::after {
+  z-index: 999;
+}
+.create-app .form .input-container.error.sotok::after {
+  z-index: 999;
+}
+.create-app .form .input-container.error.metrs::after {
+  z-index: 999;
+}
 .create-app .form .input-container.error .placeholder {
   z-index: 999;
 }
 .create-app .form .input-container.error input {
-  border: 2px solid var(--Fields-Stroke-Error, #FFD8D8);
-  background: var(--Fields-BG-Error, #FFF5F5);
+  border: 2px solid var(--Fields-Stroke-Error, #ffd8d8);
+  background: var(--Fields-BG-Error, #fff5f5);
 }
 .create-app .form .input-container.w110 input {
   width: 110px;
@@ -3477,4 +3486,63 @@ section {
 }
 .create-app .select-container-single select {
   padding: 20px 20px 9px 20px;
+}
+
+.select-container-single.currency {
+  max-width: 200px;
+}
+.select-container-single .select-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 5px);
+  width: 100%;
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  border-radius: 0 0 10px 10px;
+  z-index: 0;
+}
+.select-container-single .select-items div {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.select-container-single .select-items div:hover {
+  background: var(--Stroke-Divider_form, #F1F7FF);
+}
+.select-container-single .select-selected {
+  z-index: 999;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-container-single .custom-select {
+  position: relative;
+  border-radius: var(--Corner_radius_m, 10px);
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  background: var(--Fields-Form, #fff);
+  display: flex;
+  width: 100%;
+  padding: 20px 20px 9px 20px;
+  align-items: center;
+  gap: var(--Corner_radius_m, 10px);
+}
+.select-container-single .custom-select::after {
+  content: "";
+  background: url("../img/arrow-selection.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.select-container-single .hidden-select {
+  display: none;
+}
+.select-container-single .select-hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
