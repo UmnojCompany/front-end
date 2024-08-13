@@ -3482,6 +3482,9 @@ section {
       }
       .input-container {
          &.error{
+            .placeholder{
+               z-index: 999;
+            }
             input{
                border: 2px solid var(--Fields-Stroke-Error, #FFD8D8);
    
@@ -3538,7 +3541,7 @@ section {
          }
          .placeholder {
             transition: 0.3s;
-            z-index: 999;
+            z-index: 0;
             span {
                &.black {
                   color: var(--Fields-Text, #2a344a);

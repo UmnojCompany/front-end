@@ -2421,6 +2421,10 @@
               .replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Добавляем пробелы
           }
     
+          function formatNumberWithoutSpaces(value) {
+            return value.replace(/\D/g, ""); // Удаляем все нечисловые символы, без добавления пробелов
+          }
+    
           function applyStyles() {
             const parent = input.closest(".input-container");
             const placeholder = parent.querySelector(".placeholder");
@@ -2451,7 +2455,14 @@
           }
     
           input.addEventListener("input", function () {
-            let value = formatNumberWithSpaces(input.value);
+            let value;
+    
+            if (input.closest(".input-container.years")) {
+              value = formatNumberWithoutSpaces(input.value); // Для форм с классом years не добавляем пробелы
+            } else {
+              value = formatNumberWithSpaces(input.value); // Для всех остальных форм добавляем пробелы
+            }
+    
             input.value = value;
             applyStyles();
           });
@@ -2464,6 +2475,7 @@
         });
       });
     </script>
+    
     
     
     
