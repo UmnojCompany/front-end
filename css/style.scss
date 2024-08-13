@@ -3475,7 +3475,7 @@ section {
          }
       }
       input {
-         padding: 20px 20px 10px 20px;
+         padding: 20px 20px 9px 20px;
       }
       &.start {
          gap: 10px;
@@ -3495,7 +3495,8 @@ section {
                content: "м²";
                position: absolute;
                right: 20px;
-               top: 20px;
+               top: auto;
+               bottom: 17px;
                color: var(--Fields-Title, #7786a5);
             }
          }
@@ -3508,7 +3509,8 @@ section {
                content: "сот.";
                position: absolute;
                right: 20px;
-               top: 20px;
+               top: auto;
+               bottom: 17px;
                color: var(--Fields-Title, #7786a5);
             }
          }
@@ -3521,7 +3523,8 @@ section {
                content: "г";
                position: absolute;
                right: 20px;
-               top: 20px;
+               top: auto;
+               bottom: 17px;
                color: var(--Fields-Title, #7786a5);
             }
          }
@@ -3576,19 +3579,7 @@ section {
          flex: 0;
       }
    }
-   .years {
-      input {
-         width: 140px;
-      }
 
-      &::after {
-         content: "г";
-         position: absolute;
-         right: 20px;
-         top: 20px;
-         color: var(--Fields-Title, #7786a5);
-      }
-   }
    .pcat {
       &.active {
          display: block;
@@ -3730,5 +3721,11 @@ section {
       display: flex;
       gap: 20px;
       justify-content: space-between;
+   }
+   .form .chek-lists-single li {
+      padding: var(--Corner_radius_m, 10px) 20px;
+   }
+   .form .chek-lists li {
+      padding: var(--Corner_radius_m, 10px) 20px;
    }
 }

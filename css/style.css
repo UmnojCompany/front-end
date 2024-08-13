@@ -3250,7 +3250,7 @@ section {
   width: 200px;
 }
 .create-app .form input {
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 9px 20px;
 }
 .create-app .form.start {
   gap: 10px;
@@ -3268,7 +3268,8 @@ section {
   content: "м²";
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: auto;
+  bottom: 17px;
   color: var(--Fields-Title, #7786a5);
 }
 .create-app .form .input-container.sotok input {
@@ -3278,7 +3279,8 @@ section {
   content: "сот.";
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: auto;
+  bottom: 17px;
   color: var(--Fields-Title, #7786a5);
 }
 .create-app .form .input-container.years input {
@@ -3288,7 +3290,8 @@ section {
   content: "г";
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: auto;
+  bottom: 17px;
   color: var(--Fields-Title, #7786a5);
 }
 .create-app .form .input-container .placeholder {
@@ -3335,16 +3338,6 @@ section {
 .create-app .form .input-container input:focus + .placeholder {
   font-size: 12px;
   top: 5px;
-}
-.create-app .years input {
-  width: 140px;
-}
-.create-app .years::after {
-  content: "г";
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: var(--Fields-Title, #7786a5);
 }
 .create-app .pcat {
   display: none;
@@ -3468,4 +3461,10 @@ section {
   position: relative;
   display: flex;
   gap: 22px;
+}
+.create-app .form .chek-lists-single li {
+  padding: var(--Corner_radius_m, 10px) 20px;
+}
+.create-app .form .chek-lists li {
+  padding: var(--Corner_radius_m, 10px) 20px;
 }/*# sourceMappingURL=style.css.map */
