@@ -3121,6 +3121,47 @@ section {
      object-fit: cover;
 }
 
+.create-app .gap {
+  padding: 30px;
+}
+.create-app .custom-selects .row {
+  padding: 0px 0px 0px 0px;
+}
+.create-app .custom-select-container .selected-items .selected-item .remove-item svg path {
+  fill: #fff;
+}
+.create-app .custom-select-container .selected-items .selected-item {
+  border-radius: 100px;
+  background: var(--Main-Blue, #4e6af3);
+  padding: 7px var(--Corner_radius_m, 10px) 7px 13px;
+  color: var(--Text-White, #fff);
+  /* Platform/Button Link/Small */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+.create-app .custom-select-container .custom-options {
+  padding: 20px 0px 0px 0px;
+  top: 60px;
+}
+.create-app .custom-selects .select-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.create-app .custom-selects .select-placeholder .ico {
+  display: flex;
+  align-items: center;
+}
+.create-app .custom-selects .select-placeholder.active {
+  gap: 5px;
+}
+.create-app .custom-selects .select-placeholder.active svg {
+  width: 14px;
+  height: 14px;
+}
 .create-app .info-profile {
   padding: 30px;
 }
