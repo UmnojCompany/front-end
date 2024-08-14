@@ -3482,6 +3482,9 @@ section {
       }
       .input-container {
          &.error {
+            input{
+               color: var(--Text-Error, #f34942) !important;
+            }
             &.years {
                &::after {
                   z-index: 999;
@@ -3785,7 +3788,7 @@ section {
 
       position: absolute;
       left: 0;
-      top: calc(100% - 5px);
+      top: calc(100% - 7px);
       width: 100%;
       border: 2px solid var(--Fields-Stroke, #e1edfd);
 
