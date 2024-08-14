@@ -3483,7 +3483,7 @@ section {
       }
       .input-container {
          &.error {
-            input{
+            input {
                color: var(--Text-Error, #f34942) !important;
             }
             &.years {
@@ -3763,36 +3763,70 @@ section {
    .select-container-single select {
       padding: 20px 20px 9px 20px;
    }
-   .step{
-      &.hide{
+   .step {
+      &.hide {
          display: none;
       }
    }
-   .districts{
+   .districts {
       display: none;
       &.active {
-          display: block;
+         display: block;
       }
    }
-   
+   .column-hide {
+      &.active {
+         max-height: none;
+      }
+      max-height: 100px;
+      overflow: hidden;
+   }
+   .show-more {
+      cursor: pointer;
+      &.active {
+         svg {
+            transform: rotate(180deg);
+         }
+         .show {
+            display: none;
+         }
+         .hided {
+            display: block;
+         }
+      }
+      .hided {
+         display: none;
+      }
+      padding: 0px 30px 30px 30px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--Main-Blue, #4e6af3);
+
+      /* Fields/Placeholder */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+   }
 }
 .select-container-single {
-   &.currency{
+   &.currency {
       max-width: 200px;
    }
-   
+
    .select-items {
       div {
          &:hover {
-            background: var(--Stroke-Divider_form, #F1F7FF);
+            background: var(--Stroke-Divider_form, #f1f7ff);
          }
-         padding: 10px 20px ;
-         &:first-child{
+         padding: 10px 20px;
+         &:first-child {
             padding: 20px 20px 10px 20px;
          }
          cursor: pointer;
          //background: #0ab258;
-         
       }
 
       display: flex;
@@ -3821,15 +3855,15 @@ section {
       justify-content: space-between;
    }
    .custom-select {
-     &::after{
-      content: '';
-      background: url('../img/arrow-selection.svg') no-repeat;
-      width: 18px;
-      height: 18px;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-     }
+      &::after {
+         content: "";
+         background: url("../img/arrow-selection.svg") no-repeat;
+         width: 18px;
+         height: 18px;
+         position: absolute;
+         right: 20px;
+         top: 20px;
+      }
       position: relative;
       border-radius: var(--Corner_radius_m, 10px);
       border: 2px solid var(--Fields-Stroke, #e1edfd);

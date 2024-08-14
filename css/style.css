@@ -3499,6 +3499,39 @@ section {
 .create-app .districts.active {
   display: block;
 }
+.create-app .column-hide {
+  max-height: 100px;
+  overflow: hidden;
+}
+.create-app .column-hide.active {
+  max-height: none;
+}
+.create-app .show-more {
+  cursor: pointer;
+  padding: 0px 30px 30px 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--Main-Blue, #4e6af3);
+  /* Fields/Placeholder */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.create-app .show-more.active svg {
+  transform: rotate(180deg);
+}
+.create-app .show-more.active .show {
+  display: none;
+}
+.create-app .show-more.active .hided {
+  display: block;
+}
+.create-app .show-more .hided {
+  display: none;
+}
 
 .select-container-single.currency {
   max-width: 200px;
@@ -3521,7 +3554,7 @@ section {
   cursor: pointer;
 }
 .select-container-single .select-items div:hover {
-  background: var(--Stroke-Divider_form, #F1F7FF);
+  background: var(--Stroke-Divider_form, #f1f7ff);
 }
 .select-container-single .select-items div:first-child {
   padding: 20px 20px 10px 20px;
