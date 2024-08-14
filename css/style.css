@@ -1793,7 +1793,7 @@ section {
   color: var(--Text-Error, #f34942);
 }
 .form .input-container .placeholder span.black {
-  color: var(--Fields-Text, #2a344a);
+  color: var(--Fields-Title, #7786a5);
 }
 .form .input-container .number-input {
   width: 250px;
@@ -3329,7 +3329,7 @@ section {
   color: var(--Text-Error, #f34942);
 }
 .create-app .form .input-container .placeholder span.black {
-  color: var(--Fields-Text, #2a344a);
+  color: var(--Fields-Title, #7786a5);
 }
 .create-app .form .input-container .number-input {
   width: 200px;

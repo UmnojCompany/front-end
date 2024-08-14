@@ -1819,7 +1819,8 @@ section {
          z-index: 0;
          span {
             &.black {
-               color: var(--Fields-Text, #2a344a);
+               //color: var(--Fields-Text, #2a344a);
+               color: var(--Fields-Title, #7786a5);
             }
             color: var(--Text-Error, #f34942);
          }
@@ -3563,7 +3564,8 @@ section {
             z-index: 0;
             span {
                &.black {
-                  color: var(--Fields-Text, #2a344a);
+                  //color: var(--Fields-Text, #2a344a);
+                  color: var(--Fields-Title, #7786a5);
                }
                color: var(--Text-Error, #f34942);
             }
