@@ -3523,6 +3523,9 @@ section {
 .select-container-single .select-items div:hover {
   background: var(--Stroke-Divider_form, #F1F7FF);
 }
+.select-container-single .select-items div:first-child {
+  padding: 20px 20px 10px 20px;
+}
 .select-container-single .select-selected {
   z-index: 999;
   cursor: pointer;
