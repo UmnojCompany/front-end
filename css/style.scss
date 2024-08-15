@@ -1904,7 +1904,7 @@ section {
       }
       border-radius: var(--Corner_radius_m, 10px);
       border: 2px solid var(--Fields-Stroke, #e1edfd);
-      background: var(--Fields-Form, #fff);
+      background: #ffffff;
       outline: none; /* Убираем стандартный outline */
 
       display: flex;
@@ -3757,7 +3757,7 @@ section {
    &.pol{
       z-index: 1000;
    }
-   z-index: 999;
+   
    &.currency {
       max-width: 200px;
    }
@@ -3816,6 +3816,7 @@ section {
 
       border-radius: 0 0 10px 10px;
       z-index: 0;
+      overflow: hidden;
    }
    .select-selected {
       
@@ -3853,9 +3854,7 @@ section {
       }
    }
    position: relative;
-   //min-width: 100%;
-
-   background: var(--Fields-Form, #fff);
+   z-index: 999;
    flex: 1;
 
    &.active {
