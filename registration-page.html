@@ -19,14 +19,23 @@
             </div>
             <form class="form" action="">
               <div class="top">
-                <div class="select-container">
-                  <label for="fruit-select">Статус <span>*</span></label>
-                  <select id="fruit-select" name="fruits">
-                    <option value="">Выберите ваш статус</option>
-                    <option value="apple">Я клиент</option>
-                    <option value="banana">Я риелтор</option>
-                    <option value="cherry">Я застройщик</option>
+                <div class="select-container-single ">
+                  <div class="select-items select-hide">
+                    <div data-value="r01">Я клиент</div>
+                    <div data-value="r02">Я риелтор</div>
+                    <div data-value="r03">Я застройщик</div>
+                  </div>
+                  <div class="custom-select">
+                    <div class="select-selected"></div>
+                  </div>
+  
+                  <select class="hidden-select" required="">
+                    <option value=""></option>
+                    <option value="r01">Я клиент</option>
+                    <option value="r02">Я риелтор</option>
+                    <option value="r03">Я застройщик</option>
                   </select>
+                  <label for="">Ваш статус <span>*</span></label>
                 </div>
               </div>
               <div class="bott">
