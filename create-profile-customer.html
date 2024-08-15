@@ -80,23 +80,37 @@
                   <input type="text" name="" id="" required />
                   <div class="placeholder">Отчество</div>
                 </div>
-                <div class="select-container-single">
-                  <select id="" name="" required>
+                <div class="select-container-single pol">
+                  <div class="select-items select-hide">
+                    <div data-value="rp01">Мужской</div>
+                    <div data-value="rp02">Женский</div>
+                  </div>
+                  <div class="custom-select">
+                    <div class="select-selected"></div>
+                  </div>
+  
+                  <select class="hidden-select" required="">
                     <option value=""></option>
-                    <option value="apple">Мужской</option>
-                    <option value="banana">Женский</option>
+                    <option value="rp01">Мужской</option>
+                    <option value="rp02">Женский</option>
                   </select>
                   <label for="">Пол <span>*</span></label>
                 </div>
               </div>
               <div class="row">
-                <div class="select-container-single">
-                  <select id="" name="" required>
+                <div class="select-container-single ">
+                  <div class="select-items select-hide">
+                    <div data-value="rps01">Москва</div>
+                    <div data-value="rps02">Санкт-Петербург</div>
+                  </div>
+                  <div class="custom-select">
+                    <div class="select-selected"></div>
+                  </div>
+  
+                  <select class="hidden-select" required="">
                     <option value=""></option>
-                    <option value="apple">Москва</option>
-                    <option value="banana">Санкт-Петербург</option>
-                    <option value="banana">Тюмень</option>
-                    <option value="banana">Сургут</option>
+                    <option value="rps01">Москва</option>
+                    <option value="rps02">Санкт-Петербург</option>
                   </select>
                   <label for="">Город <span>*</span></label>
                 </div>

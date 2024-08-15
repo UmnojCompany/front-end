@@ -3489,8 +3489,31 @@ section {
   background: var(--Fields-Form, #fff);
   flex: 1;
 }
+.select-container-single.pol {
+  z-index: 1000;
+}
 .select-container-single.currency {
   max-width: 200px;
+}
+.select-container-single .custom-select {
+  position: relative;
+  border-radius: var(--Corner_radius_m, 10px);
+  border: 2px solid #4E6AF3;
+  background: var(--Fields-Form, #fff);
+  display: flex;
+  width: 100%;
+  padding: 20px 20px 12px 20px;
+  align-items: center;
+  gap: var(--Corner_radius_m, 10px);
+}
+.select-container-single .custom-select::after {
+  content: "";
+  background: url("../img/arrow-selection.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 .select-container-single .select-items {
   display: flex;
@@ -3504,6 +3527,9 @@ section {
   border: 2px solid var(--Fields-Stroke, #e1edfd);
   border-radius: 0 0 10px 10px;
   z-index: 0;
+}
+.select-container-single .select-items.select-hide + .custom-select {
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
 }
 .select-container-single .select-items div {
   padding: 10px 20px;
@@ -3523,26 +3549,6 @@ section {
   height: 24px;
   align-items: center;
   justify-content: space-between;
-}
-.select-container-single .custom-select {
-  position: relative;
-  border-radius: var(--Corner_radius_m, 10px);
-  border: 2px solid var(--Fields-Stroke, #e1edfd);
-  background: var(--Fields-Form, #fff);
-  display: flex;
-  width: 100%;
-  padding: 20px 20px 12px 20px;
-  align-items: center;
-  gap: var(--Corner_radius_m, 10px);
-}
-.select-container-single .custom-select::after {
-  content: "";
-  background: url("../img/arrow-selection.svg") no-repeat;
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
 .select-container-single .hidden-select {
   display: none;
