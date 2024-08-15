@@ -1553,7 +1553,8 @@ section {
    }
    position: relative;
    min-width: 100%;
-   padding: 30px 20px 10px 20px;
+   //padding: 30px 20px 10px 20px;
+   padding: 23px 20px 9px 20px;
    border-radius: 10px;
    border: 2px solid var(--Fields-Stroke, #e1edfd);
    background: var(--Fields-Form, #fff);
@@ -1909,7 +1910,8 @@ section {
       display: flex;
       width: 300px;
       //padding: 17px 20px;
-      padding: 24px 20px 10px 20px;
+      //padding: 24px 20px 10px 20px;
+      padding: 23px 20px 9px 20px;
       align-items: center;
       gap: var(--Corner_radius_m, 10px);
 
@@ -2063,66 +2065,46 @@ section {
    position: relative;
 }
 .select-container-single {
-   select {
-      // position: relative;
-      // z-index: 9;
-      cursor: pointer;
-      padding: 24px 20px 10px 20px;
-      border-radius: 10px;
-      border: 2px solid var(--Fields-Stroke, #e1edfd);
+   // select {
+   //    // position: relative;
+   //    // z-index: 9;
+   //    cursor: pointer;
+   //    padding: 24px 20px 10px 20px;
+   //    border-radius: 10px;
+   //    border: 2px solid var(--Fields-Stroke, #e1edfd);
 
-      background: #fff
-         url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgc3Ryb2tlPSIjNzc4NkE1IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjUgNy43NUw4LjY0NiAxMS44OTZDOC44NDEgMTIuMDkxIDkgMTIuMDkxIDkuMzUzNSAxMS44OTZMMTMuNSA3Ljc1Ii8+PC9zdmc+")
-         no-repeat right 20px top 50%;
-      background-size: 18px;
-      appearance: none; /* Убираем стандартный стиль браузера */
-      -webkit-appearance: none; /* Убираем стандартный стиль браузера для Safari */
-      -moz-appearance: none; /* Убираем стандартный стиль браузера для Firefox */
+   //    background: #fff
+   //       url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgc3Ryb2tlPSIjNzc4NkE1IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjUgNy43NUw4LjY0NiAxMS44OTZDOC44NDEgMTIuMDkxIDkgMTIuMDkxIDkuMzUzNSAxMS44OTZMMTMuNSA3Ljc1Ii8+PC9zdmc+")
+   //       no-repeat right 20px top 50%;
+   //    background-size: 18px;
+   //    appearance: none; /* Убираем стандартный стиль браузера */
+   //    -webkit-appearance: none; /* Убираем стандартный стиль браузера для Safari */
+   //    -moz-appearance: none; /* Убираем стандартный стиль браузера для Firefox */
 
-      width: 100%;
-      color: var(--Fields-Text, #2a344a);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px; /* 150% */
+   //    width: 100%;
+   //    color: var(--Fields-Text, #2a344a);
+   //    font-size: 16px;
+   //    font-style: normal;
+   //    font-weight: 400;
+   //    line-height: 24px; /* 150% */
 
-      &:focus {
-         &:hover {
-            border: 2px solid #4e6af3;
-         }
-         border: 2px solid #4e6af3;
-      }
+   //    &:focus {
+   //       &:hover {
+   //          border: 2px solid #4e6af3;
+   //       }
+   //       border: 2px solid #4e6af3;
+   //    }
 
-      &:valid + label {
-         font-size: 12px;
-         top: 5px;
-      }
-      &:focus + label {
-         font-size: 12px;
-         top: 5px;
-      }
-   }
-   label {
-      transition: 0.3s;
-      z-index: 0;
-      position: absolute;
-      left: 22px;
-      top: 20px;
-      color: var(--Fields-Title, #7786a5);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-
-      span {
-         color: var(--Text-Error, #f34942);
-      }
-   }
-   position: relative;
-   //min-width: 100%;
-
-   background: var(--Fields-Form, #fff);
-   flex: 1;
+   //    &:valid + label {
+   //       font-size: 12px;
+   //       top: 5px;
+   //    }
+   //    &:focus + label {
+   //       font-size: 12px;
+   //       top: 5px;
+   //    }
+   // }
+   
 }
 .form {
    .multi-select {
@@ -3476,7 +3458,7 @@ section {
          }
       }
       input {
-         padding: 20px 20px 9px 20px;
+         padding: 23px 20px 9px 20px;
       }
       &.start {
          gap: 10px;
@@ -3527,7 +3509,7 @@ section {
                position: absolute;
                right: 20px;
                top: auto;
-               bottom: 17px;
+               bottom: 20px;
                color: var(--Fields-Title, #7786a5);
             }
          }
@@ -3541,7 +3523,7 @@ section {
                position: absolute;
                right: 20px;
                top: auto;
-               bottom: 17px;
+               bottom: 20px;
                color: var(--Fields-Title, #7786a5);
             }
          }
@@ -3555,7 +3537,7 @@ section {
                position: absolute;
                right: 20px;
                top: auto;
-               bottom: 17px;
+               bottom: 20px;
                color: var(--Fields-Title, #7786a5);
             }
          }
@@ -3797,6 +3779,7 @@ section {
       .hided {
          display: none;
       }
+      max-width: fit-content;
       padding: 0px 30px 30px 30px;
       display: flex;
       align-items: center;
@@ -3812,6 +3795,7 @@ section {
    }
 }
 .select-container-single {
+   z-index: 999;
    &.currency {
       max-width: 200px;
    }
@@ -3846,6 +3830,7 @@ section {
       z-index: 0;
    }
    .select-selected {
+      
       z-index: 999;
       cursor: pointer;
       display: flex;
@@ -3872,7 +3857,7 @@ section {
       display: flex;
       width: 100%;
       // padding: 18px 20px;
-      padding: 20px 20px 9px 20px;
+      padding: 20px 20px 12px 20px;
       align-items: center;
       gap: var(--Corner_radius_m, 10px);
    }
@@ -3882,5 +3867,35 @@ section {
    }
    .select-hide {
       display: none;
+   }
+
+   label {
+      transition: 0.3s;
+      z-index: 0;
+      position: absolute;
+      left: 22px;
+      top: 20px;
+      color: var(--Fields-Title, #7786a5);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+
+      span {
+         color: var(--Text-Error, #f34942);
+      }
+   }
+   position: relative;
+   //min-width: 100%;
+
+   background: var(--Fields-Form, #fff);
+   flex: 1;
+
+   &.active {
+      label {
+        
+         top: 5px;
+         font-size: 12px;
+      }
    }
 }

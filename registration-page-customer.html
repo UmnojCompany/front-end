@@ -19,15 +19,26 @@
             </div>
             <form class="form" action="">
               <div class="top">
-                <div class="select-container">
-                  <label for="fruit-select">Статус <span>*</span></label>
-                  <select id="fruit-select" name="fruits">
-                    <option value="">Выберите ваш статус</option>
-                    <option value="apple">Я клиент</option>
-                    <option value="banana">Я риелтор</option>
-                    <option value="cherry">Я застройщик</option>
-                  </select>
-                </div>
+                
+                  <div class="select-container-single ">
+                    <div class="select-items select-hide">
+                      <div data-value="ruble">Рублей — ₽</div>
+                      <div data-value="dollar">Долларов — $</div>
+                      <div data-value="euro">Евро — €</div>
+                    </div>
+                    <div class="custom-select">
+                      <div class="select-selected"></div>
+                    </div>
+    
+                    <select class="hidden-select" required="">
+                      <option value=""></option>
+                      <option value="ruble">Рублей — ₽</option>
+                      <option value="dollar">Долларов — $</option>
+                      <option value="euro">Евро — €</option>
+                    </select>
+                    <label for="">Валюта</label>
+                  </div>
+                
               </div>
               <div class="bott">
                 <div class="input-container">
@@ -68,7 +79,6 @@
                 </div>
               </div>
 
-              <!-- <div class="restore-access">Восстановить доступ</div> -->
             </form>
           </div>
           <div class="button-primary next-button active">Далее</div>

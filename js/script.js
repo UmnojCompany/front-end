@@ -13,7 +13,68 @@ jQuery(document).ready(function ($) {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
+
+  const selectContainers = document.querySelectorAll(".select-container-single");
+
+selectContainers.forEach((container) => {
+    const selected = container.querySelector(".select-selected");
+    const optionsContainer = container.querySelector(".select-items");
+    const hiddenSelect = container.querySelector(".hidden-select");
+
+    // Проверяем наличие всех необходимых элементов перед добавлением событий
+    if (selected && optionsContainer && hiddenSelect) {
+        selected.addEventListener("click", (event) => {
+            event.stopPropagation();
+            closeAllSelects(selected);
+            selected.classList.toggle("active");
+            optionsContainer.classList.toggle("select-hide");
+        });
+
+        optionsContainer.querySelectorAll("div").forEach((option) => {
+            option.addEventListener("click", function () {
+                const value = this.getAttribute("data-value");
+                selected.innerHTML = this.innerHTML;
+                hiddenSelect.value = value;
+                optionsContainer.classList.add("select-hide");
+                selected.classList.remove("active");
+
+                // Добавляем класс active к контейнеру select-container-single при выборе пункта
+                container.classList.add("active");
+            });
+        });
+    }
+});
+
+document.addEventListener("click", () => {
+    closeAllSelects();
+});
+
+function closeAllSelects(except) {
+    selectContainers.forEach((container) => {
+        const selected = container.querySelector(".select-selected");
+        const optionsContainer = container.querySelector(".select-items");
+
+        if (selected && optionsContainer && selected !== except) {
+            selected.classList.remove("active");
+            optionsContainer.classList.add("select-hide");
+        }
+    });
+}
+
 
   //var tooltips = document.querySelectorAll(".tooltip");
 
