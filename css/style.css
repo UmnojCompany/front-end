@@ -1586,7 +1586,7 @@ section {
 
 .payments-balance .right .currency {
   position: absolute;
-  top: 8px;
+  top: 13px;
   right: 15px;
   color: var(--Fields-Title, #7786a5);
   /* Platform/Fields/Placeholder */
@@ -1601,11 +1601,11 @@ section {
   gap: 10px;
 }
 .payments-balance .right form .button-primary {
-  height: 40px;
-  padding: 10px 20px;
+  height: 50px;
+  padding: 15px 36px;
 }
 .payments-balance .right form input[type=number] {
-  height: 40px;
+  height: 50px;
   width: 227px;
   padding: 0px 35px 0px 15px;
 }
