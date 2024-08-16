@@ -29,7 +29,8 @@ jQuery(document).ready(function ($) {
 document.addEventListener("DOMContentLoaded", function () {
 
 
-  // Функция для открытия/закрытия опций
+  // Мультиселекты
+
   window.toggleOptions = function (element) {
     const container = element.closest(".custom-select-container");
     const options = container.querySelector(".custom-options");
@@ -210,7 +211,7 @@ function checkIfAnySelected(container) {
 
 
 
-
+// Моноселекты
 
   const selectContainers = document.querySelectorAll(".select-container-single");
 
