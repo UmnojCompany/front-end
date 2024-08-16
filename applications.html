@@ -206,7 +206,11 @@
       </div>
       <div class="right">
         <div class="buttons">
-          <a href="application-card-open.html" class="button tooltip" data-tooltip="Функционал в разработке!">
+          <a
+            href="application-card-open.html"
+            class="button tooltip"
+            data-tooltip="Функционал в разработке!"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -222,7 +226,11 @@
               />
             </svg>
           </a>
-          <a href="my-favorites.html" class="button tooltip" data-tooltip="Функционал в разработке!">
+          <a
+            href="my-favorites.html"
+            class="button tooltip"
+            data-tooltip="Функционал в разработке!"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -238,7 +246,11 @@
               />
             </svg>
           </a>
-          <a href="payment.html" class="button tooltip" data-tooltip="Функционал в разработке!">
+          <a
+            href="payment.html"
+            class="button tooltip"
+            data-tooltip="Функционал в разработке!"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -255,7 +267,11 @@
             ><span>0 €</span>
           </a>
         </div>
-        <a href="#" class="button-primary create tooltip" data-tooltip="Функционал в разработке!">
+        <a
+          href="#"
+          class="button-primary create tooltip"
+          data-tooltip="Функционал в разработке!"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -1659,7 +1675,9 @@
                         <option value="closed">Закрыто</option>
                       </select>
                     </div>
-                    <a href="application-card-open.html" class="button-secondary"
+                    <a
+                      href="application-card-open.html"
+                      class="button-secondary"
                       >Написать в чат</a
                     >
                   </div>
@@ -2073,7 +2091,9 @@
                         <option value="closed">Закрыто</option>
                       </select>
                     </div>
-                    <a href="application-card-open.html" class="button-secondary"
+                    <a
+                      href="application-card-open.html"
+                      class="button-secondary"
                       >Написать в чат</a
                     >
                   </div>
@@ -2375,10 +2395,10 @@
     </script>
     <script>
       // Функция для загрузки и отображения модальных окон
-function loadModal(modalType) {
-    fetch("modals.html")
-        .then((response) => response.text())
-        .then((html) => {
+      function loadModal(modalType) {
+        fetch("modals.html")
+          .then((response) => response.text())
+          .then((html) => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, "text/html");
             const modalContent = doc.getElementById(modalType).innerHTML;
@@ -2389,84 +2409,88 @@ function loadModal(modalType) {
 
             initializeDynamicElements(); // Инициализация после загрузки модального окна
             applyInputMask(); // Применяем маску после загрузки модального окна
-        })
-        .catch((error) => console.error('Error loading modal content:', error));
-}
+          })
+          .catch((error) =>
+            console.error("Error loading modal content:", error)
+          );
+      }
 
-// Вызов Модальных окон
-document.querySelectorAll(".trigger").forEach((item) => {
-    item.addEventListener("click", function () {
-        const modalType = this.getAttribute("data-modal-type"); // Например, 'formModal' или 'infoModal'
-        loadModal(modalType);
-    });
-});
+      // Вызов Модальных окон
+      document.querySelectorAll(".trigger").forEach((item) => {
+        item.addEventListener("click", function () {
+          const modalType = this.getAttribute("data-modal-type"); // Например, 'formModal' или 'infoModal'
+          loadModal(modalType);
+        });
+      });
 
-// Закрытие модального окна
-document.addEventListener("click", function (event) {
-    if (event.target.classList.contains("close-button")) {
-        document.getElementById("modal").style.display = "none";
-        document.body.classList.remove("hold"); // Убираем класс hold для body
-    }
-});
+      // Закрытие модального окна
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("close-button")) {
+          document.getElementById("modal").style.display = "none";
+          document.body.classList.remove("hold"); // Убираем класс hold для body
+        }
+      });
 
-// Инициализация динамических элементов после загрузки модального окна
-function initializeDynamicElements() {
-    initializeSelects(); // Инициализация селектов после загрузки модального окна
-}
+      // Инициализация динамических элементов после загрузки модального окна
+      function initializeDynamicElements() {
+        initializeSelects(); // Инициализация селектов после загрузки модального окна
+      }
 
-// Функция для инициализации селектов
-function initializeSelects() {
-    const selectContainers = document.querySelectorAll(".select-container-single");
-    selectContainers.forEach((container) => {
-        const selected = container.querySelector(".select-selected");
-        const optionsContainer = container.querySelector(".select-items");
-        const hiddenSelect = container.querySelector(".hidden-select");
+      // Функция для инициализации селектов
+      function initializeSelects() {
+        const selectContainers = document.querySelectorAll(
+          ".select-container-single"
+        );
+        selectContainers.forEach((container) => {
+          const selected = container.querySelector(".select-selected");
+          const optionsContainer = container.querySelector(".select-items");
+          const hiddenSelect = container.querySelector(".hidden-select");
 
-        if (selected && optionsContainer && hiddenSelect) {
+          if (selected && optionsContainer && hiddenSelect) {
             selected.addEventListener("click", (event) => {
-                event.stopPropagation();
-                closeAllSelects(selected);
-                selected.classList.toggle("active");
-                optionsContainer.classList.toggle("select-hide");
+              event.stopPropagation();
+              closeAllSelects(selected);
+              selected.classList.toggle("active");
+              optionsContainer.classList.toggle("select-hide");
             });
 
             optionsContainer.querySelectorAll("div").forEach((option) => {
-                option.addEventListener("click", function () {
-                    const value = this.getAttribute("data-value");
-                    selected.innerHTML = this.innerHTML;
-                    hiddenSelect.value = value;
-                    optionsContainer.classList.add("select-hide");
-                    selected.classList.remove("active");
+              option.addEventListener("click", function () {
+                const value = this.getAttribute("data-value");
+                selected.innerHTML = this.innerHTML;
+                hiddenSelect.value = value;
+                optionsContainer.classList.add("select-hide");
+                selected.classList.remove("active");
 
-                    // Добавляем класс active к контейнеру select-container-single при выборе пункта
-                    container.classList.add("active");
-                });
+                // Добавляем класс active к контейнеру select-container-single при выборе пункта
+                container.classList.add("active");
+              });
             });
-        }
-    });
-}
+          }
+        });
+      }
 
-function closeAllSelects(except) {
-    const selectContainers = document.querySelectorAll(".select-container-single");
-    selectContainers.forEach((container) => {
-        const selected = container.querySelector(".select-selected");
-        const optionsContainer = container.querySelector(".select-items");
+      function closeAllSelects(except) {
+        const selectContainers = document.querySelectorAll(
+          ".select-container-single"
+        );
+        selectContainers.forEach((container) => {
+          const selected = container.querySelector(".select-selected");
+          const optionsContainer = container.querySelector(".select-items");
 
-        if (selected && optionsContainer && selected !== except) {
+          if (selected && optionsContainer && selected !== except) {
             selected.classList.remove("active");
             optionsContainer.classList.add("select-hide");
-        }
-    });
-}
+          }
+        });
+      }
 
-// Инициализация при загрузке страницы
-document.addEventListener("DOMContentLoaded", () => {
-    document.addEventListener("click", () => {
-        closeAllSelects();
-    });
-});
-
-    
+      // Инициализация при загрузке страницы
+      document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("click", () => {
+          closeAllSelects();
+        });
+      });
     </script>
   </body>
 </html>
