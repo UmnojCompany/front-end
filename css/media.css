@@ -36,8 +36,50 @@
   .content-text h5 {
     font-size: 18px;
   }
+  .enter-page .container {
+    padding: 0px 0px 0px 0px;
+    margin: 10px;
+  }
+  .registration-page p a {
+    display: block;
+  }
+  .enter-page .form {
+    padding: 30px;
+  }
 }
 @media (max-width: 767px) {
+  .enter-page .container {
+    margin: 0px 0px 0px 0px;
+  }
+  .registration-page p {
+    text-align: left;
+    max-width: 320px;
+    margin: 20px auto 0 auto;
+  }
+  .registration-page p a {
+    display: inline;
+  }
+  .enter-page .button-primary {
+    max-width: 320px;
+    margin: 0px auto;
+  }
+  .enter-page .form {
+    padding: 20px;
+  }
+  .enter-page .subtitle, .modal .subtitle {
+    line-height: 140%;
+    padding: 5px 20px;
+  }
+  .enter-page .wrapper {
+    padding: 20px 0px 0px 0px;
+  }
+  .enter-page h3, .enter-page h4, .modal h3, .modal h4 {
+    padding: 0px 20px;
+    margin: 0px 0px 16px 0px;
+  }
+  .registration-page .bott {
+    flex-direction: column;
+  }
   .content-text {
     max-height: 84vh;
   }

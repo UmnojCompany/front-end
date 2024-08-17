@@ -1470,7 +1470,7 @@ section {
 .registration-page {
   padding: 0px 0px 0px 0px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .registration-page p {
   color: var(--Text-Grey, #7786a5);
@@ -1481,6 +1481,7 @@ section {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
   text-align: center;
+  margin: 30px 0px 0px 0px;
 }
 .registration-page p a {
   color: var(--Main-Blue, #4e6af3);
@@ -1491,7 +1492,6 @@ section {
   font-weight: 400;
   line-height: 16px; /* 114.286% */
   display: inline-block;
-  margin: 30px 0px 0px 0px;
 }
 .registration-page .top {
   min-width: 100%;
