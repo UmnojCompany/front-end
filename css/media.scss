@@ -13,6 +13,7 @@
     }
 }
 @media (max-width: 940px) {
+
     .header .right .avatar img {
         width: 32px;
         height: 32px;
@@ -46,11 +47,25 @@
     .registration-page p a{
         display: block;
     }
-    .enter-page .form{
-        padding: 30px;
+
+    .enter-page .confirm h3, .modal .confirm h3{
+        margin: 0px 0px 20px 0px;
     }
+    
 }
 @media (max-width: 767px) {
+    .enter-page .confirm h3, .modal .confirm h3{
+        margin: 0px 0px 16px 0px;
+    }
+    .enter-page .form input, .modal .form input{
+        //max-width: 370px;
+        //min-width: 320px;
+        width: auto;
+    }
+    .enter-page .confirm .form{
+        padding: 40px 20px ;
+       
+    }
     .enter-page .container{
         margin: 0px 0px 0px 0px;
     }
@@ -69,7 +84,7 @@
         }
     }
     .enter-page .form{
-        padding: 20px;
+        padding: 40px 20px ;
     }
     .enter-page .subtitle, .modal .subtitle{
         line-height: 140%;
@@ -142,8 +157,8 @@
     .modal {
         padding: 0px 0px;
     }
-}
-@media (max-width: 640px) {
+
+
     .payments-balance .right form input[type="submit"] {
         min-width: 100%;
     }

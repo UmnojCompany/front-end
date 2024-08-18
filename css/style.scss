@@ -133,7 +133,7 @@ section {
    border-radius: var(--Corner_radius_m, 10px);
    background: var(--Button-Primary-BG-Default, #4e6af3);
    display: flex;
-   padding: 15px 36px;
+   padding: 13px 36px;
    justify-content: center;
    align-items: center;
    gap: var(--Corner_radius_m, 10px);
@@ -1159,7 +1159,7 @@ section {
       justify-content: center;
       gap: 10px;
       input {
-         padding: 18px 20px;
+         padding: 16px 20px;
          max-width: 60px;
          color: var(--Text-Black, #2a344a);
          text-align: center;
@@ -1364,6 +1364,15 @@ section {
    }
 }
 .enter-page {
+   .form{
+      padding: 50px 30px 90px 30px;
+   }
+   .confirm{
+      .form{
+         gap: 40px;
+         padding: 50px 0px ;
+      }
+   }
    position: absolute;
    .restore-access {
       &.hide {
@@ -1386,7 +1395,7 @@ section {
    }
    background: none;
    display: flex;
-   align-items: center;
+   align-items: flex-start;
    .container {
       padding: 100px 0px;
       flex: 1;
