@@ -13,6 +13,18 @@
   }
 }
 @media (max-width: 940px) {
+  .page-head ul li, .head-profile ul li {
+    line-height: 20px;
+  }
+  .page-head h3,
+  .head-profile h3 {
+    margin: 0px 0px 20px 0px;
+  }
+  .header {
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+  }
   .header .right .avatar img {
     width: 32px;
     height: 32px;
@@ -43,15 +55,21 @@
   .registration-page p a {
     display: block;
   }
-  .enter-page .confirm h3, .modal .confirm h3 {
+  .enter-page .confirm h3,
+  .modal .confirm h3 {
     margin: 0px 0px 20px 0px;
+  }
+  main {
+    padding: 60px 0px 70px 0px;
   }
 }
 @media (max-width: 767px) {
-  .enter-page .confirm h3, .modal .confirm h3 {
+  .enter-page .confirm h3,
+  .modal .confirm h3 {
     margin: 0px 0px 16px 0px;
   }
-  .enter-page .form input, .modal .form input {
+  .enter-page .form input,
+  .modal .form input {
     width: auto;
   }
   .enter-page .confirm .form {
@@ -75,14 +93,18 @@
   .enter-page .form {
     padding: 40px 20px;
   }
-  .enter-page .subtitle, .modal .subtitle {
+  .enter-page .subtitle,
+  .modal .subtitle {
     line-height: 140%;
     padding: 5px 20px;
   }
   .enter-page .wrapper {
     padding: 20px 0px 0px 0px;
   }
-  .enter-page h3, .enter-page h4, .modal h3, .modal h4 {
+  .enter-page h3,
+  .enter-page h4,
+  .modal h3,
+  .modal h4 {
     padding: 0px 20px;
     margin: 0px 0px 16px 0px;
   }
