@@ -1,18 +1,20 @@
 @media (max-width: 1070px) {
-    .header .right .create {
-        display: none;
-    }
+  
     .header .site-logo-dt {
         display: none;
     }
     .header .site-logo-mob {
         display: block;
     }
+   
+}
+@media (max-width: 960px) {
+    .header .right .create {
+        display: none;
+    }
     .header .nav-dt {
         display: none;
     }
-}
-@media (max-width: 960px) {
     .payments-balance .wrapper{
         flex-direction: column;gap: 20px;
         align-items: flex-start;
@@ -69,6 +71,17 @@
     }
     main {
         padding: 60px 0px 70px 0px;
+    }
+    .footer {
+        position: relative;
+        margin: 60px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+    .footer .wrapper.dtop {
+        display: none;
+    }
+    .footer .wrapp.mob {
+        display: block;
     }
 }
 @media (max-width: 767px) {
@@ -141,17 +154,7 @@
         gap: 20px;
         align-items: flex-start;
     }
-    .footer {
-        position: relative;
-        margin: 90px 0px 0px 0px;
-        padding: 0px 0px 0px 0px;
-    }
-    .footer .wrapper.dtop {
-        display: none;
-    }
-    .footer .wrapp.mob {
-        display: block;
-    }
+    
     h4 {
         font-size: 18px;
     }
@@ -189,7 +192,7 @@
     }
     .payments-balance .right {
         .input-container {
-            min-width: 100%;
+            min-width: 320px;
         }
         min-width: 100%;
         form {
@@ -198,7 +201,9 @@
             width: 100%;
         }
     }
-
+    .payments-balance .right form .button-primary{
+        min-width: 320px;
+    }
     .footer .wrapp.mob .left,
     .footer .wrapp.mob .right {
         gap: 0px;
@@ -261,5 +266,26 @@
     }
     h3 {
         font-size: 22px;
+    }
+    .page-head .wrapper, .head-profile .wrapper{
+        padding: 20px 20px 20px 20px;
+    }
+    .payments-balance .wrapper{
+        padding: 20px 20px 20px 20px;
+    }
+    .payments-story .wrapper{
+        padding: 20px 0px 0px 0px;
+    }
+    .payments-story h4{
+        padding: 0px 20px 20px 20px;
+    }
+    .payments-story .list-header{
+        padding: 15px 20px ;
+    }
+    .payments-story .date{
+        padding: 5px 20px ;
+    }
+    .payments-story li{
+        margin: 0px 20px ;
     }
 }
