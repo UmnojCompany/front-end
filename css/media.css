@@ -12,7 +12,12 @@
     display: none;
   }
 }
-@media (max-width: 940px) {
+@media (max-width: 960px) {
+  .payments-balance .wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
   .page-head ul li, .head-profile ul li {
     line-height: 20px;
   }
