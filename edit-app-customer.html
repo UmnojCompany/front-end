@@ -1336,9 +1336,9 @@
                     </div>
                     <div class="select-container-single currency">
                       <div class="select-items select-hide">
-                        <div data-value="ruble">₽</div>
-                        <div data-value="dollar">$</div>
-                        <div data-value="euro">€</div>
+                        <div data-value="ruble">Рублей — ₽</div>
+                        <div data-value="dollar">Долларов — $</div>
+                        <div data-value="euro">Евро — €</div>
                       </div>
                       <div class="custom-select">
                         <div class="select-selected"></div>
@@ -1346,9 +1346,9 @@
 
                       <select class="hidden-select" required="">
                         <option value=""></option>
-                        <option value="ruble">₽</option>
-                        <option value="dollar">$</option>
-                        <option value="euro">€</option>
+                        <option value="ruble">Рублей — ₽</option>
+                        <option value="dollar">Долларов — $</option>
+                        <option value="euro">Евро — €</option>
                       </select>
                       <label for="">Валюта</label>
                     </div>
@@ -1539,9 +1539,9 @@
                     </div>
                     <div class="select-container-single currency">
                       <div class="select-items select-hide">
-                        <div data-value="ruble">₽</div>
-                        <div data-value="dollar">$</div>
-                        <div data-value="euro">€</div>
+                        <div data-value="ruble">Рублей — ₽</div>
+                        <div data-value="dollar">Долларов — $</div>
+                        <div data-value="euro">Евро — €</div>
                       </div>
                       <div class="custom-select">
                         <div class="select-selected"></div>
@@ -1549,9 +1549,9 @@
 
                       <select class="hidden-select" required="">
                         <option value=""></option>
-                        <option value="ruble">₽</option>
-                        <option value="dollar">$</option>
-                        <option value="euro">€</option>
+                        <option value="ruble">Рублей — ₽</option>
+                        <option value="dollar">Долларов — $</option>
+                        <option value="euro">Евро — €</option>
                       </select>
                       <label for="">Валюта</label>
                     </div>
@@ -1787,9 +1787,9 @@
                     </div>
                     <div class="select-container-single currency">
                       <div class="select-items select-hide">
-                        <div data-value="ruble">₽</div>
-                        <div data-value="dollar">$</div>
-                        <div data-value="euro">€</div>
+                        <div data-value="ruble">Рублей — ₽</div>
+                        <div data-value="dollar">Долларов — $</div>
+                        <div data-value="euro">Евро — €</div>
                       </div>
                       <div class="custom-select">
                         <div class="select-selected"></div>
@@ -1797,9 +1797,9 @@
 
                       <select class="hidden-select" required="">
                         <option value=""></option>
-                        <option value="ruble">₽</option>
-                        <option value="dollar">$</option>
-                        <option value="euro">€</option>
+                        <option value="ruble">Рублей — ₽</option>
+                        <option value="dollar">Долларов — $</option>
+                        <option value="euro">Евро — €</option>
                       </select>
                       <label for="">Валюта</label>
                     </div>
@@ -1971,178 +1971,6 @@
         charCounter.textContent = `${currentLength}/500`;
       });
     </script>
-    <script>
-      // прогресс бар
-      let progress = 0;
-
-      function move() {
-        if (progress < 100) {
-          progress += 10;
-          const progressBar = document.getElementById("progressBar");
-          progressBar.style.width = progress + "%";
-        }
-      }
-    </script>
-    <script>
-      // кнопки Далее
-      document.addEventListener("DOMContentLoaded", () => {
-        const buttons = document.querySelectorAll(".button-primary");
-        const lastButton = buttons[buttons.length - 1];
-        const createProfileButton = document.querySelector(
-          ".button-primary.hide"
-        );
-        let progress = 0;
-        const progressBar = document.getElementById("progressBar");
-
-        buttons.forEach((button, index) => {
-          button.addEventListener("click", () => {
-            // Скрыть текущую кнопку
-            button.classList.add("hide");
-
-            // Показать следующий блок wrapper
-            const nextWrapper = button.nextElementSibling;
-            if (nextWrapper && nextWrapper.classList.contains("wrapper")) {
-              nextWrapper.classList.remove("hide");
-            }
-
-            // Показать следующую кнопку или кнопку "Создать профиль"
-            if (index < buttons.length - 2) {
-              buttons[index + 1].classList.remove("inactive");
-            } else if (index === buttons.length - 2) {
-              // Последняя кнопка "Далее" была нажата
-              createProfileButton.classList.remove("hide");
-            }
-
-            // Обновление прогрессбара
-            if (progress < 100) {
-              progress += 20; // Увеличиваем прогресс на 20% за каждую кнопку
-              progressBar.style.width = progress + "%";
-            }
-          });
-        });
-      });
-    </script>
-    <script>
-      document.querySelectorAll(".upload-container").forEach((container) => {
-        const fileInput = container.querySelector('input[type="file"]');
-        const preview = container.querySelector(".preview");
-        const multiple = container.getAttribute("data-multiple") === "true";
-
-        container.addEventListener("click", () => {
-          fileInput.click();
-        });
-
-        container.addEventListener("dragover", (event) => {
-          event.preventDefault();
-          container.classList.add("dragover");
-        });
-
-        container.addEventListener("dragleave", () => {
-          container.classList.remove("dragover");
-        });
-
-        container.addEventListener("drop", (event) => {
-          event.preventDefault();
-          container.classList.remove("dragover");
-
-          const files = event.dataTransfer.files;
-          if (files.length) {
-            handleFiles(files, preview, multiple, container);
-          }
-        });
-
-        fileInput.addEventListener("change", (event) => {
-          handleFiles(event.target.files, preview, multiple, container);
-        });
-      });
-
-      function handleFiles(files, preview, multiple, container) {
-        if (!multiple) {
-          preview.innerHTML = "";
-        }
-
-        Array.from(files).forEach((file) => {
-          if (file && file.type.startsWith("image/")) {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-              // Создаем wrapper для каждого изображения
-              const previewWrapper = document.createElement("div");
-              previewWrapper.classList.add("preview-wrapper");
-
-              const img = document.createElement("img");
-              img.src = event.target.result;
-
-              // Создаем кнопку для удаления
-              const removeBtn = document.createElement("button");
-              removeBtn.classList.add("remove-btn");
-              //removeBtn.textContent = "×";
-              removeBtn.addEventListener("click", (e) => {
-                e.stopPropagation(); // Останавливаем всплытие события
-                e.preventDefault(); // Останавливаем действие по умолчанию
-                preview.removeChild(previewWrapper);
-              });
-
-              // Добавляем изображение и кнопку в preview-wrapper
-              previewWrapper.appendChild(img);
-              previewWrapper.appendChild(removeBtn);
-
-              // Добавляем preview-wrapper в общий контейнер preview
-              preview.appendChild(previewWrapper);
-
-              container.classList.add("full");
-            };
-            reader.readAsDataURL(file);
-          } else {
-            alert("Please upload an image file.");
-          }
-        });
-      }
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const maxForms = 3;
-        const videoFormsContainer = document.getElementById(
-          "videoFormsContainer"
-        );
-        const addVideoBtn = document.getElementById("addVideoBtn");
-
-        addVideoBtn.addEventListener("click", () => {
-          if (videoFormsContainer.children.length < maxForms) {
-            const videoForm = document.createElement("div");
-            videoForm.classList.add("video-form");
-
-            const videoNameInput = document.createElement("input");
-            videoNameInput.type = "text";
-            videoNameInput.placeholder = "Название видео";
-
-            const videoLinkInput = document.createElement("input");
-            videoLinkInput.type = "text";
-            videoLinkInput.placeholder = "Ссылка на видео";
-
-            const removeBtn = document.createElement("button");
-            removeBtn.classList.add("remove-btn");
-            removeBtn.textContent = "×";
-            removeBtn.addEventListener("click", () => {
-              videoFormsContainer.removeChild(videoForm);
-              if (videoFormsContainer.children.length < maxForms) {
-                addVideoBtn.classList.remove("off"); // Убираем класс off, если форма удалена и лимит не достигнут
-              }
-            });
-
-            videoForm.appendChild(videoNameInput);
-            videoForm.appendChild(videoLinkInput);
-            videoForm.appendChild(removeBtn);
-
-            videoFormsContainer.appendChild(videoForm);
-
-            if (videoFormsContainer.children.length === maxForms) {
-              addVideoBtn.classList.add("off"); // Добавляем класс off, если достигнут лимит форм
-            }
-          }
-        });
-      });
-    </script>
-
 
     <script>
       // чек-листы одиночный выбор
@@ -2248,107 +2076,6 @@
           applyStyles(); // Начальная проверка
         });
       });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const categories = document.querySelectorAll(".cat");
-
-        categories.forEach(function (category) {
-          category.addEventListener("click", function () {
-            // Удаляем класс active у всех категорий и pcat
-            document.querySelectorAll(".cat, .pcat").forEach(function (el) {
-              el.classList.remove("active");
-            });
-
-            // Добавляем класс active на нажатую категорию
-            category.classList.add("active");
-
-            // Добавляем класс active на соответствующие pcat элементы
-            const pcatClass = `.pcat-${category.classList[1].split("-")[1]}`;
-            document.querySelectorAll(pcatClass).forEach(function (pcat) {
-              pcat.classList.add("active");
-            });
-          });
-        });
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const selectContainers = document.querySelectorAll(
-          ".select-container-single"
-        );
-
-        selectContainers.forEach((container) => {
-          const selected = container.querySelector(".select-selected");
-          const optionsContainer = container.querySelector(".select-items");
-          const hiddenSelect = container.querySelector(".hidden-select");
-
-          // Проверяем наличие всех необходимых элементов перед добавлением событий
-          if (selected && optionsContainer && hiddenSelect) {
-            selected.addEventListener("click", (event) => {
-              event.stopPropagation();
-              closeAllSelects(selected);
-              selected.classList.toggle("active");
-              optionsContainer.classList.toggle("select-hide");
-            });
-
-            optionsContainer.querySelectorAll("div").forEach((option) => {
-              option.addEventListener("click", function () {
-                const value = this.getAttribute("data-value");
-                selected.innerHTML = this.innerHTML;
-                hiddenSelect.value = value;
-                optionsContainer.classList.add("select-hide");
-                selected.classList.remove("active");
-              });
-            });
-          }
-        });
-
-        document.addEventListener("click", () => {
-          closeAllSelects();
-        });
-
-        function closeAllSelects(except) {
-          selectContainers.forEach((container) => {
-            const selected = container.querySelector(".select-selected");
-            const optionsContainer = container.querySelector(".select-items");
-
-            if (selected && optionsContainer && selected !== except) {
-              selected.classList.remove("active");
-              optionsContainer.classList.add("select-hide");
-            }
-          });
-        }
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Находим все элементы с классом .show-more
-        const showMoreBlocks = document.querySelectorAll(".show-more");
-    
-        showMoreBlocks.forEach((block) => {
-            block.addEventListener("click", () => {
-                // Находим родительский элемент с классом .wrapper
-                const parentWrapper = block.closest(".wrapper");
-    
-                if (parentWrapper) {
-                    // Находим элементы внутри текущего .wrapper
-                    const columnHide = parentWrapper.querySelector(".column-hide");
-    
-                    // Переключаем класс active у блока .show-more
-                    block.classList.toggle("active");
-    
-                    // Переключаем класс active у блока .column-hide
-                    if (columnHide) {
-                        columnHide.classList.toggle("active");
-                    }
-                }
-            });
-        });
-    });
-    
     </script>
   </body>
 </html>
