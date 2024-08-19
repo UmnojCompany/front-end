@@ -1955,6 +1955,11 @@ section {
       gap: 10px;
       flex-wrap: wrap;
       li {
+         transition: 0.3s;
+         &:hover {
+            color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+
+         }
          cursor: pointer;
          &.active {
             background: var(--Request-BG-Active, #4e6af3);
@@ -1980,6 +1985,11 @@ section {
       gap: 10px;
       flex-wrap: wrap;
       li {
+         transition: 0.3s;
+         &:hover {
+            color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+
+         }
          &.active {
             background: var(--Request-BG-Active, #4e6af3);
             color: var(--Request-Text-Active, #fff);

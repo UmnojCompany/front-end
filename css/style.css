@@ -1894,6 +1894,7 @@ section {
   flex-wrap: wrap;
 }
 .form .chek-lists-single li {
+  transition: 0.3s;
   cursor: pointer;
   border-radius: 8px;
   background: var(--Request-BG-Default, #f1f7ff);
@@ -1906,6 +1907,9 @@ section {
   font-weight: 400;
   line-height: 20px; /* 125% */
 }
+.form .chek-lists-single li:hover {
+  color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+}
 .form .chek-lists-single li.active {
   background: var(--Request-BG-Active, #4e6af3);
   color: var(--Request-Text-Active, #fff);
@@ -1917,6 +1921,7 @@ section {
   flex-wrap: wrap;
 }
 .form .chek-lists li {
+  transition: 0.3s;
   cursor: pointer;
   border-radius: 30px;
   background: var(--Request-BG-Default, #f1f7ff);
@@ -1928,6 +1933,9 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+}
+.form .chek-lists li:hover {
+  color: var(--Button-Secondary-Text-Hover, #4E6AF3);
 }
 .form .chek-lists li.active {
   background: var(--Request-BG-Active, #4e6af3);
