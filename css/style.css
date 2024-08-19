@@ -1496,9 +1496,24 @@ section {
 }
 
 .content-text {
+  /* Стилизация самого скроллбара */
+  /* Стилизация дорожки (трек) */
+  /* Стилизация ползунка (thumb) */
+  /* Стилизация при наведении на ползунок */
   max-height: 69vh;
   overflow-y: scroll;
   padding: 30px 30px 30px 30px;
+}
+.content-text::-webkit-scrollbar {
+  width: 11px; /* Ширина скроллбара */
+}
+.content-text::-webkit-scrollbar-thumb {
+  background: var(--Stroke-Light-Grey, #D4DDEE);
+  border-radius: 11px; /* Радиус закругления ползунка */
+  border: 3px solid #fff; /* Граница ползунка */
+}
+.content-text::-webkit-scrollbar-thumb:hover {
+  background: var(--Stroke-Light-Grey, #D4DDEE);
 }
 .content-text h5 {
   padding: 40px 30px 20px 0px;

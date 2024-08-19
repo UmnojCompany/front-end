@@ -1283,11 +1283,10 @@ section {
       border-radius: var(--Corner_radius_m, 10px);
       background: var(--BG-White, #fff);
    }
-   
+
    &.test {
       position: absolute;
    }
-   
 
    .form {
       padding: 50px 30px 90px 30px;
@@ -1337,9 +1336,9 @@ section {
    display: flex;
    align-items: flex-start;
 }
-.accept{
+.accept {
    &.hide {
-       display: none;
+      display: none;
    }
 }
 .modal {
@@ -1537,6 +1536,28 @@ section {
    z-index: 777;
 }
 .content-text {
+   /* Стилизация самого скроллбара */
+   &::-webkit-scrollbar {
+      width: 11px; /* Ширина скроллбара */
+   }
+
+   /* Стилизация дорожки (трек) */
+   &::-webkit-scrollbar-track {
+     // background: #f1f1f1; /* Цвет фона дорожки */
+      //border-radius: 10px; /* Радиус закругления */
+   }
+
+   /* Стилизация ползунка (thumb) */
+   &::-webkit-scrollbar-thumb {
+      background: var(--Stroke-Light-Grey, #D4DDEE);
+      border-radius: 11px; /* Радиус закругления ползунка */
+      border: 3px solid #fff; /* Граница ползунка */
+   }
+
+   /* Стилизация при наведении на ползунок */
+   &::-webkit-scrollbar-thumb:hover {
+      background: var(--Stroke-Light-Grey, #D4DDEE);
+   }
    h5 {
       padding: 40px 30px 20px 0px;
    }
