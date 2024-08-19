@@ -2289,6 +2289,10 @@ section {
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      padding: 21px 0px ;
+      h3{
+         margin: 0px 0px 0px 0px;
+      }
    }
    .cancel {
       position: absolute;

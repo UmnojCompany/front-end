@@ -2173,6 +2173,11 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  padding: 21px 0px;
+}
+.create-app .head h3,
+.create-profile-realtor .head h3 {
+  margin: 0px 0px 0px 0px;
 }
 .create-app .cancel,
 .create-profile-realtor .cancel {

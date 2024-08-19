@@ -261,15 +261,15 @@ function closeAllSelects(except) {
 }
 
 
-  //var tooltips = document.querySelectorAll(".tooltip");
+  var tooltips = document.querySelectorAll(".tooltip");
 
-  // tooltips.forEach(function (tooltip) {
-  //   var text = tooltip.getAttribute("data-tooltip");
-  //   var tooltipText = document.createElement("div");
-  //   tooltipText.className = "tooltip-text";
-  //   tooltipText.innerText = text;
-  //   tooltip.appendChild(tooltipText);
-  // });
+  tooltips.forEach(function (tooltip) {
+    var text = tooltip.getAttribute("data-tooltip");
+    var tooltipText = document.createElement("div");
+    tooltipText.className = "tooltip-text";
+    tooltipText.innerText = text;
+    tooltip.appendChild(tooltipText);
+  });
 
   // чек-листы одиночный выбор
 
