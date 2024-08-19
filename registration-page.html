@@ -137,7 +137,7 @@
             </form>
           </div>
           <a href="create-profile-realtor.html" class="button-primary enter-button">Зарегистрироваться</a>
-          <p>
+          <p class="accept">
             Нажимая на кнопку «Далее», вы соглашаетесь с обработкой
             <a class="politic trigger" data-modal-type="politikaModal"
               >персональных данных и политикой конфиденциальности</a
@@ -190,30 +190,37 @@
       document.body.addEventListener("click", function (event) {
         if (event.target.classList.contains("next-button")) {
           event.target.classList.add("hide");
-
+    
           var modalContent = event.target.closest(".enter-page");
-
+    
           var confirmElement = modalContent.querySelector(".confirm");
           if (confirmElement) {
             confirmElement.classList.add("active");
           }
-
+    
           var phoneElement = modalContent.querySelector(".phone");
           if (phoneElement) {
             phoneElement.classList.remove("blocked");
           }
-
+    
           var blockedTextElement = modalContent.querySelector(".next-button");
           if (blockedTextElement) {
             blockedTextElement.classList.add("hide");
           }
-
+    
           var enterButtonElement = modalContent.querySelector(".enter-button");
           if (enterButtonElement) {
             enterButtonElement.classList.add("active");
           }
+    
+          // Добавляем класс hide блоку с классом accept
+          var acceptElement = modalContent.querySelector(".accept");
+          if (acceptElement) {
+            acceptElement.classList.add("hide");
+          }
         }
       });
     </script>
+    
   </body>
 </html>

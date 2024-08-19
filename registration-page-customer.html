@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Page Cuctomer</title>
+    <title>Registration Page</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
   </head>
@@ -15,30 +15,28 @@
             <h3>Пройдите простую регистрацию</h3>
             <div class="subtitle">
               Укажите ваши данные для регистрации или
-              <a href="my-profile-customer.html">войдите в свой профиль</a>
+              <a href="my-profile.html">войдите в свой профиль</a>
             </div>
             <form class="form" action="">
               <div class="top">
-                
-                  <div class="select-container-single ">
-                    <div class="select-items select-hide">
-                      <div data-value="r01">Я клиент</div>
-                      <div data-value="r02">Я риелтор</div>
-                      <div data-value="r03">Я застройщик</div>
-                    </div>
-                    <div class="custom-select">
-                      <div class="select-selected"></div>
-                    </div>
-    
-                    <select class="hidden-select" required="">
-                      <option value=""></option>
-                      <option value="r01">Я клиент</option>
-                      <option value="r02">Я риелтор</option>
-                      <option value="r03">Я застройщик</option>
-                    </select>
-                    <label for="">Ваш статус <span>*</span></label>
+                <div class="select-container-single ">
+                  <div class="select-items select-hide">
+                    <div data-value="r01">Я клиент</div>
+                    <div data-value="r02">Я риелтор</div>
+                    <div data-value="r03">Я застройщик</div>
                   </div>
-                
+                  <div class="custom-select">
+                    <div class="select-selected"></div>
+                  </div>
+  
+                  <select class="hidden-select" required="">
+                    <option value=""></option>
+                    <option value="r01">Я клиент</option>
+                    <option value="r02">Я риелтор</option>
+                    <option value="r03">Я застройщик</option>
+                  </select>
+                  <label for="">Ваш статус <span>*</span></label>
+                </div>
               </div>
               <div class="bott">
                 <div class="input-container">
@@ -48,7 +46,7 @@
                 <div class="input-container">
                   <div class="flags">
                     <ul>
-                      <li><img src="img/Flag-tr.svg" alt="" /></li>
+                      <li><img src="img/Flag-rus.svg" alt="" /></li>
                       <li></li>
                     </ul>
                     <div class="drop">
@@ -73,12 +71,14 @@
                     type="tel"
                     name=""
                     id=""
-                    placeholder="+7 (919) 777–77–77"
+                    placeholder="Номер телефона *"
                   />
+                 
                   <span class="blocked-text hide">Профиль заблокирован</span>
                 </div>
               </div>
 
+              <!-- <div class="restore-access">Восстановить доступ</div> -->
             </form>
           </div>
           <div class="button-primary next-button active">Далее</div>
@@ -136,7 +136,7 @@
               </div>
             </form>
           </div>
-          <a href="create-profile-customer.html" class="button-primary enter-button">Зарегистрироваться</a>
+          <a href="create-profile-realtor.html" class="button-primary enter-button">Зарегистрироваться</a>
           <p>
             Нажимая на кнопку «Далее», вы соглашаетесь с обработкой
             <a class="politic trigger" data-modal-type="politikaModal"
