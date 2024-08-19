@@ -1479,6 +1479,9 @@ section {
   display: flex;
   align-items: flex-start;
 }
+.registration-page .form {
+  padding: 30px;
+}
 .registration-page p {
   color: var(--Text-Grey, #7786a5);
   /* Platform/Desktop/Body-2 R */
