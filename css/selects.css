@@ -22,6 +22,9 @@
   position: relative;
   z-index: 1;
 }
+.custom-select-container .select-wrapper:hover {
+  border: 2px solid var(--Fields-Stroke-Hover, #CDDEF4);
+}
 .custom-select-container.active {
   z-index: 9999;
 }

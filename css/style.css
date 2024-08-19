@@ -3538,15 +3538,19 @@ section {
 .select-container-single .select-items.select-hide + .custom-select {
   border: 2px solid var(--Fields-Stroke, #e1edfd);
 }
+.select-container-single .select-items.select-hide + .custom-select:hover {
+  border: 2px solid var(--Fields-Stroke-Hover, #CDDEF4);
+}
 .select-container-single .select-items div {
-  padding: 10px 20px;
+  line-height: 20px;
+  padding: 12px 20px;
   cursor: pointer;
 }
 .select-container-single .select-items div:hover {
   background: var(--Stroke-Divider_form, #f1f7ff);
 }
 .select-container-single .select-items div:first-child {
-  padding: 20px 20px 10px 20px;
+  padding: 22px 20px 12px 20px;
 }
 .select-container-single .select-selected {
   z-index: 999;
@@ -3563,6 +3567,10 @@ section {
 .select-container-single .select-hide {
   display: none;
 }
+.select-container-single.active label {
+  top: 5px;
+  font-size: 12px;
+}
 .select-container-single label {
   transition: 0.3s;
   z-index: 0;
@@ -3577,8 +3585,4 @@ section {
 }
 .select-container-single label span {
   color: var(--Text-Error, #f34942);
-}
-.select-container-single.active label {
-  top: 5px;
-  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */
