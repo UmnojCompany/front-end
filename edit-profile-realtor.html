@@ -39,7 +39,7 @@
               разрешение 600 x 600px. Доступный формат jpg / png
             </div>
             <form class="form" action="">
-              <div class="upload-container" data-multiple="false">
+              <div class="upload-container mono-file" data-multiple="false">
                 <div class="preview"></div>
                 <div class="up-info">
                   <div class="file-icon">
@@ -83,7 +83,7 @@
                   <div class="custom-select">
                     <div class="select-selected"></div>
                   </div>
-  
+
                   <select class="hidden-select" required="">
                     <option value=""></option>
                     <option value="rp01">Мужской</option>
@@ -93,7 +93,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="select-container-single ">
+                <div class="select-container-single">
                   <div class="select-items select-hide">
                     <div data-value="rps01">Москва</div>
                     <div data-value="rps02">Санкт-Петербург</div>
@@ -101,7 +101,7 @@
                   <div class="custom-select">
                     <div class="select-selected"></div>
                   </div>
-  
+
                   <select class="hidden-select" required="">
                     <option value=""></option>
                     <option value="rps01">Москва</option>
@@ -115,7 +115,8 @@
           <div class="wrapper">
             <h3>Контакты <span>*</span></h3>
             <div class="subtitle">
-              Все данные, кроме эл. почты, будут видны пользователям, которые откроют вам свои контакты
+              Все данные, кроме эл. почты, будут видны пользователям, которые
+              откроют вам свои контакты
             </div>
             <form class="gap form" action="">
               <div class="row">
@@ -252,7 +253,7 @@
                   </div>
                   <input
                     type="text"
-                    class="search-input"
+                    class="search-input hide"
                     placeholder=""
                     oninput="filterOptions(this)"
                   />
@@ -316,7 +317,7 @@
                   </div>
                   <input
                     type="text"
-                    class="search-input"
+                    class="search-input hide"
                     placeholder=""
                     oninput="filterOptions(this)"
                   />
@@ -381,7 +382,7 @@
                   </div>
                   <input
                     type="text"
-                    class="search-input"
+                    class="search-input hide"
                     placeholder=""
                     oninput="filterOptions(this)"
                   />
@@ -485,7 +486,9 @@
             </form>
           </div>
 
-          <a href="my-profile.html" class="button-primary">Сохранить изменения</a>
+          <a href="my-profile.html" class="button-primary"
+            >Сохранить изменения</a
+          >
         </div>
       </section>
     </main>
@@ -540,6 +543,51 @@
       });
     </script>
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const maxForms = 10;
+        const videoFormsContainer = document.getElementById(
+          "videoFormsContainer"
+        );
+        const addVideoBtn = document.getElementById("addVideoBtn");
+
+        addVideoBtn.addEventListener("click", () => {
+          if (videoFormsContainer.children.length < maxForms) {
+            const videoForm = document.createElement("div");
+            videoForm.classList.add("video-form");
+
+            const videoNameInput = document.createElement("input");
+            videoNameInput.type = "text";
+            videoNameInput.placeholder = "Название видео";
+
+            const videoLinkInput = document.createElement("input");
+            videoLinkInput.type = "text";
+            videoLinkInput.placeholder = "Ссылка на видео";
+
+            const removeBtn = document.createElement("button");
+            removeBtn.classList.add("remove-btn");
+            removeBtn.textContent = "×";
+            removeBtn.addEventListener("click", () => {
+              videoFormsContainer.removeChild(videoForm);
+              if (videoFormsContainer.children.length < maxForms) {
+                addVideoBtn.classList.remove("off"); // Убираем класс off, если форма удалена и лимит не достигнут
+              }
+            });
+
+            videoForm.appendChild(videoNameInput);
+            videoForm.appendChild(videoLinkInput);
+            videoForm.appendChild(removeBtn);
+
+            videoFormsContainer.appendChild(videoForm);
+
+            if (videoFormsContainer.children.length === maxForms) {
+              addVideoBtn.classList.add("off"); // Добавляем класс off, если достигнут лимит форм
+            }
+          }
+        });
+      });
+    </script>
+
+    <script>
       document.querySelectorAll(".upload-container").forEach((container) => {
         const fileInput = container.querySelector('input[type="file"]');
         const preview = container.querySelector(".preview");
@@ -592,11 +640,16 @@
               // Создаем кнопку для удаления
               const removeBtn = document.createElement("button");
               removeBtn.classList.add("remove-btn");
-              //removeBtn.textContent = "×";
+              // removeBtn.textContent = "×";
               removeBtn.addEventListener("click", (e) => {
                 e.stopPropagation(); // Останавливаем всплытие события
                 e.preventDefault(); // Останавливаем действие по умолчанию
                 preview.removeChild(previewWrapper);
+
+                // Проверяем, есть ли у контейнера класс mono-file и убираем класс full, если это последний файл
+                if (container.classList.contains("mono-file")) {
+                  container.classList.remove("full");
+                }
               });
 
               // Добавляем изображение и кнопку в preview-wrapper
@@ -610,56 +663,10 @@
             };
             reader.readAsDataURL(file);
           } else {
-            alert("Please upload an image file.");
+            alert("Формат файла не поддерживается");
           }
         });
       }
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const maxForms = 3;
-        const videoFormsContainer = document.getElementById(
-          "videoFormsContainer"
-        );
-        const addVideoBtn = document.getElementById("addVideoBtn");
-
-        addVideoBtn.addEventListener("click", () => {
-          if (videoFormsContainer.children.length < maxForms) {
-            const videoForm = document.createElement("div");
-            videoForm.classList.add("video-form");
-
-            const videoNameInput = document.createElement("input");
-            videoNameInput.type = "text";
-            videoNameInput.placeholder = "Название видео";
-
-            const videoLinkInput = document.createElement("input");
-            videoLinkInput.type = "text";
-            videoLinkInput.placeholder = "Ссылка на видео";
-
-            const removeBtn = document.createElement("button");
-            removeBtn.classList.add("remove-btn");
-            removeBtn.textContent = "×";
-            removeBtn.addEventListener("click", () => {
-              videoFormsContainer.removeChild(videoForm);
-              if (videoFormsContainer.children.length < maxForms) {
-                addVideoBtn.classList.remove("off"); // Убираем класс off, если форма удалена и лимит не достигнут
-              }
-            });
-
-            videoForm.appendChild(videoNameInput);
-            videoForm.appendChild(videoLinkInput);
-            videoForm.appendChild(removeBtn);
-
-            videoFormsContainer.appendChild(videoForm);
-
-            if (videoFormsContainer.children.length === maxForms) {
-              addVideoBtn.classList.add("off"); // Добавляем класс off, если достигнут лимит форм
-            }
-          }
-        });
-      });
-    </script>
-
-
   </body>
 </html>

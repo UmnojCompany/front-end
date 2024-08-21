@@ -31,7 +31,7 @@ h3 {
    font-size: 32px;
    font-style: normal;
    font-weight: 500;
-   line-height: 67%; /* 38.4px */
+   //line-height: 67%; /* 38.4px */
 }
 h4 {
    span {
@@ -786,7 +786,7 @@ section {
    ul {
       li {
          line-height: 0;
-         cursor: pointer;
+         //cursor: pointer;
          padding: 15px 10px;
          border-radius: 5px;
          border: 1px solid var(--Stroke-Divider, #e1edfd);
@@ -798,6 +798,7 @@ section {
    }
    .item {
       &.noborder {
+         padding: 28px 0px 0px 0px;
          border-bottom: none;
       }
       .title {
@@ -868,8 +869,23 @@ section {
       margin: 30px 0px 0px 0px;
    }
    .butt-more {
-      &.hide {
+      .p01{
          display: none;
+      }
+      .p02{
+         display: inline-block;
+      }
+      &.hide {
+         svg{
+            transform: rotate(180deg);
+         }
+         //display: none;
+         .p02{
+            display: none;
+         }
+         .p01{
+            display: inline-block;
+         }
       }
       max-width: fit-content;
       cursor: pointer;
@@ -915,13 +931,13 @@ section {
    .line {
       position: absolute;
       left: 0;
-      top: 85px;
+      top: 82px;
       width: 100%;
       height: 2px;
       background: #f1f7ff;
    }
    h3 {
-      margin: 8px 0px 56px 0px;
+      margin: 0px 0px 50px 0px;
    }
 }
 .sertificats-profile {
@@ -931,7 +947,7 @@ section {
    .line {
       position: absolute;
       left: 0;
-      top: 75px;
+      top: 82px;
       width: 100%;
       height: 2px;
       background: #f1f7ff;
@@ -953,7 +969,7 @@ section {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      margin: 55px 0px 0px 0px;
+      margin: 50px 0px 0px 0px;
    }
 }
 .edit-profile {
@@ -1085,7 +1101,7 @@ section {
          display: flex;
          align-items: center;
          justify-content: space-between;
-         padding: 30px 0px 10px 0px;
+         padding: 30px 0px 0px 0px;
       }
    }
    h4 {
@@ -1360,6 +1376,7 @@ section {
       margin: 40px auto 0px auto;
    }
    .daha {
+      margin: 20px 0px 30px 0px;
       span {
          color: var(--Main-Blue, #4e6af3);
          text-align: center;
@@ -1909,6 +1926,12 @@ section {
    }
    .upload-container {
       &.full {
+         &.mono-file{
+            .up-info{
+               display: none;
+            }
+         }
+          gap: 20px;
          &.big {
             .up-info {
                width: 190px;
@@ -1924,7 +1947,7 @@ section {
          }
       }
       display: flex;
-      gap: 20px;
+     
       flex-wrap: wrap;
       min-width: 100%;
    }
@@ -1956,6 +1979,7 @@ section {
 
    .preview-wrapper {
       .remove-btn {
+         display: none;
          position: absolute;
          cursor: pointer;
          right: 8px;
@@ -1968,6 +1992,9 @@ section {
       }
 
       &:hover {
+         .remove-btn{
+            display: block;
+         }
       }
       position: relative;
    }
@@ -2399,6 +2426,19 @@ section {
    }
 }
 .add-video {
+   &:hover {
+      color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+      svg{
+         path{
+            fill: #4E6AF3;
+         }
+      }
+   }
+   svg{
+      path{
+         fill: #2A344A;
+      }
+   }
    margin: 30px 0px 0px 0px;
    align-self: flex-start;
    cursor: pointer;
@@ -2408,7 +2448,8 @@ section {
    gap: 10px;
    border-radius: 10px;
    background: var(--Button-Secondary-BG-Default, #f1f7ff);
-   color: var(--Main-Blue, #4e6af3);
+   color: var(--Button-Secondary-Text-Default, #2A344A);
+
    text-align: center;
    font-size: 16px;
    font-style: normal;
@@ -2416,6 +2457,9 @@ section {
    line-height: 20px; /* 125% */
 }
 .video-form {
+   &:first-child{
+      margin: 30px 0px 0px 0px;
+   }
    display: flex;
    align-items: center;
    gap: 10px;
@@ -2442,11 +2486,19 @@ section {
    color: #888;
 }
 .add-video-btn.off {
-   background-color: #ddd;
-   cursor: not-allowed;
+   svg{
+      path{
+         fill: #B8C6E3;
+      }
+   }
+   background: var(--BG-Disabled, #EFF3FB);
+   color: var(--Text-Disabled, #B8C6E3);
+
+   cursor: unset;
 }
 .video-forms-container {
    min-width: 100%;
+   //padding: 30px 0px 0px 0px;
 }
 .tooltip-text {
    display: none;
@@ -2670,7 +2722,8 @@ section {
    }
    .head {
       border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
-      padding: 11px 0px;
+      //padding: 11px 0px;
+      padding: 10px 0px 11px 0px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -2739,6 +2792,7 @@ section {
       li {
          &:last-child {
             border-bottom: none;
+            padding: 20px 0px 0px 0px;
          }
          border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
          padding: 20px 0px;

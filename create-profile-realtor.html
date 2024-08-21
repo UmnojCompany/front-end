@@ -40,10 +40,10 @@
             <h3>Фото для профиля <span>*</span></h3>
             <div class="subtitle">
               Загрузите минимум одно фото для профиля. Вес до 10 мб. Оптимальное
-              разрешение 600 x 600px. Доступный формат jpg / png
+              разрешение 600 x 600 px. Доступный формат jpg / png
             </div>
             <form class="form" action="">
-              <div class="upload-container" data-multiple="false">
+              <div class="upload-container mono-file" data-multiple="false">
                 <div class="preview"></div>
                 <div class="up-info">
                   <div class="file-icon">
@@ -88,7 +88,7 @@
                   <div class="custom-select">
                     <div class="select-selected"></div>
                   </div>
-  
+
                   <select class="hidden-select" required="">
                     <option value=""></option>
                     <option value="rp01">Мужской</option>
@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="select-container-single ">
+                <div class="select-container-single">
                   <div class="select-items select-hide">
                     <div data-value="rps01">Москва</div>
                     <div data-value="rps02">Санкт-Петербург</div>
@@ -106,7 +106,7 @@
                   <div class="custom-select">
                     <div class="select-selected"></div>
                   </div>
-  
+
                   <select class="hidden-select" required="">
                     <option value=""></option>
                     <option value="rps01">Москва</option>
@@ -121,13 +121,43 @@
           <div class="wrapper hide">
             <h3>Контакты <span>*</span></h3>
             <div class="subtitle">
-              Все данные, кроме эл. почты, будут видны пользователям, которые откроют вам свои контакты
+              Все данные, кроме эл. почты, будут видны пользователям, которые
+              откроют вам свои контакты
             </div>
             <form class="gap form" action="">
               <div class="row">
                 <div class="input-container">
-                  <input class="phone" type="text" name="" id="" required />
-                  <div class="placeholder">Номер телефона <span>*</span></div>
+                  <div class="flags">
+                    <ul>
+                      <li><img src="img/Flag-rus.svg" alt="" /></li>
+                      <li></li>
+                    </ul>
+                    <div class="drop">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.5 7.75L8.64645 11.8964C8.84171 12.0917 9.15829 12.0917 9.35355 11.8964L13.5 7.75"
+                          stroke="#7786A5"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <input
+                    class="phone"
+                    type="tel"
+                    name=""
+                    id=""
+                    placeholder="Номер телефона *"
+                  />
+
+                  <span class="blocked-text hide">Профиль заблокирован</span>
                 </div>
                 <div class="input-container">
                   <input type="text" name="" id="" required />
@@ -259,7 +289,7 @@
                   </div>
                   <input
                     type="text"
-                    class="search-input"
+                    class="search-input hide"
                     placeholder=""
                     oninput="filterOptions(this)"
                   />
@@ -323,7 +353,7 @@
                   </div>
                   <input
                     type="text"
-                    class="search-input"
+                    class="search-input hide"
                     placeholder=""
                     oninput="filterOptions(this)"
                   />
@@ -388,7 +418,7 @@
                   </div>
                   <input
                     type="text"
-                    class="search-input"
+                    class="search-input hide"
                     placeholder=""
                     oninput="filterOptions(this)"
                   />
@@ -433,7 +463,7 @@
             <h3>Лицензии и сертификаты</h3>
             <div class="subtitle">
               Можете загрузить до 20 изображений. Вес до 10 мб. Оптимальное
-              разрешение 1080 x 1920px. Доступный формат jpg / png / pdf
+              разрешение 1080 x 1920 px. Доступный формат jpg / png / pdf
             </div>
             <form class="form" action="">
               <div class="upload-container big" data-multiple="true">
@@ -494,7 +524,9 @@
             </form>
           </div>
 
-          <a href="my-profile.html" class="button-primary hide">Создать профиль</a>
+          <a href="my-profile.html" class="button-primary hide"
+            >Создать профиль</a
+          >
         </div>
       </section>
     </main>
@@ -600,84 +632,8 @@
       });
     </script>
     <script>
-      document.querySelectorAll(".upload-container").forEach((container) => {
-        const fileInput = container.querySelector('input[type="file"]');
-        const preview = container.querySelector(".preview");
-        const multiple = container.getAttribute("data-multiple") === "true";
-
-        container.addEventListener("click", () => {
-          fileInput.click();
-        });
-
-        container.addEventListener("dragover", (event) => {
-          event.preventDefault();
-          container.classList.add("dragover");
-        });
-
-        container.addEventListener("dragleave", () => {
-          container.classList.remove("dragover");
-        });
-
-        container.addEventListener("drop", (event) => {
-          event.preventDefault();
-          container.classList.remove("dragover");
-
-          const files = event.dataTransfer.files;
-          if (files.length) {
-            handleFiles(files, preview, multiple, container);
-          }
-        });
-
-        fileInput.addEventListener("change", (event) => {
-          handleFiles(event.target.files, preview, multiple, container);
-        });
-      });
-
-      function handleFiles(files, preview, multiple, container) {
-        if (!multiple) {
-          preview.innerHTML = "";
-        }
-
-        Array.from(files).forEach((file) => {
-          if (file && file.type.startsWith("image/")) {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-              // Создаем wrapper для каждого изображения
-              const previewWrapper = document.createElement("div");
-              previewWrapper.classList.add("preview-wrapper");
-
-              const img = document.createElement("img");
-              img.src = event.target.result;
-
-              // Создаем кнопку для удаления
-              const removeBtn = document.createElement("button");
-              removeBtn.classList.add("remove-btn");
-              //removeBtn.textContent = "×";
-              removeBtn.addEventListener("click", (e) => {
-                e.stopPropagation(); // Останавливаем всплытие события
-                e.preventDefault(); // Останавливаем действие по умолчанию
-                preview.removeChild(previewWrapper);
-              });
-
-              // Добавляем изображение и кнопку в preview-wrapper
-              previewWrapper.appendChild(img);
-              previewWrapper.appendChild(removeBtn);
-
-              // Добавляем preview-wrapper в общий контейнер preview
-              preview.appendChild(previewWrapper);
-
-              container.classList.add("full");
-            };
-            reader.readAsDataURL(file);
-          } else {
-            alert("Please upload an image file.");
-          }
-        });
-      }
-    </script>
-    <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const maxForms = 3;
+        const maxForms = 10;
         const videoFormsContainer = document.getElementById(
           "videoFormsContainer"
         );
@@ -781,5 +737,87 @@
       });
     </script>
 
+    <script>
+      document.querySelectorAll(".upload-container").forEach((container) => {
+        const fileInput = container.querySelector('input[type="file"]');
+        const preview = container.querySelector(".preview");
+        const multiple = container.getAttribute("data-multiple") === "true";
+      
+        container.addEventListener("click", () => {
+          fileInput.click();
+        });
+      
+        container.addEventListener("dragover", (event) => {
+          event.preventDefault();
+          container.classList.add("dragover");
+        });
+      
+        container.addEventListener("dragleave", () => {
+          container.classList.remove("dragover");
+        });
+      
+        container.addEventListener("drop", (event) => {
+          event.preventDefault();
+          container.classList.remove("dragover");
+      
+          const files = event.dataTransfer.files;
+          if (files.length) {
+            handleFiles(files, preview, multiple, container);
+          }
+        });
+      
+        fileInput.addEventListener("change", (event) => {
+          handleFiles(event.target.files, preview, multiple, container);
+        });
+      });
+      
+      function handleFiles(files, preview, multiple, container) {
+        if (!multiple) {
+          preview.innerHTML = "";
+        }
+      
+        Array.from(files).forEach((file) => {
+          if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+              // Создаем wrapper для каждого изображения
+              const previewWrapper = document.createElement("div");
+              previewWrapper.classList.add("preview-wrapper");
+      
+              const img = document.createElement("img");
+              img.src = event.target.result;
+      
+              // Создаем кнопку для удаления
+              const removeBtn = document.createElement("button");
+              removeBtn.classList.add("remove-btn");
+              // removeBtn.textContent = "×";
+              removeBtn.addEventListener("click", (e) => {
+                e.stopPropagation(); // Останавливаем всплытие события
+                e.preventDefault(); // Останавливаем действие по умолчанию
+                preview.removeChild(previewWrapper);
+      
+                // Проверяем, есть ли у контейнера класс mono-file и убираем класс full, если это последний файл
+                if (container.classList.contains("mono-file")) {
+                  container.classList.remove("full");
+                }
+              });
+      
+              // Добавляем изображение и кнопку в preview-wrapper
+              previewWrapper.appendChild(img);
+              previewWrapper.appendChild(removeBtn);
+      
+              // Добавляем preview-wrapper в общий контейнер preview
+              preview.appendChild(previewWrapper);
+      
+              container.classList.add("full");
+            };
+            reader.readAsDataURL(file);
+          } else {
+            alert("Формат файла не поддерживается");
+          }
+        });
+      }
+      
+    </script>
   </body>
 </html>

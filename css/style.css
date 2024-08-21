@@ -97,7 +97,6 @@ h3 {
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
-  line-height: 67%; /* 38.4px */
 }
 h3 span {
   color: var(--Text-Grey, #7786a5);
@@ -805,7 +804,6 @@ section {
 }
 .param-profile ul li {
   line-height: 0;
-  cursor: pointer;
   padding: 15px 10px;
   border-radius: 5px;
   border: 1px solid var(--Stroke-Divider, #e1edfd);
@@ -818,6 +816,7 @@ section {
   gap: 10px;
 }
 .param-profile .item.noborder {
+  padding: 28px 0px 0px 0px;
   border-bottom: none;
 }
 .param-profile .item .title {
@@ -890,8 +889,20 @@ section {
   align-items: center;
   gap: 5px;
 }
-.about-profile .butt-more.hide {
+.about-profile .butt-more .p01 {
   display: none;
+}
+.about-profile .butt-more .p02 {
+  display: inline-block;
+}
+.about-profile .butt-more.hide svg {
+  transform: rotate(180deg);
+}
+.about-profile .butt-more.hide .p02 {
+  display: none;
+}
+.about-profile .butt-more.hide .p01 {
+  display: inline-block;
 }
 .about-profile .text {
   margin: 0px 0px 15px 0px;
@@ -920,13 +931,13 @@ section {
 .about-profile .line {
   position: absolute;
   left: 0;
-  top: 85px;
+  top: 82px;
   width: 100%;
   height: 2px;
   background: #f1f7ff;
 }
 .about-profile h3 {
-  margin: 8px 0px 56px 0px;
+  margin: 0px 0px 50px 0px;
 }
 
 .sertificats-profile .wrapper {
@@ -935,7 +946,7 @@ section {
 .sertificats-profile .line {
   position: absolute;
   left: 0;
-  top: 75px;
+  top: 82px;
   width: 100%;
   height: 2px;
   background: #f1f7ff;
@@ -958,7 +969,7 @@ section {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin: 55px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
 }
 
 .edit-profile .edit-butt {
@@ -1089,7 +1100,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0px 10px 0px;
+  padding: 30px 0px 0px 0px;
 }
 .safety h4 {
   margin: 0px 0px 20px 0px;
@@ -1348,6 +1359,7 @@ section {
   margin: 40px auto 0px auto;
 }
 .modal .daha {
+  margin: 20px 0px 30px 0px;
   color: var(--Text-Disabled, #b8c6e3);
   text-align: right;
   /* Platform/Button Link/Small */
@@ -1835,9 +1847,14 @@ section {
 }
 .form .upload-container {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
   min-width: 100%;
+}
+.form .upload-container.full {
+  gap: 20px;
+}
+.form .upload-container.full.mono-file .up-info {
+  display: none;
 }
 .form .upload-container.full.big .up-info {
   width: 190px;
@@ -1872,6 +1889,7 @@ section {
   position: relative;
 }
 .form .preview-wrapper .remove-btn {
+  display: none;
   position: absolute;
   cursor: pointer;
   right: 8px;
@@ -1880,6 +1898,9 @@ section {
   height: 30px;
   background: url("../img/delete-img.svg") no-repeat;
   z-index: 10;
+}
+.form .preview-wrapper:hover .remove-btn {
+  display: block;
 }
 .form .preview img {
   margin: 0px 0px 0px 0px;
@@ -2283,12 +2304,21 @@ section {
   gap: 10px;
   border-radius: 10px;
   background: var(--Button-Secondary-BG-Default, #f1f7ff);
-  color: var(--Main-Blue, #4e6af3);
+  color: var(--Button-Secondary-Text-Default, #2A344A);
   text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+}
+.add-video:hover {
+  color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+}
+.add-video:hover svg path {
+  fill: #4E6AF3;
+}
+.add-video svg path {
+  fill: #2A344A;
 }
 
 .video-form {
@@ -2299,6 +2329,9 @@ section {
   border-radius: 10px;
   background: #f6faff;
   padding: 7px 10px 7px 7px;
+}
+.video-form:first-child {
+  margin: 30px 0px 0px 0px;
 }
 
 .video-form input[type=text] {
@@ -2315,8 +2348,12 @@ section {
 }
 
 .add-video-btn.off {
-  background-color: #ddd;
-  cursor: not-allowed;
+  background: var(--BG-Disabled, #EFF3FB);
+  color: var(--Text-Disabled, #B8C6E3);
+  cursor: unset;
+}
+.add-video-btn.off svg path {
+  fill: #B8C6E3;
 }
 
 .video-forms-container {
@@ -2526,7 +2563,7 @@ section {
 }
 .my-objects .head {
   border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
-  padding: 11px 0px;
+  padding: 10px 0px 11px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2602,6 +2639,7 @@ section {
 }
 .my-objects .options li:last-child {
   border-bottom: none;
+  padding: 20px 0px 0px 0px;
 }
 .my-objects .page-head h3 {
   display: flex;

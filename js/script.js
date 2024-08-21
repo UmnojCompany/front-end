@@ -415,16 +415,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Кнопка Открыть еще
-  const button = document.querySelector(".butt-more");
-  if (button) {
-    button.addEventListener("click", function () {
-      const textBlock = document.querySelector(".text");
-      if (textBlock) {
-        textBlock.classList.add("open");
+  // Находим все элементы с классом .butt-more
+  const buttons33 = document.querySelectorAll(".butt-more");
+
+  buttons33.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Находим родительский элемент с классом .wrapper
+      const parentWrapper = button.closest(".wrapper");
+
+      if (parentWrapper) {
+        // Находим элементы внутри текущего .wrapper
+        const textBlock = parentWrapper.querySelector(".text");
+
+        // Переключаем класс open у блока .text
+        if (textBlock) {
+          textBlock.classList.toggle("open");
+        }
+
+        // Переключаем класс hide у кнопки .butt-more
+        button.classList.toggle("hide");
       }
-      button.classList.add("hide");
     });
-  }
+  });
 
   // Меню Вкладок
   const pageHead = document.querySelector(".page-head ul");

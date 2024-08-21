@@ -39,7 +39,7 @@
               разрешение 600 x 600px. Доступный формат jpg / png
             </div>
             <form class="form" action="">
-              <div class="upload-container" data-multiple="false">
+              <div class="upload-container mono-file" data-multiple="false">
                 <div class="preview"></div>
                 <div class="up-info">
                   <div class="file-icon">
@@ -83,7 +83,7 @@
                   <div class="custom-select">
                     <div class="select-selected"></div>
                   </div>
-  
+
                   <select class="hidden-select" required="">
                     <option value=""></option>
                     <option value="rp01">Мужской</option>
@@ -93,7 +93,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="select-container-single ">
+                <div class="select-container-single">
                   <div class="select-items select-hide">
                     <div data-value="rps01">Москва</div>
                     <div data-value="rps02">Санкт-Петербург</div>
@@ -101,7 +101,7 @@
                   <div class="custom-select">
                     <div class="select-selected"></div>
                   </div>
-  
+
                   <select class="hidden-select" required="">
                     <option value=""></option>
                     <option value="rps01">Москва</option>
@@ -154,9 +154,10 @@
               </div>
             </form>
           </div>
-          
 
-          <a href="my-profile-customer.html" class="button-primary">Сохранить изменения</a>
+          <a href="my-profile-customer.html" class="button-primary"
+            >Сохранить изменения</a
+          >
         </div>
       </section>
     </main>
@@ -254,11 +255,16 @@
               // Создаем кнопку для удаления
               const removeBtn = document.createElement("button");
               removeBtn.classList.add("remove-btn");
-              //removeBtn.textContent = "×";
+              // removeBtn.textContent = "×";
               removeBtn.addEventListener("click", (e) => {
                 e.stopPropagation(); // Останавливаем всплытие события
                 e.preventDefault(); // Останавливаем действие по умолчанию
                 preview.removeChild(previewWrapper);
+
+                // Проверяем, есть ли у контейнера класс mono-file и убираем класс full, если это последний файл
+                if (container.classList.contains("mono-file")) {
+                  container.classList.remove("full");
+                }
               });
 
               // Добавляем изображение и кнопку в preview-wrapper
@@ -272,11 +278,10 @@
             };
             reader.readAsDataURL(file);
           } else {
-            alert("Please upload an image file.");
+            alert("Формат файла не поддерживается");
           }
         });
       }
     </script>
-
   </body>
 </html>

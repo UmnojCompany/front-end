@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .testselects {
   padding: 100px 0px 0px 0px;
   display: flex;
@@ -23,7 +24,7 @@
   z-index: 1;
 }
 .custom-select-container .select-wrapper:hover {
-  border: 2px solid var(--Fields-Stroke-Hover, #CDDEF4);
+  border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
 }
 .custom-select-container.active {
   z-index: 9999;
@@ -99,6 +100,11 @@
   display: block;
 }
 .custom-select-container .custom-option {
+  /* Создаем кастомный чекбокс */
+  /* Стиль кастомного чекбокса */
+  /* Отмеченное состояние кастомного чекбокса */
+  /* Галочка в кастомном чекбоксе */
+  /* Состояние при наведении */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -112,12 +118,42 @@
   line-height: 20px; /* 125% */
   cursor: pointer;
 }
-.custom-select-container .custom-option input[type=checkbox] {
+.custom-select-container .custom-option input[type=checkbox] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.custom-select-container .custom-option input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
+  border: 2px solid #C7D2E9;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.custom-select-container .custom-option input[type=checkbox]:checked + label:before {
+  background-color: #4E6AF3;
+  border-color: #4E6AF3;
+}
+.custom-select-container .custom-option input[type=checkbox]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: url("../img/chek.svg") no-repeat;
+}
+.custom-select-container .custom-option input[type=checkbox] {
+  display: none;
 }
 .custom-select-container .custom-option:hover {
-  background: var(--Stroke-Divider_form, #F1F7FF);
+  background: var(--Stroke-Divider_form, #f1f7ff);
 }
 .custom-select-container .selected-items {
   display: flex;
@@ -153,14 +189,18 @@
 .custom-select-container .search-input {
   display: none;
   width: 30%;
-  padding: 5px 0px;
   position: absolute;
   top: 24px;
   left: 22px;
   z-index: 99;
+  font-size: 16px;
+  line-height: 30px;
 }
 .custom-select-container .search-input.active {
   display: block;
+}
+.custom-select-container .search-input.active.hide {
+  display: none;
 }
 .custom-select-container .no-results {
   padding: 10px;

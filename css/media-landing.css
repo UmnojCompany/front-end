@@ -593,6 +593,10 @@
   }
   .parameters ul li {
     font-size: 14px;
+    line-height: 16px; /* 114.286% */
+  }
+  .main-reviews .item .title {
+    font-size: 18px;
   }
   .parameters .item {
     gap: 15px;
@@ -637,7 +641,7 @@
   }
   .showcases .indicators .data {
     font-size: 26px;
-    min-width: 82px;
+    min-width: 102px;
   }
   .showcases .container {
     gap: 20px;
@@ -679,5 +683,8 @@
   }
   .intro .row {
     gap: 10px;
+  }
+  .faq-main {
+    padding: 0px 0px 100px 0px;
   }
 }/*# sourceMappingURL=media-landing.css.map */
