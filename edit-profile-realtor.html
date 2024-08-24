@@ -35,7 +35,7 @@
           <div class="wrapper">
             <h3>Фото для профиля <span>*</span></h3>
             <div class="subtitle">
-              Загрузите минимум одно фото для профиля. Вес до 10 мб. Оптимальное
+              Загрузите фото для профиля. Вес до 10 мб. Оптимальное
               разрешение 600 x 600px. Доступный формат jpg / png
             </div>
             <form class="form" action="">
@@ -164,11 +164,11 @@
             <form class="gap custom-selects" action="">
               <div class="row">
                 <div class="custom-select-container">
-                  <div class="select-wrapper">
+                  <div class="select-wrapper" onclick="toggleOptions(this)">
                     <div class="select-placeholder">
                       Город недвижимости <span>*</span>
                     </div>
-                    <div class="custom-select" onclick="toggleOptions(this)">
+                    <div class="custom-select">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -229,11 +229,11 @@
               </div>
               <div class="row">
                 <div class="custom-select-container">
-                  <div class="select-wrapper">
+                  <div class="select-wrapper" onclick="toggleOptions(this)">
                     <div class="select-placeholder">
                       Формат сделки <span>*</span>
                     </div>
-                    <div class="custom-select" onclick="toggleOptions(this)">
+                    <div class="custom-select">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -293,11 +293,11 @@
               </div>
               <div class="row">
                 <div class="custom-select-container">
-                  <div class="select-wrapper">
+                  <div class="select-wrapper" onclick="toggleOptions(this)">
                     <div class="select-placeholder">
                       Тип недвижимости <span>*</span>
                     </div>
-                    <div class="custom-select" onclick="toggleOptions(this)">
+                    <div class="custom-select">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -358,11 +358,11 @@
               </div>
               <div class="row">
                 <div class="custom-select-container">
-                  <div class="select-wrapper">
+                  <div class="select-wrapper" onclick="toggleOptions(this)">
                     <div class="select-placeholder">
                       Состояние недвижимости <span>*</span>
                     </div>
-                    <div class="custom-select" onclick="toggleOptions(this)">
+                    <div class="custom-select">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -430,8 +430,7 @@
             </div>
             <form class="form" action="">
               <div class="upload-container big" data-multiple="true">
-                <div class="preview big"></div>
-                <div class="up-info">
+                <div class="preview big"><div class="up-info">
                   <div class="file-icon">
                     <img src="img/file-image.svg" alt="" />
                   </div>
@@ -445,7 +444,8 @@
                     multiple
                     style="display: none"
                   />
-                </div>
+                </div></div>
+                
               </div>
             </form>
           </div>

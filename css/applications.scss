@@ -1,5 +1,5 @@
 .applications {
-    padding: 75px 0px 20px 0px;
+    padding: 75px 0px 0px 0px;
     section {
         margin: 0px 0px 0px 0px;
     }
@@ -101,7 +101,21 @@
         margin: 0px 30px 0px 0px;
     }
     .category-klients {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        //min-width: 160px;
+        position: relative;
         margin: 0px 50px 0px 0px;
+        color: var(--Text-Black, #2a344a);
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px; /* 100% */
+        letter-spacing: 1.12px;
+        text-transform: uppercase;
         select {
             //min-width: 170px; /* Adjust as needed */
             color: var(--Text-Black, #2a344a);
@@ -206,7 +220,80 @@
     padding: 0px 0px 0px 0px;
 }
 .column {
+    position: relative;
+    padding: 0px 5px 10px 0px;
+    /* Стилизация самого скроллбара */
+    &::-webkit-scrollbar {
+        width: 5px; /* Ширина скроллбара */
+    }
+
+    /* Стилизация дорожки (трек) */
+    &::-webkit-scrollbar-track {
+        // background: #f1f1f1; /* Цвет фона дорожки */
+        //border-radius: 10px; /* Радиус закругления */
+    }
+
+    /* Стилизация ползунка (thumb) */
+    &::-webkit-scrollbar-thumb {
+        background: var(--Stroke-Light-Grey, #d4ddee);
+        border-radius: 5px; /* Радиус закругления ползунка */
+        // border: 5px solid #eef1f5; /* Граница ползунка */
+    }
+
+    /* Стилизация при наведении на ползунок */
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--Stroke-Light-Grey, #d4ddee);
+    }
+
     &.col-01 {
+        .hover {
+            .button-primary {
+                max-width: fit-content;
+                padding: 7px 16px;
+                color: var(--Button-Primary-Text-Default, #fff);
+                text-align: center;
+
+                /* Platform/Button Link/Small */
+                font-family: Roboto;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px; /* 114.286% */
+            }
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 10px;
+
+            padding: 10px;
+            p {
+                flex-grow: 1;
+                color: var(--Text-Black, #2a344a);
+
+                /* Platform/Fields/Description */
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px; /* 133.333% */
+            }
+        }
+        .row-item {
+            position: relative;
+            //cursor: pointer;
+            min-height: 120px;
+            //overflow: hidden;
+            &:hover {
+                .hover {
+                    display: flex;
+                }
+            }
+        }
         .col-head {
             background: linear-gradient(180deg, #fff 94.81%, #4e6af3 94.81%, #54b7ff 94.81%);
         }
@@ -277,6 +364,10 @@
         }
     }
     .col-head {
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: 1;
         .data {
             color: var(--Text-Grey, #7786a5);
             font-family: Roboto;
@@ -318,9 +409,9 @@
     flex-direction: column;
     gap: 10px;
     //max-height: 100vh;
-    max-height: calc(100vh - 180px);
+    max-height: calc(100vh - 160px);
     overflow-y: auto;
-    padding: 0px 10px 0px 0px;
+    //padding: 0px 10px 0px 0px;
 }
 .row-item {
     ul {
@@ -393,9 +484,9 @@
         justify-content: space-between;
     }
     padding: 8px 10px 10px 10px;
-    max-width: 340px;
-    min-width: 340px;
-    width: 340px;
+    //max-width: 340px;
+    //min-width: 340px;
+    //width: 340px;
     height: 120px;
     border-radius: var(--Corner_radius_m, 10px);
     background: var(--BG-White, #fff);
@@ -418,6 +509,11 @@
                 display: none;
             }
             li {
+                &.active {
+                    span {
+                        color: var(--Main-Blue, #4e6af3);
+                    }
+                }
                 min-width: fit-content;
                 span {
                     margin: 0px 0px 0px 10px;
@@ -432,13 +528,19 @@
                 }
             }
         }
-
+        .list-wrapp::-webkit-scrollbar {
+            display: none; /* Скрываем скроллбар для WebKit-браузеров */
+          }
         .list-wrapp {
+            -webkit-user-select: none;
+            -moz-user-select: none;
             overflow-x: auto;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-
+            overflow-y: hidden; /* Отключаем вертикальный скролл */
+            -ms-overflow-style: none; /* IE и Edge */
+            scrollbar-width: none; /* Firefox */
+          
             padding: 0px 0px 10px 0px;
+            cursor: grab; /* Меняем курсор на руку для наглядности */
         }
         .wrapper {
             overflow: hidden;
@@ -464,7 +566,7 @@
     &.active {
         display: block;
     }
-    padding: 10px 0px 0px 0px;
+    padding: 10px 0px 200px 0px;
 }
 .cards-wrapp {
     display: flex;
@@ -474,7 +576,7 @@
 }
 .proposal,
 .client-card,
-.app-card{
+.app-card {
     .menu {
         &:hover {
             border-radius: 50px;
@@ -488,7 +590,7 @@
         //margin-left: -5px;
         margin: 0px -10px 0px -5px;
     }
-        .card-status {
+    .card-status {
         position: relative;
         &.new {
             &::after {
@@ -663,10 +765,45 @@
         }
     }
 }
-.client-card {
+.client-card,
+.card{
+.menu {
+        .submenu {
+            .item {
+                &:hover {
+                    background: var(--Stroke-Divider_form, #f1f7ff);
+                }
+                padding: 12px 20px 13px 20px;
+                color: var(--Text-Black, #2a344a);
 
+                /* Platform/Button Link/Medium */
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 125% */
+            }
+            &.active {
+                display: block;
+            }
+            display: none;
+            z-index: 999;
+            overflow: hidden;
+            width: 200px;
+            border-radius: 10px;
+            border: 2px solid var(--Stroke-Light-Grey, #d4ddee);
+            background: var(--BG-White, #fff);
+            position: absolute;
+            right: 0;
+            top: calc(100% + 4px);
+        }
+        position: relative;
+    }
+}
+.client-card {
+    
     .button-primary {
-        padding: 10px 20px;
+        padding: 8px 20px;
     }
     .dashboard {
         display: flex;
@@ -684,6 +821,8 @@
         line-height: 120%; /* 24px */
     }
     .card-footer {
+        padding: 10px 0px 0px 0px;
+        border-top: 1px solid var(--Stroke-Divider, #e1edfd);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -763,7 +902,6 @@
         line-height: 140%; /* 19.6px */
     }
     h5 {
-
         &.unpublished {
             color: var(--Text-Grey, #7786a5);
         }
@@ -788,6 +926,15 @@
         display: flex;
         align-items: center;
         gap: 8px;
+
+        color: var(--Text-Black, #2a344a);
+
+        /* Platform/Accent_16 (S) */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 19.2px */
     }
     .date-create {
         color: var(--Text-Grey, #7786a5);
@@ -838,7 +985,7 @@
             &::before {
                 content: "TRUE";
                 position: absolute;
-                right: calc(100% + 10px) ;
+                right: calc(100% + 10px);
                 top: 2px;
 
                 color: var(--Text-White, #fff);
@@ -875,4 +1022,11 @@
         border: 2px solid var(--Stroke-Light-Grey, #d4ddee);
     }
     border: 2px solid var(--Stroke-Light-Grey, #d4ddee00);
+}
+.category-klients.zaglushka {
+    .tooltip-text {
+        right: auto;
+        left: 0;
+        letter-spacing: 0;
+    }
 }

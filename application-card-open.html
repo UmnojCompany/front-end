@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <link rel="stylesheet" href="css//applicationcard.css" />
+    <link rel="stylesheet" href="css/applicationcard.css" />
   </head>
 
   <body class="application-card">
@@ -38,20 +38,195 @@
             <div class="app-id">Заявка #12342323</div>
           </h5>
           <div class="card-status">
-            <select class="status-select" id="statusSelect" name="" required="">
-              <option value="contact">Получен контакт</option>
-              <option value="need">Выявлена потребность</option>
-              <option value="repeat">Повторное предложение</option>
-              <option value="approved">Объект согласован</option>
-              <option value="scheduled">Запланирован показ</option>
-              <option value="shown">Проведен показ</option>
-              <option value="signed">Подписан договор</option>
-              <option value="paid-reservation">Оплачена бронь</option>
-              <option value="first-payment">Оплачен первый взнос</option>
-              <option value="paid-full">Оплачено 100%</option>
-              <option value="ownership">Получено право соб-сти</option>
-              <option value="closed">Закрыто</option>
-            </select>
+            <div class="custom-status-select-container">
+              <div class="custom-status-select">
+                <div class="custom-status-select-trigger">Получен контакт</div>
+                <div class="custom-status-options">
+                  <span class="custom-status-option active" data-value="contact"
+                    >Получен контакт<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="need"
+                    >Выявлена потребность<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="repeat"
+                    >Повторное предложение<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="approved"
+                    >Объект согласован<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="scheduled"
+                    >Запланирован показ<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="shown"
+                    >Проведен показ<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="signed"
+                    >Подписан договор<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span
+                    class="custom-status-option"
+                    data-value="paid-reservation"
+                    >Оплачена бронь<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="first-payment"
+                    >Оплачен первый взнос<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="paid-full"
+                    >Оплачено 100%<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="ownership"
+                    >Получено право соб-сти<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                  <span class="custom-status-option" data-value="closed"
+                    >Закрыто<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.1972 3.35834C12.4901 3.65124 12.4901 4.12611 12.1972 4.419L5.97493 10.6412C5.68204 10.9341 5.20717 10.9341 4.91427 10.6412L1.80317 7.53011C1.51027 7.23722 1.51027 6.76235 1.80317 6.46945C2.09606 6.17656 2.57093 6.17656 2.86383 6.46945L5.4446 9.05023L11.1365 3.35834C11.4294 3.06545 11.9043 3.06545 12.1972 3.35834Z"
+                        fill="white"
+                      /></svg
+                  ></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="app-from">
@@ -525,7 +700,7 @@
               </div>
               Добавить объект
             </div>
-            <div class="item ">
+            <div class="item">
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -684,6 +859,40 @@
           }
         });
       });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const customSelect = document.querySelector(".custom-status-select");
+        const trigger = customSelect.querySelector(".custom-status-select-trigger");
+        const optionsContainer = customSelect.querySelector(".custom-status-options");
+        const options = customSelect.querySelectorAll(".custom-status-option");
+      
+        // Открытие/закрытие выпадающего списка
+        trigger.addEventListener("click", function () {
+          const isOpen = optionsContainer.classList.toggle("open");
+          trigger.classList.toggle("open", isOpen); // Добавляем или убираем класс open для триггера
+        });
+      
+        // Выбор опции
+        options.forEach((option) => {
+          option.addEventListener("click", function () {
+            trigger.textContent = this.textContent;
+            optionsContainer.classList.remove("open");
+            trigger.classList.remove("open"); // Убираем класс open у триггера при закрытии
+            options.forEach((opt) => opt.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      
+        // Закрытие выпадающего списка при клике вне его
+        document.addEventListener("click", function (e) {
+          if (!customSelect.contains(e.target)) {
+            optionsContainer.classList.remove("open");
+            trigger.classList.remove("open"); // Убираем класс open у триггера при закрытии
+          }
+        });
+      });
+      
     </script>
   </body>
 </html>

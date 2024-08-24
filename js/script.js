@@ -28,6 +28,53 @@ jQuery(document).ready(function ($) {
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  const favoritBlocks = document.querySelectorAll(".to-favorit, .favorites");
+
+        favoritBlocks.forEach(function (block) {
+          block.addEventListener("click", function () {
+            block.classList.toggle("active");
+          });
+        });
+
+  //субменю 3 точки
+   // Находим все блоки с классом client-card
+   const clientCards = document.querySelectorAll(".client-card, .card");
+      
+   clientCards.forEach((card) => {
+     // Находим блок с классом menu внутри client-card
+     const menu = card.querySelector(".menu");
+     // Находим блок с классом submenu внутри client-card
+     const submenu = card.querySelector(".submenu");
+ 
+     if (menu && submenu) {
+       // Добавляем обработчик клика на menu
+       menu.addEventListener("click", function (event) {
+         event.stopPropagation(); // Останавливаем всплытие события
+ 
+         // Закрываем все открытые submenu в других блоках
+         clientCards.forEach((otherCard) => {
+           if (otherCard !== card) { // Проверяем, что это не тот же блок
+             const otherSubmenu = otherCard.querySelector(".submenu");
+             if (otherSubmenu) {
+               otherSubmenu.classList.remove("active");
+             }
+           }
+         });
+ 
+         // Переключаем класс active у текущего submenu
+         submenu.classList.toggle("active");
+       });
+ 
+       // Добавляем обработчик клика на весь документ
+       document.addEventListener("click", function (event) {
+         // Если клик происходит вне текущего submenu, убираем класс active
+         if (!submenu.contains(event.target) && !menu.contains(event.target)) {
+           submenu.classList.remove("active");
+         }
+       });
+     }
+   });
+
 
   // Мультиселекты
 
@@ -213,7 +260,7 @@ function checkIfAnySelected(container) {
 
 // Моноселекты
 
-  const selectContainers = document.querySelectorAll(".select-container-single");
+const selectContainers = document.querySelectorAll(".select-container-single");
 
 selectContainers.forEach((container) => {
     const selected = container.querySelector(".select-selected");
@@ -226,7 +273,12 @@ selectContainers.forEach((container) => {
             event.stopPropagation();
             closeAllSelects(selected);
             selected.classList.toggle("active");
-            optionsContainer.classList.toggle("select-hide");
+            const isSelectHideRemoved = optionsContainer.classList.toggle("select-hide");
+            if (!isSelectHideRemoved) {
+                container.classList.add("open");
+            } else {
+                container.classList.remove("open");
+            }
         });
 
         optionsContainer.querySelectorAll("div").forEach((option) => {
@@ -236,6 +288,9 @@ selectContainers.forEach((container) => {
                 hiddenSelect.value = value;
                 optionsContainer.classList.add("select-hide");
                 selected.classList.remove("active");
+
+                // Убираем класс open при выборе пункта
+                container.classList.remove("open");
 
                 // Добавляем класс active к контейнеру select-container-single при выборе пункта
                 container.classList.add("active");
@@ -256,20 +311,21 @@ function closeAllSelects(except) {
         if (selected && optionsContainer && selected !== except) {
             selected.classList.remove("active");
             optionsContainer.classList.add("select-hide");
+            container.classList.remove("open");
         }
     });
 }
 
 
-  var tooltips = document.querySelectorAll(".tooltip");
+  // var tooltips = document.querySelectorAll(".tooltip");
 
-  tooltips.forEach(function (tooltip) {
-    var text = tooltip.getAttribute("data-tooltip");
-    var tooltipText = document.createElement("div");
-    tooltipText.className = "tooltip-text";
-    tooltipText.innerText = text;
-    tooltip.appendChild(tooltipText);
-  });
+  // tooltips.forEach(function (tooltip) {
+  //   var text = tooltip.getAttribute("data-tooltip");
+  //   var tooltipText = document.createElement("div");
+  //   tooltipText.className = "tooltip-text";
+  //   tooltipText.innerText = text;
+  //   tooltip.appendChild(tooltipText);
+  // });
 
   // чек-листы одиночный выбор
 
@@ -439,24 +495,108 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Меню Вкладок
-  const pageHead = document.querySelector(".page-head ul");
-  if (pageHead) {
-    const listItems = pageHead.querySelectorAll("li");
-    const pageContents = document.querySelectorAll("[class^='page-content-']");
+  // const pageHead = document.querySelector(".page-head ul");
+  // if (pageHead) {
+  //   const listItems = pageHead.querySelectorAll("li");
+  //   const pageContents = document.querySelectorAll("[class^='page-content-']");
 
-    listItems.forEach((item, index) => {
-      item.addEventListener("click", function () {
-        listItems.forEach((li) => li.classList.remove("active"));
-        item.classList.add("active");
+  //   listItems.forEach((item, index) => {
+  //     item.addEventListener("click", function () {
+  //       listItems.forEach((li) => li.classList.remove("active"));
+  //       item.classList.add("active");
 
-        pageContents.forEach((content) => content.classList.remove("active"));
-        const targetContent = document.querySelector(".page-content-" + (index + 1));
-        if (targetContent) {
-          targetContent.classList.add("active");
-        }
-      });
-    });
-  }
+  //       pageContents.forEach((content) => content.classList.remove("active"));
+  //       const targetContent = document.querySelector(".page-content-" + (index + 1));
+  //       if (targetContent) {
+  //         targetContent.classList.add("active");
+  //       }
+  //     });
+  //   });
+  // }
+
+
+   // Работа с меню вкладок
+   const pageHead = document.querySelector(".page-head ul");
+   const listItems = pageHead ? pageHead.querySelectorAll("li") : [];
+   const pageContents = document.querySelectorAll("[class^='page-content-']");
+ 
+   if (pageHead) {
+     listItems.forEach((item, index) => {
+       item.addEventListener("click", function () {
+         // Удаляем активные классы у всех пунктов списка и контента
+         listItems.forEach((li) => li.classList.remove("active"));
+         pageContents.forEach((content) => content.classList.remove("active"));
+ 
+         // Добавляем активные классы текущему пункту и соответствующему контенту
+         item.classList.add("active");
+         const targetContent = document.querySelector(".page-content-" + (index + 1));
+         if (targetContent) {
+           targetContent.classList.add("active");
+         }
+       });
+     });
+   }
+ 
+   // Дополнительное действие по клику на .kostil01
+   const kostilBlock1 = document.querySelector(".kostil01");
+   if (kostilBlock1) {
+     kostilBlock1.addEventListener("click", function (event) {
+       event.preventDefault();
+       event.stopPropagation();
+ 
+       // Убираем класс active у .page-content-3 и добавляем его к .page-content-2
+       const pageContent3 = document.querySelector(".page-content-3");
+       if (pageContent3) {
+         pageContent3.classList.remove("active");
+       }
+ 
+       const pageContent2 = document.querySelector(".page-content-2");
+       if (pageContent2) {
+         pageContent2.classList.add("active");
+       }
+ 
+       // Убираем класс active у третьего пункта списка и добавляем его второму пункту
+       const thirdItem = pageHead.querySelector("li:nth-child(3)");
+       if (thirdItem) {
+         thirdItem.classList.remove("active");
+       }
+ 
+       const secondItem = pageHead.querySelector("li:nth-child(2)");
+       if (secondItem) {
+         secondItem.classList.add("active");
+       }
+     });
+   }
+ 
+   // Дополнительное действие по клику на .kostil02
+   const kostilBlock2 = document.querySelector(".kostil02");
+   if (kostilBlock2) {
+     kostilBlock2.addEventListener("click", function (event) {
+       event.preventDefault();
+       event.stopPropagation();
+ 
+       // Убираем класс active у всех page-content и добавляем его к .page-content-5
+       pageContents.forEach((content) => content.classList.remove("active"));
+       const pageContent5 = document.querySelector(".page-content-5");
+       if (pageContent5) {
+         pageContent5.classList.add("active");
+       } else {
+         console.error("Не найден .page-content-5");
+       }
+ 
+       // Убираем класс active у всех пунктов списка и добавляем его пятому пункту
+       listItems.forEach((li) => li.classList.remove("active"));
+       const fifthItem = pageHead.querySelector("li:nth-child(5)");
+       if (fifthItem) {
+         fifthItem.classList.add("active");
+       } else {
+         console.error("Не найден пятый пункт списка");
+       }
+     });
+   } else {
+     console.error("Не найден .kostil02");
+   }
+  
 
 
 });

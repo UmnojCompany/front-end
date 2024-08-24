@@ -20,7 +20,7 @@
         border: 2px solid var(--Fields-Stroke, #e1edfd);
         background: var(--Fields-Form, #fff);
         padding: 18px 20px;
-
+        cursor: pointer;
         position: relative;
         z-index: 1;
     }
@@ -80,7 +80,8 @@
 
     .custom-options {
         h4 {
-            padding: 12px 20px 4px 20px;
+            margin: 0px 0px 0px 0px;
+            padding: 12px 20px 0px 20px;
             color: var(--Text-Grey, #7786a5);
             font-family: Roboto;
             font-size: 12px;
@@ -112,61 +113,6 @@
     }
 
     .custom-option {
-        /* Создаем кастомный чекбокс */
-         input[type="checkbox"] + label {
-            position: relative;
-            padding-left: 30px;
-            cursor: pointer;
-            //font-size: 16px;
-            //color: #333;
-        }
-
-        /* Стиль кастомного чекбокса */
-         input[type="checkbox"] + label:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            border: 2px solid #C7D2E9;
-            border-radius: 4px;
-            background-color: #fff;
-        }
-
-        /* Отмеченное состояние кастомного чекбокса */
-         input[type="checkbox"]:checked + label:before {
-            background-color: #4E6AF3;
-            border-color: #4E6AF3;
-        }
-
-        /* Галочка в кастомном чекбоксе */
-         input[type="checkbox"]:checked + label:after {
-            content: "";
-            position: absolute;
-            left: 4px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            background: url('../img/chek.svg') no-repeat;
-            // border-right: 2px solid #fff;
-            // border-bottom: 2px solid #fff;
-        }
-
-        /* Состояние при наведении */
-         input[type="checkbox"] + label:hover:before {
-           // border-color: #555;
-        }
-
-        input {
-            &[type="checkbox"] {
-                // width: 20px;
-                // height: 20px;
-                display: none;
-            }
-        }
         display: flex;
         align-items: center;
         gap: 10px;

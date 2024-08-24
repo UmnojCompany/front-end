@@ -19,6 +19,85 @@ body {
    flex-direction: column;
    min-height: 100%;
 }
+body {
+   input:-webkit-autofill,
+   textarea:-webkit-autofill,
+   select:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important; /* Этот трюк заставляет инпут выглядеть так, как будто у него изменился цвет фона */
+      box-shadow: 0 0 0px 1000px #ffffff inset !important; /* Поддержка для других браузеров */
+      // -webkit-text-fill-color: #4e6af3 !important; /* Цвет текста */
+   }
+   textarea {
+      resize: vertical;
+      min-height: 200px;
+
+      overflow-y: scroll; /* Сохраняем возможность вертикальной прокрутки */
+      scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+      -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
+   }
+
+   input {
+      &[type="checkbox"] {
+         // width: 20px;
+         // height: 20px;
+         display: none;
+      }
+   }
+   /* Создаем кастомный чекбокс */
+   input[type="checkbox"] + label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      //font-size: 16px;
+      //color: #333;
+   }
+
+   /* Стиль кастомного чекбокса */
+   input[type="checkbox"] + label:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border: 2px solid #c7d2e9;
+      border-radius: 4px;
+      background-color: #fff;
+   }
+
+   /* Отмеченное состояние кастомного чекбокса */
+   input[type="checkbox"]:checked + label:before {
+      background-color: #4e6af3;
+      border-color: #4e6af3;
+   }
+
+   /* Галочка в кастомном чекбоксе */
+   input[type="checkbox"]:checked + label:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: url("../img/chek.svg") no-repeat;
+      // border-right: 2px solid #fff;
+      // border-bottom: 2px solid #fff;
+   }
+
+   /* Состояние при наведении */
+   input[type="checkbox"] + label:hover:before {
+      // border-color: #555;
+   }
+
+   overflow-y: scroll; /* Сохраняем возможность вертикальной прокрутки */
+   scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+   -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
+}
+body::-webkit-scrollbar {
+   width: 0; /* Скрываем скроллбар в WebKit-браузерах (Chrome, Safari) */
+}
 h3 {
    span {
       color: var(--Text-Grey, #7786a5);
@@ -83,6 +162,7 @@ main {
 section {
    margin: 0px 0px 20px 0px;
 }
+
 .button-primary {
    &.create {
       &:hover {
@@ -234,7 +314,9 @@ section {
       //border: 2px solid #ffffff00;
       transition: 0.3s;
    }
-
+   .button-primary {
+      color: #fff;
+   }
    .buttons {
       .button {
          &:hover {
@@ -329,6 +411,7 @@ section {
       position: absolute;
       top: 100%;
       left: -10px;
+      z-index: 999;
 
       flex-direction: column;
       gap: 2px;
@@ -440,6 +523,9 @@ section {
    z-index: 555;
 }
 .footer {
+   &.hide {
+      display: none;
+   }
    .wrapp.mob {
       .butt {
          display: flex;
@@ -558,6 +644,9 @@ section {
          position: relative;
          cursor: pointer;
          &.active {
+            span {
+               color: #4e6af3;
+            }
             color: #4e6af3;
             &::after {
                content: "";
@@ -570,6 +659,12 @@ section {
                left: 0;
                z-index: 1;
             }
+         }
+         &:hover {
+            span {
+               color: #4e6af3 !important;
+            }
+            color: #4e6af3;
          }
          line-height: 32px; /* 125% */
       }
@@ -617,9 +712,12 @@ section {
          }
          background: #31a7e3;
       }
-      .phone {
+      .button-primary {
+         &:hover {
+            //background: #3e56d0;
+         }
          width: 190px;
-         background: #4e6af3;
+         //background: #4e6af3;
       }
       a {
          transition: 0.3s;
@@ -869,21 +967,21 @@ section {
       margin: 30px 0px 0px 0px;
    }
    .butt-more {
-      .p01{
+      .p01 {
          display: none;
       }
-      .p02{
+      .p02 {
          display: inline-block;
       }
       &.hide {
-         svg{
+         svg {
             transform: rotate(180deg);
          }
          //display: none;
-         .p02{
+         .p02 {
             display: none;
          }
-         .p01{
+         .p01 {
             display: inline-block;
          }
       }
@@ -1359,10 +1457,11 @@ section {
 }
 .modal {
    .not-more {
+      position: relative;
       max-width: fit-content;
       display: flex;
       align-items: center;
-      gap: 10px;
+      // gap: 10px;
 
       color: var(--Text-Black, #2a344a);
 
@@ -1511,10 +1610,14 @@ section {
       }
       text-align: center;
    }
-   h3,
-   h4 {
+   h3 {
       padding: 0px 30px;
       margin: 0px 0px 20px 0px;
+      line-height: 120%; /* 38.4px */
+   }
+   h4 {
+      padding: 0px 30px;
+      margin: 0px 0px 15px 0px;
       line-height: 120%; /* 38.4px */
    }
    .close-button {
@@ -1560,20 +1663,20 @@ section {
 
    /* Стилизация дорожки (трек) */
    &::-webkit-scrollbar-track {
-     // background: #f1f1f1; /* Цвет фона дорожки */
+      // background: #f1f1f1; /* Цвет фона дорожки */
       //border-radius: 10px; /* Радиус закругления */
    }
 
    /* Стилизация ползунка (thumb) */
    &::-webkit-scrollbar-thumb {
-      background: var(--Stroke-Light-Grey, #D4DDEE);
+      background: var(--Stroke-Light-Grey, #d4ddee);
       border-radius: 11px; /* Радиус закругления ползунка */
       border: 3px solid #fff; /* Граница ползунка */
    }
 
    /* Стилизация при наведении на ползунок */
    &::-webkit-scrollbar-thumb:hover {
-      background: var(--Stroke-Light-Grey, #D4DDEE);
+      background: var(--Stroke-Light-Grey, #d4ddee);
    }
    h5 {
       padding: 40px 30px 20px 0px;
@@ -1607,8 +1710,31 @@ section {
    padding: 30px 30px 30px 30px;
 }
 .content-status {
+   /* Стилизация самого скроллбара */
+   &::-webkit-scrollbar {
+      width: 11px; /* Ширина скроллбара */
+   }
+
+   /* Стилизация дорожки (трек) */
+   &::-webkit-scrollbar-track {
+      // background: #f1f1f1; /* Цвет фона дорожки */
+      //border-radius: 10px; /* Радиус закругления */
+   }
+
+   /* Стилизация ползунка (thumb) */
+   &::-webkit-scrollbar-thumb {
+      background: var(--Stroke-Light-Grey, #d4ddee);
+      border-radius: 11px; /* Радиус закругления ползунка */
+      border: 3px solid #fff; /* Граница ползунка */
+   }
+
+   /* Стилизация при наведении на ползунок */
+   &::-webkit-scrollbar-thumb:hover {
+      background: var(--Stroke-Light-Grey, #d4ddee);
+   }
    overflow-y: auto;
    max-height: 700px;
+
    .images {
       display: flex;
       flex-direction: column;
@@ -1632,14 +1758,12 @@ section {
    line-height: 150%; /* 24px */
    padding: 40px 30px;
 }
-
 .modal {
    .modal-content {
       max-height: 90vh;
       //overflow: scroll;
    }
 }
-
 .payments-story {
    .list-header {
       display: flex;
@@ -1823,6 +1947,7 @@ section {
    }
    label {
       position: absolute;
+      z-index: 999;
       left: 22px;
       top: 10px;
       color: var(--Fields-Title, #7786a5);
@@ -1899,9 +2024,10 @@ section {
       padding: 20px 30px;
    }
 }
-
 .form {
    .up-info {
+      order: 9999;
+
       a {
          color: var(--Main-Blue, #4e6af3);
       }
@@ -1925,13 +2051,19 @@ section {
       cursor: pointer;
    }
    .upload-container {
+      .file-icon {
+         img {
+            width: 39px !important;
+            height: 36px !important;
+         }
+      }
       &.full {
-         &.mono-file{
-            .up-info{
+         &.mono-file {
+            .up-info {
                display: none;
             }
          }
-          gap: 20px;
+         gap: 20px;
          &.big {
             .up-info {
                width: 190px;
@@ -1947,7 +2079,7 @@ section {
          }
       }
       display: flex;
-     
+
       flex-wrap: wrap;
       min-width: 100%;
    }
@@ -1964,6 +2096,7 @@ section {
 
    .preview {
       &.big {
+         min-width: 100%;
          img,
          .preview-wrapper {
             width: 190px;
@@ -1992,7 +2125,7 @@ section {
       }
 
       &:hover {
-         .remove-btn{
+         .remove-btn {
             display: block;
          }
       }
@@ -2316,15 +2449,15 @@ section {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      padding: 21px 0px ;
-      h3{
+      padding: 21px 0px;
+      h3 {
          margin: 0px 0px 0px 0px;
       }
    }
    .cancel {
       position: absolute;
       top: 40px;
-      right: -50px;
+      right: -60px;
       cursor: pointer;
       border-radius: 50px;
       background: #fff;
@@ -2338,7 +2471,6 @@ section {
    align-items: flex-start;
    position: relative;
 }
-
 .form {
    .multi-select {
       .hidden {
@@ -2427,16 +2559,16 @@ section {
 }
 .add-video {
    &:hover {
-      color: var(--Button-Secondary-Text-Hover, #4E6AF3);
-      svg{
-         path{
-            fill: #4E6AF3;
+      color: var(--Button-Secondary-Text-Hover, #4e6af3);
+      svg {
+         path {
+            fill: #4e6af3;
          }
       }
    }
-   svg{
-      path{
-         fill: #2A344A;
+   svg {
+      path {
+         fill: #2a344a;
       }
    }
    margin: 30px 0px 0px 0px;
@@ -2448,7 +2580,7 @@ section {
    gap: 10px;
    border-radius: 10px;
    background: var(--Button-Secondary-BG-Default, #f1f7ff);
-   color: var(--Button-Secondary-Text-Default, #2A344A);
+   color: var(--Button-Secondary-Text-Default, #2a344a);
 
    text-align: center;
    font-size: 16px;
@@ -2457,7 +2589,7 @@ section {
    line-height: 20px; /* 125% */
 }
 .video-form {
-   &:first-child{
+   &:first-child {
       margin: 30px 0px 0px 0px;
    }
    display: flex;
@@ -2468,7 +2600,6 @@ section {
    background: #f6faff;
    padding: 7px 10px 7px 7px;
 }
-
 .video-form input[type="text"] {
    padding: 16px 20px;
    // margin-right: 10px;
@@ -2477,7 +2608,6 @@ section {
    // border-radius: 5px;
    flex: 1;
 }
-
 .video-form .remove-btn {
    background-color: transparent;
    border: none;
@@ -2486,13 +2616,13 @@ section {
    color: #888;
 }
 .add-video-btn.off {
-   svg{
-      path{
-         fill: #B8C6E3;
+   svg {
+      path {
+         fill: #b8c6e3;
       }
    }
-   background: var(--BG-Disabled, #EFF3FB);
-   color: var(--Text-Disabled, #B8C6E3);
+   background: var(--BG-Disabled, #eff3fb);
+   color: var(--Text-Disabled, #b8c6e3);
 
    cursor: unset;
 }
@@ -2514,7 +2644,7 @@ section {
    background: var(--BG-Grey, #3a465d);
    padding: 10px;
 
-   color: var(--Text-White, #fff);
+   color: var(--Text-White, #fff) !important;
 
    /* Platform/Fields/Description */
    font-family: Roboto;
@@ -2523,8 +2653,8 @@ section {
    font-weight: 400;
    line-height: 16px; /* 133.333% */
    text-transform: none;
+   letter-spacing: 0;
 }
-
 .tooltip:hover .tooltip-text {
    display: block;
 }
@@ -2619,6 +2749,11 @@ section {
    }
    .info-profile {
       .button-return {
+         svg {
+            path {
+               fill: #2a344a;
+            }
+         }
          position: absolute;
          top: 0;
          right: calc(100% + 20px);
@@ -2721,6 +2856,7 @@ section {
       align-self: stretch;
    }
    .head {
+      margin: -30px 0px 0px 0px;
       border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
       //padding: 11px 0px;
       padding: 10px 0px 11px 0px;
@@ -3066,6 +3202,30 @@ section {
    gap: 10px;
 }
 .proposal {
+   .avatar {
+      position: relative;
+   }
+   .bage1 {
+      background: var(--Fields-BG-Validation, #fffbf4);
+   }
+   .bage2 {
+      background: var(--BG-Disabled, #eff3fb);
+   }
+   .bage1,
+   .bage2 {
+      position: absolute;
+      left: -10px;
+      bottom: -5px;
+      width: 28px;
+      height: 28px;
+      border-radius: 28px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      &.active {
+         display: flex;
+      }
+   }
    .p-footer {
       .to-favorit {
          svg {
@@ -3449,6 +3609,16 @@ section {
    }
 
    .agent-info {
+      span {
+         color: var(--Text-Black, #2a344a);
+
+         /* Platform/Desktop/Body-2 R */
+         font-family: Roboto;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 140%; /* 19.6px */
+      }
       p {
          max-width: 400px;
          color: var(--Text-Grey, #7786a5);
@@ -3577,7 +3747,11 @@ section {
       }
    }
    .custom-select-container .selected-items .selected-item {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
       border-radius: 100px;
+      border: none;
       background: var(--Main-Blue, #4e6af3);
       padding: 7px var(--Corner_radius_m, 10px) 7px 13px;
 
@@ -3710,6 +3884,9 @@ section {
       }
    }
    .form {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
       .select-container-single {
          &.currency {
             select {
@@ -3863,6 +4040,7 @@ section {
    h5 {
       &.mbott {
          margin-bottom: -15px;
+         margin-top: 10px;
       }
       span {
          color: var(--Text-Error, #f34942);
@@ -4024,6 +4202,9 @@ section {
       overflow: hidden;
    }
    .show-more {
+      &.mtop {
+         margin: 20px 0px 0px 0px;
+      }
       cursor: pointer;
       &.active {
          svg {
@@ -4065,32 +4246,16 @@ section {
       &::after {
          content: "";
          background: url("../img/arrow-selection.svg") no-repeat;
+         pointer-events: none;
          width: 18px;
          height: 18px;
          position: absolute;
          right: 20px;
-         top: 20px;
+         top: 22px;
       }
-
       position: relative;
-      border-radius: var(--Corner_radius_m, 10px);
-      border: 2px solid #4e6af3;
-      background: var(--Fields-Form, #fff);
-      display: flex;
-      width: 100%;
-      // padding: 18px 20px;
-      //padding: 20px 20px 12px 20px;
-      padding: 23px 20px 9px 20px;
-      align-items: center;
-      gap: var(--Corner_radius_m, 10px);
    }
    .select-items {
-      &.select-hide + .custom-select {
-         &:hover {
-            border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
-         }
-         border: 2px solid var(--Fields-Stroke, #e1edfd);
-      }
       div {
          line-height: 20px;
          &:hover {
@@ -4107,9 +4272,6 @@ section {
       flex-direction: column;
       gap: 0px;
       background: #fff;
-
-      //padding: 20px;
-
       position: absolute;
       left: 0;
       top: calc(100% - 7px);
@@ -4121,11 +4283,24 @@ section {
       overflow: hidden;
    }
    .select-selected {
+      &.active {
+         &:hover {
+            border: 2px solid #4e6af3;
+         }
+         border: 2px solid #4e6af3;
+      }
+      &:hover {
+         border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
+      }
+      border-radius: var(--Corner_radius_m, 10px);
+      border: 2px solid var(--Fields-Stroke, #e1edfd);
+      background: var(--Fields-Form, #fff);
+      padding: 23px 20px 9px 20px;
       z-index: 999;
       cursor: pointer;
       display: flex;
       width: 100%;
-      height: 24px;
+      height: 60px;
       align-items: center;
       justify-content: space-between;
    }
@@ -4141,7 +4316,14 @@ section {
          font-size: 12px;
       }
    }
+   &.open {
+      label {
+         top: 5px;
+         font-size: 12px;
+      }
+   }
    label {
+      pointer-events: none;
       transition: 0.3s;
       z-index: 0;
       position: absolute;
@@ -4160,4 +4342,18 @@ section {
    position: relative;
    z-index: 999;
    flex: 1;
+}
+.favorites {
+   svg {
+      path {
+         fill: none;
+      }
+   }
+   &.active {
+      svg {
+         path {
+            fill: #4e6af3;
+         }
+      }
+   }
 }

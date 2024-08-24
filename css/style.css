@@ -91,6 +91,66 @@ body.landing {
   background: var(--BG-Grey_Light_L, #f5f7f9);
 }
 
+body {
+  /* Создаем кастомный чекбокс */
+  /* Стиль кастомного чекбокса */
+  /* Отмеченное состояние кастомного чекбокса */
+  /* Галочка в кастомном чекбоксе */
+  /* Состояние при наведении */
+  overflow-y: scroll; /* Сохраняем возможность вертикальной прокрутки */
+  scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+  -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
+}
+body input:-webkit-autofill,
+body textarea:-webkit-autofill,
+body select:-webkit-autofill { /* Этот трюк заставляет инпут выглядеть так, как будто у него изменился цвет фона */
+  box-shadow: 0 0 0px 1000px #ffffff inset !important; /* Поддержка для других браузеров */
+}
+body textarea {
+  resize: vertical;
+  min-height: 200px;
+  overflow-y: scroll; /* Сохраняем возможность вертикальной прокрутки */
+  scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+  -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
+}
+body input[type=checkbox] {
+  display: none;
+}
+body input[type=checkbox] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+body input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c7d2e9;
+  border-radius: 4px;
+  background-color: #fff;
+}
+body input[type=checkbox]:checked + label:before {
+  background-color: #4e6af3;
+  border-color: #4e6af3;
+}
+body input[type=checkbox]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: url("../img/chek.svg") no-repeat;
+}
+body::-webkit-scrollbar {
+  width: 0; /* Скрываем скроллбар в WebKit-браузерах (Chrome, Safari) */
+}
+
 h3 {
   color: var(--Text-Black, #2a344a);
   /* Platform/Desktop/H-3 M */
@@ -301,6 +361,9 @@ section {
 .header a.active, .header a:hover {
   background: var(--Header-BG-Focused, #3a465d);
 }
+.header .button-primary {
+  color: #fff;
+}
 .header .buttons {
   display: flex;
   align-items: center;
@@ -324,6 +387,7 @@ section {
   position: absolute;
   top: 100%;
   left: -10px;
+  z-index: 999;
   flex-direction: column;
   gap: 2px;
   display: none;
@@ -480,6 +544,9 @@ section {
   line-height: 140%; /* 19.6px */
   padding: 10px 0px 10px 0px;
 }
+.footer.hide {
+  display: none;
+}
 .footer .wrapp.mob {
   background: url("../img/tab_bar.svg") top no-repeat;
   padding: 20px 0px 20px 0px;
@@ -600,6 +667,10 @@ section {
 .head-profile ul li.active {
   color: #4e6af3;
 }
+.page-head ul li.active span,
+.head-profile ul li.active span {
+  color: #4e6af3;
+}
 .page-head ul li.active::after,
 .head-profile ul li.active::after {
   content: "";
@@ -611,6 +682,14 @@ section {
   bottom: -10px;
   left: 0;
   z-index: 1;
+}
+.page-head ul li:hover,
+.head-profile ul li:hover {
+  color: #4e6af3;
+}
+.page-head ul li:hover span,
+.head-profile ul li:hover span {
+  color: #4e6af3 !important;
 }
 .page-head ul::after,
 .head-profile ul::after {
@@ -654,9 +733,8 @@ section {
 .info-profile .buttons .telegram:hover {
   background: #1299de;
 }
-.info-profile .buttons .phone {
+.info-profile .buttons .button-primary {
   width: 190px;
-  background: #4e6af3;
 }
 .info-profile .buttons a {
   transition: 0.3s;
@@ -1344,11 +1422,11 @@ section {
   z-index: 777;
 }
 .modal .not-more {
+  position: relative;
   max-width: -moz-fit-content;
   max-width: fit-content;
   display: flex;
   align-items: center;
-  gap: 10px;
   color: var(--Text-Black, #2a344a);
   /* Platform/Desktop/Body-2 R */
   font-family: Roboto;
@@ -1478,10 +1556,14 @@ section {
 .modal .info img {
   margin: 0px 0px 10px 0px;
 }
-.modal h3,
-.modal h4 {
+.modal h3 {
   padding: 0px 30px;
   margin: 0px 0px 20px 0px;
+  line-height: 120%; /* 38.4px */
+}
+.modal h4 {
+  padding: 0px 30px;
+  margin: 0px 0px 15px 0px;
   line-height: 120%; /* 38.4px */
 }
 .modal .close-button {
@@ -1520,12 +1602,12 @@ section {
   width: 11px; /* Ширина скроллбара */
 }
 .content-text::-webkit-scrollbar-thumb {
-  background: var(--Stroke-Light-Grey, #D4DDEE);
+  background: var(--Stroke-Light-Grey, #d4ddee);
   border-radius: 11px; /* Радиус закругления ползунка */
   border: 3px solid #fff; /* Граница ползунка */
 }
 .content-text::-webkit-scrollbar-thumb:hover {
-  background: var(--Stroke-Light-Grey, #D4DDEE);
+  background: var(--Stroke-Light-Grey, #d4ddee);
 }
 .content-text h5 {
   padding: 40px 30px 20px 0px;
@@ -1555,6 +1637,10 @@ section {
 }
 
 .content-status {
+  /* Стилизация самого скроллбара */
+  /* Стилизация дорожки (трек) */
+  /* Стилизация ползунка (thumb) */
+  /* Стилизация при наведении на ползунок */
   overflow-y: auto;
   max-height: 700px;
   color: var(--Text-Grey_Dark, #3b4a69);
@@ -1565,6 +1651,17 @@ section {
   font-weight: 400;
   line-height: 150%; /* 24px */
   padding: 40px 30px;
+}
+.content-status::-webkit-scrollbar {
+  width: 11px; /* Ширина скроллбара */
+}
+.content-status::-webkit-scrollbar-thumb {
+  background: var(--Stroke-Light-Grey, #d4ddee);
+  border-radius: 11px; /* Радиус закругления ползунка */
+  border: 3px solid #fff; /* Граница ползунка */
+}
+.content-status::-webkit-scrollbar-thumb:hover {
+  background: var(--Stroke-Light-Grey, #d4ddee);
 }
 .content-status .images {
   display: flex;
@@ -1757,6 +1854,7 @@ section {
 }
 .input-container label {
   position: absolute;
+  z-index: 999;
   left: 22px;
   top: 10px;
   color: var(--Fields-Title, #7786a5);
@@ -1826,6 +1924,7 @@ section {
   /* Убираем стрелки для IE */
 }
 .form .up-info {
+  order: 9999;
   border: 2px dashed var(--Stroke-Divider, #e1edfd);
   border-radius: 10px;
   width: 100%;
@@ -1849,6 +1948,10 @@ section {
   display: flex;
   flex-wrap: wrap;
   min-width: 100%;
+}
+.form .upload-container .file-icon img {
+  width: 39px !important;
+  height: 36px !important;
 }
 .form .upload-container.full {
   gap: 20px;
@@ -1879,6 +1982,9 @@ section {
   gap: 20px;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+.form .preview.big {
+  min-width: 100%;
 }
 .form .preview.big img,
 .form .preview.big .preview-wrapper {
@@ -2204,7 +2310,7 @@ section {
 .create-profile-realtor .cancel {
   position: absolute;
   top: 40px;
-  right: -50px;
+  right: -60px;
   cursor: pointer;
   border-radius: 50px;
   background: #fff;
@@ -2304,7 +2410,7 @@ section {
   gap: 10px;
   border-radius: 10px;
   background: var(--Button-Secondary-BG-Default, #f1f7ff);
-  color: var(--Button-Secondary-Text-Default, #2A344A);
+  color: var(--Button-Secondary-Text-Default, #2a344a);
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -2312,13 +2418,13 @@ section {
   line-height: 20px; /* 125% */
 }
 .add-video:hover {
-  color: var(--Button-Secondary-Text-Hover, #4E6AF3);
+  color: var(--Button-Secondary-Text-Hover, #4e6af3);
 }
 .add-video:hover svg path {
-  fill: #4E6AF3;
+  fill: #4e6af3;
 }
 .add-video svg path {
-  fill: #2A344A;
+  fill: #2a344a;
 }
 
 .video-form {
@@ -2348,12 +2454,12 @@ section {
 }
 
 .add-video-btn.off {
-  background: var(--BG-Disabled, #EFF3FB);
-  color: var(--Text-Disabled, #B8C6E3);
+  background: var(--BG-Disabled, #eff3fb);
+  color: var(--Text-Disabled, #b8c6e3);
   cursor: unset;
 }
 .add-video-btn.off svg path {
-  fill: #B8C6E3;
+  fill: #b8c6e3;
 }
 
 .video-forms-container {
@@ -2370,7 +2476,7 @@ section {
   border-radius: 10px;
   background: var(--BG-Grey, #3a465d);
   padding: 10px;
-  color: var(--Text-White, #fff);
+  color: var(--Text-White, #fff) !important;
   /* Platform/Fields/Description */
   font-family: Roboto;
   font-size: 12px;
@@ -2378,6 +2484,7 @@ section {
   font-weight: 400;
   line-height: 16px; /* 133.333% */
   text-transform: none;
+  letter-spacing: 0;
 }
 
 .tooltip:hover .tooltip-text {
@@ -2467,6 +2574,10 @@ section {
   position: absolute;
   top: 0;
   right: calc(100% + 20px);
+}
+.customer-profile .info-profile .button-return svg path,
+.realtor-profile .info-profile .button-return svg path {
+  fill: #2a344a;
 }
 .customer-profile .info-profile .container,
 .realtor-profile .info-profile .container {
@@ -2562,6 +2673,7 @@ section {
   gap: 5px;
 }
 .my-objects .head {
+  margin: -30px 0px 0px 0px;
   border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
   padding: 10px 0px 11px 0px;
   display: flex;
@@ -2862,6 +2974,31 @@ section {
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--BG-White, #fff);
   padding: 20px 30px;
+}
+.proposal .avatar {
+  position: relative;
+}
+.proposal .bage1 {
+  background: var(--Fields-BG-Validation, #fffbf4);
+}
+.proposal .bage2 {
+  background: var(--BG-Disabled, #eff3fb);
+}
+.proposal .bage1,
+.proposal .bage2 {
+  position: absolute;
+  left: -10px;
+  bottom: -5px;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.proposal .bage1.active,
+.proposal .bage2.active {
+  display: flex;
 }
 .proposal .p-footer {
   display: flex;
@@ -3190,6 +3327,15 @@ section {
   flex-direction: column;
   align-items: center;
 }
+.chat .agent-info span {
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Desktop/Body-2 R */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
 .chat .agent-info p {
   max-width: 400px;
   color: var(--Text-Grey, #7786a5);
@@ -3303,7 +3449,11 @@ section {
   fill: #fff;
 }
 .create-app .custom-select-container .selected-items .selected-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   border-radius: 100px;
+  border: none;
   background: var(--Main-Blue, #4e6af3);
   padding: 7px var(--Corner_radius_m, 10px) 7px 13px;
   color: var(--Text-White, #fff);
@@ -3417,6 +3567,11 @@ section {
 .create-app .subrow .form {
   padding: 0px 0px 0px 0px;
   align-items: flex-start;
+}
+.create-app .form {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .create-app .form .select-container-single.currency select {
   width: 200px;
@@ -3538,6 +3693,7 @@ section {
 }
 .create-app h5.mbott {
   margin-bottom: -15px;
+  margin-top: 10px;
 }
 .create-app h5 span {
   color: var(--Text-Error, #f34942);
@@ -3694,6 +3850,9 @@ section {
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
+.create-app .show-more.mtop {
+  margin: 20px 0px 0px 0px;
+}
 .create-app .show-more.active svg {
   transform: rotate(180deg);
 }
@@ -3720,23 +3879,16 @@ section {
 }
 .select-container-single .custom-select {
   position: relative;
-  border-radius: var(--Corner_radius_m, 10px);
-  border: 2px solid #4e6af3;
-  background: var(--Fields-Form, #fff);
-  display: flex;
-  width: 100%;
-  padding: 23px 20px 9px 20px;
-  align-items: center;
-  gap: var(--Corner_radius_m, 10px);
 }
 .select-container-single .custom-select::after {
   content: "";
   background: url("../img/arrow-selection.svg") no-repeat;
+  pointer-events: none;
   width: 18px;
   height: 18px;
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 22px;
 }
 .select-container-single .select-items {
   display: flex;
@@ -3752,12 +3904,6 @@ section {
   z-index: 0;
   overflow: hidden;
 }
-.select-container-single .select-items.select-hide + .custom-select {
-  border: 2px solid var(--Fields-Stroke, #e1edfd);
-}
-.select-container-single .select-items.select-hide + .custom-select:hover {
-  border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
-}
 .select-container-single .select-items div {
   line-height: 20px;
   padding: 12px 20px;
@@ -3770,13 +3916,26 @@ section {
   padding: 22px 20px 12px 20px;
 }
 .select-container-single .select-selected {
+  border-radius: var(--Corner_radius_m, 10px);
+  border: 2px solid var(--Fields-Stroke, #e1edfd);
+  background: var(--Fields-Form, #fff);
+  padding: 23px 20px 9px 20px;
   z-index: 999;
   cursor: pointer;
   display: flex;
   width: 100%;
-  height: 24px;
+  height: 60px;
   align-items: center;
   justify-content: space-between;
+}
+.select-container-single .select-selected.active {
+  border: 2px solid #4e6af3;
+}
+.select-container-single .select-selected.active:hover {
+  border: 2px solid #4e6af3;
+}
+.select-container-single .select-selected:hover {
+  border: 2px solid var(--Fields-Stroke-Hover, #cddef4);
 }
 .select-container-single .hidden-select {
   display: none;
@@ -3788,7 +3947,12 @@ section {
   top: 5px;
   font-size: 12px;
 }
+.select-container-single.open label {
+  top: 5px;
+  font-size: 12px;
+}
 .select-container-single label {
+  pointer-events: none;
   transition: 0.3s;
   z-index: 0;
   position: absolute;
@@ -3802,4 +3966,11 @@ section {
 }
 .select-container-single label span {
   color: var(--Text-Error, #f34942);
+}
+
+.favorites svg path {
+  fill: none;
+}
+.favorites.active svg path {
+  fill: #4e6af3;
 }/*# sourceMappingURL=style.css.map */

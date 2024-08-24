@@ -1,3 +1,4 @@
+@charset "UTF-8";
 section {
   margin: 0px 0px 0px 0px;
 }
@@ -131,6 +132,12 @@ section {
 }
 .sidebar .app-from .left {
   width: 150px;
+  color: var(--Text-Grey, #7786a5);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 .sidebar .app-from .top {
   display: flex;
@@ -160,19 +167,38 @@ section {
   line-height: 150%; /* 24px */
 }
 .sidebar .options {
+  /* Стилизация самого скроллбара */
+  /* Стилизация дорожки (трек) */
+  /* Стилизация ползунка (thumb) */
+  /* Стилизация при наведении на ползунок */
   overflow-y: scroll;
 }
+.sidebar .options::-webkit-scrollbar {
+  width: 5px; /* Ширина скроллбара */
+}
+.sidebar .options::-webkit-scrollbar-track {
+  border-left: 1px solid var(--BG-Grey_Light_L, #F5F7F9);
+  border-right: 1px solid var(--BG-Grey_Light_L, #F5F7F9);
+}
+.sidebar .options::-webkit-scrollbar-thumb {
+  background: var(--Stroke-Light-Grey, #d4ddee);
+  border-radius: 5px; /* Радиус закругления ползунка */
+}
+.sidebar .options::-webkit-scrollbar-thumb:hover {
+  background: var(--Stroke-Light-Grey, #d4ddee);
+}
 .sidebar .options.max {
-  max-height: 50vh;
+  max-height: calc(100vh - 455px);
 }
 .sidebar .options.max.min {
-  max-height: 76vh;
+  max-height: calc(100vh - 197px);
 }
 .sidebar .options.min {
-  max-height: 70vh;
+  max-height: 73vh;
 }
 .sidebar .options.orta {
   max-height: 75vh;
+  min-height: 78vh;
 }
 .sidebar .head {
   display: flex;
@@ -246,6 +272,7 @@ section {
   gap: 20px;
 }
 .messeger .null-mess .content .title {
+  margin: 0px 0px 10px 0px;
   color: var(--Text-Black, #2a344a);
   text-align: center;
   /* Platform/Desktop/H-5 M */
@@ -289,7 +316,8 @@ section {
   max-width: 710px;
 }
 .day-list .day {
-  align-self: flex-end;
+  margin: 30px 0px 0px 0px;
+  align-self: center;
   color: var(--Text-Grey, #7786a5);
   text-align: center;
   /* Platform/Mobile/Body-2 R */
@@ -387,6 +415,10 @@ section {
 }
 
 .wrapp {
+  /* Стилизация самого скроллбара */
+  /* Стилизация дорожки (трек) */
+  /* Стилизация ползунка (thumb) */
+  /* Стилизация при наведении на ползунок */
   flex-grow: 1;
   overflow-y: scroll;
   padding: 0px 100px 150px 0px;
@@ -394,8 +426,18 @@ section {
   max-width: 1060px;
   margin: 0px auto;
 }
+.wrapp::-webkit-scrollbar {
+  width: 5px; /* Ширина скроллбара */
+}
+.wrapp::-webkit-scrollbar-thumb {
+  background: var(--Stroke-Light-Grey, #d4ddee);
+  border-radius: 5px; /* Радиус закругления ползунка */
+}
+.wrapp::-webkit-scrollbar-thumb:hover {
+  background: var(--Stroke-Light-Grey, #d4ddee);
+}
 
-.card-status {
+.card-status.new {
   color: var(--Text-White, #fff);
   /* Platform/Desktop/Body-1 R */
   font-family: Roboto;
@@ -403,23 +445,6 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
-}
-.card-status select {
-  margin: 0px 0px 0px -4px;
-  color: var(--Text-White, #fff);
-  /* Platform/Desktop/Body-1 R */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-  background: var(--BG-Black, #2a344a);
-}
-.card-status.new span {
-  display: block;
-}
-.card-status span {
-  display: none;
 }
 
 .mess-form {
@@ -468,8 +493,96 @@ section {
   gap: 15px;
 }
 .mess-form .add .item:hover {
-  color: #4E6AF3;
+  color: #4e6af3;
 }
 .mess-form .add.active {
   display: flex;
+}
+
+.custom-status-select-container {
+  position: relative;
+}
+
+.custom-status-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.custom-status-select-trigger {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0px 20px 0px 0px;
+  position: relative;
+  color: var(--Text-White, #fff);
+  /* Platform/Desktop/Body-1 R */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.custom-status-select-trigger.open::after {
+  transform: rotate(0deg);
+}
+.custom-status-select-trigger::after {
+  content: "";
+  background: url("../img/arrow-selects.svg");
+  position: absolute;
+  top: 3px;
+  left: calc(100% - 15px);
+  width: 18px;
+  height: 18px;
+  transform: rotate(180deg);
+}
+
+.custom-status-options {
+  position: absolute;
+  top: calc(100% + 23px);
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: var(--BG-Black, #2a344a);
+  border-radius: var(--Corner_radius_m, 10px);
+  z-index: 10;
+  display: none; /* Изначально скрыто */
+  max-width: 255px;
+}
+.custom-status-options.open {
+  display: flex;
+}
+
+.custom-status-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  color: var(--Text-Disabled, #b8c6e3);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  padding: 12px 20px 13px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.custom-status-option svg {
+  display: none;
+}
+
+.custom-status-option.active {
+  color: #ffffff;
+}
+.custom-status-option.active svg {
+  display: block;
+}
+
+.custom-status-option:hover {
+  color: #ffffff;
 }/*# sourceMappingURL=applicationcard.css.map */

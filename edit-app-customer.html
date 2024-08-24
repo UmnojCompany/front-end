@@ -13,7 +13,6 @@
       <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
       </div>
-
       <section class="enter-page create-app">
         <div class="container">
           <a href="my-applications.html" class="cancel">
@@ -82,11 +81,11 @@
                 <li>Санкт-Петербург</li>
               </ul>
             </div>
-            <h5>Район</h5>
+            <h5 class="mbott">Район</h5>
             <form class="gap custom-selects" action="">
               <div class="row">
                 <div class="custom-select-container">
-                  <div class="select-wrapper">
+                  <div class="select-wrapper" onclick="toggleOptions(this)">
                     <div class="select-placeholder">
                       <div class="ico">
                         <svg
@@ -106,7 +105,7 @@
                       </div>
                       Укажите интересующие вас районы
                     </div>
-                    <div class="custom-select" onclick="toggleOptions(this)">
+                    <div class="custom-select">
                       <!-- <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
@@ -1002,12 +1001,12 @@
                 <div class="input-container w100">
                   <textarea
                     id="myTextarea"
-                    maxlength="500"
+                    maxlength="5000"
                     rows="10"
                     required=""
                   ></textarea>
-                  <div class="placeholder">О себе</div>
-                  <div class="char-counter" id="charCounter">0/500</div>
+                  <div class="placeholder">Опишите дополнительные пожелания</div>
+                  <div class="char-counter" id="charCounter">0/5000</div>
                 </div>
               </form>
             </div>
@@ -1015,7 +1014,7 @@
               <h3>Ваш профиль</h3>
               <div class="subtitle">
                 Заявка будет опубликована от имени вашего профиля. Вы можете
-                войти в другой профиль или зарегистрировать новый
+                  <a href="enter-page-customer.html">войти</a> в другой профиль или <a href="registration-page.html">зарегистрировать</a> новый
               </div>
               <div class="info-profile">
                 <div class="cart">
@@ -1413,12 +1412,12 @@
                 <div class="input-container w100">
                   <textarea
                     id="myTextarea"
-                    maxlength="500"
+                    maxlength="5000"
                     rows="10"
                     required=""
                   ></textarea>
-                  <div class="placeholder">О себе</div>
-                  <div class="char-counter" id="charCounter">0/500</div>
+                  <div class="placeholder">Опишите дополнительные пожелания</div>
+                  <div class="char-counter" id="charCounter">0/5000</div>
                 </div>
               </form>
             </div>
@@ -1426,7 +1425,7 @@
               <h3>Ваш профиль</h3>
               <div class="subtitle">
                 Заявка будет опубликована от имени вашего профиля. Вы можете
-                войти в другой профиль или зарегистрировать новый
+                  <a href="enter-page-customer.html">войти</a> в другой профиль или <a href="registration-page.html">зарегистрировать</a> новый
               </div>
               <div class="info-profile">
                 <div class="cart">
@@ -1617,12 +1616,12 @@
                 <div class="input-container w100">
                   <textarea
                     id="myTextarea"
-                    maxlength="500"
+                    maxlength="5000"
                     rows="10"
                     required=""
                   ></textarea>
-                  <div class="placeholder">О себе</div>
-                  <div class="char-counter" id="charCounter">0/500</div>
+                  <div class="placeholder">Опишите дополнительные пожелания</div>
+                  <div class="char-counter" id="charCounter">0/5000</div>
                 </div>
               </form>
             </div>
@@ -1630,7 +1629,7 @@
               <h3>Ваш профиль</h3>
               <div class="subtitle">
                 Заявка будет опубликована от имени вашего профиля. Вы можете
-                войти в другой профиль или зарегистрировать новый
+                  <a href="enter-page-customer.html">войти</a> в другой профиль или <a href="registration-page.html">зарегистрировать</a> новый
               </div>
               <div class="info-profile">
                 <div class="cart">
@@ -1863,12 +1862,12 @@
                 <div class="input-container w100">
                   <textarea
                     id="myTextarea"
-                    maxlength="500"
+                    maxlength="5000"
                     rows="10"
                     required=""
                   ></textarea>
-                  <div class="placeholder">О себе</div>
-                  <div class="char-counter" id="charCounter">0/500</div>
+                  <div class="placeholder">Опишите дополнительные пожелания</div>
+                  <div class="char-counter" id="charCounter">0/5000</div>
                 </div>
               </form>
             </div>
@@ -1876,7 +1875,7 @@
               <h3>Ваш профиль</h3>
               <div class="subtitle">
                 Заявка будет опубликована от имени вашего профиля. Вы можете
-                войти в другой профиль или зарегистрировать новый
+                  <a href="enter-page-customer.html">войти</a> в другой профиль или <a href="registration-page.html">зарегистрировать</a> новый
               </div>
               <div class="info-profile">
                 <div class="cart">
@@ -1963,15 +1962,107 @@
     <script src="js/script.js"></script>
     <script>
       //счетчик вводимых символов
-      const textarea = document.getElementById("myTextarea");
-      const charCounter = document.getElementById("charCounter");
-
-      textarea.addEventListener("input", () => {
-        const currentLength = textarea.value.length;
-        charCounter.textContent = `${currentLength}/500`;
+      document.addEventListener("DOMContentLoaded", function () {
+        // Находим все textarea с id "myTextarea"
+        const textareas = document.querySelectorAll("#myTextarea");
+      
+        textareas.forEach((textarea) => {
+          // Находим соответствующий счетчик символов внутри того же контейнера
+          const charCounter = textarea.closest(".input-container").querySelector(".char-counter");
+      
+          textarea.addEventListener("input", () => {
+            const currentLength = textarea.value.length;
+            charCounter.textContent = `${currentLength}/5000`;
+          });
+        });
       });
+      
     </script>
+    <script>
+      // прогресс бар
+      let progress = 0;
 
+      function move() {
+        if (progress < 100) {
+          progress += 10;
+          const progressBar = document.getElementById("progressBar");
+          progressBar.style.width = progress + "%";
+        }
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".button-primary");
+        const createProfileButton = document.querySelector(".button-primary.hide");
+        const nextBlocks = document.querySelectorAll(".next");
+        let progress = 0;
+        const progressBar = document.getElementById("progressBar");
+    
+        // Логика для кнопок с классом .button-primary
+        buttons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                // Проверяем, если кнопка находится внутри блока pcat и блок активен
+                const parentPcat = button.closest(".pcat");
+                if (parentPcat) {
+                    const activePcat = document.querySelector(".pcat.active");
+                    if (parentPcat !== activePcat) {
+                        return; // Прерываем выполнение, если кнопка не внутри активного блока
+                    }
+                }
+    
+                // Скрыть текущую кнопку
+                button.classList.add("hide");
+    
+                // Показать следующий блок step
+                const nextWrapper = button.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains("step")) {
+                    nextWrapper.classList.remove("hide");
+                }
+    
+                // Показать следующую кнопку или кнопку "Создать профиль"
+                if (index < buttons.length - 2) {
+                    buttons[index + 1].classList.remove("inactive");
+                } else if (index === buttons.length - 2) {
+                    // Последняя кнопка "Далее" была нажата
+                    createProfileButton.classList.remove("hide");
+                }
+    
+                // Обновление прогрессбара
+                if (progress < 100) {
+                    progress += 10; // Увеличиваем прогресс на 10% за каждую кнопку
+                    progressBar.style.width = progress + "%";
+                }
+            });
+        });
+    
+        // Логика для блоков с классом .next
+        nextBlocks.forEach((block, index) => {
+            block.addEventListener("click", () => {
+                // Добавляем класс inactive к текущему блоку next
+                block.classList.add("inactive");
+    
+                // Убираем класс inactive у следующего блока с классом next
+                const nextNextBlock = nextBlocks[index + 1];
+                if (nextNextBlock) {
+                    nextNextBlock.classList.remove("inactive");
+                }
+    
+                // Находим следующий блок с классом .inner и убираем у него класс hide
+                let nextInnerBlock = block.closest(".pcat").querySelector(".inner.hide");
+                if (nextInnerBlock) {
+                    nextInnerBlock.classList.remove("hide");
+                }
+    
+                // Обновление прогрессбара (для блоков с классом .next)
+                if (progress < 100) {
+                    progress += 10; // Увеличиваем прогресс на 10% за каждый шаг
+                    progressBar.style.width = progress + "%";
+                }
+            });
+        });
+    });
+    
+    </script>
     <script>
       // чек-листы одиночный выбор
       document.addEventListener("DOMContentLoaded", () => {
@@ -2011,7 +2102,6 @@
         });
       });
     </script>
-
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const numberInputs = document.querySelectorAll(".number-input");
@@ -2076,6 +2166,94 @@
           applyStyles(); // Начальная проверка
         });
       });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const categories = document.querySelectorAll(".cat");
+
+        categories.forEach(function (category) {
+          category.addEventListener("click", function () {
+            // Удаляем класс active у всех категорий и pcat
+            document.querySelectorAll(".cat, .pcat").forEach(function (el) {
+              el.classList.remove("active");
+            });
+
+            // Добавляем класс active на нажатую категорию
+            category.classList.add("active");
+
+            // Добавляем класс active на соответствующие pcat элементы
+            const pcatClass = `.pcat-${category.classList[1].split("-")[1]}`;
+            document.querySelectorAll(pcatClass).forEach(function (pcat) {
+              pcat.classList.add("active");
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cityItems = document.querySelectorAll(
+          ".chek-lists-single .city-01, .chek-lists-single .city-02"
+        );
+
+        cityItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            // Убираем класс active у всех элементов списка и форм
+            document
+              .querySelectorAll(".chek-lists-single li")
+              .forEach((el) => el.classList.remove("active"));
+            document
+              .querySelectorAll(".custom-selects")
+              .forEach((form) => form.classList.remove("active"));
+
+            // Добавляем класс active к текущему элементу списка
+            this.classList.add("active");
+
+            // Определяем, какой блок нужно активировать
+            const activeClass = this.classList.contains("city-01")
+              ? "districts-01"
+              : "districts-02";
+            const inactiveClass = this.classList.contains("city-01")
+              ? "districts-02"
+              : "districts-01";
+
+            // Активируем соответствующий блок
+            document.querySelector(`.${activeClass}`).classList.add("active");
+
+            // Убираем класс active у другого блока
+            document
+              .querySelector(`.${inactiveClass}`)
+              .classList.remove("active");
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Находим все элементы с классом .show-more
+        const showMoreBlocks = document.querySelectorAll(".show-more");
+    
+        showMoreBlocks.forEach((block) => {
+            block.addEventListener("click", () => {
+                // Находим родительский элемент с классом .wrapper
+                const parentWrapper = block.closest(".wrapper");
+    
+                if (parentWrapper) {
+                    // Находим элементы внутри текущего .wrapper
+                    const columnHide = parentWrapper.querySelector(".column-hide");
+    
+                    // Переключаем класс active у блока .show-more
+                    block.classList.toggle("active");
+    
+                    // Переключаем класс active у блока .column-hide
+                    if (columnHide) {
+                        columnHide.classList.toggle("active");
+                    }
+                }
+            });
+        });
+    });
+    
     </script>
   </body>
 </html>

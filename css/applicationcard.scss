@@ -136,6 +136,12 @@ section {
     .app-from {
         .left {
             width: 150px;
+            color: var(--Text-Grey, #7786a5);
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
         }
         .top {
             display: flex;
@@ -170,17 +176,48 @@ section {
     }
 
     .options {
+        /* Стилизация самого скроллбара */
+        &::-webkit-scrollbar {
+            width: 5px; /* Ширина скроллбара */
+        }
+
+        /* Стилизация дорожки (трек) */
+        &::-webkit-scrollbar-track {
+            // background: #f1f1f1; /* Цвет фона дорожки */
+            //border-radius: 10px; /* Радиус закругления */
+            border-left: 1px solid var(--BG-Grey_Light_L, #F5F7F9);
+            border-right: 1px solid var(--BG-Grey_Light_L, #F5F7F9);
+
+        }
+
+        /* Стилизация ползунка (thumb) */
+        &::-webkit-scrollbar-thumb {
+            background: var(--Stroke-Light-Grey, #d4ddee);
+            border-radius: 5px; /* Радиус закругления ползунка */
+            // border: 5px solid #eef1f5; /* Граница ползунка */
+        }
+
+        /* Стилизация при наведении на ползунок */
+        &::-webkit-scrollbar-thumb:hover {
+            background: var(--Stroke-Light-Grey, #d4ddee);
+        }
+
         &.max {
             &.min {
-                max-height: 76vh;
+                //max-height: 76vh;
+                max-height: calc(100vh - 197px);
             }
-            max-height: 50vh;
+           // max-height: 50vh;
+            max-height: calc(100vh - 455px);
+            //min-height: calc(100vh - 455px);
+            //max-height: 100vh;
         }
         &.min {
-            max-height: 70vh;
+            max-height: 73vh;
         }
         &.orta {
             max-height: 75vh;
+            min-height: 78vh;
         }
         overflow-y: scroll;
     }
@@ -246,6 +283,7 @@ section {
     .null-mess {
         .content {
             .title {
+                margin: 0px 0px 10px 0px;
                 color: var(--Text-Black, #2a344a);
                 text-align: center;
 
@@ -280,6 +318,7 @@ section {
         align-items: center;
         justify-content: center;
         height: 100%;
+       // min-height: calc(100vh - 110px) ;
     }
 
     .exit {
@@ -304,7 +343,8 @@ section {
 }
 .day-list {
     .day {
-        align-self: flex-end;
+        margin: 30px 0px 0px 0px;
+        align-self: center;
 
         color: var(--Text-Grey, #7786a5);
         text-align: center;
@@ -424,6 +464,29 @@ section {
     }
 }
 .wrapp {
+    /* Стилизация самого скроллбара */
+    &::-webkit-scrollbar {
+        width: 5px; /* Ширина скроллбара */
+    }
+
+    /* Стилизация дорожки (трек) */
+    &::-webkit-scrollbar-track {
+        // background: #f1f1f1; /* Цвет фона дорожки */
+        //border-radius: 10px; /* Радиус закругления */
+    }
+
+    /* Стилизация ползунка (thumb) */
+    &::-webkit-scrollbar-thumb {
+        background: var(--Stroke-Light-Grey, #d4ddee);
+        border-radius: 5px; /* Радиус закругления ползунка */
+        // border: 5px solid #eef1f5; /* Граница ползунка */
+    }
+
+    /* Стилизация при наведении на ползунок */
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--Stroke-Light-Grey, #d4ddee);
+    }
+
     flex-grow: 1;
     //overflow: hidden;
     overflow-y: scroll;
@@ -432,28 +495,7 @@ section {
     max-width: 1060px;
     margin: 0px auto;
 }
-.card-status {
-    select {
-        margin: 0px 0px 0px -4px;
-        color: var(--Text-White, #fff);
-
-        /* Platform/Desktop/Body-1 R */
-        font-family: Roboto;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%; /* 24px */
-
-        background: var(--BG-Black, #2a344a);
-    }
-    &.new {
-        span {
-            display: block;
-        }
-    }
-    span {
-        display: none;
-    }
+.card-status.new{
     color: var(--Text-White, #fff);
 
     /* Platform/Desktop/Body-1 R */
@@ -463,6 +505,37 @@ section {
     font-weight: 400;
     line-height: 150%; /* 24px */
 }
+// .card-status {
+//     select {
+//         margin: 0px 0px 0px -4px;
+//         color: var(--Text-White, #fff);
+
+//         /* Platform/Desktop/Body-1 R */
+//         font-family: Roboto;
+//         font-size: 16px;
+//         font-style: normal;
+//         font-weight: 400;
+//         line-height: 150%; /* 24px */
+
+//         background: var(--BG-Black, #2a344a);
+//     }
+//     &.new {
+//         span {
+//             display: block;
+//         }
+//     }
+//     span {
+//         display: none;
+//     }
+//     color: var(--Text-White, #fff);
+
+//     /* Platform/Desktop/Body-1 R */
+//     font-family: Roboto;
+//     font-size: 16px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 150%; /* 24px */
+// }
 .mess-form {
     .add {
         .icon {
@@ -475,7 +548,7 @@ section {
         }
         .item {
             &:hover {
-              color: #4E6AF3;
+                color: #4e6af3;
             }
             min-width: 230px;
             cursor: pointer;
@@ -490,10 +563,10 @@ section {
             gap: 15px;
         }
         display: none;
-        &.active{
-             display: flex;
+        &.active {
+            display: flex;
         }
-       
+
         flex-direction: column;
         gap: 7px;
         padding: var(--Corner_radius_m, 10px);
@@ -517,4 +590,106 @@ section {
     width: 100%;
     max-width: 1060px;
     margin: 0px auto;
+}
+//селект
+.custom-status-select-container {
+    position: relative;
+    // width: 100%;
+    // max-width: 400px;
+}
+
+.custom-status-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.custom-status-select-trigger {
+    &.open {
+        &::after {
+            
+            transform: rotate(0deg);
+        }
+    }
+    &::after {
+        content: "";
+        background: url("../img/arrow-selects.svg");
+        position: absolute;
+        top: 3px;
+        left: calc(100% - 15px);
+        width: 18px;
+        height: 18px;
+        transform: rotate(180deg);
+    }
+    max-width: fit-content;
+    padding: 0px 20px 0px 0px;
+    position: relative;
+    color: var(--Text-White, #fff);
+
+    /* Platform/Desktop/Body-1 R */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.custom-status-options {
+    &.open {
+        display: flex;
+    }
+    position: absolute;
+    top: calc(100% + 23px);
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    //gap: 10px;
+
+    background: var(--BG-Black, #2a344a);
+    border-radius: var(--Corner_radius_m, 10px);
+
+    z-index: 10;
+    display: none; /* Изначально скрыто */
+    max-width: 255px;
+    // max-height: 200px;
+    //overflow-y: auto;
+}
+
+.custom-status-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    svg {
+        display: none;
+    }
+    position: relative;
+    color: var(--Text-Disabled, #b8c6e3);
+
+    /* Platform/Button Link/Medium */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+
+    padding: 12px 20px 13px 20px;
+
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.custom-status-option.active {
+    color: #ffffff;
+    svg {
+        display: block;
+    }
+}
+.custom-status-option:hover {
+    color: #ffffff;
 }

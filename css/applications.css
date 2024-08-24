@@ -1,5 +1,6 @@
+@charset "UTF-8";
 .applications {
-  padding: 75px 0px 20px 0px;
+  padding: 75px 0px 0px 0px;
 }
 .applications section {
   margin: 0px 0px 0px 0px;
@@ -91,7 +92,20 @@
   fill: #4e6af3;
 }
 .applications-menu .category-klients {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  position: relative;
   margin: 0px 50px 0px 0px;
+  color: var(--Text-Black, #2a344a);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 100% */
+  letter-spacing: 1.12px;
+  text-transform: uppercase;
 }
 .applications-menu .category-klients select {
   color: var(--Text-Black, #2a344a);
@@ -182,13 +196,70 @@
 }
 
 .column {
+  position: relative;
+  padding: 0px 5px 10px 0px;
+  /* Стилизация самого скроллбара */
+  /* Стилизация дорожки (трек) */
+  /* Стилизация ползунка (thumb) */
+  /* Стилизация при наведении на ползунок */
   min-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-height: calc(100vh - 180px);
+  max-height: calc(100vh - 160px);
   overflow-y: auto;
-  padding: 0px 10px 0px 0px;
+}
+.column::-webkit-scrollbar {
+  width: 5px; /* Ширина скроллбара */
+}
+.column::-webkit-scrollbar-thumb {
+  background: var(--Stroke-Light-Grey, #d4ddee);
+  border-radius: 5px; /* Радиус закругления ползунка */
+}
+.column::-webkit-scrollbar-thumb:hover {
+  background: var(--Stroke-Light-Grey, #d4ddee);
+}
+.column.col-01 .hover {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.column.col-01 .hover .button-primary {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 7px 16px;
+  color: var(--Button-Primary-Text-Default, #fff);
+  text-align: center;
+  /* Platform/Button Link/Small */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+.column.col-01 .hover p {
+  flex-grow: 1;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Fields/Description */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+.column.col-01 .row-item {
+  position: relative;
+  min-height: 120px;
+}
+.column.col-01 .row-item:hover .hover {
+  display: flex;
 }
 .column.col-01 .col-head {
   background: linear-gradient(180deg, #fff 94.81%, #4e6af3 94.81%, #54b7ff 94.81%);
@@ -233,6 +304,10 @@
   background: linear-gradient(180deg, #fff 94.81%, #f34942 94.81%);
 }
 .column .col-head {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
   border-radius: var(--Corner_radius_m, 10px);
   padding: 15px 20px 19px 20px;
 }
@@ -266,9 +341,6 @@
 
 .row-item {
   padding: 8px 10px 10px 10px;
-  max-width: 340px;
-  min-width: 340px;
-  width: 340px;
   height: 120px;
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--BG-White, #fff);
@@ -350,7 +422,7 @@
 
 .vertical {
   display: none;
-  padding: 10px 0px 0px 0px;
+  padding: 10px 0px 200px 0px;
 }
 .vertical .page-head ul::after {
   display: none;
@@ -358,6 +430,9 @@
 .vertical .page-head ul li {
   min-width: -moz-fit-content;
   min-width: fit-content;
+}
+.vertical .page-head ul li.active span {
+  color: var(--Main-Blue, #4e6af3);
 }
 .vertical .page-head ul li span {
   margin: 0px 0px 0px 10px;
@@ -369,11 +444,18 @@
   font-weight: 400;
   line-height: 20px; /* 125% */
 }
+.vertical .page-head .list-wrapp::-webkit-scrollbar {
+  display: none; /* Скрываем скроллбар для WebKit-браузеров */
+}
 .vertical .page-head .list-wrapp {
+  -webkit-user-select: none;
+  -moz-user-select: none;
   overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-y: hidden; /* Отключаем вертикальный скролл */
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
   padding: 0px 0px 10px 0px;
+  cursor: grab; /* Меняем курсор на руку для наглядности */
 }
 .vertical .page-head .wrapper {
   overflow: hidden;
@@ -627,6 +709,43 @@
   color: var(--Text-Error, #f34942);
 }
 
+.client-card .menu,
+.card .menu {
+  position: relative;
+}
+.client-card .menu .submenu,
+.card .menu .submenu {
+  display: none;
+  z-index: 999;
+  overflow: hidden;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid var(--Stroke-Light-Grey, #d4ddee);
+  background: var(--BG-White, #fff);
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+}
+.client-card .menu .submenu .item,
+.card .menu .submenu .item {
+  padding: 12px 20px 13px 20px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.client-card .menu .submenu .item:hover,
+.card .menu .submenu .item:hover {
+  background: var(--Stroke-Divider_form, #f1f7ff);
+}
+.client-card .menu .submenu.active,
+.card .menu .submenu.active {
+  display: block;
+}
+
 .client-card {
   border-radius: var(--Corner_radius_m, 10px);
   background: var(--BG-White, #fff);
@@ -634,7 +753,7 @@
   border: 2px solid var(--Stroke-Light-Grey, rgba(212, 221, 238, 0));
 }
 .client-card .button-primary {
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 .client-card .dashboard {
   display: flex;
@@ -651,6 +770,8 @@
   line-height: 120%; /* 24px */
 }
 .client-card .card-footer {
+  padding: 10px 0px 0px 0px;
+  border-top: 1px solid var(--Stroke-Divider, #e1edfd);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -749,6 +870,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--Text-Black, #2a344a);
+  /* Platform/Accent_16 (S) */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
 }
 .client-card .date-create {
   color: var(--Text-Grey, #7786a5);
@@ -823,4 +951,10 @@
 }
 .client-card:hover {
   border: 2px solid var(--Stroke-Light-Grey, #d4ddee);
+}
+
+.category-klients.zaglushka .tooltip-text {
+  right: auto;
+  left: 0;
+  letter-spacing: 0;
 }/*# sourceMappingURL=applications.css.map */
