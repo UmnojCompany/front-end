@@ -553,6 +553,7 @@ section {
   margin: 0px 10px 0px 10px;
   border-radius: 10px 10px 0 0;
   background-position-y: 0px;
+  border-top: 2px solid #EEF1F5;
 }
 .footer .wrapp.mob .butt {
   display: flex;
