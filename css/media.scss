@@ -1,12 +1,10 @@
 @media (max-width: 1070px) {
-  
     .header .site-logo-dt {
         display: none;
     }
     .header .site-logo-mob {
         display: block;
     }
-   
 }
 @media (max-width: 960px) {
     .header .right .create {
@@ -15,11 +13,13 @@
     .header .nav-dt {
         display: none;
     }
-    .payments-balance .wrapper{
-        flex-direction: column;gap: 20px;
+    .payments-balance .wrapper {
+        flex-direction: column;
+        gap: 20px;
         align-items: flex-start;
     }
-    .page-head ul li, .head-profile ul li{
+    .page-head ul li,
+    .head-profile ul li {
         line-height: 20px;
     }
     .page-head h3,
@@ -83,25 +83,50 @@
     .footer .wrapp.mob {
         display: block;
     }
-    .create-app .cancel, .create-profile-realtor .cancel{
+    .create-app .cancel,
+    .create-profile-realtor .cancel {
         right: 22px;
         top: 15px;
-        background: var(--BG-Light-grey, #EEF1F5);
+        background: var(--BG-Light-grey, #eef1f5);
     }
-    .create-app .head, .create-profile-realtor .head{
+    .create-app .head,
+    .create-profile-realtor .head {
         padding: 15px 0px 15px 0px;
         height: 70px;
         align-items: center;
     }
-    .enter-page .form input{
+    .enter-page .form input {
         width: 100%;
     }
-    .create-app .id-realtor, .create-profile-realtor .id-realtor{
+    .create-app .id-realtor,
+    .create-profile-realtor .id-realtor {
         margin: 0px 82px 0px 0px;
         padding: 0px 0px 0px 0px;
         display: flex;
         align-items: center;
     }
+    .form .up-info .mob {
+        display: block;
+    }
+    .form .up-info .dtop {
+        display: none;
+    }
+    body textarea{
+        height: 164px;
+    }
+    main.no-padding{
+        padding: 0px 0px 75px 0px;
+    }
+    .about-profile .line{
+        top: 76px;
+    }
+    .param-profile .item.noborder{
+        padding: 20px 0px 0px 0px;
+    }
+    .param-profile .item{
+        padding: 20px 0px;
+    }
+    .header{padding: 10px 30px ;}
 }
 @media (max-width: 767px) {
     .enter-page .confirm h3,
@@ -173,7 +198,7 @@
         gap: 20px;
         align-items: flex-start;
     }
-    
+
     h4 {
         font-size: 18px;
     }
@@ -220,7 +245,7 @@
             width: 100%;
         }
     }
-    .payments-balance .right form .button-primary{
+    .payments-balance .right form .button-primary {
         min-width: 320px;
     }
     .footer .wrapp.mob .left,
@@ -286,25 +311,26 @@
     h3 {
         font-size: 22px;
     }
-    .page-head .wrapper, .head-profile .wrapper{
+    .page-head .wrapper,
+    .head-profile .wrapper {
         padding: 20px 20px 20px 20px;
     }
-    .payments-balance .wrapper{
+    .payments-balance .wrapper {
         padding: 20px 20px 20px 20px;
     }
-    .payments-story .wrapper{
+    .payments-story .wrapper {
         padding: 20px 0px 0px 0px;
     }
-    .payments-story h4{
+    .payments-story h4 {
         padding: 0px 20px 20px 20px;
     }
-    .payments-story .list-header{
-        padding: 15px 20px ;
+    .payments-story .list-header {
+        padding: 15px 20px;
     }
-    .payments-story .date{
-        padding: 5px 20px ;
+    .payments-story .date {
+        padding: 5px 20px;
     }
-    .payments-story li{
-        margin: 0px 20px ;
+    .payments-story li {
+        margin: 0px 20px;
     }
 }

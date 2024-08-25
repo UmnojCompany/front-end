@@ -35,7 +35,6 @@ body {
       scrollbar-width: none; /* Скрываем скроллбар в Firefox */
       -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
    }
-
    input {
       &[type="checkbox"] {
          // width: 20px;
@@ -162,7 +161,6 @@ main {
 section {
    margin: 0px 0px 20px 0px;
 }
-
 .button-primary {
    &.create {
       &:hover {
@@ -236,7 +234,6 @@ section {
    }
    border: 2px solid #ffffff00;
 }
-
 .button-secondary {
    transition: 0.3s;
    &:hover {
@@ -916,6 +913,8 @@ section {
       gap: 10px;
    }
    .subtitle {
+      color: var(--Text-Grey_Dark, #3B4A69);
+
       font-size: 14px;
       position: absolute;
       top: 88px;
@@ -2026,13 +2025,12 @@ section {
 }
 .form {
    .up-info {
+      .mob{display: none;}
       order: 9999;
-
       a {
          color: var(--Main-Blue, #4e6af3);
       }
       border: 2px dashed var(--Stroke-Divider, #e1edfd);
-
       border-radius: 10px;
       width: 100%;
       height: 200px;
@@ -2083,17 +2081,14 @@ section {
       flex-wrap: wrap;
       min-width: 100%;
    }
-
    .upload-container input[type="file"] {
       display: none;
    }
-
    .upload-container.dragover {
       border-color: #3e56d0;
 
       color: #3e56d0;
    }
-
    .preview {
       &.big {
          min-width: 100%;
@@ -2109,7 +2104,6 @@ section {
       justify-content: flex-start;
       flex-wrap: wrap;
    }
-
    .preview-wrapper {
       .remove-btn {
          display: none;
@@ -2131,7 +2125,6 @@ section {
       }
       position: relative;
    }
-
    .preview img {
       margin: 0px 0px 0px 0px;
       width: 130px;
@@ -2267,7 +2260,6 @@ section {
       justify-content: space-between;
       gap: 20px;
    }
-
    input {
       &.labeled {
          padding: 26px 20px 6px 20px;
@@ -2316,19 +2308,14 @@ section {
       font-weight: 400;
       line-height: 24px; /* 150% */
    }
-   /* Убираем стрелки для всех браузеров */
    input[type="number"] {
       -moz-appearance: textfield; /* Firefox */
    }
-
-   /* Убираем стрелки для Chrome, Safari, Edge, Opera */
    input[type="number"]::-webkit-outer-spin-button,
    input[type="number"]::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
    }
-
-   /* Убираем стрелки для IE */
    input[type="number"] {
       -ms-appearance: none;
    }
@@ -2388,6 +2375,87 @@ section {
          font-weight: 400;
          line-height: 20px; /* 125% */
       }
+   }
+   .multi-select {
+      .hidden {
+         display: none;
+      }
+      select {
+         cursor: pointer;
+         position: relative;
+         z-index: 99;
+         &.full + .placeholder {
+            font-size: 12px;
+            top: 5px;
+         }
+         &:focus + .placeholder {
+            font-size: 12px;
+            top: 5px;
+         }
+         width: 100%;
+         height: 24px;
+         background: #129ade00;
+      }
+      .placeholder {
+         transition: 0.3s;
+         z-index: 0;
+         span {
+            color: var(--Text-Error, #f34942);
+         }
+         position: absolute;
+         left: 22px;
+         top: 20px;
+
+         color: var(--Fields-Title, #7786a5);
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 24px; /* 150% */
+      }
+      position: relative;
+      padding: 17px 20px 17px 20px;
+      width: 100%;
+      border-radius: var(--Corner_radius_m, 10px);
+      border: 2px solid var(--Fields-Stroke, #e1edfd);
+      background: var(--Fields-Form, #fff);
+      outline: none; /* Убираем стандартный outline */
+   }
+   .selected-items {
+      list-style-type: none;
+      display: flex;
+      gap: 8px;
+      width: 100%;
+   }
+   .selected-items li {
+      border-radius: 5px;
+      border: 1px solid var(--Stroke-Divider, #e1edfd);
+      background: var(--BG-White, #fff);
+      display: flex;
+      padding: 7px 10px;
+      align-items: center;
+      gap: 5px;
+
+      color: var(--Text-Black, #2a344a);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 114.286% */
+   }
+   .selected-items li span {
+      cursor: pointer;
+      color: #7786a5;
+      //font-weight: bold;
+      font-size: 22px;
+      font-weight: 300;
+
+      line-height: 0%;
+
+      display: flex;
+      width: 15px;
+      height: 15px;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 0px 3px 0px;
    }
 }
 .progress-container {
@@ -2470,92 +2538,6 @@ section {
    }
    align-items: flex-start;
    position: relative;
-}
-.form {
-   .multi-select {
-      .hidden {
-         display: none;
-      }
-      select {
-         cursor: pointer;
-         position: relative;
-         z-index: 99;
-         &.full + .placeholder {
-            font-size: 12px;
-            top: 5px;
-         }
-         &:focus + .placeholder {
-            font-size: 12px;
-            top: 5px;
-         }
-         width: 100%;
-         height: 24px;
-         background: #129ade00;
-      }
-      .placeholder {
-         transition: 0.3s;
-         z-index: 0;
-         span {
-            color: var(--Text-Error, #f34942);
-         }
-         position: absolute;
-         left: 22px;
-         top: 20px;
-
-         color: var(--Fields-Title, #7786a5);
-         font-size: 16px;
-         font-style: normal;
-         font-weight: 400;
-         line-height: 24px; /* 150% */
-      }
-      position: relative;
-      padding: 17px 20px 17px 20px;
-      width: 100%;
-      border-radius: var(--Corner_radius_m, 10px);
-      border: 2px solid var(--Fields-Stroke, #e1edfd);
-      background: var(--Fields-Form, #fff);
-      outline: none; /* Убираем стандартный outline */
-   }
-
-   .selected-items {
-      list-style-type: none;
-      display: flex;
-      gap: 8px;
-      width: 100%;
-   }
-
-   .selected-items li {
-      border-radius: 5px;
-      border: 1px solid var(--Stroke-Divider, #e1edfd);
-      background: var(--BG-White, #fff);
-      display: flex;
-      padding: 7px 10px;
-      align-items: center;
-      gap: 5px;
-
-      color: var(--Text-Black, #2a344a);
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px; /* 114.286% */
-   }
-
-   .selected-items li span {
-      cursor: pointer;
-      color: #7786a5;
-      //font-weight: bold;
-      font-size: 22px;
-      font-weight: 300;
-
-      line-height: 0%;
-
-      display: flex;
-      width: 15px;
-      height: 15px;
-      align-items: center;
-      justify-content: center;
-      padding: 0px 0px 3px 0px;
-   }
 }
 .add-video {
    &:hover {

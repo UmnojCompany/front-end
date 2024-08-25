@@ -18,7 +18,8 @@
     gap: 20px;
     align-items: flex-start;
   }
-  .page-head ul li, .head-profile ul li {
+  .page-head ul li,
+  .head-profile ul li {
     line-height: 20px;
   }
   .page-head h3,
@@ -78,12 +79,14 @@
   .footer .wrapp.mob {
     display: block;
   }
-  .create-app .cancel, .create-profile-realtor .cancel {
+  .create-app .cancel,
+  .create-profile-realtor .cancel {
     right: 22px;
     top: 15px;
-    background: var(--BG-Light-grey, #EEF1F5);
+    background: var(--BG-Light-grey, #eef1f5);
   }
-  .create-app .head, .create-profile-realtor .head {
+  .create-app .head,
+  .create-profile-realtor .head {
     padding: 15px 0px 15px 0px;
     height: 70px;
     align-items: center;
@@ -91,11 +94,36 @@
   .enter-page .form input {
     width: 100%;
   }
-  .create-app .id-realtor, .create-profile-realtor .id-realtor {
+  .create-app .id-realtor,
+  .create-profile-realtor .id-realtor {
     margin: 0px 82px 0px 0px;
     padding: 0px 0px 0px 0px;
     display: flex;
     align-items: center;
+  }
+  .form .up-info .mob {
+    display: block;
+  }
+  .form .up-info .dtop {
+    display: none;
+  }
+  body textarea {
+    height: 164px;
+  }
+  main.no-padding {
+    padding: 0px 0px 75px 0px;
+  }
+  .about-profile .line {
+    top: 76px;
+  }
+  .param-profile .item.noborder {
+    padding: 20px 0px 0px 0px;
+  }
+  .param-profile .item {
+    padding: 20px 0px;
+  }
+  .header {
+    padding: 10px 30px;
   }
 }
 @media (max-width: 767px) {
@@ -269,7 +297,8 @@
   h3 {
     font-size: 22px;
   }
-  .page-head .wrapper, .head-profile .wrapper {
+  .page-head .wrapper,
+  .head-profile .wrapper {
     padding: 20px 20px 20px 20px;
   }
   .payments-balance .wrapper {
