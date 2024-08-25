@@ -542,9 +542,11 @@ section {
          display: flex;
          justify-content: space-between;
       }
-      background: url("../img/tab_bar.svg") top no-repeat;
+      background: #fff url("../img/mfbg5.svg") top no-repeat;
       padding: 20px 0px 20px 0px;
-      background-position-y: -19px;
+      margin: 0px 10px 0px 10px;
+      border-radius: 10px 10px 0 0;
+      background-position-y: 0px;
    }
    .butt-add {
       z-index: 99;

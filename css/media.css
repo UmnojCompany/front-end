@@ -66,7 +66,7 @@
     margin: 0px 0px 20px 0px;
   }
   main {
-    padding: 60px 0px 70px 0px;
+    padding: 60px 0px 150px 0px;
   }
   .footer {
     position: relative;
@@ -124,6 +124,68 @@
   }
   .header {
     padding: 10px 30px;
+  }
+  .param-profile h3 {
+    margin: 0px 0px 50px 0px;
+  }
+  .param-profile .subtitle {
+    top: 80px;
+  }
+  .notifications .line,
+  .safety .line,
+  .sertificats-profile .line {
+    top: 76px;
+  }
+  .footer {
+    margin: 0px 0px 0px 0px;
+  }
+  .page-head .wrapper,
+  .head-profile .wrapper {
+    padding: 35px 30px 21px 30px;
+  }
+  .page-head ul li,
+  .head-profile ul li {
+    line-height: 33px;
+  }
+  .payments-balance .right {
+    min-width: 100%;
+  }
+  .button-primary.fit-content {
+    max-width: 100%;
+    width: 50%;
+  }
+  .payments-balance .right .form {
+    display: flex;
+    flex: 1;
+  }
+  .payments-balance .right form input[type=number] {
+    width: 50%;
+  }
+  .payments-balance h4,
+  .payments-story h4 {
+    font-size: 20px;
+  }
+  .notifications h4,
+  .safety h4 {
+    font-size: 20px;
+  }
+  .safety .info {
+    margin: -10px 0px 30px 0px;
+  }
+  .notifications ul {
+    margin: 40px 0px 0px 0px;
+  }
+  section:last-child {
+    margin: 0px 0px 0px 0px;
+  }
+  .vertical {
+    padding: 10px 0px 50px 0px;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    min-width: 100%;
   }
 }
 @media (max-width: 767px) {
