@@ -83,6 +83,25 @@
     .footer .wrapp.mob {
         display: block;
     }
+    .create-app .cancel, .create-profile-realtor .cancel{
+        right: 22px;
+        top: 15px;
+        background: var(--BG-Light-grey, #EEF1F5);
+    }
+    .create-app .head, .create-profile-realtor .head{
+        padding: 15px 0px 15px 0px;
+        height: 70px;
+        align-items: center;
+    }
+    .enter-page .form input{
+        width: 100%;
+    }
+    .create-app .id-realtor, .create-profile-realtor .id-realtor{
+        margin: 0px 82px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        align-items: center;
+    }
 }
 @media (max-width: 767px) {
     .enter-page .confirm h3,
