@@ -23,10 +23,16 @@ section {
   border-radius: 10px;
   background: var(--BG-Light-grey, #eef1f5);
 }
+.app-card-wrapp.hide-options .agent-info,
+.app-card-wrapp.hide-options .app-from,
+.app-card-wrapp.hide-options .options {
+  display: none;
+}
 
 .sidebar {
-  min-width: 580px;
-  max-width: 580px;
+  position: relative;
+  min-width: 370px;
+  max-width: 35%;
   background: #fff;
 }
 .sidebar .title {
@@ -67,11 +73,15 @@ section {
   color: var(--Text-Success, #0ab258);
   /* Platform/Desktop/Body-2 R */
   font-family: Roboto;
+  text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 19.6px */
   padding: 15px 20px;
+}
+.sidebar .client-contacts .sonra .button-primary {
+  display: none;
 }
 .sidebar .client-contacts .sonra.active {
   display: block;
@@ -110,7 +120,6 @@ section {
 }
 .sidebar .col .name {
   color: var(--Text-Black, #2a344a);
-  text-align: center;
   /* Platform/Accent_16 (S) */
   font-family: Roboto;
   font-size: 16px;
@@ -146,6 +155,11 @@ section {
   border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
 }
 .sidebar h5 {
+  white-space: nowrap; /* Запрещаем перенос текста */
+  overflow: hidden; /* Обрезаем текст, если он выходит за границы контейнера */
+  text-overflow: ellipsis; /* Добавляем многоточие, если текст обрезан */
+  display: inline-block;
+  max-width: calc(100% - 160px);
   color: var(--Text-White, #fff);
   /* Platform/Desktop/H-5 M */
   font-family: Roboto;
@@ -153,11 +167,16 @@ section {
   font-style: normal;
   font-weight: 500;
   line-height: 120%; /* 24px */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-block;
+}
+.sidebar h5 span {
+  display: none;
 }
 .sidebar h5 .app-id {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  white-space: nowrap;
   color: var(--Text-Grey, #7786a5);
   /* Platform/Desktop/Body-1 R */
   font-family: Roboto;
@@ -165,6 +184,9 @@ section {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+.sidebar h5 .app-id span {
+  display: inline-block;
 }
 .sidebar .options {
   /* Стилизация самого скроллбара */
@@ -177,8 +199,8 @@ section {
   width: 5px; /* Ширина скроллбара */
 }
 .sidebar .options::-webkit-scrollbar-track {
-  border-left: 1px solid var(--BG-Grey_Light_L, #F5F7F9);
-  border-right: 1px solid var(--BG-Grey_Light_L, #F5F7F9);
+  border-left: 1px solid var(--BG-Grey_Light_L, #f5f7f9);
+  border-right: 1px solid var(--BG-Grey_Light_L, #f5f7f9);
 }
 .sidebar .options::-webkit-scrollbar-thumb {
   background: var(--Stroke-Light-Grey, #d4ddee);
@@ -194,11 +216,12 @@ section {
   max-height: calc(100vh - 197px);
 }
 .sidebar .options.min {
-  max-height: 73vh;
+  min-height: calc(100vh - 282px);
+  max-height: calc(100vh - 282px);
 }
 .sidebar .options.orta {
   max-height: 75vh;
-  min-height: 78vh;
+  min-height: 75vh;
 }
 .sidebar .head {
   display: flex;
@@ -208,6 +231,9 @@ section {
   background: var(--BG-Black, #2a344a);
   padding: 20px;
 }
+.sidebar.custom {
+  min-width: 380px;
+}
 
 .messeger {
   position: relative;
@@ -215,6 +241,9 @@ section {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+.messeger.null .wrapp {
+  padding: 0px 0px 150px 0px;
 }
 .messeger .mess-input-container {
   flex: 1 0 0;
@@ -508,6 +537,7 @@ section {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  max-width: 250px;
 }
 
 .custom-status-select-trigger {
@@ -585,4 +615,42 @@ section {
 
 .custom-status-option:hover {
   color: #ffffff;
+}
+
+.chat-switcher {
+  margin: 0px 0px 2px 0px;
+  position: relative;
+  display: none;
+  gap: 30px;
+  color: var(--Text-Grey, #7786a5);
+}
+.chat-switcher::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 8px);
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--BG-Grey, #3a465d);
+}
+.chat-switcher .switch {
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.chat-switcher .switch.active {
+  position: relative;
+  color: var(--Text-White, #fff);
+}
+.chat-switcher .switch.active::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 8px);
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--Text-White, #fff);
 }/*# sourceMappingURL=applicationcard.css.map */

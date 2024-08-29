@@ -548,14 +548,14 @@ section {
   display: none;
 }
 .footer .wrapp.mob {
-  background: #fff url("../img/mfbg5.svg") top no-repeat;
+  background: #fff;
   padding: 20px 0px 20px 0px;
-  margin: 0px 10px 0px 10px;
   border-radius: 10px 10px 0 0;
   background-position-y: 0px;
-  border-top: 2px solid #EEF1F5;
+  border-top: 2px solid #eef1f5;
 }
 .footer .wrapp.mob .butt {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -574,11 +574,12 @@ section {
   justify-content: space-between;
 }
 .footer .butt-add {
+  cursor: pointer;
   z-index: 99;
   position: absolute;
   top: -22px;
   left: 50%;
-  margin-left: -24px;
+  margin-left: -41px;
 }
 .footer .wrapper.dtop {
   display: block;
@@ -910,7 +911,7 @@ section {
   line-height: 150%; /* 24px */
 }
 .param-profile .subtitle {
-  color: var(--Text-Grey_Dark, #3B4A69);
+  color: var(--Text-Grey_Dark, #3b4a69);
   font-size: 14px;
   position: absolute;
   top: 88px;
@@ -3003,8 +3004,9 @@ section {
 }
 .proposal .p-footer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 20px;
 }
 .proposal .p-footer .to-favorit {
   cursor: pointer;
@@ -3026,6 +3028,7 @@ section {
   padding: 8px 20px;
 }
 .proposal .p-footer .to-chat {
+  white-space: nowrap;
   transition: 0.3s;
   cursor: pointer;
   display: flex;
@@ -3074,6 +3077,9 @@ section {
 .proposal .options {
   border-top: 1px solid var(--Stroke-Divider, #e1edfd);
   border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+}
+.proposal .options li:last-child {
+  padding: 20px 0px;
 }
 .proposal .a-card {
   display: flex;
@@ -3291,7 +3297,6 @@ section {
 }
 .chat .sidebar .col .stars {
   color: var(--Text-Black, #2a344a);
-  /* Platform/Desktop/Body-2 R */
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -3312,7 +3317,6 @@ section {
 }
 .chat .sidebar .app-from .left {
   color: var(--Text-Grey, #7786a5);
-  /* Desktop/Body-2 R */
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -3974,4 +3978,59 @@ section {
 }
 .favorites.active svg path {
   fill: #4e6af3;
+}
+
+.create-app .form .input-container .placeholder br {
+  display: none;
+}
+
+.page-head ul::after {
+  display: none;
+}
+.page-head ul li {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.page-head ul li.active span {
+  color: var(--Main-Blue, #4e6af3);
+}
+.page-head ul li span {
+  margin: 0px 0px 0px 10px;
+  color: var(--Text-Grey, #7786a5);
+  /* Platform/Button Link/Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.page-head .list-wrapp::-webkit-scrollbar {
+  display: none; /* Скрываем скроллбар для WebKit-браузеров */
+}
+.page-head .list-wrapp {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  overflow-x: auto;
+  overflow-y: hidden; /* Отключаем вертикальный скролл */
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+  padding: 0px 0px 10px 0px;
+  cursor: grab; /* Меняем курсор на руку для наглядности */
+}
+.page-head .wrapper {
+  overflow: hidden;
+  padding: 30px 30px 10px 30px;
+}
+.page-head .forline {
+  position: relative;
+}
+.page-head .forline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: var(--Corner_radius_m, 10px);
+  background: var(--Stroke-Divider, #e1edfd);
+  bottom: 0px;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

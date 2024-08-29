@@ -196,6 +196,8 @@
 }
 
 .column {
+  border-radius: 10px 0px 0 0;
+  overflow: hidden;
   position: relative;
   padding: 0px 5px 10px 0px;
   /* Стилизация самого скроллбара */
@@ -348,10 +350,23 @@
   flex-direction: column;
 }
 .row-item ul {
+  position: relative;
   display: flex;
   gap: 5px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.row-item ul::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 22px;
+  background: linear-gradient(to right, transparent, white);
 }
 .row-item ul li {
+  white-space: nowrap;
   color: var(--Text-Black, #2a344a);
   /* Platform/Caption_1 */
   font-family: Roboto;
@@ -423,56 +438,6 @@
 .vertical {
   display: none;
   padding: 10px 0px 200px 0px;
-}
-.vertical .page-head ul::after {
-  display: none;
-}
-.vertical .page-head ul li {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.vertical .page-head ul li.active span {
-  color: var(--Main-Blue, #4e6af3);
-}
-.vertical .page-head ul li span {
-  margin: 0px 0px 0px 10px;
-  color: var(--Text-Grey, #7786a5);
-  /* Platform/Button Link/Medium */
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 125% */
-}
-.vertical .page-head .list-wrapp::-webkit-scrollbar {
-  display: none; /* Скрываем скроллбар для WebKit-браузеров */
-}
-.vertical .page-head .list-wrapp {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  overflow-x: auto;
-  overflow-y: hidden; /* Отключаем вертикальный скролл */
-  -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox */
-  padding: 0px 0px 10px 0px;
-  cursor: grab; /* Меняем курсор на руку для наглядности */
-}
-.vertical .page-head .wrapper {
-  overflow: hidden;
-  padding: 30px 30px 10px 30px;
-}
-.vertical .page-head .forline {
-  position: relative;
-}
-.vertical .page-head .forline::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  border-radius: var(--Corner_radius_m, 10px);
-  background: var(--Stroke-Divider, #e1edfd);
-  bottom: 0px;
-  left: 0;
 }
 .vertical.active {
   display: block;
@@ -789,6 +754,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  overflow: hidden;
+  position: relative;
 }
 .client-card .options .type::after {
   background: url("../img/cards/type.svg");
@@ -809,6 +776,7 @@
   background: url("../img/cards/deadlines.svg");
 }
 .client-card .options li {
+  white-space: nowrap;
   position: relative;
   padding: 7px 10px 7px 34px;
   border-radius: 5px;
@@ -833,6 +801,15 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.client-card .options::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to right, transparent, white);
 }
 .client-card .location {
   padding: 10px 0px 15px 0px;
@@ -957,4 +934,20 @@
   right: auto;
   left: 0;
   letter-spacing: 0;
+}
+
+.search-mob {
+  display: none;
+  background: #fff;
+  margin: 0px 10px 0px 10px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+}
+
+.applications-menu.kanbanmenu {
+  margin: 0px 0px 10px 0px;
+}
+.applications-menu.kanbanmenu .search-mob {
+  border-radius: 0 0 10px 10px;
+  border-bottom: none;
 }/*# sourceMappingURL=applications.css.map */

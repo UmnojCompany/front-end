@@ -25,8 +25,8 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/applicationcard.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
 
   <body class="application-card">
@@ -35,7 +35,7 @@
         <div class="head">
           <h5>
             Куплю квартиру в Москве
-            <div class="app-id">Заявка #12342323</div>
+            <div class="app-id"><span>Заявка</span> #12342323</div>
           </h5>
           <div class="card-status">
             <div class="custom-status-select-container">
@@ -91,6 +91,10 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="chat-switcher">
+            <div class="switch poz01 active">Заявка</div>
+            <div class="switch poz02">Чат</div>
           </div>
         </div>
         <div class="app-from">
@@ -706,6 +710,32 @@
             optionsContainer.classList.remove("open");
             trigger.classList.remove("open"); // Убираем класс open у триггера при закрытии
           }
+        });
+      });
+      
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const switcher = document.querySelector(".chat-switcher");
+        const switches = switcher.querySelectorAll(".switch");
+        const appCardWrap = document.querySelector(".app-card-wrapp");
+      
+        switches.forEach((sw, index) => {
+          sw.addEventListener("click", function () {
+            // Убираем класс active со всех элементов
+            switches.forEach((item) => item.classList.remove("active"));
+      
+            // Добавляем класс active на тот элемент, по которому кликнули
+            this.classList.add("active");
+      
+            // Если это второй элемент (индекс 1), добавляем класс hide-options к app-card-wrapp
+            if (index === 1 && appCardWrap) {
+              appCardWrap.classList.add("hide-options");
+            } else if (index !== 1 && appCardWrap) {
+              // Убираем класс hide-options, если кликнули на первый элемент
+              appCardWrap.classList.remove("hide-options");
+            }
+          });
         });
       });
       

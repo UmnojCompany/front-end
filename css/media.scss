@@ -7,6 +7,16 @@
     }
 }
 @media (max-width: 960px) {
+    .application-card .sidebar{
+        min-width: 100%;
+    }
+    .sidebar h5 span{
+        display: inline-block;
+        //margin-right: 10px;
+    }
+    .sidebar h5 .app-id{
+        margin: 0px 0px 0px auto;
+    }
     .header .right .create {
         display: none;
     }
@@ -156,45 +166,203 @@
     }
     .button-primary.fit-content {
         max-width: 100%;
-        width: 50%;
+        //width: 50%;
     }
     .payments-balance .right .form {
         display: flex;
         flex: 1;
     }
-    .payments-balance .right form input[type=number]{
+    .payments-balance .right form .button-primary.fit-content {
+        width: 50%;
+    }
+    .payments-balance .right form input[type="number"] {
         width: 50%;
     }
     .payments-balance h4,
-    .payments-story h4{
+    .payments-story h4 {
         font-size: 20px;
     }
     .notifications h4,
-    .safety h4{
+    .safety h4 {
         font-size: 20px;
     }
-    .safety .info{
+    .safety .info {
         margin: -10px 0px 30px 0px;
     }
-    .notifications ul{
+    .notifications ul {
         margin: 40px 0px 0px 0px;
     }
-    section{
-        &:last-child{
+    section {
+        &:last-child {
             margin: 0px 0px 0px 0px;
         }
     }
-    .vertical{
-        padding: 10px 0px 50px 0px;
+    .vertical {
+        padding: 0px 0px 150px 0px;
     }
-    .footer{
+    .footer {
         position: fixed;
         bottom: 0px;
         left: 0;
         min-width: 100%;
     }
+    .applications-menu .filters {
+        display: none;
+    }
+    .applications-menu .wrapp {
+        border-radius: 0;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--Stroke-Divider, #e1edfd);
+        margin: -10px 10px 0px 10px;
+        padding: 10px 20px 0px 20px;
+    }
+    .applications-menu .nav-metod {
+        margin: 0px auto 0px 0px;
+    }
+    .vertical .page-head .wrapper {
+        border-radius: 0 0 10px 10px;
+        padding: 20px 30px 10px 30px;
+    }
+    .applications-menu .search-items {
+        margin: 0px 0px 0px 0px;
+    }
+    .search-mob {
+        display: block;
+    }
+    .column.col-01 .row-item:hover .hover {
+        display: none;
+    }
+    .applications {
+        .column {
+            max-height: calc(100vh - 202px);
+        }
+    }
+    .row-item ul {
+        max-width: 85%;
+    }
+    .row-item {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            bottom: 16px;
+            width: 18px;
+            height: 18px;
+            background: url("../img/chat-ico.svg") no-repeat;
+        }
+    }
+    .app-card-wrapp {
+        flex-direction: column;
+    }
+    .app-card-wrapp {
+        border-radius: 0px;
+    }
+    .application-card {
+        .sidebar .head {
+            border-radius: 0px;
+        }
+        padding: 0px 0px 0px 0px;
+        .sidebar {
+            max-width: 100%;
+        }
+    }
+    .sidebar .options.max {
+        max-height: calc(100vh - 467px);
+        min-height: calc(100vh - 467px);
+    }
+    .chat .agent-info {
+        max-height: calc(100vh - 132px);
+        min-height: calc(100vh - 132px);
+    }
+    .sidebar .options.min {
+        max-height: calc(100vh - 330px);
+        min-height: calc(100vh - 330px);
+    }
+    .sidebar .options.max.min {
+        max-height: calc(100vh - 210px);
+        min-height: calc(100vh - 210px);
+    }
+    .sidebar .options.orta {
+        max-height: calc(100vh - 132px);
+        min-height: calc(100vh - 132px);
+    }
+    .application-card .sidebar {
+        &.hide {
+            display: none;
+        }
+    }
+    .chat-switcher {
+        display: flex;
+    }
+    .plug .wrapp {
+        margin-top: -100px;
+    }
+    .create-app {
+        .wrapper.xscroll {
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 30px;
+                width: 30px;
+                height: 70%;
+                background: var(--BG-Lianer, linear-gradient(270deg, #fff 52%, rgba(255, 255, 255, 0) 100%));
+            }
+            position: relative;
+            .row {
+                &::-webkit-scrollbar {
+                    width: 0;
+                    height: 0; /* Убираем отображение горизонтального скроллбара */
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: transparent; /* Делаем ползунок полностью прозрачным */
+                }
+
+                .item {
+                    min-width: 280px;
+                }
+                overflow-x: auto;
+                max-width: calc(100vw - 20px);
+            }
+            //overflow-x: scroll;
+            //max-width: 70%;
+        }
+    }
+    .messeger .exit {
+        display: none;
+    }
+    .messeger {
+        .wrapp {
+            padding: 0px 0px 150px 0px;
+            max-height: calc(100vh - 210px);
+            min-height: calc(100vh - 210px);
+        }
+    }
+    .custom-status-options {
+        top: calc(100% + 8px);
+    }
+    .sidebar .client-contacts .sonra {
+        text-align: center;
+        margin-top: -20px;
+        background: #fff;
+        .button-primary {
+            display: block;
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    .sidebar .app-from .top {
+        //border-bottom: none;
+        //padding: 15px 20px 0px 20px;
+    }
 }
 @media (max-width: 767px) {
+    .chat .agent-info{
+        padding: 20px;
+    }
+    .footer .wrapp.mob {
+        margin: 0px 0px 0px 0px;
+    }
     .enter-page .confirm h3,
     .modal .confirm h3 {
         margin: 0px 0px 16px 0px;
@@ -221,8 +389,8 @@
     }
     .enter-page {
         .button-primary {
-            max-width: 320px;
-            margin: 0px auto;
+            max-width: 100%;
+            margin: 0px 20px;
         }
     }
     .enter-page .form {
@@ -398,5 +566,317 @@
     }
     .payments-story li {
         margin: 0px 20px;
+    }
+    .modal .modal-content {
+        min-width: 100%;
+    }
+    .form .input-container {
+        width: 100%;
+    }
+    .button-primary.w370 {
+        width: 100%;
+    }
+    .payments-balance .right form .button-primary.fit-content {
+        width: 100%;
+    }
+    .content-text {
+        // padding: 20px;
+        max-height: 87vh;
+        max-width: 100vw;
+        padding: 20px 10px 0px 20px;
+
+        color: var(--Text-Grey_Dark, #3b4a69);
+
+        /* Platform/Mobile/Body-1 R */
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+    }
+    .modal .modal-content {
+        padding: 16px 0px 0px 0px;
+        height: calc(100vh - 36px);
+        max-height: calc(100vh - 36px);
+        min-height: calc(100vh - 36px);
+    }
+    .content-text p span {
+        padding: 0px 0px 10px 0px;
+    }
+    .enter-page .form.custom,
+    .registration-page .form.custom {
+        padding: 40px 20px;
+    }
+    .enter-page .form,
+    .registration-page .form {
+        padding: 20px;
+    }
+    .enter-page .wrapper {
+        margin: 0px 0px 16px 0px;
+    }
+    .create-app .cancel,
+    .create-profile-realtor .cancel {
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 14px;
+        top: 40px;
+    }
+    .create-app .head,
+    .create-profile-realtor .head {
+        height: auto;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        padding: 20px 0px 16px 0px;
+        margin: 20px 0px 16px 0px;
+    }
+    .create-app .id-realtor,
+    .create-profile-realtor .id-realtor {
+        margin: 0px 0px 0px 20px;
+    }
+    .create-app .form.gap,
+    .create-profile-realtor .form.gap {
+        .row {
+            flex-direction: column;
+        }
+    }
+    h5 {
+        color: var(--Text-Black, #2a344a);
+
+        /* Platform/Mobile/H-5 M */
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 21.6px */
+    }
+    .create-app h5,
+    .create-profile-realtor h5 {
+        margin: 10px 0px -5px 0px;
+    }
+    .create-app .gap,
+    .create-profile-realtor .gap {
+        padding: 20px;
+    }
+    .form textarea {
+        padding: 30px 20px 18px 20px;
+        line-height: 120%;
+    }
+    .add-video {
+        justify-content: center;
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+    }
+    .video-form {
+        flex-direction: column;
+    }
+    .enter-page .form input,
+    .modal .form input {
+        width: 100%;
+    }
+    .enter-page .container {
+        margin: 0px 0px 16px 0px;
+    }
+    .applications-menu .statistic {
+        display: none;
+    }
+    .applications-menu .nav-metod {
+        margin: 0px 0px 0px 0px;
+    }
+    .vertical {
+        .page-head h3 {
+            margin: 0px 0px 16px 0px;
+        }
+        .client-card .card-body {
+            padding: 15px 0px 15px 0px;
+        }
+        .client-card h5 {
+            font-size: 18px;
+        }
+        .client-card .dashboard {
+            .button-primary {
+                width: 100%;
+            }
+            min-width: 100%;
+        }
+        .client-card .card-footer {
+            padding: 15px 0px 0px 0px;
+            flex-direction: column;
+            align-items: start;
+            gap: 15px;
+        }
+        .card-status {
+            display: none;
+        }
+        .client-card {
+            padding: 15px 20px 20px 20px;
+        }
+        .client-card .views {
+            margin: 0px 0px 0px auto;
+        }
+        .client-card .right {
+            min-width: 100%;
+            justify-content: space-between;
+        }
+        .client-card .left {
+            display: none;
+        }
+    }
+    .applications-menu .wrapp {
+        margin: -20px 0px 0px 0px;
+        min-height: 55px;
+    }
+    .search-mob {
+        margin: 0px 0px 0px 0px;
+    }
+    .vertical .page-head .wrapper {
+        padding: 20px 0px 10px 20px;
+    }
+    .vertical .page-head ul li {
+        line-height: 20px; /* 125% */
+    }
+    .button-secondary {
+        min-width: 100%;
+    }
+    .sidebar h5 {
+        span {
+            
+        }
+        font-size: 18px;
+        //align-items: start;
+        display: inline-block;
+        max-width: 90%;
+        
+    }
+    .sidebar h5 .app-id {
+        span {
+            display: none;
+        }
+        position: absolute;
+        right: 20px;
+        top: 53px;
+    }
+    .create-app .cats.row{
+        flex-wrap: wrap;
+    }
+    .create-app .wrapper.xscroll{
+        .row{
+            padding: 0px 0px 20px 20px;
+            max-width: 100vw;
+        }
+    }
+    .create-app .form.start{
+        flex-direction: column;
+    }
+    .create-app .custom-selects .select-placeholder{
+        .dt-op{
+            display: none;
+        }
+    }
+    .create-app h5.mbott{
+        margin-bottom: -5px;
+    }
+    .create-app .column-hide{
+        max-height: 150px;
+    }
+    .create-app .column{
+        padding: 20px;
+    }
+    .create-app .cats.row{
+        padding: 20px 20px 20px 20px;
+    }
+    .create-app .form .input-container .placeholder{
+        line-height: 1.2;
+    }
+    .create-app .form .input-container .placeholder{
+        br{
+           display: inline-block;
+        }
+     }
+    .create-app{
+        .info-profile .cart{
+            .avatar{
+                width: 70px;height: 70px;
+                border-radius: 10px;
+            }
+            h5{
+                margin: 0px 0px 0px 0px;
+            }
+            flex-direction: row;
+            gap: 15px;
+        }
+        h5{
+            padding: 0px 20px ;
+        }
+        .form .chek-lists-single{
+            min-width: 100%;
+        }
+    }
+    .create-app .wrapper.xscroll::after{
+        top: 20px;
+       
+    }
+    .select-container-single.currency{
+        min-width: 100%;
+    }
+    .page-head ul li, .head-profile ul li{
+        white-space: nowrap;
+    }
+    .my-apps.applications{
+        padding: 50px 0px 150px 0px;
+    }
+    .page-head h3, .head-profile h3{
+        margin: 0px 0px 10px 0px;
+    }
+    .my-apps.applications .client-card .options{
+        padding: 0px 0px 15px 0px;
+    }
+    .client-card .dashboard,
+    .my-apps.applications .button-apps{min-width: 100%;}
+    .my-apps.applications .client-card .card-footer{padding: 15px 0px 0px 0px;}
+    .my-apps{
+        .client-card .left.true{
+            min-width: calc(100% - 59px);
+            margin: 0px 0px 0px 57px;
+           
+        }
+        .client-card .left{
+            min-width: 100%;
+        }
+        .client-card .date-create{
+            margin: 0px auto 0px 0px;
+        }
+        .client-card .right{
+            min-width: 100%;
+            justify-content: space-between;
+        }
+        .client-card .card-head{
+            flex-direction: column-reverse;
+            gap: 15px;
+        }
+        .card-footer{
+            flex-direction: column;
+            align-items: start;gap: 15px;
+            
+        }
+        .card-status{
+            display: none;
+        }
+        .client-card{
+            padding: 15px 20px 20px 20px;
+        }
+        .page-head{
+            .wrapper{
+                padding: 30px 0px 10px 20px;
+            }
+            
+        }
     }
 }

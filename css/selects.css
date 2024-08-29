@@ -56,6 +56,9 @@
   font-weight: 400;
   line-height: 16px; /* 133.333% */
 }
+.custom-select-container .select-placeholder .dt-op {
+  color: var(--Fields-Title, #7786a5);
+}
 .custom-select-container .select-placeholder span {
   color: var(--Text-Error, #f34942);
 }

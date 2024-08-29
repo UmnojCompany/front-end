@@ -35,7 +35,7 @@
             <h3>Редактирование заявки</h3>
             <div class="id-realtor">ID 10445</div>
           </div>
-          <div class="wrapper">
+          <div class="wrapper xscroll">
             <div class="row">
               <div class="item">
                 <div class="num">1</div>
@@ -103,7 +103,7 @@
                           />
                         </svg>
                       </div>
-                      Укажите интересующие вас районы
+                      <p>Укажите <span class="dt-op">интересующие вас </span>районы</p> 
                     </div>
                     <div class="custom-select">
                       <!-- <svg
@@ -166,7 +166,6 @@
               </div>
             </form>
           </div>
-          <!-- <div class="button-primary">Далее</div> -->
           <div class="wrapper">
             <h3>Формат сделки <span>*</span></h3>
             <div class="line"></div>
@@ -177,7 +176,6 @@
               </ul>
             </div>
           </div>
-          <!-- <div class="button-primary inactive">Далее</div> -->
           <div class="wrapper">
             <h3>Тип <span>*</span></h3>
             <div class="line"></div>
@@ -686,7 +684,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="button-primary inactive">Далее</div> -->
           <div class="pcat pcat-01 active">
             <div class="wrapper">
               <h3>Состояние <span>*</span></h3>
@@ -940,6 +937,24 @@
                       />
                       <div class="placeholder">До 999 999 999</div>
                     </div>
+                    <div class="select-container-single currency">
+                      <div class="select-items select-hide">
+                        <div data-value="ruble">Рублей — ₽</div>
+                        <div data-value="dollar">Долларов — $</div>
+                        <div data-value="euro">Евро — €</div>
+                      </div>
+                      <div class="custom-select">
+                        <div class="select-selected"></div>
+                      </div>
+
+                      <select class="hidden-select" required="">
+                        <option value=""></option>
+                        <option value="ruble">Рублей — ₽</option>
+                        <option value="dollar">Долларов — $</option>
+                        <option value="euro">Евро — €</option>
+                      </select>
+                      <label for="">Валюта</label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1005,7 +1020,7 @@
                     rows="10"
                     required=""
                   ></textarea>
-                  <div class="placeholder">Опишите дополнительные пожелания</div>
+                  <div class="placeholder">Опишите дополнительные<br> пожелания</div>
                   <div class="char-counter" id="charCounter">0/5000</div>
                 </div>
               </form>
