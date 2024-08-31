@@ -69,7 +69,7 @@
     margin: 10px;
   }
   .registration-page p a {
-    display: block;
+    display: inline;
   }
   .enter-page .confirm h3,
   .modal .confirm h3 {
@@ -333,6 +333,33 @@
     display: block;
     margin: 0px 0px 20px 0px;
   }
+  .modal {
+    align-items: flex-end;
+  }
+  .modal .modal-content {
+    min-height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px);
+    min-width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+    margin: 0px 10px 10px 10px;
+  }
+  .modal .mw700 {
+    width: 100%;
+    height: 100%;
+  }
+  .content-text {
+    height: calc(100vh - 155px);
+    max-height: calc(100vh - 155px);
+  }
+  .page-head ul {
+    gap: 10px;
+  }
+  .page-head ul li {
+    padding: 0px 20px 0px 0px;
+  }
+  .page-head ul li.active::after {
+    width: calc(100% - 20px);
+  }
 }
 @media (max-width: 767px) {
   .chat .agent-info {
@@ -356,9 +383,8 @@
     margin: 0px 0px 0px 0px;
   }
   .registration-page p {
-    text-align: left;
-    max-width: 320px;
     margin: 20px auto 0 auto;
+    padding: 0px 20px;
   }
   .registration-page p a {
     display: inline;
@@ -772,13 +798,15 @@
   .select-container-single.currency {
     min-width: 100%;
   }
-  .page-head ul li, .head-profile ul li {
+  .page-head ul li,
+  .head-profile ul li {
     white-space: nowrap;
   }
   .my-apps.applications {
     padding: 50px 0px 150px 0px;
   }
-  .page-head h3, .head-profile h3 {
+  .page-head h3,
+  .head-profile h3 {
     margin: 0px 0px 10px 0px;
   }
   .my-apps.applications .client-card .options {
@@ -822,5 +850,139 @@
   }
   .my-apps .page-head .wrapper {
     padding: 30px 0px 10px 20px;
+  }
+  .page-head ul li,
+  .head-profile ul li {
+    line-height: 26px;
+  }
+  section {
+    margin: 0px 0px 16px 0px;
+  }
+  .proposal .open .button-primary.tel {
+    padding: 8px 10px;
+  }
+  .my-objects,
+  .proposals {
+    padding: 50px 0px 150px 0px;
+  }
+  .my-objects .contact-buttons a,
+  .proposals .contact-buttons a {
+    font-size: 0;
+    gap: 0;
+    padding: 8px 12px;
+  }
+  .my-objects .proposal .p-footer .to-favorit,
+  .proposals .proposal .p-footer .to-favorit {
+    display: none;
+  }
+  .my-objects .proposal .p-footer,
+  .proposals .proposal .p-footer {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .my-objects .proposal,
+  .proposals .proposal {
+    padding: 10px 20px 10px 20px;
+  }
+  .my-objects .proposal .options,
+  .proposals .proposal .options {
+    display: none;
+  }
+  .my-objects .options .title,
+  .proposals .options .title {
+    min-width: 110px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .my-objects .options li,
+  .proposals .options li {
+    padding: 15px 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .my-objects .date-create,
+  .proposals .date-create {
+    position: absolute;
+    top: 42px;
+    left: 0;
+  }
+  .my-objects .head,
+  .proposals .head {
+    position: relative;
+    white-space: nowrap;
+    margin: -20px 0px 0px 0px;
+    padding: 10px 0px 33px 0px;
+  }
+  .my-objects .dashboard,
+  .proposals .dashboard {
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+    padding: 15px 0;
+  }
+  .my-objects .dashboard .price,
+  .proposals .dashboard .price {
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    gap: 3px;
+  }
+  .my-objects .page-head h3,
+  .proposals .page-head h3 {
+    margin: 0px 0px 8px 0px;
+  }
+  .my-objects .page-head .wrapper,
+  .proposals .page-head .wrapper {
+    padding: 23px 0px 10px 20px;
+  }
+  .my-objects .wrapper,
+  .proposals .wrapper {
+    padding: 20px;
+  }
+  .data-profile .wrapper {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    overflow-x: auto;
+    overflow-y: hidden; /* Отключаем вертикальный скролл */
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .create-profile-realtor .head h3 {
+    margin: 0px 30px 0px 0px;
+  }
+  .messeger .wrapp {
+    padding: 0px 0px 150px 0px;
+    max-height: calc(100vh - 225px);
+    min-height: calc(100vh - 225px);
+  }
+  .sidebar .options.orta {
+    max-height: calc(100vh - 220px);
+    min-height: calc(100vh - 220px);
+  }
+  .create-app .column-hide {
+    max-height: 170px;
+  }
+  .header {
+    padding: 10px 20px;
+  }
+  main .wrapper {
+    padding: 20px;
+  }
+  .enter-page .wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+  .modal .modal-content {
+    margin: 0px 0px 0px 0px;
+    border-radius: 10px 10px 0 0;
+  }
+  .content-text {
+    height: calc(100vh - 97px);
+    max-height: calc(100vh - 97px);
+    padding: 20px 10px 10px 20px;
   }
 }/*# sourceMappingURL=media.css.map */

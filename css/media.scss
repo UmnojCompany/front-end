@@ -7,14 +7,14 @@
     }
 }
 @media (max-width: 960px) {
-    .application-card .sidebar{
+    .application-card .sidebar {
         min-width: 100%;
     }
-    .sidebar h5 span{
+    .sidebar h5 span {
         display: inline-block;
         //margin-right: 10px;
     }
-    .sidebar h5 .app-id{
+    .sidebar h5 .app-id {
         margin: 0px 0px 0px auto;
     }
     .header .right .create {
@@ -72,7 +72,7 @@
         margin: 10px;
     }
     .registration-page p a {
-        display: block;
+        display: inline;
     }
 
     .enter-page .confirm h3,
@@ -355,9 +355,38 @@
         //border-bottom: none;
         //padding: 15px 20px 0px 20px;
     }
+    .modal{
+        align-items: flex-end;
+    }
+    .modal .modal-content{
+        min-height:calc(100vh - 72px) ;
+        max-height:calc(100vh - 72px) ;
+        min-width:calc(100vw - 20px) ;
+        max-width:calc(100vw - 20px) ;
+        
+        margin: 0px 10px 10px 10px;
+    }
+    .modal .mw700{
+        width: 100%;
+        height: 100%;
+    }
+    .content-text{
+        height: calc(100vh - 155px);
+        max-height: calc(100vh - 155px);
+    }
+    .page-head ul {
+       gap: 10px;
+       
+    }
+    .page-head ul li{
+        padding: 0px 20px 0px 0px;
+    }
+    .page-head ul li.active::after{
+        width: calc(100% - 20px);
+    }
 }
 @media (max-width: 767px) {
-    .chat .agent-info{
+    .chat .agent-info {
         padding: 20px;
     }
     .footer .wrapp.mob {
@@ -380,9 +409,10 @@
         margin: 0px 0px 0px 0px;
     }
     .registration-page p {
-        text-align: left;
-        max-width: 320px;
+        //text-align: left;
+        //max-width: 320px;
         margin: 20px auto 0 auto;
+        padding: 0px 20px ;
     }
     .registration-page p a {
         display: inline;
@@ -747,13 +777,11 @@
     }
     .sidebar h5 {
         span {
-            
         }
         font-size: 18px;
         //align-items: start;
         display: inline-block;
         max-width: 90%;
-        
     }
     .sidebar h5 .app-id {
         span {
@@ -763,120 +791,248 @@
         right: 20px;
         top: 53px;
     }
-    .create-app .cats.row{
+    .create-app .cats.row {
         flex-wrap: wrap;
     }
-    .create-app .wrapper.xscroll{
-        .row{
+    .create-app .wrapper.xscroll {
+        .row {
             padding: 0px 0px 20px 20px;
             max-width: 100vw;
         }
     }
-    .create-app .form.start{
+    .create-app .form.start {
         flex-direction: column;
     }
-    .create-app .custom-selects .select-placeholder{
-        .dt-op{
+    .create-app .custom-selects .select-placeholder {
+        .dt-op {
             display: none;
         }
     }
-    .create-app h5.mbott{
+    .create-app h5.mbott {
         margin-bottom: -5px;
     }
-    .create-app .column-hide{
+    .create-app .column-hide {
         max-height: 150px;
     }
-    .create-app .column{
+    .create-app .column {
         padding: 20px;
     }
-    .create-app .cats.row{
+    .create-app .cats.row {
         padding: 20px 20px 20px 20px;
     }
-    .create-app .form .input-container .placeholder{
+    .create-app .form .input-container .placeholder {
         line-height: 1.2;
     }
-    .create-app .form .input-container .placeholder{
-        br{
-           display: inline-block;
+    .create-app .form .input-container .placeholder {
+        br {
+            display: inline-block;
         }
-     }
-    .create-app{
-        .info-profile .cart{
-            .avatar{
-                width: 70px;height: 70px;
+    }
+    .create-app {
+        .info-profile .cart {
+            .avatar {
+                width: 70px;
+                height: 70px;
                 border-radius: 10px;
             }
-            h5{
+            h5 {
                 margin: 0px 0px 0px 0px;
             }
             flex-direction: row;
             gap: 15px;
         }
-        h5{
-            padding: 0px 20px ;
+        h5 {
+            padding: 0px 20px;
         }
-        .form .chek-lists-single{
+        .form .chek-lists-single {
             min-width: 100%;
         }
     }
-    .create-app .wrapper.xscroll::after{
+    .create-app .wrapper.xscroll::after {
         top: 20px;
-       
     }
-    .select-container-single.currency{
+    .select-container-single.currency {
         min-width: 100%;
     }
-    .page-head ul li, .head-profile ul li{
+    .page-head ul li,
+    .head-profile ul li {
         white-space: nowrap;
     }
-    .my-apps.applications{
+    .my-apps.applications {
         padding: 50px 0px 150px 0px;
     }
-    .page-head h3, .head-profile h3{
+    .page-head h3,
+    .head-profile h3 {
         margin: 0px 0px 10px 0px;
     }
-    .my-apps.applications .client-card .options{
+    .my-apps.applications .client-card .options {
         padding: 0px 0px 15px 0px;
     }
     .client-card .dashboard,
-    .my-apps.applications .button-apps{min-width: 100%;}
-    .my-apps.applications .client-card .card-footer{padding: 15px 0px 0px 0px;}
-    .my-apps{
-        .client-card .left.true{
+    .my-apps.applications .button-apps {
+        min-width: 100%;
+    }
+    .my-apps.applications .client-card .card-footer {
+        padding: 15px 0px 0px 0px;
+    }
+    .my-apps {
+        .client-card .left.true {
             min-width: calc(100% - 59px);
             margin: 0px 0px 0px 57px;
-           
         }
-        .client-card .left{
+        .client-card .left {
             min-width: 100%;
         }
-        .client-card .date-create{
+        .client-card .date-create {
             margin: 0px auto 0px 0px;
         }
-        .client-card .right{
+        .client-card .right {
             min-width: 100%;
             justify-content: space-between;
         }
-        .client-card .card-head{
+        .client-card .card-head {
             flex-direction: column-reverse;
             gap: 15px;
         }
-        .card-footer{
+        .card-footer {
             flex-direction: column;
-            align-items: start;gap: 15px;
-            
+            align-items: start;
+            gap: 15px;
         }
-        .card-status{
+        .card-status {
             display: none;
         }
-        .client-card{
+        .client-card {
             padding: 15px 20px 20px 20px;
         }
-        .page-head{
-            .wrapper{
+        .page-head {
+            .wrapper {
                 padding: 30px 0px 10px 20px;
             }
-            
         }
+    }
+    .page-head ul li,
+    .head-profile ul li {
+        line-height: 26px;
+    }
+    section {
+        margin: 0px 0px 16px 0px;
+    }
+    .proposal .open .button-primary.tel{
+        padding: 8px 10px;
+    }
+    .my-objects,
+    .proposals {
+        .contact-buttons a{
+            font-size: 0;
+            gap: 0;
+            padding: 8px 12px;
+        }
+        .proposal .p-footer .to-favorit{
+            display: none;
+        }
+        // .proposal .p-footer .right{
+        //    margin: 0px 0px 0px auto;
+        // }
+        
+        .proposal .p-footer{
+            justify-content: flex-start;
+            gap: 10px;
+        }
+        .proposal{
+            padding: 10px 20px 10px 20px;
+        }
+        .proposal .options{
+            display: none;
+        }
+        .options .title {
+            min-width: 110px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+        .options li {
+            padding: 15px 0;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+        .date-create {
+            position: absolute;
+            top: 42px;
+            left: 0;
+        }
+        .head {
+            position: relative;
+            white-space: nowrap;
+            margin: -20px 0px 0px 0px;
+            padding: 10px 0px 33px 0px;
+        }
+         .dashboard {
+            .price {
+                font-size: 21px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%;
+                gap: 3px;
+            }
+            flex-direction: column;
+            gap: 15px;
+            align-items: start;
+            padding: 15px 0;
+        }
+        .page-head h3 {
+            margin: 0px 0px 8px 0px;
+        }
+        .page-head .wrapper {
+            padding: 23px 0px 10px 20px;
+        }
+        .wrapper {
+            padding: 20px;
+        }
+        padding: 50px 0px 150px 0px;
+    }
+    .data-profile .wrapper{
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        overflow-x: auto;
+        overflow-y: hidden; /* Отключаем вертикальный скролл */
+        -ms-overflow-style: none; /* IE и Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .create-profile-realtor .head h3 {
+        margin: 0px 30px 0px 0px;
+    }
+    .messeger .wrapp {
+        padding: 0px 0px 150px 0px;
+        max-height: calc(100vh - 225px);
+        min-height: calc(100vh - 225px);
+    }
+    .sidebar .options.orta {
+        max-height: calc(100vh - 220px);
+        min-height: calc(100vh - 220px);
+    }
+    .create-app .column-hide {
+        max-height: 170px;
+    }
+    .header{
+        padding: 10px 20px ;
+    }
+    main .wrapper{
+        padding: 20px;
+    }
+    .enter-page .wrapper{
+        border-radius: 0 0 10px 10px;
+    }
+    .modal .modal-content{
+        margin: 0px 0px 0px 0px;
+        border-radius: 10px 10px 0 0;
+    }
+    .content-text{
+        height: calc(100vh - 97px);
+        max-height: calc(100vh - 97px);
+        padding: 20px 10px 10px 20px;
     }
 }

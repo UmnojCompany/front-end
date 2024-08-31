@@ -4033,4 +4033,8 @@ section {
   background: var(--Stroke-Divider, #e1edfd);
   bottom: 0px;
   left: 0;
+}
+
+.proposal .open .button-primary.tel {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

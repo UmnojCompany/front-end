@@ -4410,3 +4410,8 @@ section {
        position: relative;
    }
 }
+.proposal .open .button-primary{
+   &.tel{
+      display: flex;
+   }
+}
