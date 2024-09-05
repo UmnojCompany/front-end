@@ -17,6 +17,35 @@ jQuery(document).ready(function ($) {
 
 
 
+document.querySelectorAll('.list-wrapp').forEach((wrapper) => {
+  const listItems = wrapper.querySelectorAll('li');
+
+  listItems.forEach((item) => {
+      item.addEventListener('click', () => {
+          const wrapperRect = wrapper.getBoundingClientRect();
+          const itemRect = item.getBoundingClientRect();
+          
+          // Если элемент частично скрыт справа
+          if (itemRect.right > wrapperRect.right) {
+              const scrollAmount = itemRect.right - wrapperRect.right;
+              wrapper.scrollBy({
+                  left: scrollAmount,
+                  behavior: 'smooth'
+              });
+          }
+
+          // Если элемент частично скрыт слева (например, после прокрутки вправо)
+          if (itemRect.left < wrapperRect.left) {
+              const scrollAmount = wrapperRect.left - itemRect.left;
+              wrapper.scrollBy({
+                  left: -scrollAmount,
+                  behavior: 'smooth'
+              });
+          }
+      });
+  });
+});
+
 
 
 

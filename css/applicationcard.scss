@@ -26,7 +26,8 @@ section {
     border-radius: 10px;
     background: var(--BG-Light-grey, #eef1f5);
 }
-.sidebar { position: relative;
+.sidebar { 
+    position: relative;
     .title {
         min-width: 150px;
 
@@ -168,7 +169,7 @@ section {
         overflow: hidden; /* Обрезаем текст, если он выходит за границы контейнера */
         text-overflow: ellipsis; /* Добавляем многоточие, если текст обрезан */
         display: inline-block;
-        max-width: calc(100% - 160px);
+        max-width: calc(100% - 90px);
         span {
             display: none;
         }
@@ -264,7 +265,8 @@ section {
     // max-width: 580px;
     //min-width: 35%;
     &.custom{
-        min-width: 380px;
+        //min-width: 380px;
+        min-width: 35%;
     }
     min-width: 370px;
     max-width: 35%;
@@ -676,7 +678,7 @@ section {
 .custom-status-option {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     svg {
         display: none;
     }

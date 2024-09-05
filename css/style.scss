@@ -97,11 +97,29 @@ body {
 body::-webkit-scrollbar {
    width: 0; /* Скрываем скроллбар в WebKit-браузерах (Chrome, Safari) */
 }
+.page-head ul li,
+.form .upload-container,
+.custom-select-container,
+.select-container-single {
+   -webkit-tap-highlight-color: transparent; /* Убирает выделение на мобильных устройствах */
+
+}
+a, button, select, input, textarea {
+   -webkit-tap-highlight-color: transparent; /* Убирает выделение на мобильных устройствах */
+}
+.overflow{
+   z-index: 900;
+   position: fixed;
+   left: 0;top: 0;
+   width: 100%;
+   height: 10px;
+   background: #eef1f5;
+}
 h3 {
    span {
       color: var(--Text-Grey, #7786a5);
       display: inline-block;
-      margin: 0px 0px 0px 8px;
+      //margin: 0px 0px 0px 8px;
    }
    color: var(--Text-Black, #2a344a);
 
@@ -922,7 +940,7 @@ section {
    }
    .subtitle {
       color: var(--Text-Grey_Dark, #3b4a69);
-
+line-height: 140%;
       font-size: 14px;
       position: absolute;
       top: 88px;
@@ -1109,14 +1127,27 @@ section {
    }
 }
 .notifications {
+   .edit{
+      margin: 0px 30px 0px auto;
+   }
+   .title{width: 100%;
+      display: flex;align-items: center;
+   }
+   .edit {
+      cursor: pointer;
+      color: var(--Main-Blue, #4e6af3);
+
+      /* Platform/Button Link/Medium */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 125% */
+   }
    .right {
-      .edit {
-         cursor: pointer;
-      }
       display: flex;
       align-items: center;
       gap: 30px;
-      color: #4e6af3;
    }
    li {
       &:last-child {
@@ -1169,6 +1200,15 @@ section {
    transition: 0.1s;
 }
 .safety {
+   .for-mob {
+      .tel {
+         //margin: 0px 0px 0px auto;
+      }
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+   }
    .delete-butt {
       cursor: pointer;
       color: #fff;
@@ -1183,7 +1223,18 @@ section {
       gap: 10px;
    }
    .title {
+      min-width: 250px;
+      br {
+         display: none;
+      }
       color: var(--Text-Grey, #7786a5);
+
+      /* Platform/Fields/Placeholder */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
    }
    .info {
       max-width: 830px;
@@ -1325,7 +1376,7 @@ section {
       // top: 80px;
       background: var(--Stroke-Divider_form, #f1f7ff);
       padding: var(--Corner_radius_s, 5px) 30px;
-      color: var(--Text-Grey_Dark, #3b4a69);
+      color: var(--Text-Grey_Dark, #2a344a);
 
       font-size: 14px;
       font-style: normal;
@@ -1565,7 +1616,7 @@ section {
       // top: 80px;
       background: var(--Stroke-Divider_form, #f1f7ff);
       padding: var(--Corner_radius_s, 5px) 30px;
-      color: var(--Text-Grey_Dark, #3b4a69);
+      color: var(--Text-Grey_Dark, #2a344a);
 
       font-size: 14px;
       font-style: normal;
@@ -1582,6 +1633,7 @@ section {
    .mw460 {
       width: 460px;
       padding: 10px 40px 40px 40px;
+      margin: 0px auto;
       h4 {
          padding: 0px 0px 0px 0px;
       }
@@ -1660,7 +1712,7 @@ section {
    top: 0;
    min-width: 100%;
    min-height: 100%;
-   z-index: 777;
+   z-index: 999;
 }
 .content-text {
    /* Стилизация самого скроллбара */
@@ -2337,7 +2389,8 @@ section {
       li {
          transition: 0.3s;
          &:hover {
-            color: var(--Button-Secondary-Text-Hover, #4e6af3);
+            //color: var(--Button-Secondary-Text-Hover, #4e6af3);
+            background: var(--Request-BG-Hover, #E1EDFD);
          }
          cursor: pointer;
          &.active {
@@ -2366,7 +2419,8 @@ section {
       li {
          transition: 0.3s;
          &:hover {
-            color: var(--Button-Secondary-Text-Hover, #4e6af3);
+            //color: var(--Button-Secondary-Text-Hover, #4e6af3);
+            background: var(--Request-BG-Hover, #E1EDFD);
          }
          &.active {
             background: var(--Request-BG-Active, #4e6af3);
@@ -2486,6 +2540,9 @@ section {
 }
 .create-app,
 .create-profile-realtor {
+   h5{
+      margin: 0px 0px -15px 0px;
+   }
    background: var(--BG-Light-grey, #eef1f5);
    .wrapper {
       &.hide {
@@ -3737,6 +3794,16 @@ section {
       }
    }
    .custom-select-container .selected-items .selected-item {
+      transition: 0.2s;
+      &:hover {
+         color: #4E6AF3;
+         background: #E1EDFD;
+         svg{
+            path{
+               fill: #4E6AF3;
+            }
+         }
+      }
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
@@ -4226,6 +4293,13 @@ section {
    }
 }
 .select-container-single {
+   &.open{
+      .custom-select {
+         &::after {
+           transform: rotate(180deg);
+         }
+      }
+   }
    &.pol {
       z-index: 1000;
    }
@@ -4346,72 +4420,79 @@ section {
       }
    }
 }
-.create-app .form .input-container .placeholder{
-   br{
+.create-app .form .input-container .placeholder {
+   br {
       display: none;
    }
 }
 
 .page-head {
    ul {
-       &::after {
-           display: none;
-       }
-       li {
-           &.active {
-               span {
-                   color: var(--Main-Blue, #4e6af3);
-               }
-           }
-           min-width: fit-content;
-           span {
-               margin: 0px 0px 0px 10px;
-               color: var(--Text-Grey, #7786a5);
+      &::after {
+         display: none;
+      }
+      li {
+         &.active {
+            span {
+               color: var(--Main-Blue, #4e6af3);
+            }
+         }
+         min-width: fit-content;
+         span {
+            margin: 0px 0px 0px 10px;
+            color: var(--Text-Grey, #7786a5);
 
-               /* Platform/Button Link/Medium */
-               font-family: Roboto;
-               font-size: 16px;
-               font-style: normal;
-               font-weight: 400;
-               line-height: 20px; /* 125% */
-           }
-       }
+            /* Platform/Button Link/Medium */
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 125% */
+         }
+      }
    }
    .list-wrapp::-webkit-scrollbar {
-       display: none; /* Скрываем скроллбар для WebKit-браузеров */
+      display: none; /* Скрываем скроллбар для WebKit-браузеров */
    }
    .list-wrapp {
-       -webkit-user-select: none;
-       -moz-user-select: none;
-       overflow-x: auto;
-       overflow-y: hidden; /* Отключаем вертикальный скролл */
-       -ms-overflow-style: none; /* IE и Edge */
-       scrollbar-width: none; /* Firefox */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      overflow-x: auto;
+      overflow-y: hidden; /* Отключаем вертикальный скролл */
+      -ms-overflow-style: none; /* IE и Edge */
+      scrollbar-width: none; /* Firefox */
 
-       padding: 0px 0px 10px 0px;
-       cursor: grab; /* Меняем курсор на руку для наглядности */
+      padding: 0px 0px 10px 0px;
+      cursor: grab; /* Меняем курсор на руку для наглядности */
    }
    .wrapper {
-       overflow: hidden;
-       // padding: 0px 0px 0px 0px;
-       padding: 30px 30px 10px 30px;
+      overflow: hidden;
+      // padding: 0px 0px 0px 0px;
+      padding: 30px 30px 10px 30px;
    }
    .forline {
-       &::after {
-           content: "";
-           position: absolute;
-           width: 100%;
-           height: 4px;
-           border-radius: var(--Corner_radius_m, 10px);
-           background: var(--Stroke-Divider, #e1edfd);
-           bottom: 0px;
-           left: 0;
-       }
-       position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 4px;
+         border-radius: var(--Corner_radius_m, 10px);
+         background: var(--Stroke-Divider, #e1edfd);
+         bottom: 0px;
+         left: 0;
+      }
+      position: relative;
    }
 }
-.proposal .open .button-primary{
-   &.tel{
+.proposal .open .button-primary {
+   &.tel {
       display: flex;
    }
+}
+.for-chat-userinfo{
+   display: none;
+   
+}
+.create-app .info-profile .info-prf{
+   h5{margin: 0px 0px 0px 0px;}
 }

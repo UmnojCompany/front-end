@@ -35,8 +35,8 @@
           <div class="wrapper">
             <h3>Фото для профиля <span>*</span></h3>
             <div class="subtitle">
-              Загрузите фото для профиля. Вес до 10 мб. Оптимальное
-              разрешение 600 x 600px. Доступный формат jpg / png
+              Загрузите фото для профиля. Вес до 10 мб. Оптимальное разрешение
+              600 x 600px. Доступный формат jpg / png
             </div>
             <form class="form" action="">
               <div class="upload-container mono-file" data-multiple="false">
@@ -431,23 +431,24 @@
             </div>
             <form class="form" action="">
               <div class="upload-container big" data-multiple="true">
-                <div class="preview big"><div class="up-info">
-                  <div class="file-icon">
-                    <img src="img/file-image.svg" alt="" />
+                <div class="preview big">
+                  <div class="up-info">
+                    <div class="file-icon">
+                      <img src="img/file-image.svg" alt="" />
+                    </div>
+                    <p class="dtop">
+                      Перетащите изображение сюда или
+                      <a> загрузите с устройства</a>
+                    </p>
+                    <p class="mob"><a>Загрузите изображение</a></p>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      multiple
+                      style="display: none"
+                    />
                   </div>
-                  <p class="dtop">
-                    Перетащите изображение сюда или
-                    <a> загрузите с устройства</a>
-                  </p>
-                  <p class="mob"><a>Загрузите изображение</a></p>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    multiple
-                    style="display: none"
-                  />
-                </div></div>
-                
+                </div>
               </div>
             </form>
           </div>
@@ -460,7 +461,7 @@
               <div class="input-container w100">
                 <textarea
                   id="myTextarea"
-                  maxlength="500"
+                  maxlength="1000"
                   rows="10"
                   required
                 ></textarea>
@@ -541,7 +542,7 @@
 
       textarea.addEventListener("input", () => {
         const currentLength = textarea.value.length;
-        charCounter.textContent = `${currentLength}/500`;
+        charCounter.textContent = `${currentLength}/1000`;
       });
     </script>
     <script>
@@ -669,6 +670,15 @@
           }
         });
       }
+    </script>
+    <script>
+      const textarea3 = document.getElementById("myTextarea");
+
+      // Функция для автоматической подгонки высоты
+      textarea3.addEventListener("input", function () {
+        this.style.height = "auto"; // Сброс текущей высоты, чтобы пересчитать
+        this.style.height = this.scrollHeight + "px"; // Установка высоты на основе содержимого
+      });
     </script>
   </body>
 </html>

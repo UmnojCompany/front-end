@@ -159,7 +159,7 @@ section {
   overflow: hidden; /* Обрезаем текст, если он выходит за границы контейнера */
   text-overflow: ellipsis; /* Добавляем многоточие, если текст обрезан */
   display: inline-block;
-  max-width: calc(100% - 160px);
+  max-width: calc(100% - 90px);
   color: var(--Text-White, #fff);
   /* Platform/Desktop/H-5 M */
   font-family: Roboto;
@@ -232,7 +232,7 @@ section {
   padding: 20px;
 }
 .sidebar.custom {
-  min-width: 380px;
+  min-width: 35%;
 }
 
 .messeger {
@@ -589,7 +589,7 @@ section {
 .custom-status-option {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   position: relative;
   color: var(--Text-Disabled, #b8c6e3);
   /* Platform/Button Link/Medium */

@@ -39,10 +39,10 @@
           <div class="wrapper">
             <h3>Фото для профиля <span>*</span></h3>
             <div class="subtitle">
-              Загрузите фото для профиля. Вес до 10 мб. Оптимальное
-              разрешение 600 x 600 px. Доступный формат jpg / png
+              Загрузите фото для профиля. Вес до 10 мб. Оптимальное разрешение
+              600 x 600 px. Доступный формат jpg / png
             </div>
-            <form class="form " action="">
+            <form class="form" action="">
               <div class="upload-container mono-file" data-multiple="false">
                 <div class="preview"></div>
                 <div class="up-info">
@@ -470,23 +470,22 @@
               <div class="upload-container big" data-multiple="true">
                 <div class="preview big">
                   <div class="up-info">
-                  <div class="file-icon">
-                    <img src="img/file-image.svg" alt="" />
+                    <div class="file-icon">
+                      <img src="img/file-image.svg" alt="" />
+                    </div>
+                    <p class="dtop">
+                      Перетащите изображение сюда или
+                      <a> загрузите с устройства</a>
+                    </p>
+                    <p class="mob"><a>Загрузите изображение</a></p>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      multiple
+                      style="display: none"
+                    />
                   </div>
-                  <p class="dtop">
-                    Перетащите изображение сюда или
-                    <a> загрузите с устройства</a>
-                  </p>
-                  <p class="mob"><a>Загрузите изображение</a></p>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    multiple
-                    style="display: none"
-                  />
                 </div>
-                </div>
-                
               </div>
             </form>
           </div>
@@ -500,7 +499,7 @@
               <div class="input-container w100">
                 <textarea
                   id="myTextarea"
-                  maxlength="500"
+                  maxlength="1000"
                   rows="10"
                   required
                 ></textarea>
@@ -581,7 +580,7 @@
 
       textarea.addEventListener("input", () => {
         const currentLength = textarea.value.length;
-        charCounter.textContent = `${currentLength}/500`;
+        charCounter.textContent = `${currentLength}/1000`;
       });
     </script>
     <script>
@@ -746,40 +745,40 @@
         const fileInput = container.querySelector('input[type="file"]');
         const preview = container.querySelector(".preview");
         const multiple = container.getAttribute("data-multiple") === "true";
-      
+
         container.addEventListener("click", () => {
           fileInput.click();
         });
-      
+
         container.addEventListener("dragover", (event) => {
           event.preventDefault();
           container.classList.add("dragover");
         });
-      
+
         container.addEventListener("dragleave", () => {
           container.classList.remove("dragover");
         });
-      
+
         container.addEventListener("drop", (event) => {
           event.preventDefault();
           container.classList.remove("dragover");
-      
+
           const files = event.dataTransfer.files;
           if (files.length) {
             handleFiles(files, preview, multiple, container);
           }
         });
-      
+
         fileInput.addEventListener("change", (event) => {
           handleFiles(event.target.files, preview, multiple, container);
         });
       });
-      
+
       function handleFiles(files, preview, multiple, container) {
         if (!multiple) {
           preview.innerHTML = "";
         }
-      
+
         Array.from(files).forEach((file) => {
           if (file && file.type.startsWith("image/")) {
             const reader = new FileReader();
@@ -787,10 +786,10 @@
               // Создаем wrapper для каждого изображения
               const previewWrapper = document.createElement("div");
               previewWrapper.classList.add("preview-wrapper");
-      
+
               const img = document.createElement("img");
               img.src = event.target.result;
-      
+
               // Создаем кнопку для удаления
               const removeBtn = document.createElement("button");
               removeBtn.classList.add("remove-btn");
@@ -799,20 +798,20 @@
                 e.stopPropagation(); // Останавливаем всплытие события
                 e.preventDefault(); // Останавливаем действие по умолчанию
                 preview.removeChild(previewWrapper);
-      
+
                 // Проверяем, есть ли у контейнера класс mono-file и убираем класс full, если это последний файл
                 if (container.classList.contains("mono-file")) {
                   container.classList.remove("full");
                 }
               });
-      
+
               // Добавляем изображение и кнопку в preview-wrapper
               previewWrapper.appendChild(img);
               previewWrapper.appendChild(removeBtn);
-      
+
               // Добавляем preview-wrapper в общий контейнер preview
               preview.appendChild(previewWrapper);
-      
+
               container.classList.add("full");
             };
             reader.readAsDataURL(file);
@@ -821,7 +820,15 @@
           }
         });
       }
-      
+    </script>
+    <script>
+      const textarea3 = document.getElementById("myTextarea");
+
+      // Функция для автоматической подгонки высоты
+      textarea3.addEventListener("input", function () {
+        this.style.height = "auto"; // Сброс текущей высоты, чтобы пересчитать
+        this.style.height = this.scrollHeight + "px"; // Установка высоты на основе содержимого
+      });
     </script>
   </body>
 </html>

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@media (max-width: 1400px) {
+  .sidebar h5 .app-id span {
+    display: none;
+  }
+}
 @media (max-width: 1070px) {
   .header .site-logo-dt {
     display: none;
@@ -8,11 +13,29 @@
   }
 }
 @media (max-width: 960px) {
+  .create-app .cats .cat {
+    width: 155px;
+    height: 155px;
+  }
+  .form .preview-wrapper .remove-btn {
+    display: block;
+  }
+  .create-app .id-realtor {
+    white-space: nowrap;
+  }
   .application-card .sidebar {
     min-width: 100%;
   }
+  .sidebar h5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
   .sidebar h5 span {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
   .sidebar h5 .app-id {
     margin: 0px 0px 0px auto;
@@ -71,12 +94,14 @@
   .registration-page p a {
     display: inline;
   }
-  .enter-page .confirm h3,
   .modal .confirm h3 {
+    margin: 20px 0px 20px 0px;
+  }
+  .enter-page .confirm h3 {
     margin: 0px 0px 20px 0px;
   }
   main {
-    padding: 60px 0px 150px 0px;
+    padding: 60px 0px 140px 0px;
   }
   .footer {
     position: relative;
@@ -117,11 +142,11 @@
   .form .up-info .dtop {
     display: none;
   }
-  body textarea {
-    height: 164px;
-  }
   main.no-padding {
-    padding: 0px 0px 75px 0px;
+    padding: 0px 0px 140px 0px;
+  }
+  .video-form:first-child {
+    margin: 20px 0px 0px 0px;
   }
   .about-profile .line {
     top: 76px;
@@ -151,7 +176,9 @@
   }
   .page-head .wrapper,
   .head-profile .wrapper {
-    padding: 35px 30px 21px 30px;
+    padding: 30px 30px 10px 30px;
+    border-radius: 0 0 10px 10px;
+    margin: -10px 0px 0px 0px;
   }
   .page-head ul li,
   .head-profile ul li {
@@ -191,7 +218,7 @@
     margin: 0px 0px 0px 0px;
   }
   .vertical {
-    padding: 0px 0px 150px 0px;
+    padding: 0px 0px 140px 0px;
   }
   .footer {
     position: fixed;
@@ -231,10 +258,10 @@
   .row-item ul {
     max-width: 85%;
   }
-  .row-item {
+  .horizontal .row-item {
     position: relative;
   }
-  .row-item::after {
+  .horizontal .row-item::after {
     content: "";
     position: absolute;
     right: 10px;
@@ -295,7 +322,7 @@
     position: absolute;
     right: 0;
     top: 30px;
-    width: 30px;
+    width: 56px;
     height: 70%;
     background: var(--BG-Lianer, linear-gradient(270deg, #fff 52%, rgba(255, 255, 255, 0) 100%));
   }
@@ -318,8 +345,8 @@
   }
   .messeger .wrapp {
     padding: 0px 0px 150px 0px;
-    max-height: calc(100vh - 210px);
-    min-height: calc(100vh - 210px);
+    max-height: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
   }
   .custom-status-options {
     top: calc(100% + 8px);
@@ -330,7 +357,7 @@
     background: #fff;
   }
   .sidebar .client-contacts .sonra .button-primary {
-    display: block;
+    display: flex;
     margin: 0px 0px 20px 0px;
   }
   .modal {
@@ -360,16 +387,157 @@
   .page-head ul li.active::after {
     width: calc(100% - 20px);
   }
+  .create-profile-realtor h5 {
+    margin: 0px 0px -15px 0px;
+  }
+  .my-apps.applications {
+    padding: 70px 0px 140px 0px;
+  }
+  .chat .info-prf h4 {
+    font-size: 20px;
+  }
+  .messeger {
+    padding: 0px 10px 10px 10px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .card-status {
+    flex-grow: 1;
+  }
+  .application-card .sidebar .head {
+    min-height: 130px;
+  }
+  .app-card-wrapp.hide-options .for-chat-userinfo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    flex-grow: 1;
+  }
+  .app-card-wrapp.hide-options .for-chat-userinfo .ad-soyad {
+    color: var(--Text-White, #fff);
+    /* Platform/Mobile/H-5 M */
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 21.6px */
+  }
+  .app-card-wrapp.hide-options .for-chat-userinfo .ad-soyad span {
+    display: block;
+    overflow: hidden;
+    color: var(--Text-Disabled, #b8c6e3);
+    text-overflow: ellipsis;
+    /* Platform/Desktop/Body-1 R */
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  .app-card-wrapp.hide-options .for-chat-userinfo .userinfos {
+    display: flex;
+    gap: 12px;
+  }
+  .app-card-wrapp.hide-options .for-chat-userinfo .userinfos img {
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .app-card-wrapp.hide-options .card-status,
+  .app-card-wrapp.hide-options .sidebar h5 {
+    display: none;
+  }
+  .landing-footer .navigations .nav ul {
+    max-width: 100%;
+  }
+  .notifications ul {
+    margin: 20px 0px 0px 0px;
+  }
 }
 @media (max-width: 767px) {
-  .chat .agent-info {
+  .create-app .row {
+    gap: 10px;
+  }
+  main.no-padding {
+    padding: 0px 0px 0px 0px;
+  }
+  .form .preview {
+    gap: 10px;
+  }
+  .form .upload-container.full.big .up-info {
+    width: 154px;
+    height: 230px;
+  }
+  .form .preview.big img, .form .preview.big .preview-wrapper {
+    width: 154px;
+    height: 230px;
+  }
+  .content-status {
+    padding: 40px 20px;
+  }
+  .messeges .to.duble {
+    padding: 0px 0px 0px 0px;
+  }
+  .mess-form {
+    gap: 0;
+  }
+  .sertificats-profile .items {
+    gap: 10px;
+  }
+  .notifications .line,
+  .safety .line,
+  .sertificats-profile .line {
+    top: 60px;
+  }
+  .overflow {
+    display: none;
+  }
+  .sidebar .client-contacts .sonra .button-primary {
+    padding: 0px 0px 0px 0px;
+    min-height: 40px;
+  }
+  .create-app .info-profile {
     padding: 20px;
+  }
+  .about-profile h3 {
+    margin: 0px 0px 40px 0px;
+  }
+  .about-profile .line {
+    top: 60px;
+  }
+  .about-profile .videos {
+    margin: 15px 0px 0px 0px;
+  }
+  .data-profile ul li {
+    padding: 0px 30px 0px 0px;
+  }
+  .data-profile ul {
+    gap: 5px;
+  }
+  .info-profile .reviews,
+  .info-profile .stars {
+    font-size: 20px;
+  }
+  .my-apps.applications .page-head {
+    margin: 10px 0px 0px 0px;
+  }
+  .create-profile-realtor h5 {
+    padding: 0px 20px;
+  }
+  .chat .agent-info {
+    padding: 50px 20px;
   }
   .footer .wrapp.mob {
     margin: 0px 0px 0px 0px;
   }
-  .enter-page .confirm h3,
   .modal .confirm h3 {
+    margin: 20px 0px 16px 0px;
+  }
+  .enter-page .confirm h3 {
     margin: 0px 0px 16px 0px;
   }
   .enter-page .form input,
@@ -414,9 +582,6 @@
   .registration-page .bott {
     flex-direction: column;
   }
-  .content-text {
-    max-height: 84vh;
-  }
   .modal .modal-content {
     max-height: 95vh;
     height: 95vh;
@@ -444,7 +609,7 @@
     width: 100%;
   }
   .info-profile .cart .avatar {
-    border-radius: 20px;
+    border-radius: 10px;
   }
   .head-profile h3 {
     margin: 0px 0px 20px 0px;
@@ -486,10 +651,14 @@
     justify-content: space-around;
   }
   .edit-profile .wrapper {
-    margin: 20px 20px 36px 20px;
+    margin: 20px 20px 0px 20px;
   }
   .sertificats-profile .items {
-    justify-content: center;
+    margin: 40px 0px 0px 0px;
+  }
+  .chat .agent-info .avatar img {
+    width: 64px;
+    height: 64px;
   }
   .sertificats-profile .item {
     width: 154px;
@@ -498,32 +667,15 @@
   .param-profile .subtitle {
     padding: 5px 20px;
   }
-  .info-profile .cart .avatar img {
-    width: 100%;
-  }
   .param-profile .subtitle {
     top: 65px;
   }
   .param-profile h3 {
-    margin: 0px 0px 80px 0px;
+    margin: 0px 0px 70px 0px;
   }
   .param-profile .item {
     flex-direction: column;
     padding: 15px 0px;
-  }
-  .info-profile .cart .avatar {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    align-items: center;
-  }
-  .info-profile .cart .id-info {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .info-profile .cart {
-    flex-direction: column;
   }
   .head-profile ul {
     min-width: 400px;
@@ -539,7 +691,7 @@
   }
   .page-head .wrapper,
   .head-profile .wrapper {
-    padding: 20px 20px 20px 20px;
+    padding: 30px 0px 10px 20px;
   }
   .payments-balance .wrapper {
     padding: 20px 20px 20px 20px;
@@ -572,7 +724,6 @@
     width: 100%;
   }
   .content-text {
-    max-height: 87vh;
     max-width: 100vw;
     padding: 20px 10px 0px 20px;
     color: var(--Text-Grey_Dark, #3b4a69);
@@ -733,7 +884,14 @@
   .sidebar h5 {
     font-size: 18px;
     display: inline-block;
-    max-width: 90%;
+    max-width: 100%;
+  }
+  .sidebar h5 span {
+    display: inline-block;
+    margin-right: 2px;
+  }
+  .sidebar h5 span svg {
+    margin: 0px 0px -3px 0px;
   }
   .sidebar h5 .app-id {
     position: absolute;
@@ -803,7 +961,7 @@
     white-space: nowrap;
   }
   .my-apps.applications {
-    padding: 50px 0px 150px 0px;
+    padding: 50px 0px 140px 0px;
   }
   .page-head h3,
   .head-profile h3 {
@@ -861,9 +1019,23 @@
   .proposal .open .button-primary.tel {
     padding: 8px 10px;
   }
+  .sidebar li,
+  .my-objects .options li {
+    gap: 20px;
+  }
+  .sidebar .title {
+    min-width: 110px;
+    max-width: 110px;
+  }
+  .enter-page.create-app .wrapper:first-child {
+    border-radius: 10px;
+  }
+  .create-app .show-more {
+    padding: 0px 20px 20px 20px;
+  }
   .my-objects,
   .proposals {
-    padding: 50px 0px 150px 0px;
+    padding: 50px 0px 140px 0px;
   }
   .my-objects .contact-buttons a,
   .proposals .contact-buttons a {
@@ -891,6 +1063,7 @@
   .my-objects .options .title,
   .proposals .options .title {
     min-width: 110px;
+    width: 110px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -938,7 +1111,7 @@
   }
   .my-objects .page-head .wrapper,
   .proposals .page-head .wrapper {
-    padding: 23px 0px 10px 20px;
+    padding: 30px 0px 10px 20px;
   }
   .my-objects .wrapper,
   .proposals .wrapper {
@@ -953,19 +1126,22 @@
     scrollbar-width: none; /* Firefox */
   }
   .create-profile-realtor .head h3 {
-    margin: 0px 30px 0px 0px;
+    margin: 0px 40px 0px 0px;
   }
   .messeger .wrapp {
     padding: 0px 0px 150px 0px;
-    max-height: calc(100vh - 225px);
-    min-height: calc(100vh - 225px);
+    max-height: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
   }
   .sidebar .options.orta {
-    max-height: calc(100vh - 220px);
-    min-height: calc(100vh - 220px);
+    max-height: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
+  }
+  .chat .agent-info .button-primary {
+    padding: 8px 20px;
   }
   .create-app .column-hide {
-    max-height: 170px;
+    max-height: 150px;
   }
   .header {
     padding: 10px 20px;
@@ -973,7 +1149,7 @@
   main .wrapper {
     padding: 20px;
   }
-  .enter-page .wrapper {
+  .enter-page .wrapper:first-child {
     border-radius: 0 0 10px 10px;
   }
   .modal .modal-content {
@@ -981,8 +1157,158 @@
     border-radius: 10px 10px 0 0;
   }
   .content-text {
-    height: calc(100vh - 97px);
-    max-height: calc(100vh - 97px);
+    min-height: calc(100vh - 120px);
+    max-height: calc(100vh - 120px);
     padding: 20px 10px 10px 20px;
+  }
+  .modal h3 {
+    padding: 0px 50px 0px 20px;
+  }
+  .modal .mw460 {
+    width: 100%;
+  }
+  .info-profile h4 {
+    font-size: 22px;
+  }
+  .param-profile ul li,
+  .param-profile .item .title {
+    font-size: 14px;
+  }
+  .data-profile .wrapper {
+    padding: 20px;
+  }
+  .safety ul li {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+  .safety .title br {
+    display: block;
+  }
+  .safety .title {
+    min-width: 110px;
+  }
+  .safety .for-mob {
+    gap: 20px;
+  }
+  .safety .for-mob .tel {
+    line-height: 24px;
+  }
+  .notifications .title {
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+  }
+  .notifications .edit {
+    margin: 5px 0px 0px 0px;
+  }
+  .notifications li {
+    align-items: start;
+  }
+  .modal .form {
+    padding: 40px 20px;
+  }
+  .proposal .open .button-primary.tel,
+  .my-objects .contact-buttons a,
+  .proposals .contact-buttons a {
+    padding: 8px;
+    min-width: 40px;
+  }
+  .edit-profile .wrapper {
+    padding: 0;
+    min-height: 40px;
+  }
+  .day-list .day {
+    margin: 15px 0px 0px 0px;
+  }
+  .messeges li .avatar {
+    display: none;
+  }
+  .application-card .sidebar {
+    margin: 0px 0px 0px 0px;
+  }
+  .messeger {
+    padding: 0px 10px 10px 10px;
+  }
+  .messeger .wrapp {
+    overflow-y: scroll; /* Сохраняем возможность вертикальной прокрутки */
+    scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+    -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
+  }
+  .messeger .wrapp::-webkit-scrollbar {
+    width: 0; /* Скрываем скроллбар в WebKit-браузерах (Chrome, Safari) */
+  }
+  .client-card .options ul {
+    min-width: 70vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .sidebar .options li:last-child {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sidebar .options.min {
+    max-height: calc(100vh - 350px);
+    min-height: calc(100vh - 350px);
+  }
+  .safety .for-mob {
+    align-items: start;
+  }
+  .create-app .head h3 {
+    margin: 0px 50px 0px 0px;
+  }
+  .enter-page {
+    padding: 0px 0px 72px 0px;
+  }
+  .about-profile .text {
+    -webkit-line-clamp: 10;
+  }
+}
+@media (max-width: 639px) {
+  .sidebar .app-from .top.kustom {
+    border-bottom: none;
+  }
+  .sidebar .options.max.min {
+    max-height: calc(100vh - 235px);
+    min-height: calc(100vh - 235px);
+  }
+  .sidebar .options.max {
+    max-height: calc(100vh - 490px);
+    min-height: calc(100vh - 490px);
+  }
+  .sidebar .butt-open.active {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 10px);
+  }
+  .sidebar .app-from .top {
+    position: relative;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .info-profile .cart .avatar img {
+    width: 100%;
+  }
+  .info-profile .cart .avatar {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+  .info-profile .cart .id-info {
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .info-profile .cart {
+    flex-direction: column;
+  }
+  .sidebar .options.orta {
+    max-height: calc(100vh - 235px);
+    min-height: calc(100vh - 235px);
   }
 }/*# sourceMappingURL=media.css.map */

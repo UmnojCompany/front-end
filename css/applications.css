@@ -379,6 +379,7 @@
   background: var(--BG-Light-Blue, #f1f7ff);
 }
 .row-item .price {
+  flex-grow: 1;
   margin: 8px 0px 10px 0px;
   color: var(--Text-Black, #2a344a);
   /* Platform/Accent_14 (M) */
@@ -691,6 +692,12 @@
   right: 0;
   top: calc(100% + 4px);
 }
+.client-card .menu .submenu a,
+.card .menu .submenu a {
+  color: var(--Text-Black, #2A344A);
+  display: block;
+  width: 100%;
+}
 .client-card .menu .submenu .item,
 .card .menu .submenu .item {
   padding: 12px 20px 13px 20px;
@@ -807,7 +814,7 @@
   content: "";
   right: 0;
   top: 0;
-  width: 30px;
+  width: 20px;
   height: 30px;
   background: linear-gradient(to right, transparent, white);
 }

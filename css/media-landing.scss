@@ -333,6 +333,9 @@
             color: #fff;
         }
     }
+    .landing-footer .navigations .nav ul li a:hover{
+        color: var(--Text-Grey, #7786a5);
+    }
 }
 @media (max-width: 767px) {
     .enter-page .modal-content,
@@ -421,7 +424,7 @@
         min-width: 120px;
     }
     body.landing .modal-content {
-        overflow: auto;
+        //overflow: auto;
     }
     .mob-menu {
         overflow: auto;

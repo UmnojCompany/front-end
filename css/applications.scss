@@ -447,6 +447,7 @@
         overflow: hidden;
     }
     .price {
+        flex-grow: 1;
         margin: 8px 0px 10px 0px;
         color: var(--Text-Black, #2a344a);
 
@@ -727,6 +728,14 @@
 .card {
     .menu {
         .submenu {
+            a{
+                color: var(--Text-Black, #2A344A);
+
+                
+                display: block;
+                width: 100%;
+                
+            }
             .item {
                 &:hover {
                     background: var(--Stroke-Divider_form, #f1f7ff);
@@ -845,7 +854,7 @@
             content: "";
             right: 0;
             top: 0;
-            width: 30px;
+            width: 20px;
             height: 30px;
             background: linear-gradient(to right, transparent, white);
         }
