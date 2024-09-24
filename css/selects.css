@@ -171,4 +171,13 @@
   padding: 10px;
   text-align: center;
   display: none;
+}
+
+.form.space {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.create-app .form .input-container.add-adress {
+  flex: 1;
 }/*# sourceMappingURL=selects.css.map */
