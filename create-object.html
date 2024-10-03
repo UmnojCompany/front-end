@@ -1130,7 +1130,7 @@
               </div>
               <div class="line"></div>
 
-              <h3 class="custom">Оснащение</h3>
+              <h4 class="custom">Оснащение</h4>
               <div class="subtitle">
                 Укажите основные предметы комфорта и технологии, которыми
                 оснащена недвижимость
@@ -1160,7 +1160,7 @@
                 </ul>
               </div>
 
-              <h3 class="custom">Планировка квартиры</h3>
+              <h4 class="custom">Планировка квартиры</h4>
               <div class="subtitle">
                 Загрузите планировку недвижимости. Вес до 10 мб. Минимальное
                 разрешение 600 x 600 px. Доступный формат jpg / png
@@ -1188,490 +1188,1999 @@
                 </div>
               </form>
             </div>
-            <div class="wrapper forinroom">
-              <h3>В здании</h3>
-              <div class="subtitle">
-                Укажите основную информацию о параметрах и планировке здания
+            <div class="wrapper forinroom hidden">
+              <div class="o-head">
+                <h3>В здании</h3>
+                <div class="toggle"><div class="circle"></div></div>
               </div>
-              <div class="form inroom">
-                <div class="item">
-                  <div class="title">Этажей <span>*</span></div>
-                  <div class="input-type">
-                    <input
-                      type="text"
-                      placeholder="Кол-во"
-                      maxlength="2"
-                      pattern="\d{2}"
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                    />
+              <div class="o-body">
+                <div class="subtitle">
+                  Укажите основную информацию о параметрах и планировке здания
+                </div>
+                <div class="form inroom">
+                  <div class="item">
+                    <div class="title">Этажей <span>*</span></div>
+                    <div class="input-type">
+                      <input
+                        type="text"
+                        placeholder="Кол-во"
+                        maxlength="2"
+                        pattern="\d{2}"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                      />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="title">Жилая площадь, м2</div>
+                    <div class="input-type">
+                      <input
+                        type="text"
+                        placeholder="Площадь"
+                        maxlength="2"
+                        pattern="\d{2}"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                      />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="title">Квартир</div>
+                    <div class="input-type">
+                      <input
+                        type="text"
+                        placeholder="Кол-во"
+                        maxlength="2"
+                        pattern="\d{2}"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="temporary">
+                    <div class="item it-01 hide">
+                      <div class="title">Лифт пассажирский</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-02 hide">
+                      <div class="title">Лифт грузовой</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-03 hide">
+                      <div class="title">Паркинг</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-04 hide">
+                      <div class="title">Бассейн</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-05 hide">
+                      <div class="title">Хамам</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-06 hide">
+                      <div class="title">Сауна</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-07 hide">
+                      <div class="title">СПА</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-08 hide">
+                      <div class="title">Детская комната</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-09 hide">
+                      <div class="title">Тренажёрный зал</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-10 hide">
+                      <div class="title">Бильярд</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-11 hide">
+                      <div class="title">Кинотеатр</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-12 hide">
+                      <div class="title">Лаунж-зона</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-13 hide">
+                      <div class="title">Кафе</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-14 hide">
+                      <div class="title">Ресторан</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-15 hide">
+                      <div class="title">Лобби</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="dop-lists">
+                    <li>Лифт пассажирский</li>
+                    <li>Лифт грузовой</li>
+                    <li>Паркинг</li>
+                    <li>Бассейн</li>
+                    <li>Хамам</li>
+                    <li>Сауна</li>
+                    <li>СПА</li>
+                    <li>Детская комната</li>
+                    <li>Тренажёрный зал</li>
+                    <li>Бильярд</li>
+                    <li>Кинотеатр</li>
+                    <li>Лаунж-зона</li>
+                    <li>Кафе</li>
+                    <li>Ресторан</li>
+                    <li>Лобби</li>
+                  </ul>
+                </div>
+                <div class="line"></div>
+                <h4 class="custom">Характеристики</h4>
+                <div class="subtitle">
+                  Укажите основные характеристики и технологии строительства
+                  здания
+                </div>
+                <div class="form inroom">
+                  <div class="item">
+                    <div class="title">Здание / ЖК</div>
+                    <div class="input-type cust">
+                      <input type="text" placeholder="Название" />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="title">Девелопер</div>
+                    <div class="input-type cust">
+                      <input type="text" placeholder="Название" />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="title">Материалы</div>
+                    <div class="input-type cust">
+                      <input type="text" placeholder="Название" />
+                    </div>
                   </div>
                 </div>
-                <div class="item">
-                  <div class="title">Жилая площадь, м2</div>
-                  <div class="input-type">
-                    <input
-                      type="text"
-                      placeholder="Площадь"
-                      maxlength="2"
-                      pattern="\d{2}"
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                    />
-                  </div>
+                <div class="line"></div>
+                <h4 class="custom">Планировка здания</h4>
+                <div class="subtitle">
+                  Загрузите планировку здания. Вес до 10 мб. Минимальное
+                  разрешение 600 x 600 px. Доступный формат jpg / png
                 </div>
-                <div class="item">
-                  <div class="title">Квартир</div>
-                  <div class="input-type">
-                    <input
-                      type="text"
-                      placeholder="Кол-во"
-                      maxlength="2"
-                      pattern="\d{2}"
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                    />
+                <form class="form" action="">
+                  <div class="upload-container big" data-multiple="true">
+                    <div class="preview big">
+                      <div class="up-info">
+                        <div class="file-icon">
+                          <img src="img/file-image.svg" alt="" />
+                        </div>
+                        <p class="dtop">
+                          Перетащите изображение сюда или
+                          <a> загрузите с устройства</a>
+                        </p>
+                        <p class="mob"><a>Загрузите изображение</a></p>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          multiple
+                          style="display: none"
+                        />
+                      </div>
+                    </div>
                   </div>
+                </form>
+              </div>
+            </div>
+            <div class="wrapper forinroom hidden">
+              <div class="o-head">
+                <h3>На территории</h3>
+                <div class="toggle"><div class="circle"></div></div>
+              </div>
+              <div class="o-body">
+                <div class="subtitle">
+                  Укажите основную информацию о планировке и оснащении
+                  территории
+                </div>
+                <div class="form inroom">
+                  <div class="item">
+                    <div class="title">Площадь территории, м2</div>
+                    <div class="input-type">
+                      <input
+                        type="text"
+                        placeholder="Площадь"
+                        maxlength="5"
+                        pattern="\d{5}"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="temporary">
+                    <div class="item it-01 hide">
+                      <div class="title">Открытая парковка</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-02 hide">
+                      <div class="title">Бассейн</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-03 hide">
+                      <div class="title">Хамам</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-04 hide">
+                      <div class="title">Сауна</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-05 hide">
+                      <div class="title">СПА</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-06 hide">
+                      <div class="title">Тренажёрный зал</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-07 hide">
+                      <div class="title">Спортзал</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-08 hide">
+                      <div class="title">Футбольное поле</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-09 hide">
+                      <div class="title">Баскетбольное поле</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-10 hide">
+                      <div class="title">Теннисный корт</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-11 hide">
+                      <div class="title">Настольный теннис</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-12 hide">
+                      <div class="title">Бильярд</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-13 hide">
+                      <div class="title">Боулинг</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-14 hide">
+                      <div class="title">Поле для гольфа</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-15 hide">
+                      <div class="title">Аквапарк</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-16 hide">
+                      <div class="title">Водные горки</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-17 hide">
+                      <div class="title">Детская площадка</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-18 hide">
+                      <div class="title">Кинотеатр</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-19 hide">
+                      <div class="title">Кафе</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-20 hide">
+                      <div class="title">Ресторан</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-21 hide">
+                      <div class="title">Лобби</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-22 hide">
+                      <div class="title">Зона барбекю</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-23 hide">
+                      <div class="title">Лаунж-зона</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-24 hide">
+                      <div class="title">Сад</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-25 hide">
+                      <div class="title">Частный пляж</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-26 hide">
+                      <div class="title">Охрана</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-27 hide">
+                      <div class="title">Видеонаблюдение</div>
+                      <div class="input-type">
+                        <input
+                          type="text"
+                          placeholder="Кол-во"
+                          maxlength="2"
+                          pattern="\d{2}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="dop-lists">
+                    <li>Открытая парковка</li>
+                    <li>Бассейн</li>
+                    <li>Хамам</li>
+                    <li>Сауна</li>
+                    <li>СПА</li>
+                    <li>Тренажёрный зал</li>
+                    <li>Спортзал</li>
+                    <li>Футбольное поле</li>
+                    <li>Баскетбольное поле</li>
+                    <li>Теннисный корт</li>
+                    <li>Настольный теннис</li>
+                    <li>Бильярд</li>
+                    <li>Боулинг</li>
+                    <li>Поле для гольфа</li>
+                    <li>Аквапарк</li>
+                    <li>Водные горки</li>
+                    <li>Детская площадка</li>
+                    <li>Кинотеатр</li>
+                    <li>Кафе</li>
+                    <li>Ресторан</li>
+                    <li>Лобби</li>
+                    <li>Зона барбекю</li>
+                    <li>Лаунж-зона</li>
+                    <li>Сад</li>
+                    <li>Частный пляж</li>
+                    <li>Охрана</li>
+                    <li>Видеонаблюдение</li>
+                  </ul>
                 </div>
 
-                <div class="temporary">
-                  <div class="item it-01 hide">
-                    <div class="title">Лифт пассажирский</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-02 hide">
-                    <div class="title">Лифт грузовой</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-03 hide">
-                    <div class="title">Паркинг</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-04 hide">
-                    <div class="title">Бассейн</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-05 hide">
-                    <div class="title">Хамам</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-06 hide">
-                    <div class="title">Сауна</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-07 hide">
-                    <div class="title">СПА</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-08 hide">
-                    <div class="title">Детская комната</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-09 hide">
-                    <div class="title">Тренажёрный зал</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-10 hide">
-                    <div class="title">Бильярд</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-11 hide">
-                    <div class="title">Кинотеатр</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-12 hide">
-                    <div class="title">Лаунж-зона</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-13 hide">
-                    <div class="title">Кафе</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-14 hide">
-                    <div class="title">Ресторан</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="item it-15 hide">
-                    <div class="title">Лобби</div>
-                    <div class="input-type">
-                      <input
-                        type="text"
-                        placeholder="Кол-во"
-                        maxlength="2"
-                        pattern="\d{2}"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      />
-                    </div>
-                    <div class="close-bt">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
-                          fill="#7786A5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
+                <div class="line"></div>
+                <h4 class="custom">Планировка территории</h4>
+                <div class="subtitle">
+                  Загрузите планировку территории. Вес до 10 мб. Минимальное
+                  разрешение 600 x 600 px. Доступный формат jpg / png
                 </div>
-
-                <ul class="dop-lists">
-                  <li>Лифт пассажирский</li>
-                  <li>Лифт грузовой</li>
-                  <li>Паркинг</li>
-                  <li>Бассейн</li>
-                  <li>Хамам</li>
-                  <li>Сауна</li>
-                  <li>СПА</li>
-                  <li>Детская комната</li>
-                  <li>Тренажёрный зал</li>
-                  <li>Бильярд</li>
-                  <li>Кинотеатр</li>
-                  <li>Лаунж-зона</li>
-                  <li>Кафе</li>
-                  <li>Ресторан</li>
-                  <li>Лобби</li>
-                </ul>
+                <form class="form" action="">
+                  <div class="upload-container big" data-multiple="true">
+                    <div class="preview big">
+                      <div class="up-info">
+                        <div class="file-icon">
+                          <img src="img/file-image.svg" alt="" />
+                        </div>
+                        <p class="dtop">
+                          Перетащите изображение сюда или
+                          <a> загрузите с устройства</a>
+                        </p>
+                        <p class="mob"><a>Загрузите изображение</a></p>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          multiple
+                          style="display: none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
+            </div>
+            <div class="wrapper forinroom hidden">
+              <div class="o-head">
+                <h3>Места поблизости</h3>
+                <div class="toggle"><div class="circle"></div></div>
+              </div>
+              <div class="o-body">
+                <div class="subtitle">
+                  Укажите расстояние от недвижимости до важных локаций и
+                  объектов инфраструктуры
+                </div>
+                <div class="form inroom">
+                  <div class="temporary">
+                    <div class="item it-01 hide">
+                      <div class="title">Море</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-02 hide">
+                      <div class="title">Водоём</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-03 hide">
+                      <div class="title">Парк</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-04 hide">
+                      <div class="title">Центр города</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-05 hide">
+                      <div class="title">Метро</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-06 hide">
+                      <div class="title">Аэропорт</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-07 hide">
+                      <div class="title">Автовокзал</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-08 hide">
+                      <div class="title">Детский сад</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-09 hide">
+                      <div class="title">Школа</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-10 hide">
+                      <div class="title">Университет</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-11 hide">
+                      <div class="title">Больница</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-12 hide">
+                      <div class="title">Супермаркет</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-13 hide">
+                      <div class="title">Кафе</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-14 hide">
+                      <div class="title">Ресторан</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-15 hide">
+                      <div class="title">Клуб</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-16 hide">
+                      <div class="title">Торговый центр</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-17 hide">
+                      <div class="title">Спортивный центр</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-18 hide">
+                      <div class="title">СПА центр</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-19 hide">
+                      <div class="title">Салон красоты</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-20 hide">
+                      <div class="title">Марина для яхт</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-21 hide">
+                      <div class="title">Поле для гольфа</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="item it-22 hide">
+                      <div class="title">Рынок</div>
+                      <div class="input-type">
+                        <input type="text" placeholder="Расстояние" />
+                      </div>
+                      <div class="close-bt">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13.773 4.22748C14.0659 4.52038 14.0659 4.99525 13.773 5.28814L10.0606 9.00056L13.7729 12.7129C14.0658 13.0058 14.0658 13.4806 13.7729 13.7735C13.48 14.0664 13.0052 14.0664 12.7123 13.7735L8.99996 10.0612L5.28775 13.7734C4.99486 14.0663 4.51999 14.0663 4.22709 13.7734C3.9342 13.4805 3.9342 13.0057 4.22709 12.7128L7.9393 9.00056L4.22699 5.28825C3.9341 4.99535 3.9341 4.52048 4.22699 4.22759C4.51989 3.93469 4.99476 3.93469 5.28765 4.22759L8.99996 7.9399L12.7124 4.22748C13.0053 3.93459 13.4801 3.93459 13.773 4.22748Z"
+                            fill="#7786A5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="dop-lists">
+                    <li>Море</li>
+                    <li>Водоём</li>
+                    <li>Парк</li>
+                    <li>Центр города</li>
+                    <li>Метро</li>
+                    <li>Аэропорт</li>
+                    <li>Автовокзал</li>
+                    <li>Детский сад</li>
+                    <li>Школа</li>
+                    <li>Университет</li>
+                    <li>Больница</li>
+                    <li>Супермаркет</li>
+                    <li>Кафе</li>
+                    <li>Ресторан</li>
+                    <li>Клуб</li>
+                    <li>Торговый центр</li>
+                    <li>Спортивный центр</li>
+                    <li>СПА центр</li>
+                    <li>Салон красоты</li>
+                    <li>Марина для яхт</li>
+                    <li>Поле для гольфа</li>
+                    <li>Рынок</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper forinroom hidden">
+              <div class="o-head">
+                <h3>Виды</h3>
+                <div class="toggle"><div class="circle"></div></div>
+              </div>
+              <div class="o-body">
+                <div class="subtitle">Укажите виды из окон недвижимости</div>
+                <div class="form start">
+                  <ul class="chek-lists">
+                    <li>Панорамный вид</li>
+                    <li>На море</li>
+                    <li>На реку</li>
+                    <li>На озеро</li>
+                    <li>На горы</li>
+                    <li>На город</li>
+                    <li>На дорогу</li>
+                    <li>На парк</li>
+                    <li>На лес</li>
+                    <li>На сад</li>
+                    <li>На поле</li>
+                    <li>Во двор</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper hidden">
+                <div class="o-head">
+                    <h3>Документы</h3>
+                    <div class="toggle"><div class="circle"></div></div>
+                  </div>
+                  <div class="o-body">
+                    <div class="subtitle">Загрузите до 50 документов недвижимости.  Вес до 500 мб. Доступный формат jpg / png / pdf</div>
+                    <form class="form" action="">
+                        <div
+                          id="docsFormsContainer"
+                          class="video-forms-container"
+                        ></div>
+                        <div id="addDocsBtn" class="add-video-btn add-video">
+                            Добавить документ
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 4.25C9.41421 4.25 9.75 4.58579 9.75 5V8.2501H13C13.4142 8.2501 13.75 8.58588 13.75 9.0001C13.75 9.41431 13.4142 9.7501 13 9.7501H9.75V13C9.75 13.4142 9.41421 13.75 9 13.75C8.58578 13.75 8.25 13.4142 8.25 13V9.7501H5C4.58579 9.7501 4.25 9.41431 4.25 9.0001C4.25 8.58588 4.58579 8.2501 5 8.2501H8.25V5C8.25 4.58579 8.58578 4.25 9 4.25Z"
+                              fill="#4E6AF3"
+                            />
+                          </svg>
+                        </div>
+                      </form>
+                  </div>
+            </div>
+            <div class="wrapper hidden">
+              <div class="o-head">
+                <h3>Описание</h3>
+                <div class="toggle"><div class="circle"></div></div>
+              </div>
+              <div class="o-body">
+                <div class="subtitle">Расскажите о недвижимости, ее основных преимуществах, соседях и транспортной доступности. Не публикуйте номера телефонов, ссылки и рекламу</div>
+                 <form class="form" action="">
+                <div class="input-container w100">
+                  <textarea
+                    id="myTextarea2"
+                    maxlength="5000"
+                    rows="10"
+                    required=""
+                  ></textarea>
+                  <div class="placeholder">
+                    Описание
+                  </div>
+                  <div class="char-counter" id="charCounter">0/5000</div>
+                </div>
+              </form>
+              </div>
+             
             </div>
           </div>
           <div class="pcat pcat-02">
@@ -2512,6 +4021,9 @@
               </div>
             </div>
           </div>
+          <a href="#" class="button-primary"
+            >Загрузить объект</a
+          >
         </div>
       </section>
     </main>
@@ -2869,7 +4381,6 @@
         });
       });
     </script>
-
     <script>
       document
         .querySelectorAll(".new-custom-select")
@@ -2935,7 +4446,6 @@
           );
         });
     </script>
-
     <script>
       document.querySelectorAll(".upload-container").forEach((container) => {
         const fileInput = container.querySelector('input[type="file"]');
@@ -3070,41 +4580,111 @@
         });
       });
     </script>
-
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          // Получаем все блоки с классом .forinroom
-          const blocks = document.querySelectorAll(".forinroom");
-      
-          blocks.forEach(function (block) {
-            // Внутри каждого блока находим элементы
-            const listItems = block.querySelectorAll(".dop-lists li");
-            const container = block.querySelector(".temporary");
-      
-            listItems.forEach(function (item, index) {
-              // Определяем номер элемента
-              const itemNumber = index + 1;
-              // Если номер меньше 10, добавляем ведущий ноль
-              const indexStr = itemNumber < 10 ? '0' + itemNumber : itemNumber;
-              const itElement = block.querySelector(".it-" + indexStr);
-              const closeButton = itElement.querySelector(".close-bt");
-      
-              item.addEventListener("click", function () {
-                itElement.classList.remove("hide");
-                this.classList.add("hide");
-      
-                // Добавляем itElement в конец контейнера внутри текущего блока
-                container.appendChild(itElement);
-              });
-      
-              closeButton.addEventListener("click", function () {
-                itElement.classList.add("hide");
-                item.classList.remove("hide");
-              });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Получаем все блоки с классом .forinroom
+        const blocks = document.querySelectorAll(".forinroom");
+
+        blocks.forEach(function (block) {
+          // Внутри каждого блока находим элементы
+          const listItems = block.querySelectorAll(".dop-lists li");
+          const container = block.querySelector(".temporary");
+
+          listItems.forEach(function (item, index) {
+            // Определяем номер элемента
+            const itemNumber = index + 1;
+            // Если номер меньше 10, добавляем ведущий ноль
+            const indexStr = itemNumber < 10 ? "0" + itemNumber : itemNumber;
+            const itElement = block.querySelector(".it-" + indexStr);
+            const closeButton = itElement.querySelector(".close-bt");
+
+            item.addEventListener("click", function () {
+              itElement.classList.remove("hide");
+              this.classList.add("hide");
+
+              // Добавляем itElement в конец контейнера внутри текущего блока
+              container.appendChild(itElement);
+            });
+
+            closeButton.addEventListener("click", function () {
+              itElement.classList.add("hide");
+              item.classList.remove("hide");
             });
           });
         });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Получаем все элементы с классом 'wrapper'
+        const wrappers = document.querySelectorAll(".wrapper");
+
+        wrappers.forEach(function (wrapper) {
+          // Находим элемент '.toggle' внутри текущего 'wrapper'
+          const toggle = wrapper.querySelector(".toggle");
+
+          if (toggle) {
+            toggle.addEventListener("click", function () {
+              // Переключаем класс 'hidden' у родительского элемента 'wrapper'
+              wrapper.classList.toggle("hidden");
+            });
+          }
+        });
+      });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const maxForms2 = 10;
+          const docsFormsContainer = document.getElementById(
+            "docsFormsContainer"
+          );
+          const addDocsBtn = document.getElementById("addDocsBtn");
+  
+          // Функция для создания новой формы видео
+          function createDocsForm() {
+            if (docsFormsContainer.children.length < maxForms2) {
+              const docsForm = document.createElement("div");
+              docsForm.classList.add("video-form");
+  
+              const  docsNameInput = document.createElement("input");
+               docsNameInput.type = "text";
+               docsNameInput.placeholder = "Загрузка документа";
+  
+              const  docsLinkInput = document.createElement("input");
+               docsLinkInput.type = "text";
+               docsLinkInput.placeholder = "Название документа";
+  
+              const removeBtn = document.createElement("button");
+              removeBtn.classList.add("remove-btn");
+              removeBtn.textContent = "×";
+              removeBtn.addEventListener("click", () => {
+                 docsFormsContainer.removeChild( docsForm);
+                if ( docsFormsContainer.children.length < maxForms2) {
+                  addDocsBtn.classList.remove("off"); // Убираем класс off, если форма удалена и лимит не достигнут
+                }
+              });
+  
+               docsForm.appendChild( docsNameInput);
+               docsForm.appendChild( docsLinkInput);
+               docsForm.appendChild(removeBtn);
+  
+               docsFormsContainer.appendChild( docsForm);
+  
+              if ( docsFormsContainer.children.length === maxForms2) {
+                addDocsBtn.classList.add("off"); // Добавляем класс off, если достигнут лимит форм
+              }
+            }
+          }
+  
+          // Создаем одну форму сразу после загрузки страницы
+          createDocsForm();
+  
+          // Обработчик события для кнопки добавления видео
+          addDocsBtn.addEventListener("click", () => {
+            createDocsForm();
+          });
+        });
       </script>
-      
   </body>
 </html>

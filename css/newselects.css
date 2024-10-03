@@ -205,6 +205,9 @@
 .form.inroom .input-type {
   width: 150px;
 }
+.form.inroom .input-type.cust {
+  width: 260px;
+}
 .form.inroom .title {
   min-width: 220px;
   color: var(--Text-Black, #2a344a);
@@ -226,5 +229,22 @@
   background: var(--BG-Blue_10, #f6faff);
 }
 .form.inroom .item.hide {
+  display: none;
+}
+
+.o-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px 20px 0px;
+}
+.o-head h3 {
+  margin: 0px 0px 0px 0px;
+}
+
+.wrapper.hidden .o-head {
+  padding: 0px 30px 30px 0px;
+}
+.wrapper.hidden .o-body {
   display: none;
 }/*# sourceMappingURL=newselects.css.map */
