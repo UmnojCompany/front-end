@@ -149,13 +149,13 @@
 .add-video {
     margin: 20px 0px 0px 0px;
 }
-.forinroom{
-    .custom{
+.forinroom {
+    .custom {
         margin: 30px 0px 20px 0px;
     }
 }
 .form.inroom {
-    .temporary{
+    .temporary {
         min-width: 100%;
         display: flex;
         flex-direction: column;
@@ -163,11 +163,11 @@
     }
     .dop-lists {
         li {
-            &.hide{
+            &.hide {
                 display: none;
             }
             &:hover {
-                background: var(--Request-BG-Hover, #E1EDFD);
+                background: var(--Request-BG-Hover, #e1edfd);
             }
             transition: 0.3s;
             cursor: pointer;
@@ -229,9 +229,8 @@
     flex-direction: column;
     gap: 10px;
 }
-.o-head{
-
-    h3{
+.o-head {
+    h3 {
         margin: 0px 0px 0px 0px;
     }
     display: flex;
@@ -239,13 +238,80 @@
     justify-content: space-between;
     padding: 0px 30px 20px 0px;
 }
-.wrapper{
-    &.hidden{
-        .o-head{
+.wrapper {
+    &.hidden {
+        .o-head {
             padding: 0px 30px 30px 0px;
         }
-        .o-body{
+        .o-body {
             display: none;
         }
+    }
+}
+.objectdocs {
+    .doc-preview {
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid var(--Stroke-Divider, #e1edfd);
+            object-fit: cover;
+        }
+    }
+    .doc-close {
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        background: url("../img/doc-close.svg") no-repeat;
+    }
+    .doc-download {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background: url("../img/drop_zone.svg") no-repeat;
+    }
+    .doc-description {
+        input {
+            width: 100%;
+        }
+        flex: 1;
+    }
+    .item {
+        display: flex;
+        padding: 7px 10px 7px 7px;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+
+        border-radius: 10px;
+        background: var(--BG-Blue_10, #f6faff);
+    }
+    .docs-forms-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 100%;
+    }
+}
+.form .upload-container.full.big .up-info{
+    width: 205px;
+    height: 205px;
+}
+.form .preview.big img{
+    width: 205px;
+    height: 205px;
+    border: 1px solid var(--Stroke-Blue_100, #E1EDFD);
+
+}
+.form .preview.big .preview-wrapper {
+    width: 205px;
+    height: 205px;
+}
+.form.inroom.customwidth{
+    .new-custom-select{
+        min-width: 300px;
+    }
+    .input-type{
+        width: 300px;
     }
 }
